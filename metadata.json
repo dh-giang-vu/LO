@@ -1,0 +1,26 @@
+{
+  "repoUrl": "https://github.com/feit-comp30019/2024s2-project-2-h1pls",
+  "teamName": "H1pls",
+  "teamMembers": [
+    {
+      "name": "Nguyen Don Lam",
+      "github": "NguyenDonLam",
+      "email": "donlamn@student.unimelb.edu.au"
+    },
+    {
+      "name": "Duc Hang Giang Vu",
+      "github": "dh-giang-vu",
+      "email": "duchanggiang@student.unimelb.edu.au"
+    },
+    {
+      "name": "Sakdiphat Tanphiphatari",
+      "github": "Tan-Tanphiphatari",
+      "email": "stanphiphata@student.unimelb.edu.au"
+    },
+    {
+      "name": "Acalapati Priyatama",
+      "github": "screentime0",
+      "email": "apriyatama@student.unimelb.edu.au"
+    }
+  ]
+}
