@@ -13,23 +13,14 @@ public class InteractionHandler : MonoBehaviour
         inRangeResources = new List<CollectResource>();
     }
 
-    void Update()
+    public void GatherResources()
     {
-        if (inRangeResources.Count == 0)
+        for (int i = 0; i < inRangeResources.Count; i++)
         {
-            return;
+            var curr = inRangeResources[i];
+            inRangeResources.Remove(curr);
+            curr.Interact();
         }
-
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            for (int i = 0; i < inRangeResources.Count; i++)
-            {
-                var curr = inRangeResources[i];
-                inRangeResources.Remove(curr);
-                curr.Interact();
-            }
-        }
-
     }
 
     void OnTriggerEnter(Collider other)

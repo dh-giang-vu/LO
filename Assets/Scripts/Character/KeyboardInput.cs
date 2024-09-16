@@ -11,6 +11,7 @@ public class KeyboardInput : MonoBehaviour
 
     private CharacterAnimation characterAnimation;
     private Movement movement;
+    private InteractionHandler interactionHandler;
 
     void Start()
     {
@@ -20,6 +21,7 @@ public class KeyboardInput : MonoBehaviour
 
         characterAnimation = GetComponentInChildren<CharacterAnimation>();
         movement = GetComponent<Movement>();
+        interactionHandler = GetComponentInChildren<InteractionHandler>();
     }
 
     void Update()
@@ -38,6 +40,7 @@ public class KeyboardInput : MonoBehaviour
         {
             isGathering = true;
             characterAnimation.PlayGatheringAnimation();
+            interactionHandler.GatherResources();
         }
     }
 
