@@ -40,5 +40,6 @@ public class CharacterAnimation : MonoBehaviour
     {
         animator.avatar = idle;
         SendMessageUpwards("StopGathering");
+        Debug.Log("OnGatheringEnd");
     }
 }

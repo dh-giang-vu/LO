@@ -43,5 +43,6 @@ public class KeyboardInput : MonoBehaviour
 
     void StopGathering() {
         isGathering = false;
+        Debug.Log("StopGathering");
     }
 }

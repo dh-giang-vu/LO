@@ -77,7 +77,7 @@ ModelImporter:
       takeName: human_male_gathering_01
       internalID: 0
       firstFrame: 2
-      lastFrame: 69
+      lastFrame: 60
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -97,7 +97,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 1.0500001
+      - time: 0.7530928
         functionName: OnGatheringEnd
         data: 
         objectReferenceParameter: {instanceID: 0}
