@@ -7,10 +7,12 @@ public class InteractionHandler : MonoBehaviour
 {
 
     private List<CollectResource> inRangeResources;
+    private List<PilotoLightSourceScript> inRangePilotoLightSources;
 
     void Start()
     {
         inRangeResources = new List<CollectResource>();
+        inRangePilotoLightSources = new List<PilotoLightSourceScript>();
     }
 
     public void GatherResources()
@@ -23,12 +25,25 @@ public class InteractionHandler : MonoBehaviour
         }
     }
 
+    public void RefuelLightSources()
+    {
+        for (int i = 0; i < inRangePilotoLightSources.Count; i++)
+        {
+            StartCoroutine(inRangePilotoLightSources[i].ManualRefuel());
+        }
+    }
+
     void OnTriggerEnter(Collider other)
     {
         Debug.Log(other);
         if (other.TryGetComponent<CollectResource>(out var resource))
         {
             inRangeResources.Add(resource);
+        }
+
+        if (other.TryGetComponent<PilotoLightSourceScript>(out var pilotoLight))
+        {
+            inRangePilotoLightSources.Add(pilotoLight);
         }
     }
 
@@ -37,6 +52,10 @@ public class InteractionHandler : MonoBehaviour
         if (other.TryGetComponent<CollectResource>(out var resource))
         {
             inRangeResources.Remove(resource);
+        }
+        if (other.TryGetComponent<PilotoLightSourceScript>(out var pilotoLight))
+        {
+            inRangePilotoLightSources.Remove(pilotoLight);
         }
     }
 

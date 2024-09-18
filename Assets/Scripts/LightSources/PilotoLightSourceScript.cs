@@ -17,8 +17,6 @@ public class PilotoLightSourceScript : MonoBehaviour
     float refuelTime = 0f;
     private Renderer renderer;
 
-    private bool playerInRange = false;
-
     [SerializeField] private float refuelWaitTime = 1f;
     // Start is called before the first frame update
     void Start()
@@ -48,32 +46,13 @@ public class PilotoLightSourceScript : MonoBehaviour
         else if (lifespan <= 0 && alive) {
             Die();
         }
-        if (playerInRange && Input.GetKeyDown(KeyCode.E))
-        {
-            StartCoroutine(ManualRefuel());
-        }
         
     }
-    void OnTriggerEnter(Collider other) 
-    {
-        if (other.CompareTag("Player"))
-        {
-            playerInRange = true;
-        }
-    }
-    IEnumerator ManualRefuel()
+    public IEnumerator ManualRefuel()
     {
 
         yield return new WaitForSeconds(refuelWaitTime);
         Refuel();
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            playerInRange = false;
-        }
     }
 
     public void Refuel() {
