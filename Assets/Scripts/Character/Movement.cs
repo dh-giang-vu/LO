@@ -18,22 +18,45 @@ public class Movement : MonoBehaviour
         controller = gameObject.GetComponent<CharacterController>();
     }
 
-    void Update()
+    // void Update()
+    // {
+    //     groundedPlayer = controller.isGrounded;
+    //     if (groundedPlayer && playerVelocity.y < 0)
+    //     {
+    //         playerVelocity.y = 0f;
+    //     }
+
+    //     Vector3 move = new(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+    //     move = Vector3.ClampMagnitude(move, 1f);
+    //     controller.Move(playerSpeed * Time.deltaTime * move);
+
+    //     if (move != Vector3.zero)
+    //     {
+    //         gameObject.transform.forward = move;
+    //         SendMessage("SetRunning", true);
+    //     }
+    //     else
+    //     {
+    //         SendMessage("SetRunning", false);
+    //     }
+    //     playerVelocity.y += gravityValue * Time.deltaTime;
+    //     controller.Move(playerVelocity * Time.deltaTime);
+    // }
+
+    public void MoveCharacter(Vector3 move)
     {
         groundedPlayer = controller.isGrounded;
         if (groundedPlayer && playerVelocity.y < 0)
         {
             playerVelocity.y = 0f;
         }
-
-        Vector3 move = new(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        move = Vector3.ClampMagnitude(move, 1f);
         controller.Move(playerSpeed * Time.deltaTime * move);
 
         if (move != Vector3.zero)
         {
             gameObject.transform.forward = move;
         }
+
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
     }
