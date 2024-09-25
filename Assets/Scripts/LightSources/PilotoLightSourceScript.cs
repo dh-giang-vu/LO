@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PilotoLightSourceScript : MonoBehaviour
+public class PilotoLightSourceScript : MonoBehaviour, ISanityProvider
 {
 
     private Light light = null;
@@ -77,5 +77,15 @@ public class PilotoLightSourceScript : MonoBehaviour
 
     private void TurnOnSmoke() {
         smokes.Play();
+    }
+
+    public bool isActive()
+    {
+        return alive;
+    }
+
+    public float getSanityEffect()
+    {
+        return 0.0f;
     }
 }

@@ -1,6 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
 
 public class InteractionHandler : MonoBehaviour
@@ -35,7 +33,6 @@ public class InteractionHandler : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other);
         if (other.TryGetComponent<CollectResource>(out var resource))
         {
             inRangeResources.Add(resource);
