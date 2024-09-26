@@ -846,6 +846,7 @@ GameObject:
   - component: {fileID: 767308480}
   - component: {fileID: 767308477}
   - component: {fileID: 767308481}
+  - component: {fileID: 767308482}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -882,7 +883,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e17170753d5aba479d6a3d1dd256050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 8
+  normalSpeed: 6
+  sprintingSpeed: 9
 --- !u!143 &767308478
 CharacterController:
   m_ObjectHideFlags: 0
@@ -935,6 +937,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sanityCap: 100
   deductionRate: 0.5
+--- !u!114 &767308482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767308475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b9684dc6453c834cae6aceacd6b964c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  staminaCap: 10
+  staminaDeductionRate: 5
+  staminaRecoveryRate: 2
+  staminaDepletedTime: 5
 --- !u!1001 &853391313
 PrefabInstance:
   m_ObjectHideFlags: 0
