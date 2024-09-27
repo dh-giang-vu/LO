@@ -1,18 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
-public class PilotoLightSourceScript : MonoBehaviour
+public class PilotoLightSourceScript : LightSource, ISanityProvider
 {
 
     private Light light = null;
     private ParticleSystem smokes;
 
     public float intensity = 200f;
-
-    public int maxLifespan = 10;
-    public float lifespan = 0;
-    public bool alive;
 
     float refuelTime = 0f;
     private Renderer renderer;
@@ -21,17 +18,17 @@ public class PilotoLightSourceScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-    renderer = GetComponent<Renderer>();
-    this.light = GetComponentInChildren<Light>();
-    Transform firstChild = transform.GetChild(0);
-    this.smokes = firstChild.GetComponent<ParticleSystem>();
-    Refuel();
+        renderer = GetComponent<Renderer>();
+        this.light = GetComponentInChildren<Light>();
+        Transform firstChild = transform.GetChild(0);
+        this.smokes = firstChild.GetComponent<ParticleSystem>();
+        Refuel();
 
 
-    if (light == null)
-    {
-        Debug.Log("No Light component found in the children of this GameObject.");
-    }
+        if (light == null)
+        {
+            Debug.Log("No Light component found in the children of this GameObject.");
+        }
     }
 
     // Update is called once per frame
@@ -48,14 +45,14 @@ public class PilotoLightSourceScript : MonoBehaviour
         }
         
     }
-    public IEnumerator ManualRefuel()
+    public override IEnumerator ManualRefuel()
     {
 
         yield return new WaitForSeconds(refuelWaitTime);
         Refuel();
     }
 
-    public void Refuel() {
+    public override void Refuel() {
         lifespan = maxLifespan;
         light.intensity = intensity;
         TurnOnSmoke();
@@ -63,7 +60,7 @@ public class PilotoLightSourceScript : MonoBehaviour
         alive = true;
     }
 
-    public void Die() {
+    public override void Die() {
         TurnOffSmoke();
         lifespan = -1;
         light.intensity = 0;
@@ -77,5 +74,19 @@ public class PilotoLightSourceScript : MonoBehaviour
 
     private void TurnOnSmoke() {
         smokes.Play();
+    }
+
+    public bool isActive()
+    {
+        return alive;
+    }
+
+    public float getSanityEffect()
+    {
+        return 0.0f;
+    }
+    public override float getScore()
+    {
+        return score;
     }
 }

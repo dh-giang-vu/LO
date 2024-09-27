@@ -7,33 +7,47 @@ public class KeyboardInput : MonoBehaviour
 {
     private Vector3 directionVector;
     private bool isGathering;
-    private bool isRunning;
+    private bool isMoving;
+    private bool isSprinting;
 
     private CharacterAnimation characterAnimation;
     private Movement movement;
+    private StaminaManager staminaManager;
     private InteractionHandler interactionHandler;
 
     void Start()
     {
         directionVector = Vector3.zero;
         isGathering = false;
-        isRunning = directionVector == Vector3.zero;
+        isMoving = false;
+        isSprinting = false;
 
         characterAnimation = GetComponentInChildren<CharacterAnimation>();
         movement = GetComponent<Movement>();
+        staminaManager = GetComponent<StaminaManager>();
         interactionHandler = GetComponentInChildren<InteractionHandler>();
     }
 
     void Update()
     {
+        directionVector = new(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        directionVector = Vector3.ClampMagnitude(directionVector, 1f);
+        isMoving = !isGathering && directionVector != Vector3.zero;
+        
         if (!isGathering)
         {
-            directionVector = new(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-            directionVector = Vector3.ClampMagnitude(directionVector, 1f);
-            movement.MoveCharacter(directionVector);
+            isSprinting = CheckIfSprinting();
+            movement.MoveCharacter(directionVector, isSprinting);
+            characterAnimation.SetMovementAnimation(isMoving, isSprinting);
+        }
 
-            isRunning = directionVector != Vector3.zero;
-            characterAnimation.SetAnimation(isRunning);
+        if (isSprinting)
+        {
+            staminaManager.ConsumeStamina();
+        }
+        else
+        {
+            staminaManager.RecoverStamina();
         }
 
         if (!isGathering && Input.GetKeyDown(KeyCode.E))
@@ -45,6 +59,23 @@ public class KeyboardInput : MonoBehaviour
             // temporary
             interactionHandler.RefuelLightSources();
         }
+    }
+
+    private bool CheckIfSprinting()
+    {
+        if (!isMoving)
+        {
+            return false;
+        }
+        if (!Input.GetKey(KeyCode.LeftShift))
+        {
+            return false;
+        }
+        if (!staminaManager.CanSprint())
+        {
+            return false;
+        }
+        return true;
     }
 
     void StopGathering() {

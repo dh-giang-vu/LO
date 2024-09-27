@@ -16,10 +16,10 @@ public class CharacterAnimation : MonoBehaviour
         animator.avatar = idle;
     }
 
-    public void SetAnimation(bool isRunning)
+    public void SetMovementAnimation(bool isMoving, bool isSprinting)
     {
 
-        if (isRunning)
+        if (isMoving)
         {
             animator.avatar = running;
         }
@@ -27,7 +27,8 @@ public class CharacterAnimation : MonoBehaviour
         {
             animator.avatar = idle;
         }
-        animator.SetBool("isRunning", isRunning);
+        animator.SetBool("isRunning", isMoving);
+        animator.SetBool("isSprinting", isSprinting);
     }
 
     public void PlayGatheringAnimation()

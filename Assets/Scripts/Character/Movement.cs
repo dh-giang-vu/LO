@@ -9,48 +9,36 @@ public class Movement : MonoBehaviour
     private Vector3 playerVelocity;
     private bool groundedPlayer;
 
-    [SerializeField] private float playerSpeed = 2.0f;
+    [SerializeField] private float normalSpeed = 6.0f;
+    [SerializeField] private float sprintingSpeed = 9.0f;
+    private float currentSpeed;
     private readonly float gravityValue = -9.81f;
 
 
     void Start()
     {
+        currentSpeed = normalSpeed;
         controller = gameObject.GetComponent<CharacterController>();
     }
 
-    // void Update()
-    // {
-    //     groundedPlayer = controller.isGrounded;
-    //     if (groundedPlayer && playerVelocity.y < 0)
-    //     {
-    //         playerVelocity.y = 0f;
-    //     }
-
-    //     Vector3 move = new(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-    //     move = Vector3.ClampMagnitude(move, 1f);
-    //     controller.Move(playerSpeed * Time.deltaTime * move);
-
-    //     if (move != Vector3.zero)
-    //     {
-    //         gameObject.transform.forward = move;
-    //         SendMessage("SetRunning", true);
-    //     }
-    //     else
-    //     {
-    //         SendMessage("SetRunning", false);
-    //     }
-    //     playerVelocity.y += gravityValue * Time.deltaTime;
-    //     controller.Move(playerVelocity * Time.deltaTime);
-    // }
-
-    public void MoveCharacter(Vector3 move)
+    public void MoveCharacter(Vector3 move, bool isSprinting)
     {
         groundedPlayer = controller.isGrounded;
         if (groundedPlayer && playerVelocity.y < 0)
         {
             playerVelocity.y = 0f;
         }
-        controller.Move(playerSpeed * Time.deltaTime * move);
+
+        if (isSprinting)
+        {
+            currentSpeed = sprintingSpeed;
+        }
+        else
+        {
+            currentSpeed = normalSpeed;
+        }
+
+        controller.Move(currentSpeed * Time.deltaTime * move);
 
         if (move != Vector3.zero)
         {
