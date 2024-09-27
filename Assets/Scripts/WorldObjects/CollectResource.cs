@@ -10,12 +10,13 @@ public class CollectResource : MonoBehaviour
     public void Interact()
     {
         StartCoroutine(DelayedRemoveSelf());
-         UpdateInventory();
+        
     }
 
     IEnumerator DelayedRemoveSelf()
     {
         yield return new WaitForSeconds(destroyWaitTime);
+        UpdateInventory();
         Destroy(gameObject);
     }
 
