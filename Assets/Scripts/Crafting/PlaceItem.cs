@@ -8,6 +8,7 @@ public class PlaceItem : MonoBehaviour
     [SerializeField] private Camera cam;
     [SerializeField] private bool isPlacingItem = false;
     [SerializeField] private GameObject itemToPlace = null;
+    [SerializeField] private GameObject instantiatedItem = null;
 
     void Start()
     {
@@ -22,19 +23,26 @@ public class PlaceItem : MonoBehaviour
             return;
         }
 
-        // Allow placing down the itemToPlace once
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-            Debug.DrawRay(ray.origin, ray.direction * 10, Color.yellow);
+        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+        Debug.DrawRay(ray.origin, ray.direction * 10, Color.yellow);
 
-            if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, LayerMask.GetMask("TerrainLayer")))
+        if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, LayerMask.GetMask("TerrainLayer")))
+        {
+            // Place the item at the hit point
+            Vector3 placePosition = hit.point;
+            if (instantiatedItem == null)
             {
-                // Place the item at the hit point
-                Vector3 placePosition = hit.point;
-                Instantiate(itemToPlace, placePosition, Quaternion.identity);
-                StopPlacingItem();
+                instantiatedItem = Instantiate(itemToPlace, placePosition, Quaternion.identity);
             }
+            else
+            {
+                instantiatedItem.transform.position = placePosition;
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Mouse0) && instantiatedItem != null)
+        {
+            StopPlacingItem();
         }
 
     }
@@ -49,5 +57,6 @@ public class PlaceItem : MonoBehaviour
     {
         isPlacingItem = false;
         itemToPlace = null;
+        instantiatedItem = null;
     }
 }
