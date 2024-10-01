@@ -1979,6 +1979,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 178500365666102998, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 178500365666102998, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 868265365603838359, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: requiredWood
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 868265365603838359, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: requiredFiber
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 884667676194452990, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1998,6 +2014,18 @@ PrefabInstance:
     - target: {fileID: 884667676194452990, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1022398953247858813, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: requiredCoal
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1022398953247858813, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: requiredWood
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1022398953247858813, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: requiredMetal
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1045192315550153648, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2022,6 +2050,14 @@ PrefabInstance:
     - target: {fileID: 1045192315550153648, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2319621473241680186, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2319621473241680186, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3068818424234083109, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2147,6 +2183,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3686155763489795046, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: requiredWood
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3736249554951534553, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: requiredCoal
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3736249554951534553, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: requiredMetal
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3736249554951534553, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: messageToPrint
+      value: Metal lantern crafted!
+      objectReference: {fileID: 0}
     - target: {fileID: 3888866620558648541, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2175,6 +2227,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CraftingUI
       objectReference: {fileID: 0}
+    - target: {fileID: 4526636049189581201, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4943312871781710488, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2198,6 +2254,18 @@ PrefabInstance:
     - target: {fileID: 4943312871781710488, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5133740165853586684, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: requiredCoal
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5133740165853586684, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: requiredMetal
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5133740165853586684, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: messageToPrint
+      value: Metal lantern crafted!
       objectReference: {fileID: 0}
     - target: {fileID: 5425886558295074092, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2243,6 +2311,62 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5996266292330914149, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: requiredCoal
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5996266292330914149, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: requiredMetal
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5996266292330914149, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: messageToPrint
+      value: Light bulb crafted!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6033952962381244602, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: requiredCoal
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6033952962381244602, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: requiredWood
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6033952962381244602, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: requiredStone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6695132793519567120, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: requiredCoal
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6695132793519567120, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: requiredWood
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6695132793519567120, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: requiredStone
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6695132793519567120, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: messageToPrint
+      value: Camp fire crafted!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6870749561355545218, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: requiredCoal
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6870749561355545218, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: requiredWood
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6870749561355545218, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: requiredMetal
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6870749561355545218, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: messageToPrint
+      value: Street lamp crafted!
+      objectReference: {fileID: 0}
     - target: {fileID: 7406226833269452906, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2267,6 +2391,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7887372204336974014, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887372204336974014, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8304269796584671607, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2311,6 +2443,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8764827483981683979, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: requiredWood
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8764827483981683979, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: requiredMetal
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8764827483981683979, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: requiredStone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8764827483981683979, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: messageToPrint
+      value: Candelabra crafted!
+      objectReference: {fileID: 0}
     - target: {fileID: 9107040911798205949, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2355,8 +2503,12 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedComponents:
+    - {fileID: 3686155763489795046, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+    - {fileID: 6170124443704839540, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+    - {fileID: 346977978229906017, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+    m_RemovedGameObjects:
+    - {fileID: 4151867155290931486, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
