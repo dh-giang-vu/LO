@@ -78,7 +78,7 @@ public class SanityManager : MonoBehaviour
             }
         }
 
-        Debug.Log("Player's sanity: " + sanity.ToString());
+        //Debug.Log("Player's sanity: " + sanity.ToString());
 
     }
 }

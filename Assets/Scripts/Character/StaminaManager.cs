@@ -38,7 +38,7 @@ public class StaminaManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Recovering Stamina: " + currentStamina.ToString());
+            //Debug.Log("Recovering Stamina: " + currentStamina.ToString());
         }
     }
 
