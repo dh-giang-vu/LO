@@ -1147,6 +1147,7 @@ MonoBehaviour:
   requiredStone: 4
   requiredMetal: 0
   requiredFiber: 0
+  itemToCraft: {fileID: 11400000, guid: a5e1370a5b0fc5246b76873e86da9702, type: 2}
   messageToPrint: Camp fire crafted!
 --- !u!1 &1416210503286160825
 GameObject:
@@ -1596,6 +1597,7 @@ MonoBehaviour:
   requiredStone: 0
   requiredMetal: 0
   requiredFiber: 1
+  itemToCraft: {fileID: 0}
   messageToPrint: Candle crafted!
 --- !u!1 &1894500548617245020
 GameObject:
@@ -2020,6 +2022,7 @@ MonoBehaviour:
   requiredStone: 0
   requiredMetal: 2
   requiredFiber: 0
+  itemToCraft: {fileID: 0}
   messageToPrint: Metal lantern crafted!
 --- !u!1 &2086221693003217193
 GameObject:
@@ -4089,6 +4092,7 @@ MonoBehaviour:
   requiredStone: 0
   requiredMetal: 10
   requiredFiber: 0
+  itemToCraft: {fileID: 0}
   messageToPrint: Street lamp crafted!
 --- !u!1 &3557912825368902629
 GameObject:
@@ -5562,6 +5566,7 @@ MonoBehaviour:
   requiredStone: 0
   requiredMetal: 2
   requiredFiber: 0
+  itemToCraft: {fileID: 0}
   messageToPrint: Metal lantern crafted!
 --- !u!1 &5049916340441617548
 GameObject:
@@ -7034,6 +7039,7 @@ MonoBehaviour:
   requiredStone: 0
   requiredMetal: 1
   requiredFiber: 0
+  itemToCraft: {fileID: 0}
   messageToPrint: Candelabra crafted!
 --- !u!1 &6608015216039853414
 GameObject:
@@ -7596,6 +7602,7 @@ MonoBehaviour:
   requiredStone: 0
   requiredMetal: 5
   requiredFiber: 0
+  itemToCraft: {fileID: 0}
   messageToPrint: Burning barrel crafted!
 --- !u!1 &7237049141304130347
 GameObject:
@@ -7748,6 +7755,7 @@ MonoBehaviour:
   requiredStone: 0
   requiredMetal: 0
   requiredFiber: 0
+  itemToCraft: {fileID: 11400000, guid: 94477c2f9d3e05e43853b789e80edf9a, type: 2}
   messageToPrint: Torch crafted!
 --- !u!1 &7279923034688906365
 GameObject:

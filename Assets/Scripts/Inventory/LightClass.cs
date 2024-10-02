@@ -14,15 +14,5 @@ public class LightClass : ItemClass
     {
        return this.itemName + " : " + this.quantity;
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

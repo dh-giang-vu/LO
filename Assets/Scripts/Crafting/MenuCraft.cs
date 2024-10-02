@@ -9,6 +9,9 @@ public class MenuCraft : MonoBehaviour
     [SerializeField] private int requiredMetal = 0;
     [SerializeField] private int requiredFiber = 0;
 
+    // SerializeField to specify the type of item to craft, drag-and-drop in Inspector
+    [SerializeField] private ItemClass itemToCraft;
+
     private Inventory inventory;  // Reference to the Inventory singleton
 
     public string messageToPrint = "Default Message";
@@ -23,22 +26,32 @@ public class MenuCraft : MonoBehaviour
         {
             Debug.LogError("Inventory singleton instance is null. Ensure Inventory is instantiated.");
         }
+
+        // Ensure that the item to craft is assigned
+        if (itemToCraft == null)
+        {
+            Debug.LogError("No item type assigned for crafting! Please assign an item in the inspector.");
+        }
     }
 
     // Method that runs if enough materials are available
-    public void DoCraftItem()
+    public ItemClass DoCraftItem()
     {
         if (HasRequiredMaterials())
         {
             Debug.Log(messageToPrint);
             Debug.Log("Enough resources available. DoCraftItem method executed.");
 
-            // Optional: If you want to consume the resources after the method runs
+            // Consume resources
             UseRequiredMaterials();
+
+            // Return the crafted item type
+            return itemToCraft;
         }
         else
         {
-            Debug.LogWarning("Not enough materials to run the DoCraftItem method.");
+            Debug.LogWarning("Not enough materials to craft the item.");
+            return null; // Return null if crafting fails
         }
     }
 
