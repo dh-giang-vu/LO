@@ -6,9 +6,10 @@ public class FollowPlayer : MonoBehaviour
 {
 
     [SerializeField] private GameObject player;
+    [SerializeField] private Vector3 relativePosition = new Vector3(0, 6, -10);
 
     void Update()
     {
-        transform.position = player.transform.position + new Vector3(0, 6, -10);
+        transform.position = player.transform.position + relativePosition;
     }
 }
