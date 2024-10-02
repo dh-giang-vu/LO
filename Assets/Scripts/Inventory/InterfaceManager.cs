@@ -6,7 +6,6 @@ using TMPro;
 public class InterfaceManager : MonoBehaviour
 {
     public TextMeshProUGUI resourceText;
-    public TextMeshProUGUI statText;
 
     private Dictionary<string, int> resourceAmounts;
 
@@ -70,7 +69,6 @@ public class InterfaceManager : MonoBehaviour
     {
         Inventory inventory = Inventory.Instance;
         // Clear the resourceText before displaying resources
-        statText.text = "Sanity: " + inventory.sanity;
     }
 
 }

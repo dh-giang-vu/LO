@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,10 +8,21 @@ public class InteractionHandler : MonoBehaviour
     private List<CollectResource> inRangeResources;
     private List<PilotoLightSourceScript> inRangePilotoLightSources;
 
+    public String resourceInRange;
+
     void Start()
     {
         inRangeResources = new List<CollectResource>();
         inRangePilotoLightSources = new List<PilotoLightSourceScript>();
+    }
+
+    void Update()
+    {
+        for (int i = 0; i < inRangeResources.Count; i++)
+        {
+            Debug.Log("resource is: " + inRangeResources[i]);
+        }
+        
     }
 
     public void GatherResources()
@@ -22,6 +34,8 @@ public class InteractionHandler : MonoBehaviour
             curr.Interact();
         }
     }
+
+   
 
     public void RefuelLightSources()
     {
