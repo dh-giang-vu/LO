@@ -302,27 +302,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &206201063
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 206201052}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 5
-  m_Center: {x: -0.048304826, y: 0.3115525, z: 0.030811101}
 --- !u!1001 &294821768
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -666,6 +645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bdf18eba30a7fd42933daa131d05f0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resourceInRange: 
 --- !u!1001 &402045053
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2428,9 +2408,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7447549833156671741, guid: 7296d957f1057334a956e41e05a46f27, type: 3}
       insertIndex: -1
       addedObject: {fileID: 206201058}
-    - targetCorrespondingSourceObject: {fileID: 7447549833156671741, guid: 7296d957f1057334a956e41e05a46f27, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 206201063}
   m_SourcePrefab: {fileID: 100100000, guid: 7296d957f1057334a956e41e05a46f27, type: 3}
 --- !u!1 &1678650637
 GameObject:
@@ -2478,7 +2455,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
   isPlacingItem: 0
-  itemToPlace: {fileID: 6238572378601711981, guid: 75040bad11b2fb146b490cbeae21fd72, type: 3}
+  itemToPlace: {fileID: 206201052}
+  instantiatedItem: {fileID: 0}
+  debugMode: 0
 --- !u!1 &1822544021
 GameObject:
   m_ObjectHideFlags: 0
@@ -2791,6 +2770,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2076357118}
+  - component: {fileID: 2076357119}
   m_Layer: 0
   m_Name: Environment
   m_TagString: Untagged
@@ -2828,6 +2808,23 @@ Transform:
   - {fileID: 1585179301}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2076357119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076357117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5a7023e5a082804e8b57615c28b3b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progress: 0
+  updateInterval: 2
+  raycastDistance: 10
+  gridSpacing: 5
+  terrain: {fileID: 1507183531}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2841,3 +2838,4 @@ SceneRoots:
   - {fileID: 802012024}
   - {fileID: 1205047579}
   - {fileID: 1678650638}
+  - {fileID: 1193908082}
