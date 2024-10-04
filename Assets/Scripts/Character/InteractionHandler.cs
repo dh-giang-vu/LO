@@ -7,6 +7,7 @@ public class InteractionHandler : MonoBehaviour
 
     private List<CollectResource> inRangeResources;
     private List<PilotoLightSourceScript> inRangePilotoLightSources;
+     private List<PowerGenerator> inRangePowerGenerators;
 
     public String resourceInRange;
 
@@ -14,6 +15,7 @@ public class InteractionHandler : MonoBehaviour
     {
         inRangeResources = new List<CollectResource>();
         inRangePilotoLightSources = new List<PilotoLightSourceScript>();
+        inRangePowerGenerators = new List<PowerGenerator>();
     }
 
     void Update()
@@ -45,6 +47,15 @@ public class InteractionHandler : MonoBehaviour
         }
     }
 
+//power generator
+    public void RefuelPowerGenerator()
+    {
+        for (int i = 0; i < inRangePowerGenerators.Count; i++)
+        {
+            StartCoroutine(inRangePowerGenerators[i].ManualRefuel());
+        }
+    }
+
     void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent<CollectResource>(out var resource))
@@ -55,6 +66,11 @@ public class InteractionHandler : MonoBehaviour
         if (other.TryGetComponent<PilotoLightSourceScript>(out var pilotoLight))
         {
             inRangePilotoLightSources.Add(pilotoLight);
+        }
+//power generator
+        if (other.TryGetComponent<PowerGenerator>(out var powerGenerator))
+        {
+            inRangePowerGenerators.Add(powerGenerator);
         }
     }
 
@@ -67,6 +83,11 @@ public class InteractionHandler : MonoBehaviour
         if (other.TryGetComponent<PilotoLightSourceScript>(out var pilotoLight))
         {
             inRangePilotoLightSources.Remove(pilotoLight);
+        }
+        //power generator
+        if (other.TryGetComponent<PowerGenerator>(out var powerGenerator))
+        {
+            inRangePowerGenerators.Remove(powerGenerator);
         }
     }
 
