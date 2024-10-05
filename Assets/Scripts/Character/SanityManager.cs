@@ -35,7 +35,7 @@ public class SanityManager : MonoBehaviour
     /*
      * Return a list of active SanityProvider in range with the player.
     */
-    private List<ISanityProvider> GetActiveSanityProviders()
+    public List<ISanityProvider> GetActiveSanityProviders()
     {
         List<ISanityProvider> activeSanityProviders = new List<ISanityProvider>();
         foreach (ISanityProvider sanityProvider in inRangeSanityProviders)

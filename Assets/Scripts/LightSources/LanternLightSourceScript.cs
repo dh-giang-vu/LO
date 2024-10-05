@@ -53,4 +53,14 @@ public class LanternLightSource : LightSource
     {
         return score;
     }
+
+    public override bool isActive()
+    {
+        return alive;
+    }
+
+    public override float getSanityEffect()
+    {
+        return 0.0f;
+    }
 }
