@@ -1142,13 +1142,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbfc42ffe18c5944cb6a42586fd9b7d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectToMove: {fileID: 0}
+  objectToDisable: {fileID: 0}
   requiredWood: 4
   requiredCoal: 2
   requiredStone: 4
   requiredMetal: 0
   requiredFiber: 0
   itemToCraft: {fileID: 11400000, guid: a5e1370a5b0fc5246b76873e86da9702, type: 2}
-  messageToPrint: Camp fire crafted!
 --- !u!1 &1416210503286160825
 GameObject:
   m_ObjectHideFlags: 0
@@ -1592,13 +1593,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbfc42ffe18c5944cb6a42586fd9b7d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectToMove: {fileID: 0}
+  objectToDisable: {fileID: 0}
   requiredWood: 1
   requiredCoal: 0
   requiredStone: 0
   requiredMetal: 0
   requiredFiber: 1
   itemToCraft: {fileID: 0}
-  messageToPrint: Candle crafted!
 --- !u!1 &1894500548617245020
 GameObject:
   m_ObjectHideFlags: 0
@@ -2017,13 +2019,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbfc42ffe18c5944cb6a42586fd9b7d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectToMove: {fileID: 0}
+  objectToDisable: {fileID: 0}
   requiredWood: 0
   requiredCoal: 1
   requiredStone: 0
   requiredMetal: 2
   requiredFiber: 0
   itemToCraft: {fileID: 0}
-  messageToPrint: Metal lantern crafted!
 --- !u!1 &2086221693003217193
 GameObject:
   m_ObjectHideFlags: 0
@@ -4087,13 +4090,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbfc42ffe18c5944cb6a42586fd9b7d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectToMove: {fileID: 0}
+  objectToDisable: {fileID: 0}
   requiredWood: 0
   requiredCoal: 10
   requiredStone: 0
   requiredMetal: 10
   requiredFiber: 0
   itemToCraft: {fileID: 0}
-  messageToPrint: Street lamp crafted!
 --- !u!1 &3557912825368902629
 GameObject:
   m_ObjectHideFlags: 0
@@ -5561,13 +5565,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbfc42ffe18c5944cb6a42586fd9b7d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectToMove: {fileID: 0}
+  objectToDisable: {fileID: 0}
   requiredWood: 0
   requiredCoal: 1
   requiredStone: 0
   requiredMetal: 2
   requiredFiber: 0
   itemToCraft: {fileID: 0}
-  messageToPrint: Metal lantern crafted!
 --- !u!1 &5049916340441617548
 GameObject:
   m_ObjectHideFlags: 0
@@ -7034,13 +7039,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbfc42ffe18c5944cb6a42586fd9b7d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectToMove: {fileID: 0}
+  objectToDisable: {fileID: 0}
   requiredWood: 3
   requiredCoal: 0
   requiredStone: 0
   requiredMetal: 1
   requiredFiber: 0
   itemToCraft: {fileID: 0}
-  messageToPrint: Candelabra crafted!
 --- !u!1 &6608015216039853414
 GameObject:
   m_ObjectHideFlags: 0
@@ -7597,13 +7603,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbfc42ffe18c5944cb6a42586fd9b7d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectToMove: {fileID: 0}
+  objectToDisable: {fileID: 0}
   requiredWood: 5
   requiredCoal: 3
   requiredStone: 0
   requiredMetal: 5
   requiredFiber: 0
   itemToCraft: {fileID: 0}
-  messageToPrint: Burning barrel crafted!
 --- !u!1 &7237049141304130347
 GameObject:
   m_ObjectHideFlags: 0
@@ -7728,7 +7735,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6033952962381244602}
         m_TargetAssemblyTypeName: MenuCraft, Assembly-CSharp
-        m_MethodName: DoCraftItem
+        m_MethodName: CraftAndPlaceItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7750,13 +7757,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbfc42ffe18c5944cb6a42586fd9b7d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectToMove: {fileID: 7691141295810130644}
+  objectToDisable: {fileID: 4526636049189581201}
   requiredWood: 1
-  requiredCoal: 1
+  requiredCoal: 0
   requiredStone: 0
   requiredMetal: 0
   requiredFiber: 0
   itemToCraft: {fileID: 11400000, guid: 94477c2f9d3e05e43853b789e80edf9a, type: 2}
-  messageToPrint: Torch crafted!
 --- !u!1 &7279923034688906365
 GameObject:
   m_ObjectHideFlags: 0
