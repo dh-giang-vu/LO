@@ -58,6 +58,8 @@ public class KeyboardInput : MonoBehaviour
             
             // temporary
             interactionHandler.RefuelLightSources();
+            //temp
+            interactionHandler.RefuelPowerGenerator();
         }
     }
 
