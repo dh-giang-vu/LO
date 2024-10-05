@@ -1143,7 +1143,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToMove: {fileID: 0}
-  objectToDisable: {fileID: 0}
   requiredWood: 4
   requiredCoal: 2
   requiredStone: 4
@@ -1594,7 +1593,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToMove: {fileID: 0}
-  objectToDisable: {fileID: 0}
   requiredWood: 1
   requiredCoal: 0
   requiredStone: 0
@@ -2020,7 +2018,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToMove: {fileID: 0}
-  objectToDisable: {fileID: 0}
   requiredWood: 0
   requiredCoal: 1
   requiredStone: 0
@@ -4091,7 +4088,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToMove: {fileID: 0}
-  objectToDisable: {fileID: 0}
   requiredWood: 0
   requiredCoal: 10
   requiredStone: 0
@@ -5566,7 +5562,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToMove: {fileID: 0}
-  objectToDisable: {fileID: 0}
   requiredWood: 0
   requiredCoal: 1
   requiredStone: 0
@@ -7040,7 +7035,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToMove: {fileID: 0}
-  objectToDisable: {fileID: 0}
   requiredWood: 3
   requiredCoal: 0
   requiredStone: 0
@@ -7604,7 +7598,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToMove: {fileID: 0}
-  objectToDisable: {fileID: 0}
   requiredWood: 5
   requiredCoal: 3
   requiredStone: 0
@@ -7758,9 +7751,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToMove: {fileID: 7691141295810130644}
-  objectToDisable: {fileID: 4526636049189581201}
   requiredWood: 1
-  requiredCoal: 0
+  requiredCoal: 1
   requiredStone: 0
   requiredMetal: 0
   requiredFiber: 0
@@ -8704,6 +8696,7 @@ GameObject:
   - component: {fileID: 5697806740142428380}
   - component: {fileID: 759684397344090443}
   - component: {fileID: 8014551498365212628}
+  - component: {fileID: 2545504599802197064}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -8761,6 +8754,19 @@ MonoBehaviour:
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
+--- !u!114 &2545504599802197064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7722269118334680129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c0a49c62b7791140934fef8a555fba5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToMove: {fileID: 7691141295810130644}
 --- !u!1 &7949398490373676545
 GameObject:
   m_ObjectHideFlags: 0
