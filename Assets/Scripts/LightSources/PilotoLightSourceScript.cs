@@ -85,8 +85,4 @@ public class PilotoLightSourceScript : LightSource
     {
         return 0.0f;
     }
-    public override float getScore()
-    {
-        return score;
-    }
 }

@@ -49,10 +49,6 @@ public class LanternLightSource : LightSource
         light.intensity = 0;
         alive = false;
     }
-    public override float getScore()
-    {
-        return score;
-    }
 
     public override bool isActive()
     {

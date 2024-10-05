@@ -25,7 +25,7 @@ public class EndGameScript : MonoBehaviour
         float score = 0f;
         foreach (LightSource element in allLights)
         {
-            score += element.getScore();
+            // score += element.getScore();
         }
         if (score > endGameMark) {
             return true;

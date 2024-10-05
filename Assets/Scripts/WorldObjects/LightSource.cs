@@ -23,7 +23,6 @@ public abstract class LightSource : MonoBehaviour, ISanityProvider
     public abstract IEnumerator ManualRefuel();
     public abstract void Refuel();
     public abstract void Die();
-    public abstract float getScore();
 
     public abstract bool isActive();
     public abstract float getSanityEffect();

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ElectricLight : MonoBehaviour, ISanityProvider
+public class ElectricLight : LightSource
 {
     private Light ElecLight;
     private bool active;
@@ -24,7 +24,7 @@ public class ElectricLight : MonoBehaviour, ISanityProvider
         
     }
      // Method to turn on the light
-    public void TurnOn()
+    public override void Refuel()
     {
         if (ElecLight != null)
         {
@@ -34,7 +34,7 @@ public class ElectricLight : MonoBehaviour, ISanityProvider
     }
 
     // Method to turn off the light
-    public void TurnOff()
+    public override void Die()
     {
         if (ElecLight != null)
         {
@@ -43,13 +43,18 @@ public class ElectricLight : MonoBehaviour, ISanityProvider
         }
     }
 
-    public bool isActive()
+    public override bool isActive()
     {
         return active;
     }
 
-    public float getSanityEffect()
+    public override float getSanityEffect()
     {
         return 0.0f;
+    }
+
+    public override IEnumerator ManualRefuel()
+    {
+        throw new System.NotImplementedException();
     }
 }

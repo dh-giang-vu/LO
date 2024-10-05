@@ -36,7 +36,7 @@ public class PowerGenerator : LightSource
             activeLights.Add(lightBulb); // Add to the list of active lights
             if(alive){
                 // Turn on the light if it's a LightBulb
-            lightBulb.TurnOn();
+            lightBulb.Refuel();
             }
         }
     }
@@ -47,7 +47,7 @@ public class PowerGenerator : LightSource
         if (lightBulb != null)
         {
             // Turn off the light if it's a LightBulb
-            lightBulb.TurnOff();
+            lightBulb.Die();
             activeLights.Remove(lightBulb); // Remove from the list of active lights
         }
     }
@@ -66,7 +66,7 @@ public class PowerGenerator : LightSource
         if(activeLights.Any()){
             foreach (ElectricLight light in activeLights)
         {
-            light.TurnOn();
+            light.Refuel();
         }
         }
     }
@@ -77,12 +77,17 @@ public class PowerGenerator : LightSource
         alive = false;
         foreach (ElectricLight light in activeLights)
         {
-            light.TurnOff();
+            light.Die();
         }
     }
 
-    public override float getScore()
+    public override bool isActive()
     {
-        throw new System.NotImplementedException();
+        return false;
+    }
+
+    public override float getSanityEffect()
+    {
+        return -1f;
     }
 }
