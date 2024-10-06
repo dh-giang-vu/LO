@@ -8,6 +8,7 @@ public class InteractionHandler : MonoBehaviour
 {
     private List<CollectResource> inRangeResources;
     private List<PilotoLightSourceScript> inRangePilotoLightSources;
+     private List<PowerGenerator> inRangePowerGenerators;
 
     // Reference to the parent GameObject containing both the image and text
     public GameObject resourceUIParent;
@@ -23,11 +24,15 @@ public class InteractionHandler : MonoBehaviour
         inRangeResources = new List<CollectResource>();
         inRangePilotoLightSources = new List<PilotoLightSourceScript>();
 
+
         // Initially hide the entire parent object that contains both the text and the image
         //resourceUIParent.SetActive(false);
 
         // Start with scale at zero (hidden)
         resourceUIParent.transform.localScale = Vector3.zero;
+
+        inRangePowerGenerators = new List<PowerGenerator>();
+
     }
 
     void Update()
@@ -76,6 +81,15 @@ public class InteractionHandler : MonoBehaviour
         }
     }
 
+//power generator
+    public void RefuelPowerGenerator()
+    {
+        for (int i = 0; i < inRangePowerGenerators.Count; i++)
+        {
+            StartCoroutine(inRangePowerGenerators[i].ManualRefuel());
+        }
+    }
+
     void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent<CollectResource>(out var resource))
@@ -86,6 +100,11 @@ public class InteractionHandler : MonoBehaviour
         if (other.TryGetComponent<PilotoLightSourceScript>(out var pilotoLight))
         {
             inRangePilotoLightSources.Add(pilotoLight);
+        }
+//power generator
+        if (other.TryGetComponent<PowerGenerator>(out var powerGenerator))
+        {
+            inRangePowerGenerators.Add(powerGenerator);
         }
     }
 
@@ -98,6 +117,11 @@ public class InteractionHandler : MonoBehaviour
         if (other.TryGetComponent<PilotoLightSourceScript>(out var pilotoLight))
         {
             inRangePilotoLightSources.Remove(pilotoLight);
+        }
+        //power generator
+        if (other.TryGetComponent<PowerGenerator>(out var powerGenerator))
+        {
+            inRangePowerGenerators.Remove(powerGenerator);
         }
     }
 

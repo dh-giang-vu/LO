@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 
-public class PilotoLightSourceScript : LightSource, ISanityProvider
+public class PilotoLightSourceScript : LightSource
 {
 
     private Light light = null;
@@ -76,17 +76,13 @@ public class PilotoLightSourceScript : LightSource, ISanityProvider
         smokes.Play();
     }
 
-    public bool isActive()
+    public override bool isActive()
     {
         return alive;
     }
 
-    public float getSanityEffect()
+    public override float getSanityEffect()
     {
         return 0.0f;
-    }
-    public override float getScore()
-    {
-        return score;
     }
 }

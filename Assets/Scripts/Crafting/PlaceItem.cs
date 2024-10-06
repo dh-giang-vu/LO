@@ -10,6 +10,8 @@ public class PlaceItem : MonoBehaviour
     [SerializeField] private GameObject itemToPlace = null;
     [SerializeField] private GameObject instantiatedItem = null;
 
+    [SerializeField] private bool debugMode = false;
+
     void Start()
     {
         cam = Camera.main;
@@ -55,8 +57,11 @@ public class PlaceItem : MonoBehaviour
 
     public void StopPlacingItem()
     {
-        isPlacingItem = false;
-        itemToPlace = null;
+        if (!debugMode)
+        {
+            isPlacingItem = false;
+            itemToPlace = null;
+        }
         instantiatedItem = null;
     }
 }
