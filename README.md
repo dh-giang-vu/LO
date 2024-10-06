@@ -81,6 +81,55 @@ placeholder for it [here](GDD.md).
 ### Timeline: What is your timeline for completing the evaluation? When will you make changes to the game?
 <img src="timeline.png" alt="timeline photo" style="height: 100px; width:100px;"/>
 
+# Cooperative Evaluation Protocol for Game Testing
+
+## Overview
+
+This protocol outlines a process for conducting a cooperative evaluation of test players engaging with a game, focusing on collaborative assessment and feedback.
+
+## Objectives
+
+- Observe player interactions.
+- Identify issues and gather feedback.
+- Discuss potential solutions together.
+
+## Preparation
+
+1. **Select Participants:** 
+   - Recruit 3-5 players representing your target audience.
+
+2. **Set Up Environment:** 
+   - Ensure a comfortable, distraction-free space with all necessary equipment.
+
+3. **Materials:** 
+   - Prepare observation checklists and recording tools (with consent).
+
+## Protocol Steps
+
+1. **Introduction (5 min):**
+   - Introduce participants and explain the purpose of the evaluation.
+
+2. **Gameplay Session (15 min):**
+   - Allow participants to play while analysts observe and take notes.
+
+3. **Cooperative Discussion (10 min):**
+   - Gather for a discussion, encouraging participants to share their experiences.
+   - Analysts facilitate conversation about identified issues and potential solutions.
+
+4. **Wrap-Up (5 min):**
+   - Summarise findings and thank participants for their input.
+
+## Post-Session
+
+1. **Analyse Notes:**
+   - Review notes and recordings, compiling a report on key findings.
+
+2. **Prioritise Issues:**
+   - Rank issues based on how often they occur and their impact, discussing with the development team.
+
+3. **Follow-Up:**
+   - Share findings with everyone involved and plan future evaluations if necessary.
+
 
 ## Evaluation Report
 
