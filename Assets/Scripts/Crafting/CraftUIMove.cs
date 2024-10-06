@@ -24,7 +24,7 @@ public class CraftUIMove : MonoBehaviour
         originalPosition = objectToMove.transform.position;
 
         // Move the object 500 units down at the start
-        objectToMove.transform.position = originalPosition + new Vector3(0, -500, 0);
+        objectToMove.transform.position = originalPosition + new Vector3(0, -Screen.height, 0);
         objectIsDown = true; // Set the initial state to down
 
         // Initialize the background image to be fully transparent
@@ -70,7 +70,7 @@ public class CraftUIMove : MonoBehaviour
     private void ToggleObjectPosition()
     {
         // Check the current position of objectToMove
-        if (Vector3.Distance(objectToMove.transform.position, originalPosition + new Vector3(0, -500, 0)) < 0.1f)
+        if (Vector3.Distance(objectToMove.transform.position, originalPosition + new Vector3(0, -Screen.height, 0)) < 0.1f)
         {
             // If it's close to the down position, move it back up to its original position
             targetPosition = originalPosition;
@@ -81,7 +81,7 @@ public class CraftUIMove : MonoBehaviour
         else
         {
             // Move object down 500 units
-            targetPosition = originalPosition + new Vector3(0, -500, 0);
+            targetPosition = originalPosition + new Vector3(0, -Screen.height, 0);
             objectIsDown = true; // Update the state
             isFadingOut = true; // Start fading out
             fadeProgress = 0f; // Reset fade progress
