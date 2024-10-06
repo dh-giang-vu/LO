@@ -35,6 +35,7 @@ public class PlaceItem : MonoBehaviour
             if (instantiatedItem == null)
             {
                 instantiatedItem = Instantiate(itemToPlace, placePosition, Quaternion.identity);
+                instantiatedItem.layer = LayerMask.NameToLayer("NoCollision");   
             }
             else
             {
@@ -62,6 +63,7 @@ public class PlaceItem : MonoBehaviour
             isPlacingItem = false;
             itemToPlace = null;
         }
+        instantiatedItem.layer = LayerMask.NameToLayer("Default");
         instantiatedItem = null;
     }
 }

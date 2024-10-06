@@ -7,8 +7,7 @@ using TMPro;
 public class InteractionHandler : MonoBehaviour
 {
     private List<CollectResource> inRangeResources;
-    private List<PilotoLightSourceScript> inRangePilotoLightSources;
-     private List<PowerGenerator> inRangePowerGenerators;
+    private List<LightSource> inRangeLightSources;
 
     // Reference to the parent GameObject containing both the image and text
     public GameObject resourceUIParent;
@@ -22,16 +21,10 @@ public class InteractionHandler : MonoBehaviour
     void Start()
     {
         inRangeResources = new List<CollectResource>();
-        inRangePilotoLightSources = new List<PilotoLightSourceScript>();
-
-
-        // Initially hide the entire parent object that contains both the text and the image
-        //resourceUIParent.SetActive(false);
+        inRangeLightSources = new List<LightSource>();
 
         // Start with scale at zero (hidden)
         resourceUIParent.transform.localScale = Vector3.zero;
-
-        inRangePowerGenerators = new List<PowerGenerator>();
 
     }
 
@@ -46,9 +39,6 @@ public class InteractionHandler : MonoBehaviour
             // Format and display the text
             resourceText.text = $"E - Collect {resourceTag}";
 
-            // Show the parent UI GameObject
-            //resourceUIParent.SetActive(true);
-
             // Set the target scale to full size (pop in)
             targetScale = Vector3.one;
         }
@@ -56,7 +46,6 @@ public class InteractionHandler : MonoBehaviour
         {
             // Hide the parent UI GameObject if no resources are in range
             targetScale = Vector3.zero;
-            //resourceUIParent.SetActive(false);
         }
         resourceUIParent.transform.localScale = Vector3.Lerp(resourceUIParent.transform.localScale, targetScale, Time.deltaTime * animationSpeed);
     }
@@ -71,22 +60,11 @@ public class InteractionHandler : MonoBehaviour
         }
     }
 
-   
-
     public void RefuelLightSources()
     {
-        for (int i = 0; i < inRangePilotoLightSources.Count; i++)
+        for (int i = 0; i < inRangeLightSources.Count; i++)
         {
-            StartCoroutine(inRangePilotoLightSources[i].ManualRefuel());
-        }
-    }
-
-//power generator
-    public void RefuelPowerGenerator()
-    {
-        for (int i = 0; i < inRangePowerGenerators.Count; i++)
-        {
-            StartCoroutine(inRangePowerGenerators[i].ManualRefuel());
+            StartCoroutine(inRangeLightSources[i].ManualRefuel());
         }
     }
 
@@ -96,15 +74,9 @@ public class InteractionHandler : MonoBehaviour
         {
             inRangeResources.Add(resource);
         }
-
-        if (other.TryGetComponent<PilotoLightSourceScript>(out var pilotoLight))
+        if (other.TryGetComponent<LightSource>(out var lightSource))
         {
-            inRangePilotoLightSources.Add(pilotoLight);
-        }
-//power generator
-        if (other.TryGetComponent<PowerGenerator>(out var powerGenerator))
-        {
-            inRangePowerGenerators.Add(powerGenerator);
+            inRangeLightSources.Add(lightSource);
         }
     }
 
@@ -114,14 +86,9 @@ public class InteractionHandler : MonoBehaviour
         {
             inRangeResources.Remove(resource);
         }
-        if (other.TryGetComponent<PilotoLightSourceScript>(out var pilotoLight))
+        if (other.TryGetComponent<LightSource>(out var lightSource))
         {
-            inRangePilotoLightSources.Remove(pilotoLight);
-        }
-        //power generator
-        if (other.TryGetComponent<PowerGenerator>(out var powerGenerator))
-        {
-            inRangePowerGenerators.Remove(powerGenerator);
+            inRangeLightSources.Remove(lightSource);
         }
     }
 

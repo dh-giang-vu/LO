@@ -60,7 +60,7 @@ public class MenuCraft : MonoBehaviour
 
             UseRequiredMaterials(); // Consume the materials
             StartPlacingItem();      // Start placing the item
-            
+
             // Set target position and start moving the object down
             targetPosition = objectToMove.transform.position + new Vector3(0, -500, 0);
             isMovingObject = true; // Start the movement
@@ -132,6 +132,7 @@ public class MenuCraft : MonoBehaviour
                 if (instantiatedItem == null)
                 {
                     instantiatedItem = Instantiate(itemToCraft.model, placePosition, Quaternion.identity);
+                    instantiatedItem.layer = LayerMask.NameToLayer("NoCollision");                    
                 }
                 else
                 {
@@ -166,6 +167,7 @@ public class MenuCraft : MonoBehaviour
     private void StopPlacingItem()
     {
         isPlacingItem = false;
+        instantiatedItem.layer = LayerMask.NameToLayer("Default");
         instantiatedItem = null;  // Clear the reference so no further updates happen
     }
 }

@@ -55,11 +55,7 @@ public class KeyboardInput : MonoBehaviour
             isGathering = true;
             characterAnimation.PlayGatheringAnimation();
             interactionHandler.GatherResources();
-            
-            // temporary
             interactionHandler.RefuelLightSources();
-            //temp
-            interactionHandler.RefuelPowerGenerator();
         }
     }
 

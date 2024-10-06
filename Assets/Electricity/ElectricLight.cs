@@ -55,6 +55,7 @@ public class ElectricLight : LightSource
 
     public override IEnumerator ManualRefuel()
     {
-        throw new System.NotImplementedException();
+        // throw new System.NotImplementedException();
+        return null;
     }
 }

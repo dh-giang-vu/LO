@@ -19,10 +19,12 @@ public class PowerGenerator : LightSource
     void Update()
     {
         Debug.Log("Power generator: " + lifespan);
-        if (lifespan > 0) {
+        if (lifespan > 0)
+        {
             lifespan = maxLifespan - (Time.time - refuelTime);
         }
-        else if (lifespan <= 0 && alive) {
+        else if (lifespan <= 0 && alive)
+        {
             Die();
         }
     }
@@ -30,13 +32,14 @@ public class PowerGenerator : LightSource
     {
         // Check if the object entering the trigger has a LightBulb component
         ElectricLight lightBulb = other.GetComponent<ElectricLight>();
-        if (lightBulb != null )
+        if (lightBulb != null)
         {
-            
+
             activeLights.Add(lightBulb); // Add to the list of active lights
-            if(alive){
+            if (alive)
+            {
                 // Turn on the light if it's a LightBulb
-            lightBulb.Refuel();
+                lightBulb.Refuel();
             }
         }
     }
@@ -60,14 +63,15 @@ public class PowerGenerator : LightSource
 
     public override void Refuel()
     {
-         lifespan = maxLifespan;
+        lifespan = maxLifespan;
         refuelTime = Time.time;
         alive = true;
-        if(activeLights.Any()){
-            foreach (ElectricLight light in activeLights)
+        if (activeLights.Any())
         {
-            light.Refuel();
-        }
+            foreach (ElectricLight light in activeLights)
+            {
+                light.Refuel();
+            }
         }
     }
 

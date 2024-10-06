@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2956151349047896867}
   m_Layer: 0
   m_Name: bush_berries_blue
-  m_TagString: Tree
+  m_TagString: Bush
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
