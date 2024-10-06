@@ -12102,9 +12102,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6033952962381244602, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
-      propertyPath: itemPlaceDistance
-      value: 50
+    - target: {fileID: 6330174998439596683, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330174998439596683, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330174998439596683, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 6330174998439596683, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 450
       objectReference: {fileID: 0}
     - target: {fileID: 7406226833269452906, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: m_AnchorMax.y
@@ -12574,7 +12586,7 @@ SceneRoots:
   - {fileID: 767308476}
   - {fileID: 1497480601}
   - {fileID: 802012024}
-  - {fileID: 1205047579}
   - {fileID: 1678650638}
   - {fileID: 1193908082}
   - {fileID: 1315217712}
+  - {fileID: 1205047579}
