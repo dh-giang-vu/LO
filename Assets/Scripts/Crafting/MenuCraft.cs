@@ -11,6 +11,7 @@ public class MenuCraft : MonoBehaviour
     [SerializeField] private int requiredFiber = 0;
 
     [SerializeField] private LightClass itemToCraft; // This is now of type LightClass (ScriptableObject)
+    private float itemPlaceDistance = 30.0f;
 
     private Inventory inventory;  // Reference to the Inventory singleton
     private bool isPlacingItem = false;
@@ -124,7 +125,7 @@ public class MenuCraft : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition); // Use the main camera
             Debug.DrawRay(ray.origin, ray.direction * 10, Color.yellow);
 
-            if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, LayerMask.GetMask("TerrainLayer")))
+            if (Physics.Raycast(ray, out RaycastHit hit, itemPlaceDistance, LayerMask.GetMask("TerrainLayer")))
             {
                 Vector3 placePosition = hit.point;
 
