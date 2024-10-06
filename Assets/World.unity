@@ -265,11 +265,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f7e21a391751d2848818827623fa1f7d, type: 2}
   - {fileID: 11400000, guid: f7e21a391751d2848818827623fa1f7d, type: 2}
   - {fileID: 11400000, guid: f7e21a391751d2848818827623fa1f7d, type: 2}
---- !u!1 &163704353 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4304013647519731189, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
-  m_PrefabInstance: {fileID: 1205047579}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &82106434
 GameObject:
   m_ObjectHideFlags: 0
@@ -5322,6 +5317,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 30, y: 0, z: 0}
+--- !u!1 &163704353 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4304013647519731189, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
+  m_PrefabInstance: {fileID: 1205047579}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &206201052 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7447549833156671741, guid: 7296d957f1057334a956e41e05a46f27, type: 3}
@@ -5702,12 +5702,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bdf18eba30a7fd42933daa131d05f0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-
   resourceUIParent: {fileID: 163704353}
   resourceText: {fileID: 719436615}
-
-  resourceInRange: 
-
 --- !u!1001 &402045053
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6220,7 +6216,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1000011449246696, guid: e1f35f4b9ee7e9747b7f35059ac4423f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 871163716}
+    - targetCorrespondingSourceObject: {fileID: 1000011449246696, guid: e1f35f4b9ee7e9747b7f35059ac4423f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 871163717}
   m_SourcePrefab: {fileID: 100100000, guid: e1f35f4b9ee7e9747b7f35059ac4423f, type: 3}
 --- !u!4 &853391314 stripped
 Transform:
@@ -6329,7 +6331,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0, y: 30, z: 200}
   m_Center: {x: 0, y: 0, z: 0}
-
 --- !u!1 &966578729 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6336855543573918107, guid: 8fe2c0543598f4a4998fe1212fb05710, type: 3}
@@ -12375,8 +12376,6 @@ MonoBehaviour:
   cam: {fileID: 0}
   isPlacingItem: 0
   itemToPlace: {fileID: 6238572378601711981, guid: 75040bad11b2fb146b490cbeae21fd72, type: 3}
-  instantiatedItem: {fileID: 0}
-  itemToPlace: {fileID: 206201052}
   instantiatedItem: {fileID: 0}
   debugMode: 0
 --- !u!1 &1822544021
