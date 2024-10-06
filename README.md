@@ -49,39 +49,37 @@ placeholder for it [here](GDD.md).
 + How does the player feel whilst playing the game?
 + What do they think about the sanity system (does it stress them out?)
 + Does the player feel incentivized to craft light sources?
-Etc.
 
 
+### Participants: How will you recruit participants? What qualifying criteria will you use to ensure that they are representative of your target audience?
+
++ Our target audience is teenagers and young adults aged 15 - 28
++ We will recruit participants that belong to the same demographic as our target audience
++ Recruitment method 1: ask university friends and family to volunteer
++ Recruitment method 2: post on social media / online platforms such as Reddit
 
 
-Participants: How will you recruit participants? What qualifying criteria will you use to ensure that they are representative of your target audience?
+### Data collection: What sort of data is being collected? How will you collect the data? What tools will you use?
 
-Our target audience is teenagers and young adults aged 15 - 28. (update GDD)
-We will recruit participants that belong to the same demographic as our target audience. 
-Recruitment method 1: ask university friends and family to volunteer
-Recruitment method 2: post on social media / online platforms such as Reddit
++ Quantitative data
+  + Gameplay rating: Game mechanic / Graphic / Theme
+  + Satisfaction
++ Qualitative data
+  + Feedback: What they like/dislike about / What could be improved
 
-
-Data collection: What sort of data is being collected? How will you collect the data? What tools will you use?
-
-Data collection: 
-Quantitative data
-Gameplay rating: Game mechanic / Graphic / Theme
-Satisfaction
-Qualitative data
-Feedback: What they like/dislike about / What could be improved
-
-Tools: Questionnaire (Survey) for Quantitative data and Qualitative data
++ Tools: Questionnaire (Survey) for Quantitative data and Qualitative data
 
 
-Data analysis: How will you analyse the data? What metrics will you use to evaluate your game, and provide a basis for making changes?
+### Data analysis: How will you analyse the data? What metrics will you use to evaluate your game, and provide a basis for making changes?
 
-
-For Observational Technique:
-Affinity Diagram: Analyse main findings by grouping the similar insights
-For Questionnaire:
-Analyse summary statistics of quantitative data (i.e. mean, median, stdev)
-Produce visual graphs of the scores for each aspect of the game to identify which part needs improvement
+#### For Observational Technique:
++ Affinity Diagram: Analyse main findings by grouping the similar insights
++ For Questionnaire:
+  + Analyse summary statistics of quantitative data (i.e. mean, median, stdev)
+  + Produce visual graphs of the scores for each aspect of the game to identify which part needs improvement
+ 
+### Timeline: What is your timeline for completing the evaluation? When will you make changes to the game?
+<img src="timeline.png" alt="timeline photo" style="height: 100px; width:100px;"/>
 
 
 ## Evaluation Report
