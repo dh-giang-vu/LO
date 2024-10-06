@@ -3,8 +3,6 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    public int sanity = 100;
-
     public static Inventory Instance { get; private set; }
 
     public List<CollectableClass> items = new List<CollectableClass>();
