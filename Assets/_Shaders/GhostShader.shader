@@ -12,7 +12,7 @@ Shader "Custom/GhostSineWaveShader"
     }
     SubShader
     {
-        Tags { "RenderType"="Transparent" }
+        Tags { "Queue"="Transparent" "RenderType"="Transparent" }
         LOD 200
 
         Blend SrcAlpha OneMinusSrcAlpha

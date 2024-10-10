@@ -29,11 +29,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AuraSize: 0.5
-    - _Darkness: 0.795
-    - _DistortionAmount: 0.188
-    - _TimeScale: 2.62
-    - _Transparency: 0.902
+    - _AuraSize: 0.746
+    - _Darkness: 0.896
+    - _DistortionAmount: 0.248
+    - _TimeScale: 1.86
+    - _Transparency: 0.724
     m_Colors:
     - _AuraColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
