@@ -18,6 +18,10 @@ public class MenuCraft : MonoBehaviour
     private GameObject instantiatedItem = null;
     private LayerMask instantiatedItemLayerMask;
 
+    // Material handling variables
+    [SerializeField] private Material craftingMaterial; // The material to apply while crafting
+    private Material originalMaterial; // Store the original material
+
     // Variables to handle the movement of the objectToDisable
     private bool isMovingObject = false; // Track if the object is moving
     private Vector3 targetPosition; // Target position for the movement
@@ -43,6 +47,7 @@ public class MenuCraft : MonoBehaviour
         {
             Debug.LogError("No LightClass item assigned for crafting!");
         }
+
         instantiatedItemLayerMask = LayerMask.NameToLayer("Default");
     }
 
@@ -112,6 +117,14 @@ public class MenuCraft : MonoBehaviour
         if (itemToCraft != null && itemToCraft.model != null)
         {
             isPlacingItem = true;
+
+            // Change the material of the instantiated item
+            if (instantiatedItem == null)
+            {
+                instantiatedItem = Instantiate(itemToCraft.model, Vector3.zero, Quaternion.identity); // Instantiate at a temporary position
+                originalMaterial = instantiatedItem.GetComponent<Renderer>().material; // Store original material
+                instantiatedItem.GetComponent<Renderer>().material = craftingMaterial; // Apply new material
+            }
         }
         else
         {
@@ -136,7 +149,7 @@ public class MenuCraft : MonoBehaviour
                 {
                     instantiatedItem = Instantiate(itemToCraft.model, placePosition, Quaternion.identity);
                     instantiatedItemLayerMask = instantiatedItem.layer;
-                    instantiatedItem.layer = LayerMask.NameToLayer("NoCollision");                    
+                    instantiatedItem.layer = LayerMask.NameToLayer("NoCollision");
                 }
                 else
                 {
@@ -172,6 +185,13 @@ public class MenuCraft : MonoBehaviour
     {
         isPlacingItem = false;
         instantiatedItem.layer = instantiatedItemLayerMask;
+
+        // Revert back to the original material
+        if (instantiatedItem != null)
+        {
+            instantiatedItem.GetComponent<Renderer>().material = originalMaterial;
+        }
+
         instantiatedItem = null;  // Clear the reference so no further updates happen
     }
 }
