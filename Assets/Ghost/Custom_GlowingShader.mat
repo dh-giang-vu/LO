@@ -29,7 +29,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _FlattenAmount: 0.1
+    - _FlattenAmount: 0.47
     - _GlowIntensity: 10
     - _Transparency: 1
     m_Colors:

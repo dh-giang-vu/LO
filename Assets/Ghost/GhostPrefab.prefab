@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7418162835594805636}
   - component: {fileID: 9186686937267669098}
   - component: {fileID: 6075764589118813852}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: right_eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 483003688479198870}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: joint5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 833537259883424784}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3994424833647731647}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: JNTs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,7 +210,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1325008090317372397}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: joint4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +242,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3225540054985431961}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: AxeHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -274,7 +274,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1667315405387541680}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: joint1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -306,7 +306,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 210168958567210018}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -339,7 +339,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7826991320695231690}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Props1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -372,7 +372,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4044005638079908655}
   - component: {fileID: 4581718617918500034}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Little_Ghost2_v1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -427,7 +427,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1727231831510338927}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: joint2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -459,9 +459,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4581718618250850182}
-  - component: {fileID: 4581718618250850181}
+  - component: {fileID: 3521390778280294859}
   - component: {fileID: 4581718618250850180}
-  m_Layer: 0
+  - component: {fileID: 5077589740913272090}
+  m_Layer: 12
   m_Name: GhostPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -478,13 +479,13 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4044005638079908655}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &4581718618250850181
+--- !u!54 &3521390778280294859
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -534,6 +535,19 @@ CapsuleCollider:
   m_Height: 1.1666331
   m_Direction: 1
   m_Center: {x: 0.019093513, y: 0.56585956, z: -0.019093275}
+--- !u!114 &5077589740913272090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4581718618250850183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77c6f277c6795464c8e32111ebfd1fc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToLive: 30
 --- !u!1 &5954301793336381631
 GameObject:
   m_ObjectHideFlags: 0
@@ -545,7 +559,7 @@ GameObject:
   - component: {fileID: 1478394390283641294}
   - component: {fileID: 4560168302402407419}
   - component: {fileID: 8082742710786351506}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Umbrella_Closed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -629,7 +643,7 @@ GameObject:
   - component: {fileID: 5804296788379755105}
   - component: {fileID: 900740470358751802}
   - component: {fileID: 4769831180894173666}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: left_eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -731,7 +745,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 751338944367481236}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: joint3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -764,7 +778,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7336544799522259451}
   - component: {fileID: 828151503421502857}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Little_Ghost_2 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

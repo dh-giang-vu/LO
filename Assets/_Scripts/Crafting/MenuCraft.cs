@@ -16,6 +16,7 @@ public class MenuCraft : MonoBehaviour
     private Inventory inventory;  // Reference to the Inventory singleton
     private bool isPlacingItem = false;
     private GameObject instantiatedItem = null;
+    private LayerMask instantiatedItemLayerMask;
 
     // Variables to handle the movement of the objectToDisable
     private bool isMovingObject = false; // Track if the object is moving
@@ -42,6 +43,7 @@ public class MenuCraft : MonoBehaviour
         {
             Debug.LogError("No LightClass item assigned for crafting!");
         }
+        instantiatedItemLayerMask = LayerMask.NameToLayer("Default");
     }
 
     // Method to handle crafting the item and starting placement
@@ -133,6 +135,7 @@ public class MenuCraft : MonoBehaviour
                 if (instantiatedItem == null)
                 {
                     instantiatedItem = Instantiate(itemToCraft.model, placePosition, Quaternion.identity);
+                    instantiatedItemLayerMask = instantiatedItem.layer;
                     instantiatedItem.layer = LayerMask.NameToLayer("NoCollision");                    
                 }
                 else
@@ -168,7 +171,7 @@ public class MenuCraft : MonoBehaviour
     private void StopPlacingItem()
     {
         isPlacingItem = false;
-        instantiatedItem.layer = LayerMask.NameToLayer("Default");
+        instantiatedItem.layer = instantiatedItemLayerMask;
         instantiatedItem = null;  // Clear the reference so no further updates happen
     }
 }

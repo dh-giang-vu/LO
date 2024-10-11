@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SanityManager : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class SanityManager : MonoBehaviour
     public static SanityManager Instance { get; private set; }
 
     [SerializeField, Range(0, 100)] private float deductionRate = 5.0f; // Deduction rate percentage per second (5 means 5% per second)
+    [SerializeField, Range(0, 1)] private float lowSanityThreshold = 0.5f;
+    [SerializeField] private UnityEvent onLowSanity;
     private float sanityAmount; // Sanity value between 0.0 and 1.0
     private List<ISanityProvider> inRangeSanityProviders;
 
@@ -83,6 +86,11 @@ public class SanityManager : MonoBehaviour
                 sanityAmount = Mathf.Clamp(sanityAmount + sanityEffect, 0.0f, 1.0f);
                 
             }
+        }
+
+        if (sanityAmount < lowSanityThreshold)
+        {
+            this.onLowSanity.Invoke();
         }
 
         Debug.Log("Player's sanity: " + sanityAmount.ToString("F3")); // Format to 3 decimal places for clarity

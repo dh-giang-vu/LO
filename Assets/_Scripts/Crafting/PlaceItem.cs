@@ -11,10 +11,12 @@ public class PlaceItem : MonoBehaviour
     [SerializeField] private GameObject instantiatedItem = null;
 
     [SerializeField] private bool debugMode = false;
+    private LayerMask instantiatedItemLayerMask;
 
     void Start()
     {
         cam = Camera.main;
+        instantiatedItemLayerMask = LayerMask.NameToLayer("Default");
     }
 
     void Update()
@@ -35,6 +37,7 @@ public class PlaceItem : MonoBehaviour
             if (instantiatedItem == null)
             {
                 instantiatedItem = Instantiate(itemToPlace, placePosition, Quaternion.identity);
+                instantiatedItemLayerMask = instantiatedItem.layer;
                 instantiatedItem.layer = LayerMask.NameToLayer("NoCollision");   
             }
             else
@@ -63,7 +66,7 @@ public class PlaceItem : MonoBehaviour
             isPlacingItem = false;
             itemToPlace = null;
         }
-        instantiatedItem.layer = LayerMask.NameToLayer("Default");
+        instantiatedItem.layer = instantiatedItemLayerMask;
         instantiatedItem = null;
     }
 }
