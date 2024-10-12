@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 183551508642844484}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -3.920405, y: 15.002867, z: -4.072238}
+  m_LocalPosition: {x: -0.27, y: 15, z: 0.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -188,6 +188,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1800456163879720397, guid: 25c73e10777eb9b4d9a653b3c61d4f6c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 748278546000033691}
+    - targetCorrespondingSourceObject: {fileID: 1800456163879720397, guid: 25c73e10777eb9b4d9a653b3c61d4f6c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5522242435502567026}
+    - targetCorrespondingSourceObject: {fileID: 1800456163879720397, guid: 25c73e10777eb9b4d9a653b3c61d4f6c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -77826310605019625}
   m_SourcePrefab: {fileID: 100100000, guid: 25c73e10777eb9b4d9a653b3c61d4f6c, type: 3}
 --- !u!4 &1163620320428962414 stripped
 Transform:
@@ -211,8 +217,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a3aec6e311e38b4c8053eff2e0fd037, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intensity: 200
+  maxLifespan: 1000
+  lifespan: 0
+  alive: 0
+  score: 0
+  intensity: 500
+  refuelWaitTime: 1
+--- !u!114 &5522242435502567026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976466883782142164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a3aec6e311e38b4c8053eff2e0fd037, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   maxLifespan: 10
   lifespan: 0
   alive: 0
+  score: 0
+  intensity: 200
   refuelWaitTime: 1
+--- !u!135 &-77826310605019625
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976466883782142164}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 9
+  m_Center: {x: -0.16943905, y: 0.2261325, z: 0.18197063}

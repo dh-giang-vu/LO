@@ -184,6 +184,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2865218911771384475, guid: a00646ffdd0c8c94aab1d8cea35c7847, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4044251886308743661}
+    - targetCorrespondingSourceObject: {fileID: 2865218911771384475, guid: a00646ffdd0c8c94aab1d8cea35c7847, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7409608186464602966}
+    - targetCorrespondingSourceObject: {fileID: 2865218911771384475, guid: a00646ffdd0c8c94aab1d8cea35c7847, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 864811687563920476}
   m_SourcePrefab: {fileID: 100100000, guid: a00646ffdd0c8c94aab1d8cea35c7847, type: 3}
 --- !u!4 &4711600199874302990 stripped
 Transform:
@@ -207,8 +213,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a3aec6e311e38b4c8053eff2e0fd037, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intensity: 200
+  maxLifespan: 1000
+  lifespan: 0
+  alive: 0
+  score: 0
+  intensity: 300
+  refuelWaitTime: 1
+--- !u!114 &7409608186464602966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5343846171584138932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a3aec6e311e38b4c8053eff2e0fd037, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   maxLifespan: 10
   lifespan: 0
   alive: 0
+  score: 0
+  intensity: 200
   refuelWaitTime: 1
+--- !u!135 &864811687563920476
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5343846171584138932}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 8
+  m_Center: {x: -0.0009012893, y: -0.1847496, z: 0.00025564432}
