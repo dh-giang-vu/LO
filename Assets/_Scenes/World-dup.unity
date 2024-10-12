@@ -1114,10 +1114,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8822906c60045c947a05b0cc90adebea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToSpawn: {fileID: 871163712}
+  objectToSpawn: {fileID: 1000011449246696, guid: e1f35f4b9ee7e9747b7f35059ac4423f, type: 3}
   terrain: {fileID: 1507183531}
-  numberOfInitObjects: 5
-  autoSpawnInterval: 2
+  numberOfInitObjects: 70
+  autoSpawnInterval: 180
 --- !u!1 &802012022
 GameObject:
   m_ObjectHideFlags: 0
@@ -1147,7 +1147,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10718d7c6f404d349a6279a83545a857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sanity: 100
   items: []
 --- !u!4 &802012024
 Transform:
@@ -1460,10 +1459,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8822906c60045c947a05b0cc90adebea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToSpawn: {fileID: 966578729}
+  objectToSpawn: {fileID: 6336855543573918107, guid: 8fe2c0543598f4a4998fe1212fb05710, type: 3}
   terrain: {fileID: 1507183531}
-  numberOfInitObjects: 5
-  autoSpawnInterval: 2
+  numberOfInitObjects: 70
+  autoSpawnInterval: 200
 --- !u!1 &1104426627
 GameObject:
   m_ObjectHideFlags: 0
@@ -1543,7 +1542,7 @@ Transform:
   m_GameObject: {fileID: 1193795569}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 100, y: 0, z: 200}
+  m_LocalPosition: {x: 100, y: 0, z: 150}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1771,7 +1770,7 @@ Transform:
   m_GameObject: {fileID: 1301441707}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 200, y: 0, z: 100}
+  m_LocalPosition: {x: 150, y: 0, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2041,10 +2040,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8822906c60045c947a05b0cc90adebea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToSpawn: {fileID: 1948465010}
+  objectToSpawn: {fileID: 2303205053959840659, guid: 2349e85a434643647a7f10137f1a5a42, type: 3}
   terrain: {fileID: 1507183531}
-  numberOfInitObjects: 5
-  autoSpawnInterval: 2
+  numberOfInitObjects: 100
+  autoSpawnInterval: 120
 --- !u!1 &1497480600
 GameObject:
   m_ObjectHideFlags: 0
@@ -2266,10 +2265,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8822906c60045c947a05b0cc90adebea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToSpawn: {fileID: 641849117}
+  objectToSpawn: {fileID: 8827697149842317551, guid: 19e48c26020fafe418cb4c2298a4fd3f, type: 3}
   terrain: {fileID: 1507183531}
-  numberOfInitObjects: 5
-  autoSpawnInterval: 2
+  numberOfInitObjects: 70
+  autoSpawnInterval: 140
 --- !u!1001 &1631554945
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2388,10 +2387,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8822906c60045c947a05b0cc90adebea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToSpawn: {fileID: 728868271}
+  objectToSpawn: {fileID: 3574884054442196509, guid: 64fb995fc63a0534bafa6da6b37e1124, type: 3}
   terrain: {fileID: 1507183531}
-  numberOfInitObjects: 5
-  autoSpawnInterval: 2
+  numberOfInitObjects: 70
+  autoSpawnInterval: 180
 --- !u!1 &1948190868 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8968903997839215233, guid: 1b01ec087414cf046926d21f8c0c7f6f, type: 3}
@@ -2671,10 +2670,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8822906c60045c947a05b0cc90adebea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToSpawn: {fileID: 60843001}
+  objectToSpawn: {fileID: 2142975841462047055, guid: 539de0ad0d93a5748ba75f2d185f146e, type: 3}
   terrain: {fileID: 1507183531}
-  numberOfInitObjects: 5
-  autoSpawnInterval: 2
+  numberOfInitObjects: 90
+  autoSpawnInterval: 150
 --- !u!1 &2076357117
 GameObject:
   m_ObjectHideFlags: 0
