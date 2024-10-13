@@ -19,9 +19,9 @@ public class PilotoLightSourceScript : LightSource
     void Start()
     {
         renderer = GetComponent<Renderer>();
-        this.light = GetComponentInChildren<Light>();
+        light = GetComponentInChildren<Light>();
         Transform firstChild = transform.GetChild(0);
-        this.smokes = firstChild.GetComponent<ParticleSystem>();
+        smokes = firstChild.GetComponent<ParticleSystem>();
         Refuel();
 
 
