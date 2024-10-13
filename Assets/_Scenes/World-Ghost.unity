@@ -300,7 +300,7 @@ ParticleSystem:
   m_GameObject: {fileID: 82106434}
   serializedVersion: 8
   lengthInSec: 5
-  simulationSpeed: 10
+  simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
@@ -481,7 +481,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.23921567, g: 0.9954781, b: 1, a: 1}
+      maxColor: {r: 1, g: 0.9039989, b: 0.44968545, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -862,7 +862,7 @@ ParticleSystem:
         m_RotationOrder: 4
     randomizeRotationDirection: 0
     gravitySource: 0
-    maxNumParticles: 150
+    maxNumParticles: 10
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
@@ -5101,8 +5101,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   screenPostProcessing: {fileID: 1315217710}
-  lightSourceParticles: {fileID: 1392858078}
-  buildingParticles: {fileID: 82106437}
   sanityManager: {fileID: 767308481}
 --- !u!114 &129196815
 MonoBehaviour:
@@ -5240,11 +5238,6 @@ Transform:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4304013647519731189, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
   m_PrefabInstance: {fileID: 1205047579}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &206201052 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7447549833156671741, guid: 7296d957f1057334a956e41e05a46f27, type: 3}
-  m_PrefabInstance: {fileID: 1631554945}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &206201053 stripped
 Transform:
@@ -5822,6 +5815,7 @@ GameObject:
   - component: {fileID: 767308477}
   - component: {fileID: 767308481}
   - component: {fileID: 767308482}
+  - component: {fileID: 767308483}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -5945,6 +5939,20 @@ MonoBehaviour:
   staminaDeductionRate: 5
   staminaRecoveryRate: 2
   staminaDepletedTime: 5
+--- !u!114 &767308483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767308475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16bf41511f38a5e45ae3c7796df922ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sanityManager: {fileID: 767308481}
+  objectToToggle: {fileID: 82106434}
 --- !u!1 &772415405
 GameObject:
   m_ObjectHideFlags: 0
@@ -6769,7 +6777,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1392858076
 Transform:
   m_ObjectHideFlags: 0
@@ -12442,7 +12450,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
   isPlacingItem: 0
-  itemToPlace: {fileID: 206201052}
+  itemToPlace: {fileID: 4581718618250850183, guid: a47d2a718f9f00f48af55aef03a26c29, type: 3}
   instantiatedItem: {fileID: 0}
   debugMode: 0
 --- !u!1 &1822544021
