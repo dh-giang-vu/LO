@@ -3766,6 +3766,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4920966705891362370, guid: 06f17c02817a13042bcf328895d511d2, type: 3}
+      propertyPath: mining
+      value: 
+      objectReference: {fileID: 9000000, guid: ff6d26bf0a326534c92ea7bd9fbc2067, type: 3}
+    - target: {fileID: 4920966705891362370, guid: 06f17c02817a13042bcf328895d511d2, type: 3}
+      propertyPath: pickaxePrefab
+      value: 
+      objectReference: {fileID: 5676840300738598790, guid: 2ce7f3f60a7219d478bdc624979d8024, type: 3}
     - target: {fileID: 7089971089040888432, guid: 06f17c02817a13042bcf328895d511d2, type: 3}
       propertyPath: resourceText
       value: 
@@ -3819,7 +3827,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 645400759}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7803917579296557164, guid: 06f17c02817a13042bcf328895d511d2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06f17c02817a13042bcf328895d511d2, type: 3}

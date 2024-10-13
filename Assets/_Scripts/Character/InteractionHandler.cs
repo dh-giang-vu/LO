@@ -33,8 +33,8 @@ public class InteractionHandler : MonoBehaviour
         // Check if there are any resources in range
         if (inRangeResources.Count > 0)
         {
-            // Get the tag of the first resource in range
-            string resourceTag = inRangeResources[0].gameObject.tag;
+            // Get the tag of the nearest resource in range
+            string resourceTag = GetNearestInRangeResource().gameObject.tag;
             
             // Format and display the text
             resourceText.text = $"E - Collect {resourceTag}";
@@ -50,14 +50,38 @@ public class InteractionHandler : MonoBehaviour
         resourceUIParent.transform.localScale = Vector3.Lerp(resourceUIParent.transform.localScale, targetScale, Time.deltaTime * animationSpeed);
     }
 
-    public void GatherResources()
+    public bool GatherResources()
     {
-        for (int i = 0; i < inRangeResources.Count; i++)
+        CollectResource nearestResource = GetNearestInRangeResource();
+        if (nearestResource == null)
         {
-            var curr = inRangeResources[i];
-            inRangeResources.Remove(curr);
-            curr.Interact();
+            return false;
         }
+        string resourceTag = nearestResource.gameObject.tag;
+        inRangeResources.Remove(nearestResource);
+        nearestResource.Interact();
+        
+        return resourceTag == "Ore" || resourceTag == "Stone";
+    }
+
+    // Find and return nearest in range resource to player
+    private CollectResource GetNearestInRangeResource()
+    {
+        CollectResource nearest = null;
+        float minDistance = Mathf.Infinity;
+        Vector3 playerPosition = transform.position;
+
+        foreach (CollectResource resource in inRangeResources)
+        {
+            float distance = Vector3.Distance(playerPosition, resource.transform.position);
+            if (distance < minDistance)
+            {
+                minDistance = distance;
+                nearest = resource;
+            }
+        }
+
+        return nearest;
     }
 
     public void RefuelLightSources()
