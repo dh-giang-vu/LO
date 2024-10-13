@@ -50,11 +50,18 @@ public class InteractionHandler : MonoBehaviour
         resourceUIParent.transform.localScale = Vector3.Lerp(resourceUIParent.transform.localScale, targetScale, Time.deltaTime * animationSpeed);
     }
 
-    public void GatherResources()
+    public bool GatherResources()
     {
         CollectResource nearestResource = GetNearestInRangeResource();
+        if (nearestResource == null)
+        {
+            return false;
+        }
+        string resourceTag = nearestResource.gameObject.tag;
         inRangeResources.Remove(nearestResource);
         nearestResource.Interact();
+        
+        return resourceTag == "Ore" || resourceTag == "Stone";
     }
 
     // Find and return nearest in range resource to player
