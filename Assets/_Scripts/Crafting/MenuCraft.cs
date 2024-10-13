@@ -31,6 +31,11 @@ public class MenuCraft : MonoBehaviour
     // Track if crafting is in progress
     private bool isCraftingInProgress = false;
 
+    // Cloud effect when placing items
+    [SerializeField] private ParticleSystem cloudParticleSystem;
+    [SerializeField] private Vector3 defaultCloudSize = new Vector3(1.0f, 1.0f, 1.0f);
+    [SerializeField] private float cloudScaling = 0.25f;
+
     private void Start()
     {
         // Get the singleton instance of the Inventory
@@ -124,6 +129,8 @@ public class MenuCraft : MonoBehaviour
                 instantiatedItem = Instantiate(itemToCraft.model, Vector3.zero, Quaternion.identity); // Instantiate at a temporary position
                 originalMaterial = instantiatedItem.GetComponent<Renderer>().material; // Store original material
                 instantiatedItem.GetComponent<Renderer>().material = craftingMaterial; // Apply new material
+                instantiatedItemLayerMask = instantiatedItem.layer;
+                instantiatedItem.layer = LayerMask.NameToLayer("NoCollision");
             }
         }
         else
@@ -147,9 +154,7 @@ public class MenuCraft : MonoBehaviour
                 // If the item hasn't been instantiated yet, instantiate it at the hit point
                 if (instantiatedItem == null)
                 {
-                    instantiatedItem = Instantiate(itemToCraft.model, placePosition, Quaternion.identity);
-                    instantiatedItemLayerMask = instantiatedItem.layer;
-                    instantiatedItem.layer = LayerMask.NameToLayer("NoCollision");
+                    Debug.LogWarning("Item not instantiated");
                 }
                 else
                 {
@@ -191,6 +196,20 @@ public class MenuCraft : MonoBehaviour
         {
             instantiatedItem.GetComponent<Renderer>().material = originalMaterial;
         }
+
+
+        // Play cloud particle system, size adjusted to item being placed
+        if (instantiatedItem.TryGetComponent<Renderer>(out var instantiatedItemRenderer))
+        {
+            Vector3 size = instantiatedItemRenderer.bounds.size;
+            cloudParticleSystem.transform.localScale = size * cloudScaling;
+        }
+        else
+        {
+            cloudParticleSystem.transform.localScale = defaultCloudSize;
+        }
+        cloudParticleSystem.transform.position = instantiatedItem.transform.position;
+        cloudParticleSystem.Play();
 
         instantiatedItem = null;  // Clear the reference so no further updates happen
     }
