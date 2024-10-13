@@ -548,6 +548,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToLive: 30
+  fadeDuration: 1
+  ghostRenderer: {fileID: 828151503421502857}
 --- !u!1 &5954301793336381631
 GameObject:
   m_ObjectHideFlags: 0
