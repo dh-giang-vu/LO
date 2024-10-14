@@ -27,7 +27,7 @@ public class ScreenPostProcessing : MonoBehaviour
     }
     void Update() {
         currentColor = colorAdjustments.colorFilter.value;
-        UpdateVignette();
+        // UpdateVignette();
         
     }
 

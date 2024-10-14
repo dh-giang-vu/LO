@@ -101,6 +101,7 @@ public class InteractionHandler : MonoBehaviour
         if (other.TryGetComponent<LightSource>(out var lightSource))
         {
             inRangeLightSources.Add(lightSource);
+            Debug.LogWarning(other);
         }
     }
 
