@@ -50,18 +50,26 @@ public class InteractionHandler : MonoBehaviour
         resourceUIParent.transform.localScale = Vector3.Lerp(resourceUIParent.transform.localScale, targetScale, Time.deltaTime * animationSpeed);
     }
 
-    public bool GatherResources()
+    public string GatherResources()
     {
         CollectResource nearestResource = GetNearestInRangeResource();
         if (nearestResource == null)
         {
-            return false;
+            return "";
         }
         string resourceTag = nearestResource.gameObject.tag;
         inRangeResources.Remove(nearestResource);
         nearestResource.Interact();
         
-        return resourceTag == "Ore" || resourceTag == "Stone";
+        if (resourceTag == "Ore" || resourceTag == "Stone")
+        {
+            return "mining";
+        }
+        else if (resourceTag == "Tree")
+        {
+            return "chopping";
+        }
+        return "";
     }
 
     // Find and return nearest in range resource to player
@@ -101,7 +109,6 @@ public class InteractionHandler : MonoBehaviour
         if (other.TryGetComponent<LightSource>(out var lightSource))
         {
             inRangeLightSources.Add(lightSource);
-            Debug.LogWarning(other);
         }
     }
 

@@ -10,16 +10,21 @@ public class CharacterAnimation : MonoBehaviour
     [SerializeField] private Avatar running;
     [SerializeField] private Avatar gathering;
     [SerializeField] private Avatar mining;
+    [SerializeField] private Avatar chopping;
     [SerializeField] private GameObject pickaxePrefab;
+    [SerializeField] private GameObject axePrefab;
 
     private GameObject pickaxeInstance = null;
-    [SerializeField]private GameObject pickaxeSpawnPoint;
+    private GameObject pickaxeSpawnPoint;
+    private GameObject axeInstance = null;
+    private GameObject axeSpawnPoint = null;
 
     void Start()
     {
         animator = GetComponent<Animator>();
         animator.avatar = idle;
         pickaxeSpawnPoint = FindChildByName(this.transform, "PickaxeSpawnPoint");
+        axeSpawnPoint = FindChildByName(this.transform, "AxeSpawnPoint");
     }
 
     public void SetMovementAnimation(bool isMoving, bool isSprinting)
@@ -37,20 +42,25 @@ public class CharacterAnimation : MonoBehaviour
         animator.SetBool("isSprinting", isSprinting);
     }
 
-    public void PlayGatheringAnimation(bool isMining)
+    public void PlayGatheringAnimation(string animationType)
     {
-        if (!isMining)
-        {
-            animator.avatar = gathering;
-            animator.SetTrigger("startGathering");
-        }
-
-        if (isMining)
+        if (animationType == "mining")
         {
             pickaxeInstance = Instantiate(pickaxePrefab, pickaxeSpawnPoint.transform);
             animator.avatar = mining;
             animator.SetTrigger("startMining");
 
+        }
+        else if (animationType == "chopping")
+        {
+            axeInstance = Instantiate(axePrefab, axeSpawnPoint.transform);
+            animator.avatar = chopping;
+            animator.SetTrigger("startChopping");
+        }
+        else
+        {
+            animator.avatar = gathering;
+            animator.SetTrigger("startGathering");
         }
     }
 
@@ -59,6 +69,10 @@ public class CharacterAnimation : MonoBehaviour
         if (pickaxeInstance != null)
         {
             Destroy(pickaxeInstance);
+        }
+        if (axeInstance != null)
+        {
+            Destroy(axeInstance);
         }
         animator.avatar = idle;
         SendMessageUpwards("StopGathering");

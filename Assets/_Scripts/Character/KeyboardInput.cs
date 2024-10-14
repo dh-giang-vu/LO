@@ -53,8 +53,8 @@ public class KeyboardInput : MonoBehaviour
         if (!isGathering && Input.GetKeyDown(KeyCode.E))
         {
             isGathering = true;
-            bool requireMining = interactionHandler.GatherResources();
-            characterAnimation.PlayGatheringAnimation(requireMining);
+            string animationType = interactionHandler.GatherResources();
+            characterAnimation.PlayGatheringAnimation(animationType);
             interactionHandler.RefuelLightSources();
         }
     }
