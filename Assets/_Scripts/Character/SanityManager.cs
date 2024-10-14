@@ -83,7 +83,7 @@ public class SanityManager : MonoBehaviour
             {
                 float sanityEffect = sanityProvider.getSanityEffect();
                 // Clamp sanity amount between 0.0 and 1.0
-                sanityAmount = Mathf.Clamp(sanityAmount + sanityEffect, 0.0f, 1.0f);
+                sanityAmount = Mathf.Clamp(sanityAmount + sanityEffect / 5.0f, 0.0f, 1.0f);
                 
             }
         }

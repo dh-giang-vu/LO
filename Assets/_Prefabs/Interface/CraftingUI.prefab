@@ -1019,6 +1019,7 @@ MonoBehaviour:
   cloudParticleSystem: {fileID: 0}
   defaultCloudSize: {x: 1, y: 1, z: 1}
   cloudScaling: 0.25
+  craftUIMove: {fileID: 2545504599802197064}
 --- !u!1 &1416210503286160825
 GameObject:
   m_ObjectHideFlags: 0
@@ -1316,6 +1317,7 @@ MonoBehaviour:
   cloudParticleSystem: {fileID: 0}
   defaultCloudSize: {x: 1, y: 1, z: 1}
   cloudScaling: 0.25
+  craftUIMove: {fileID: 2545504599802197064}
 --- !u!1 &1894500548617245020
 GameObject:
   m_ObjectHideFlags: 0
@@ -1745,6 +1747,7 @@ MonoBehaviour:
   cloudParticleSystem: {fileID: 0}
   defaultCloudSize: {x: 1, y: 1, z: 1}
   cloudScaling: 0.25
+  craftUIMove: {fileID: 2545504599802197064}
 --- !u!1 &2086221693003217193
 GameObject:
   m_ObjectHideFlags: 0
@@ -3808,6 +3811,7 @@ MonoBehaviour:
   cloudParticleSystem: {fileID: 0}
   defaultCloudSize: {x: 1, y: 1, z: 1}
   cloudScaling: 0.25
+  craftUIMove: {fileID: 2545504599802197064}
 --- !u!1 &3557912825368902629
 GameObject:
   m_ObjectHideFlags: 0
@@ -5286,6 +5290,7 @@ MonoBehaviour:
   cloudParticleSystem: {fileID: 0}
   defaultCloudSize: {x: 1, y: 1, z: 1}
   cloudScaling: 0.25
+  craftUIMove: {fileID: 2545504599802197064}
 --- !u!1 &5049916340441617548
 GameObject:
   m_ObjectHideFlags: 0
@@ -5766,11 +5771,9 @@ MonoBehaviour:
   - {fileID: 178500365666102998}
   - {fileID: 7887372204336974014}
   - {fileID: 2319621473241680186}
-  - {fileID: 0}
   - {fileID: 2276222266303493957}
   - {fileID: 7769647695946461842}
   - {fileID: 3765835395515961504}
-  - {fileID: 0}
   parentObject: {fileID: 2451112119008095333}
 --- !u!1 &5564536514847032449
 GameObject:
@@ -6621,6 +6624,7 @@ MonoBehaviour:
   cloudParticleSystem: {fileID: 0}
   defaultCloudSize: {x: 1, y: 1, z: 1}
   cloudScaling: 0.25
+  craftUIMove: {fileID: 2545504599802197064}
 --- !u!1 &6608015216039853414
 GameObject:
   m_ObjectHideFlags: 0
@@ -7263,6 +7267,7 @@ MonoBehaviour:
   cloudParticleSystem: {fileID: 0}
   defaultCloudSize: {x: 1, y: 1, z: 1}
   cloudScaling: 0.25
+  craftUIMove: {fileID: 2545504599802197064}
 --- !u!1 &7237049141304130347
 GameObject:
   m_ObjectHideFlags: 0
@@ -7420,6 +7425,7 @@ MonoBehaviour:
   cloudParticleSystem: {fileID: 0}
   defaultCloudSize: {x: 1, y: 1, z: 1}
   cloudScaling: 0.25
+  craftUIMove: {fileID: 2545504599802197064}
 --- !u!1 &7279923034688906365
 GameObject:
   m_ObjectHideFlags: 0

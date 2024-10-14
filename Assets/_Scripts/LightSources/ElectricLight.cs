@@ -10,6 +10,7 @@ public class ElectricLight : LightSource
     // Start is called before the first frame update
     void Start()
     {
+        
         // Get the Light component and turn it off initially
          ElecLight = GetComponentInChildren<Light>();
         if (ElecLight != null)

@@ -36,6 +36,9 @@ public class MenuCraft : MonoBehaviour
     [SerializeField] private Vector3 defaultCloudSize = new Vector3(1.0f, 1.0f, 1.0f);
     [SerializeField] private float cloudScaling = 0.25f;
 
+    // Reference to the CraftUIMove script to control the UI movement
+    [SerializeField] private CraftUIMove craftUIMove;
+
     private void Start()
     {
         // Get the singleton instance of the Inventory
@@ -54,6 +57,12 @@ public class MenuCraft : MonoBehaviour
         }
 
         instantiatedItemLayerMask = LayerMask.NameToLayer("Default");
+
+        // Ensure the CraftUIMove script is assigned
+        if (craftUIMove == null)
+        {
+            Debug.LogError("CraftUIMove reference is missing. Assign the script in the inspector.");
+        }
     }
 
     // Method to handle crafting the item and starting placement
@@ -74,10 +83,14 @@ public class MenuCraft : MonoBehaviour
             UseRequiredMaterials(); // Consume the materials
             StartPlacingItem();      // Start placing the item
 
+            // Call ToggleObjectPosition from CraftUIMove to move the UI element
+            craftUIMove.ToggleObjectPosition();
+
             // Set target position and start moving the object down
-            targetPosition = objectToMove.transform.position + new Vector3(0, -500, 0);
-            isMovingObject = true; // Start the movement
-            movementProgress = 0f; // Reset progress
+            // targetPosition = objectToMove.transform.position + new Vector3(0, -Screen.height, 0);
+
+            // isMovingObject = true; // Start the movement
+            // movementProgress = 0f; // Reset progress
         }
         else
         {
@@ -196,7 +209,6 @@ public class MenuCraft : MonoBehaviour
         {
             instantiatedItem.GetComponent<Renderer>().material = originalMaterial;
         }
-
 
         // Play cloud particle system, size adjusted to item being placed
         if (instantiatedItem.TryGetComponent<Renderer>(out var instantiatedItemRenderer))

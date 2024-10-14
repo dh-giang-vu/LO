@@ -371,6 +371,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4232012027248765218}
     m_Modifications:
+    - target: {fileID: 1023594972771966633, guid: b2e5c4581452eb147945ce461f601e7b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5496f654a4753c640ae20878eb857f13, type: 2}
     - target: {fileID: 6096132530597991812, guid: b2e5c4581452eb147945ce461f601e7b, type: 3}
       propertyPath: m_Name
       value: Motor

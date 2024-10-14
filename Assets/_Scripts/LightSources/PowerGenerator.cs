@@ -5,14 +5,22 @@ using UnityEngine;
 
 public class PowerGenerator : LightSource
 {
-
     [SerializeField] private float refuelWaitTime = 1f;
     float refuelTime = 0f;
     private List<ElectricLight> activeLights = new List<ElectricLight>(); // Keep track of active light bulbs
-    // Start is called before the first frame update
+
+    private Inventory inventory;  // Reference to the player's Inventory singleton
+    private int requiredCoal = 1; // Define the amount of coal required for refuel
+
     void Start()
     {
-        Refuel();
+        inventory = Inventory.Instance; // Get the singleton instance of the Inventory
+
+        // Ensure the inventory instance is valid
+        if (inventory == null)
+        {
+            Debug.LogError("Inventory singleton instance is null. Ensure Inventory is instantiated.");
+        }
     }
 
     // Update is called once per frame
@@ -28,13 +36,13 @@ public class PowerGenerator : LightSource
             Die();
         }
     }
+
     private void OnTriggerEnter(Collider other)
     {
         // Check if the object entering the trigger has a LightBulb component
         ElectricLight lightBulb = other.GetComponent<ElectricLight>();
         if (lightBulb != null)
         {
-
             activeLights.Add(lightBulb); // Add to the list of active lights
             if (alive)
             {
@@ -43,6 +51,7 @@ public class PowerGenerator : LightSource
             }
         }
     }
+
     private void OnTriggerExit(Collider other)
     {
         // Check if the object exiting the trigger has a LightBulb component
@@ -63,15 +72,36 @@ public class PowerGenerator : LightSource
 
     public override void Refuel()
     {
-        lifespan = maxLifespan;
-        refuelTime = Time.time;
-        alive = true;
-        if (activeLights.Any())
+        // Check if the player has enough coal
+        CollectableClass coal = inventory.items.Find(item => item.itemName == "Coal");
+
+        if (coal != null && coal.quantity >= requiredCoal)
         {
-            foreach (ElectricLight light in activeLights)
+            // Deduct the required amount of coal
+            coal.quantity -= requiredCoal;
+
+            // Update the inventory to reflect the change in coal amount
+            inventory.UpdateMaterialCounts();
+
+            // Proceed with refueling the generator
+            lifespan = maxLifespan;
+            refuelTime = Time.time;
+            alive = true;
+
+            // Refuel all active lights connected to the generator
+            if (activeLights.Any())
             {
-                light.Refuel();
+                foreach (ElectricLight light in activeLights)
+                {
+                    light.Refuel();
+                }
             }
+
+            Debug.Log("Generator refueled, 5 coal consumed.");
+        }
+        else
+        {
+            Debug.LogWarning("Not enough coal to refuel the generator. 5 coal required.");
         }
     }
 
