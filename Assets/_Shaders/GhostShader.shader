@@ -9,10 +9,11 @@ Shader "Custom/GhostSineWaveShader"
         _AuraSize ("Aura Size", Range(0, 1)) = 0.5
         _DistortionAmount ("Distortion Amount", Range(0, 1)) = 0.1
         _TimeScale ("Time Scale", Range(0, 5)) = 1.0
+        
     }
     SubShader
     {
-        Tags { "RenderType"="Transparent" }
+        Tags { "Queue"="Transparent" "RenderType"="Transparent" }
         LOD 200
 
         Blend SrcAlpha OneMinusSrcAlpha

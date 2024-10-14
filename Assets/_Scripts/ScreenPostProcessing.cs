@@ -8,6 +8,7 @@ public class ScreenPostProcessing : MonoBehaviour
     private ColorAdjustments colorAdjustments;
     private Vignette vignette;
     private Color currentColor;
+    [SerializeField] SanityManager sanityManager;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,8 @@ public class ScreenPostProcessing : MonoBehaviour
     }
     void Update() {
         currentColor = colorAdjustments.colorFilter.value;
+        // UpdateVignette();
+        
     }
 
     public void BuildingFilterOn() {
@@ -44,5 +47,10 @@ public class ScreenPostProcessing : MonoBehaviour
 
     public void AdjustFade(float intensity) {
         vignette.intensity.value = intensity;
+    }
+
+    private void UpdateVignette() {
+        float vignetteAmount = sanityManager.GetSanityAmount();
+        vignette.intensity.value = (1 - vignetteAmount);
     }
 }

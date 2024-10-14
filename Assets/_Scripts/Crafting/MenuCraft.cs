@@ -16,6 +16,11 @@ public class MenuCraft : MonoBehaviour
     private Inventory inventory;  // Reference to the Inventory singleton
     private bool isPlacingItem = false;
     private GameObject instantiatedItem = null;
+    private LayerMask instantiatedItemLayerMask;
+
+    // Material handling variables
+    [SerializeField] private Material craftingMaterial; // The material to apply while crafting
+    private Material originalMaterial; // Store the original material
 
     // Variables to handle the movement of the objectToDisable
     private bool isMovingObject = false; // Track if the object is moving
@@ -25,6 +30,11 @@ public class MenuCraft : MonoBehaviour
 
     // Track if crafting is in progress
     private bool isCraftingInProgress = false;
+
+    // Cloud effect when placing items
+    [SerializeField] private ParticleSystem cloudParticleSystem;
+    [SerializeField] private Vector3 defaultCloudSize = new Vector3(1.0f, 1.0f, 1.0f);
+    [SerializeField] private float cloudScaling = 0.25f;
 
     private void Start()
     {
@@ -42,6 +52,8 @@ public class MenuCraft : MonoBehaviour
         {
             Debug.LogError("No LightClass item assigned for crafting!");
         }
+
+        instantiatedItemLayerMask = LayerMask.NameToLayer("Default");
     }
 
     // Method to handle crafting the item and starting placement
@@ -110,6 +122,16 @@ public class MenuCraft : MonoBehaviour
         if (itemToCraft != null && itemToCraft.model != null)
         {
             isPlacingItem = true;
+
+            // Change the material of the instantiated item
+            if (instantiatedItem == null)
+            {
+                instantiatedItem = Instantiate(itemToCraft.model, Vector3.zero, Quaternion.identity); // Instantiate at a temporary position
+                originalMaterial = instantiatedItem.GetComponent<Renderer>().material; // Store original material
+                instantiatedItem.GetComponent<Renderer>().material = craftingMaterial; // Apply new material
+                instantiatedItemLayerMask = instantiatedItem.layer;
+                instantiatedItem.layer = LayerMask.NameToLayer("NoCollision");
+            }
         }
         else
         {
@@ -132,8 +154,7 @@ public class MenuCraft : MonoBehaviour
                 // If the item hasn't been instantiated yet, instantiate it at the hit point
                 if (instantiatedItem == null)
                 {
-                    instantiatedItem = Instantiate(itemToCraft.model, placePosition, Quaternion.identity);
-                    instantiatedItem.layer = LayerMask.NameToLayer("NoCollision");                    
+                    Debug.LogWarning("Item not instantiated");
                 }
                 else
                 {
@@ -168,7 +189,28 @@ public class MenuCraft : MonoBehaviour
     private void StopPlacingItem()
     {
         isPlacingItem = false;
-        instantiatedItem.layer = LayerMask.NameToLayer("Default");
+        instantiatedItem.layer = instantiatedItemLayerMask;
+
+        // Revert back to the original material
+        if (instantiatedItem != null)
+        {
+            instantiatedItem.GetComponent<Renderer>().material = originalMaterial;
+        }
+
+
+        // Play cloud particle system, size adjusted to item being placed
+        if (instantiatedItem.TryGetComponent<Renderer>(out var instantiatedItemRenderer))
+        {
+            Vector3 size = instantiatedItemRenderer.bounds.size;
+            cloudParticleSystem.transform.localScale = size * cloudScaling;
+        }
+        else
+        {
+            cloudParticleSystem.transform.localScale = defaultCloudSize;
+        }
+        cloudParticleSystem.transform.position = instantiatedItem.transform.position;
+        cloudParticleSystem.Play();
+
         instantiatedItem = null;  // Clear the reference so no further updates happen
     }
 }

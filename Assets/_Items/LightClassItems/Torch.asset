@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Torch
   quantity: 1
-  model: {fileID: 2995315538381988061, guid: b16aa8caa1302bd449105cfe92599327, type: 3}
+  model: {fileID: 5343846171584138932, guid: 9becd698a0db57748bebba3c965857a9, type: 3}

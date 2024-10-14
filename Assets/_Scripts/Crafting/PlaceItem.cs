@@ -9,12 +9,21 @@ public class PlaceItem : MonoBehaviour
     [SerializeField] private bool isPlacingItem = false;
     [SerializeField] private GameObject itemToPlace = null;
     [SerializeField] private GameObject instantiatedItem = null;
+    [SerializeField] private ParticleSystem cloudParticleSystem;
+    [SerializeField] private Vector3 defaultCloudSize = new Vector3(1.0f, 1.0f, 1.0f);
+    [SerializeField] private float cloudScaling = 0.25f;
 
     [SerializeField] private bool debugMode = false;
+    private LayerMask instantiatedItemLayerMask;
+
+    // Material handling variables
+    [SerializeField] private Material craftingMaterial; // The material to apply while crafting
+    private Material originalMaterial; // Store the original material
 
     void Start()
     {
         cam = Camera.main;
+        instantiatedItemLayerMask = LayerMask.NameToLayer("Default");
     }
 
     void Update()
@@ -35,7 +44,15 @@ public class PlaceItem : MonoBehaviour
             if (instantiatedItem == null)
             {
                 instantiatedItem = Instantiate(itemToPlace, placePosition, Quaternion.identity);
-                instantiatedItem.layer = LayerMask.NameToLayer("NoCollision");   
+                instantiatedItemLayerMask = instantiatedItem.layer;
+                instantiatedItem.layer = LayerMask.NameToLayer("NoCollision");
+
+                // Assign blueprint material
+                if (instantiatedItem.TryGetComponent<Renderer>(out var instantiatedItemRenderer))
+                {
+                    originalMaterial = instantiatedItemRenderer.material;
+                    instantiatedItemRenderer.material = craftingMaterial;
+                }
             }
             else
             {
@@ -63,7 +80,25 @@ public class PlaceItem : MonoBehaviour
             isPlacingItem = false;
             itemToPlace = null;
         }
-        instantiatedItem.layer = LayerMask.NameToLayer("Default");
+        
+        // Play cloud particle system, size adjusted to item being placed
+        if (instantiatedItem.TryGetComponent<Renderer>(out var instantiatedItemRenderer))
+        {
+            Vector3 size = instantiatedItemRenderer.bounds.size;
+            cloudParticleSystem.transform.localScale = size * cloudScaling;
+
+            // Revert back to the original material
+            instantiatedItemRenderer.material = originalMaterial;
+        }
+        else
+        {
+            cloudParticleSystem.transform.localScale = defaultCloudSize;
+        }
+        cloudParticleSystem.transform.position = instantiatedItem.transform.position;
+        cloudParticleSystem.Play();
+
+
+        instantiatedItem.layer = instantiatedItemLayerMask;
         instantiatedItem = null;
     }
 }
