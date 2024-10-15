@@ -45,8 +45,8 @@ public class GhostController : MonoBehaviour
     void Update()
     {
         // Make the ghost face the player
-        // Vector3 directionToPlayer = player.transform.position - transform.position;
-        // transform.rotation = Quaternion.LookRotation(directionToPlayer);
+        Vector3 directionToPlayer = player.transform.position - transform.position;
+        transform.rotation = Quaternion.LookRotation(directionToPlayer);
     }
 
     // Coroutine to handle the fade-in effect
