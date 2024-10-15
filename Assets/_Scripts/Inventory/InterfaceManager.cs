@@ -6,11 +6,18 @@ using TMPro;
 public class InterfaceManager : MonoBehaviour
 {
     public TextMeshProUGUI resourceText;
+    public TextMeshProUGUI progressText;
 
     private Dictionary<string, int> resourceAmounts;
 
     private string part1 = "<sprite name=\"";
     private string part2 = "\">";
+
+    // Reference to the DialogueBox and the DialogueScript
+    public GameObject dialogueBox;
+    private DialogueScript dialogueScript;
+
+    private bool isCrowInRange = false;  // Flag to check if crow is nearby
 
     private void Start()
     {
@@ -24,10 +31,15 @@ public class InterfaceManager : MonoBehaviour
             { "Fiber", 0 }
         };
 
+        // Initialize the DialogueBox and its script
+        dialogueScript = dialogueBox.GetComponent<DialogueScript>();
+        dialogueBox.SetActive(false); // Make sure DialogueBox is initially inactive
+
         // Update resource amounts and display
         UpdateResourceAmounts();
         DisplayResources();
         DisplayStats();
+        DisplayProgress();
     }
 
     private void Update()
@@ -36,6 +48,17 @@ public class InterfaceManager : MonoBehaviour
         UpdateResourceAmounts();
         DisplayResources();
         DisplayStats();
+        DisplayProgress();
+
+        // Check for the "E" key press to interact with the crow
+        if (isCrowInRange && Input.GetKeyDown(KeyCode.E))
+        {
+            if (!dialogueBox.activeInHierarchy)
+            {
+                // If the DialogueBox is not active, activate it and start dialogue
+                dialogueBox.SetActive(true);
+            }
+        }
     }
 
     private void UpdateResourceAmounts()
@@ -70,5 +93,29 @@ public class InterfaceManager : MonoBehaviour
         Inventory inventory = Inventory.Instance;
         // Clear the resourceText before displaying resources
     }
+
+    private void DisplayProgress()
+    {
+        float currentProgress = ProgressTracker.Instance.GetProgress();
+        currentProgress = currentProgress * 100;
+        currentProgress = Mathf.Round(currentProgress);
+        progressText.text = "Progress: " + currentProgress.ToString() + "%";
+    }
+
+    // Call this when a crow enters the trigger
+    public void OnCrowEnter()
+    {
+        isCrowInRange = true;
+    }
+
+    // Call this when a crow exits the trigger
+    public void OnCrowExit()
+    {
+        isCrowInRange = false;
+    }
+
+
+
+   
 
 }

@@ -27,7 +27,7 @@ public class DialogueScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F)) // Check for F key press
+        if (Input.GetKeyDown(KeyCode.E)) // Check for F key press
         {
             if (textComponent.text == lines[index]) // If the text is fully displayed
             {

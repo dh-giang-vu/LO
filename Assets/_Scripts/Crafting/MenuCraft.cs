@@ -22,15 +22,6 @@ public class MenuCraft : MonoBehaviour
     [SerializeField] private Material craftingMaterial; // The material to apply while crafting
     private Material originalMaterial; // Store the original material
 
-    // Variables to handle the movement of the objectToDisable
-    private bool isMovingObject = false; // Track if the object is moving
-    private Vector3 targetPosition; // Target position for the movement
-    private float movementDuration = 1f; // Duration of movement
-    private float movementProgress = 0f; // Track how far we are in the movement
-
-    // Track if crafting is in progress
-    private bool isCraftingInProgress = false;
-
     // Cloud effect when placing items
     [SerializeField] private ParticleSystem cloudParticleSystem;
     [SerializeField] private Vector3 defaultCloudSize = new Vector3(1.0f, 1.0f, 1.0f);
@@ -68,29 +59,14 @@ public class MenuCraft : MonoBehaviour
     // Method to handle crafting the item and starting placement
     public void CraftAndPlaceItem()
     {
-        // Prevent crafting if already in progress
-        if (isCraftingInProgress || isMovingObject)
-        {
-            Debug.LogWarning("Crafting or movement is already in progress.");
-            return;
-        }
-
         // Check if enough materials exist for crafting
         if (HasRequiredMaterials())
         {
-            isCraftingInProgress = true; // Set the crafting flag
-
             UseRequiredMaterials(); // Consume the materials
             StartPlacingItem();      // Start placing the item
 
             // Call ToggleObjectPosition from CraftUIMove to move the UI element
             craftUIMove.ToggleObjectPosition();
-
-            // Set target position and start moving the object down
-            // targetPosition = objectToMove.transform.position + new Vector3(0, -Screen.height, 0);
-
-            // isMovingObject = true; // Start the movement
-            // movementProgress = 0f; // Reset progress
         }
         else
         {
@@ -179,21 +155,6 @@ public class MenuCraft : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Mouse0) && instantiatedItem != null)
             {
                 StopPlacingItem();
-            }
-        }
-
-        // Handle movement of objectToDisable
-        if (isMovingObject)
-        {
-            movementProgress += Time.deltaTime / movementDuration; // Increment progress based on time
-            objectToMove.transform.position = Vector3.Lerp(objectToMove.transform.position, targetPosition, movementProgress);
-
-            // Stop moving if we reached the target position
-            if (movementProgress >= 1f)
-            {
-                isMovingObject = false; // Stop the movement
-                movementProgress = 0f; // Reset progress
-                isCraftingInProgress = false; // Reset crafting state
             }
         }
     }

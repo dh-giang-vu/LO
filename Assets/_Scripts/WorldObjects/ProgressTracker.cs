@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class ProgressTracker : MonoBehaviour
 {
+    // Singleton instance
+    public static ProgressTracker Instance { get; private set; }
+
     [SerializeField] private float progress = 0.0f;
     [SerializeField] private float updateInterval = 2.0f;
     [SerializeField] private float raycastDistance = 10.0f;
@@ -12,6 +15,20 @@ public class ProgressTracker : MonoBehaviour
     [SerializeField] private Terrain terrain;
     private float terrainWidth;
     private float terrainHeight;
+
+    // Awake method to enforce singleton pattern
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);  // Ensures there's only one instance
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
+
     void Start()
     {
         terrainWidth = terrain.terrainData.size.x;
@@ -47,5 +64,11 @@ public class ProgressTracker : MonoBehaviour
         }
 
         progress = numberOfHits / numberOfRays;
+    }
+
+    // Public method to access progress from anywhere
+    public float GetProgress()
+    {
+        return progress;
     }
 }
