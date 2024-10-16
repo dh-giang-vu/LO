@@ -8,6 +8,8 @@ TagManager:
   - Stone
   - Ore
   - Bush
+  - lb_bird
+  - crow
   layers:
   - Default
   - TransparentFX

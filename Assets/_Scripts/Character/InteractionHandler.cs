@@ -123,7 +123,7 @@ public class InteractionHandler : MonoBehaviour
         {
             inRangeResources.Add(resource);
         }
-        if (other.TryGetComponent<LightSource>(out var lightSource))
+        if (other.TryGetComponent<LightSource>(out var lightSource) && other is BoxCollider)
         {
             inRangeLightSources.Add(lightSource);
         }

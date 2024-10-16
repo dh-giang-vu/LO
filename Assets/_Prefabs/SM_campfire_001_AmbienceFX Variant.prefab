@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 4560490859120501625}
   - component: {fileID: 2744261172793940567}
   - component: {fileID: 2899607366527286750}
+  - component: {fileID: 8466524234573888955}
   m_Layer: 13
   m_Name: SM_campfire_001_AmbienceFX Variant
   m_TagString: Untagged
@@ -148,7 +149,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7447549833156671741}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.9, y: -0.04, z: -4.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -222,7 +223,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -240,7 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a3aec6e311e38b4c8053eff2e0fd037, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLifespan: 1000
+  maxLifespan: 10
   lifespan: 0
   alive: 0
   score: 0
@@ -294,6 +295,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &8466524234573888955
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7447549833156671741}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6462314026198558789, guid: 7bdf6515110869142b46bac661edc2c4, type: 3}
 --- !u!1 &7803996733557165386
 GameObject:
   m_ObjectHideFlags: 0
