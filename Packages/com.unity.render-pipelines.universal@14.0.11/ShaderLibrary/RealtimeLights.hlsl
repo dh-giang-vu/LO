@@ -73,7 +73,7 @@ float DistanceAttenuation(float distanceSqr, half2 distanceAttenuation)
     smoothFactor = smoothFactor * smoothFactor;
 
     // return lightAtten * smoothFactor;
-    return 0.9;
+    return 1;
 }
 
 half AngleAttenuation(half3 spotDirection, half3 lightDirection, half2 spotAttenuation)
