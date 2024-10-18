@@ -670,13 +670,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 767308482}
   offset: {x: 0, y: 3, z: -6}
-  yawSensitivity: 300
-  pitchSensitivity: 200
-  zoomSensitivity: 5
+  yawSensitivity: 500
+  pitchSensitivity: 400
+  zoomSensitivity: 10
   minPitch: -15
   maxPitch: 30
-  minZoom: 2
-  maxZoom: 10
+  minZoom: 5
+  maxZoom: 15
 --- !u!4 &150484356 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4099890921740684, guid: 59c11859077357741ad00e6c87489eb7, type: 3}
