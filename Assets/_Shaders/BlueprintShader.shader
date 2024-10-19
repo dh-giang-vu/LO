@@ -1,4 +1,4 @@
-Shader "Custom/EnhancedBlueprintShader"
+Shader "Custom/BlueprintShader"
 {
     Properties
     {
@@ -7,18 +7,19 @@ Shader "Custom/EnhancedBlueprintShader"
         [Enum(UnityEngine.Rendering.BlendMode)]
         _DstFactor("Dst Factor", Float) = 10
         [Enum(UnityEngine.Rendering.BlendOp)]
-        _Op("Operation", Float) = 0
+        _Opp("Operation", Float) = 0
 
         _HoloIntensity("Holo Intensity", Float) = 1
         _AnimIntensity("Anim Intensity", Float) = 0
-        _PulsingSpeed("Pulsing Speed", Float) = 1
 
         _Rotator("Rotate", Range(0,1)) = 1
-        _MainTex("Main Texture", 2D) = "white" {}
-        _DetailTex("Detail Texture", 2D) = "black" {}
 
-        _Color1("Color 1", Color) = (1,1,1,1)
-        _Color2("Color 2", Color) = (1,1,1,1)
+        _Color1("Color 1", color) = (1,1,1,1)
+        _Color2("Color 2", color) = (1,1,1,1)
+
+        // _Color ("Tint Color", Color) = (0, 0, 1, 0.5) // Blue color
+        // _MainTex ("Texture", 2D) = "white" {}
+        // _Transparency ("Transparency", Range(0, 1)) = 0.5
     }
     SubShader
     {
@@ -47,13 +48,8 @@ Shader "Custom/EnhancedBlueprintShader"
                 float4 vertex : SV_POSITION;
             };
 
-            sampler2D _MainTex;
-            sampler2D _DetailTex;
-
             float _HoloIntensity;
             float _AnimIntensity;
-            float _PulsingSpeed;
-
             float4 _Color1;
             float4 _Color2;
 
@@ -69,27 +65,17 @@ Shader "Custom/EnhancedBlueprintShader"
 
             fixed4 frag(v2f i) : SV_Target
             {
-                // Rotator effect
-                float rotate = lerp(i.uv.x, i.uv.y, _Rotator);
                 
-                // Animation effect
+                float rotate = lerp(i.uv.x, i.uv.y, _Rotator);
                 float anim = _AnimIntensity * _Time.y;
                 float holoEffect = sin(rotate * _HoloIntensity + anim) * 0.5 + 0.5;
 
-                // Pulsing effect adjusted to go from 100% to 50%
-                float pulse = sin(_Time.y * _PulsingSpeed) * 0.25 + 0.75;
-                
-                // Blend the colors based on the rotation and pulse effect
-                float4 mixedColor = lerp(_Color1, _Color2, rotate) * holoEffect * pulse;
+                float4 mixedColor = lerp(_Color1, _Color2, rotate) * holoEffect;
 
-                // Apply detail texture if any
-                fixed4 detailColor = tex2D(_DetailTex, i.uv) * 0.5; // Half opacity for detail
-                mixedColor += detailColor; // Add detail color
-
-                // Return final color
                 return fixed4(mixedColor.rgb, holoEffect * mixedColor.a);
             }
             ENDCG
         }
     }
+
 }

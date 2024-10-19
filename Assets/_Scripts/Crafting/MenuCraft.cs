@@ -114,7 +114,7 @@ public class MenuCraft : MonoBehaviour
             // Change the material of the instantiated item
             if (instantiatedItem == null)
             {
-                instantiatedItem = Instantiate(itemToCraft.model, Vector3.zero, Quaternion.identity); // Instantiate at a temporary position
+                instantiatedItem = Instantiate(itemToCraft.model, Vector3.zero, itemToCraft.model.transform.rotation); // Instantiate at a temporary position
                 originalMaterial = instantiatedItem.GetComponent<Renderer>().material; // Store original material
                 instantiatedItem.GetComponent<Renderer>().material = craftingMaterial; // Apply new material
                 instantiatedItemLayerMask = instantiatedItem.layer;
