@@ -93,19 +93,8 @@ public class PlaceItem : MonoBehaviour
         // Change materials and layer to original configuration
         RevertToOriginal(instantiatedItem);
 
-        // Play cloud particle system, size adjusted to item being placed
-        if (instantiatedItem.TryGetComponent<Renderer>(out var instantiatedItemRenderer))
-        {
-            Vector3 size = instantiatedItemRenderer.bounds.size;
-            cloudParticleSystem.transform.localScale = size * cloudScaling;
-        }
-        else
-        {
-            cloudParticleSystem.transform.localScale = defaultCloudSize;
-        }
-        cloudParticleSystem.transform.position = instantiatedItem.transform.position;
-        cloudParticleSystem.Play();
-
+        // Placing item effect
+        PlayCloudParticleSystem();
 
         instantiatedItem.layer = instantiatedItemLayerMask;
         instantiatedItem = null;
@@ -168,5 +157,21 @@ public class PlaceItem : MonoBehaviour
                 renderer.gameObject.layer = originalLayers[i];
             }
         }
+    }
+
+    // Play cloud particle system, size adjusted to item being placed
+    private void PlayCloudParticleSystem()
+    {
+        if (instantiatedItem.TryGetComponent<Renderer>(out var instantiatedItemRenderer))
+        {
+            Vector3 size = instantiatedItemRenderer.bounds.size;
+            cloudParticleSystem.transform.localScale = size * cloudScaling;
+        }
+        else
+        {
+            cloudParticleSystem.transform.localScale = defaultCloudSize;
+        }
+        cloudParticleSystem.transform.position = instantiatedItem.transform.position;
+        cloudParticleSystem.Play();
     }
 }
