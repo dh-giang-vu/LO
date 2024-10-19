@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a2771c3886af334282ef3be8aa25801, type: 3}
+  m_Name: ChristmasLights
+  m_EditorClassIdentifier: 
+  itemName: ChristmasLight
+  quantity: 1
+  model: {fileID: 6759752195238450314, guid: 358bea9a19f0e1c4c92847ee8aa06fce, type: 3}

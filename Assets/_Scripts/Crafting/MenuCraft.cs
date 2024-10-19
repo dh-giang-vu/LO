@@ -12,7 +12,7 @@ public class MenuCraft : MonoBehaviour
     [SerializeField] private int requiredMetal = 0;
     [SerializeField] private int requiredFiber = 0;
 
-    [SerializeField] private LightClass itemToCraft; // This is now of type LightClass (ScriptableObject)
+    [SerializeField] private ItemClass itemToCraft; // This is now of type LightClass (ScriptableObject)
     private float itemPlaceDistance = 30.0f;
 
     [SerializeField] private Inventory inventory;  // Reference to the Inventory
@@ -116,7 +116,7 @@ public class MenuCraft : MonoBehaviour
             // Change the material of the instantiated item
             if (instantiatedItem == null)
             {
-                instantiatedItem = Instantiate(itemToCraft.model, Vector3.zero, Quaternion.identity); // Instantiate at a temporary position
+                instantiatedItem = Instantiate(itemToCraft.model, Vector3.zero, itemToCraft.model.transform.rotation); // Instantiate at a temporary position
                 originalMaterial = instantiatedItem.GetComponent<Renderer>().material; // Store original material
                 instantiatedItem.GetComponent<Renderer>().material = craftingMaterial; // Apply new material
                 instantiatedItemLayerMask = instantiatedItem.layer;
