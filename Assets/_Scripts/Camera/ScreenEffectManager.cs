@@ -41,38 +41,35 @@ public class ScreenEffectManager : MonoBehaviour
         List<ISanityProvider> sanityProviders = sanityManager.GetActiveSanityProviders();
         foreach (ISanityProvider provider in sanityProviders)
         {
-            if (provider.getSanityEffect() == 0f)
+            if (provider is LightSource)
             {
                 inLight = true;  // Player is near a light source
             }
-            else
+            else if (provider is BuildingSanity)
             {
                 inBuilding = true;  // Player is inside a building
+                Debug.Log("INBUILDING");
             }
         }
     }
 
     public void BuildingEffectOn()
     {
-        Debug.Log("TURNING ON BUILDING FILTER");
         screenPostProcessing.BuildingFilterOn();
     }
 
     public void BuildingEffectOff()
     {
-        Debug.Log("TURNING OFF BUILDING FILTER");
         screenPostProcessing.BuildingFilterOff();
     }
 
     public void LightSourceEffectOn()
     {
-        Debug.Log("TURNING ON LIGHT FILTER");
         screenPostProcessing.LightSourceFilterOn();
     }
 
     public void LightSourceEffectOff()
     {
-        Debug.Log("TURNING OFF LIGHT FILTER");
         screenPostProcessing.LightSourceFilterOff();
     }
 }

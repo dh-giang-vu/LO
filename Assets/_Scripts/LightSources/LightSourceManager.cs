@@ -92,7 +92,6 @@ public class PilotoLightSourceScript : LightSource
     private void TurnOffSmoke()
     {
         smokes.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
-        Debug.Log("All particles cleared.");
     }
 
     private void TurnOnSmoke()

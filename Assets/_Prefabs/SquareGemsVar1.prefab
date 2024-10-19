@@ -151,5 +151,5 @@ MonoBehaviour:
   destroyWaitTime: 1
   collectables:
   - {fileID: 11400000, guid: 22f79ec8e9e4b5849b05476d2b10da33, type: 2}
-  - {fileID: 11400000, guid: 22f79ec8e9e4b5849b05476d2b10da33, type: 2}
-  - {fileID: 11400000, guid: 22f79ec8e9e4b5849b05476d2b10da33, type: 2}
+  - {fileID: 11400000, guid: 82b95c2d558824c4697b6c6fbeba9e8e, type: 2}
+  - {fileID: 11400000, guid: 82b95c2d558824c4697b6c6fbeba9e8e, type: 2}

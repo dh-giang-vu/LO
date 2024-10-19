@@ -25,7 +25,7 @@ public class BuildingObjectToggle : MonoBehaviour
         List<ISanityProvider> sanityProviders = sanityManager.GetActiveSanityProviders();
         foreach (ISanityProvider provider in sanityProviders)
         {
-            if (provider.getSanityEffect() != 0f)
+            if (provider is BuildingSanity)
             {
                 inBuilding = true; // Player is inside a building
                 break; // No need to check further, we found that the player is in a building

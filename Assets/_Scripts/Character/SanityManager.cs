@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -21,9 +22,11 @@ public class SanityManager : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        Debug.Log("found somthin" + other.name);
         if (other.TryGetComponent<ISanityProvider>(out var sanityProvider))
         {
             inRangeSanityProviders.Add(sanityProvider);
+            Debug.Log("found Sanity Provider");
         }
     }
 
@@ -76,8 +79,6 @@ public class SanityManager : MonoBehaviour
         {
             this.onLowSanity.Invoke();
         }
-
-        Debug.Log("Player's sanity: " + sanityAmount.ToString("F3")); // Format to 3 decimal places for clarity
     }
 
     // Public property to get the current sanity amount

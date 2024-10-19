@@ -37,7 +37,7 @@ public class StaminaManager : MonoBehaviour
 
         if (staminaDepleted)
         {
-            Debug.Log("Stamina has been depleted. Cannot sprint temporarily. Recovering Stamina: " + currentStamina.ToString());
+            // Debug.Log("Stamina has been depleted. Cannot sprint temporarily. Recovering Stamina: " + currentStamina.ToString());
         }
     }
 

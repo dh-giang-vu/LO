@@ -4909,6 +4909,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94944d67297ac914789c9a35a6fc036c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraTransform: {fileID: 0}
 --- !u!114 &8322549211923366363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9880,6 +9881,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourceUIParent: {fileID: 0}
   resourceText: {fileID: 0}
+  interfaceManager: {fileID: 0}
 --- !u!1 &7803917579296557164
 GameObject:
   m_ObjectHideFlags: 0
@@ -10014,5 +10016,6 @@ MonoBehaviour:
   running: {fileID: 9000000, guid: 49af61a7bff56144e806c4331e85909e, type: 3}
   gathering: {fileID: 9000000, guid: 57acbb80eced1f845aca858c810ee944, type: 3}
   mining: {fileID: 0}
+  chopping: {fileID: 0}
   pickaxePrefab: {fileID: 0}
-  pickaxeSpawnPoint: {fileID: 0}
+  axePrefab: {fileID: 0}
