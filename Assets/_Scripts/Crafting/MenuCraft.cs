@@ -34,9 +34,13 @@ public class MenuCraft : MonoBehaviour
     [SerializeField] private CraftUIMove craftUIMove;
     private GameObject player;
 
+    // New toggle to switch between handling all meshes or only one mesh
+    [SerializeField] private bool applyToAllMeshes = true;
+
     private void Start()
     {
         player = GameObject.FindWithTag("Player");
+
         // Ensure the inventory instance is valid
         if (inventory == null)
         {
@@ -119,26 +123,50 @@ public class MenuCraft : MonoBehaviour
             {
                 instantiatedItem = Instantiate(itemToCraft.model, Vector3.zero, itemToCraft.model.transform.rotation); // Instantiate at a temporary position
                 
-                // Store original materials and layers of all meshes
+                // Clear stored data
                 originalMaterials.Clear();
                 originalLayers.Clear();
-                Renderer[] renderers = instantiatedItem.GetComponentsInChildren<Renderer>();
-                foreach (Renderer renderer in renderers)
-                {
-                    // Save the original material and layer for each renderer
-                    originalMaterials.AddRange(renderer.materials);
-                    originalLayers.Add(renderer.gameObject.layer); // Store original layer
-                    
-                    // Apply crafting material to all sub-meshes
-                    Material[] craftingMaterials = new Material[renderer.materials.Length];
-                    for (int i = 0; i < renderer.materials.Length; i++)
-                    {
-                        craftingMaterials[i] = craftingMaterial;
-                    }
-                    renderer.materials = craftingMaterials;
 
-                    // Change the layer to NoCollision for each renderer
-                    renderer.gameObject.layer = LayerMask.NameToLayer("NoCollision");
+                if (applyToAllMeshes)
+                {
+                    // Handle all submeshes
+                    Renderer[] renderers = instantiatedItem.GetComponentsInChildren<Renderer>();
+                    foreach (Renderer renderer in renderers)
+                    {
+                        // Save original material and layer for each renderer
+                        originalMaterials.AddRange(renderer.materials);
+                        originalLayers.Add(renderer.gameObject.layer);
+
+                        // Apply crafting material to all sub-meshes
+                        Material[] craftingMaterials = new Material[renderer.materials.Length];
+                        for (int i = 0; i < renderer.materials.Length; i++)
+                        {
+                            craftingMaterials[i] = craftingMaterial;
+                        }
+                        renderer.materials = craftingMaterials;
+
+                        // Change the layer to NoCollision for each renderer
+                        renderer.gameObject.layer = LayerMask.NameToLayer("NoCollision");
+                    }
+                }
+                else
+                {
+                    // Handle only the first/main mesh
+                    Renderer mainRenderer = instantiatedItem.GetComponent<Renderer>();
+                    if (mainRenderer != null)
+                    {
+                        originalMaterials.AddRange(mainRenderer.materials);
+                        originalLayers.Add(mainRenderer.gameObject.layer);
+
+                        Material[] craftingMaterials = new Material[mainRenderer.materials.Length];
+                        for (int i = 0; i < mainRenderer.materials.Length; i++)
+                        {
+                            craftingMaterials[i] = craftingMaterial;
+                        }
+                        mainRenderer.materials = craftingMaterials;
+
+                        mainRenderer.gameObject.layer = LayerMask.NameToLayer("NoCollision");
+                    }
                 }
 
                 instantiatedItemLayerMask = instantiatedItem.layer;
@@ -184,55 +212,73 @@ public class MenuCraft : MonoBehaviour
     }
 
     // Method to stop placing the item
-
-    // Method to stop placing the item
-private void StopPlacingItem()
-{
-    isPlacingItem = false;
-    instantiatedItem.layer = instantiatedItemLayerMask;
-
-    // Revert back to the original materials and layers for all meshes
-    Renderer[] renderers = instantiatedItem.GetComponentsInChildren<Renderer>();
-    int materialIndex = 0;
-
-    for (int i = 0; i < renderers.Length; i++)
+    private void StopPlacingItem()
     {
-        Renderer renderer = renderers[i];
-        
-        // Set the materials back to their original
-        Material[] materials = new Material[renderer.materials.Length];
-        for (int j = 0; j < renderer.materials.Length; j++)
+        isPlacingItem = false;
+        instantiatedItem.layer = instantiatedItemLayerMask;
+
+        // Revert back to the original materials and layers
+        if (applyToAllMeshes)
         {
-            if (materialIndex < originalMaterials.Count)
+            Renderer[] renderers = instantiatedItem.GetComponentsInChildren<Renderer>();
+            int materialIndex = 0;
+
+            for (int i = 0; i < renderers.Length; i++)
             {
-                materials[j] = originalMaterials[materialIndex];
-                materialIndex++;
+                Renderer renderer = renderers[i];
+
+                // Set the materials back to their original
+                Material[] materials = new Material[renderer.materials.Length];
+                for (int j = 0; j < renderer.materials.Length; j++)
+                {
+                    if (materialIndex < originalMaterials.Count)
+                    {
+                        materials[j] = originalMaterials[materialIndex];
+                        materialIndex++;
+                    }
+                }
+                renderer.materials = materials;
+
+                // Revert back to the original layer
+                if (i < originalLayers.Count)
+                {
+                    renderer.gameObject.layer = originalLayers[i];
+                }
             }
         }
-        renderer.materials = materials;
-
-        // Revert back to the original layer
-        if (i < originalLayers.Count)
+        else
         {
-            int originalLayer = originalLayers[i];
-            renderer.gameObject.layer = originalLayer;
+            // Revert materials and layer for only the main mesh
+            Renderer mainRenderer = instantiatedItem.GetComponent<Renderer>();
+            if (mainRenderer != null)
+            {
+                Material[] materials = new Material[mainRenderer.materials.Length];
+                for (int i = 0; i < mainRenderer.materials.Length; i++)
+                {
+                    materials[i] = originalMaterials[i];
+                }
+                mainRenderer.materials = materials;
+
+                if (originalLayers.Count > 0)
+                {
+                    mainRenderer.gameObject.layer = originalLayers[0];
+                }
+            }
         }
-    }
 
-    // Play cloud particle system, size adjusted to item being placed
-    if (instantiatedItem.TryGetComponent<Renderer>(out var instantiatedItemRenderer))
-    {
-        Vector3 size = instantiatedItemRenderer.bounds.size;
-        cloudParticleSystem.transform.localScale = size * cloudScaling;
-    }
-    else
-    {
-        cloudParticleSystem.transform.localScale = defaultCloudSize;
-    }
-    cloudParticleSystem.transform.position = instantiatedItem.transform.position;
-    cloudParticleSystem.Play();
+        // Play cloud particle system, size adjusted to item being placed
+        if (instantiatedItem.TryGetComponent<Renderer>(out var instantiatedItemRenderer))
+        {
+            Vector3 size = instantiatedItemRenderer.bounds.size;
+            cloudParticleSystem.transform.localScale = size * cloudScaling;
+        }
+        else
+        {
+            cloudParticleSystem.transform.localScale = defaultCloudSize;
+        }
+        cloudParticleSystem.transform.position = instantiatedItem.transform.position;
+        cloudParticleSystem.Play();
 
-    instantiatedItem = null;  // Clear the reference so no further updates happen
-}
-
+        instantiatedItem = null;  // Clear the reference so no further updates happen
+    }
 }

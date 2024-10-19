@@ -506,6 +506,7 @@ MonoBehaviour:
   defaultCloudSize: {x: 1, y: 1, z: 1}
   cloudScaling: 0.25
   craftUIMove: {fileID: 2545504599802197064}
+  applyToAllMeshes: 1
 --- !u!1 &148333208249694832
 GameObject:
   m_ObjectHideFlags: 0
@@ -2215,6 +2216,7 @@ MonoBehaviour:
   defaultCloudSize: {x: 1, y: 1, z: 1}
   cloudScaling: 0.25
   craftUIMove: {fileID: 2545504599802197064}
+  applyToAllMeshes: 0
 --- !u!1 &1152898206042817134
 GameObject:
   m_ObjectHideFlags: 0
@@ -2509,6 +2511,7 @@ MonoBehaviour:
   defaultCloudSize: {x: 1, y: 1, z: 1}
   cloudScaling: 0.25
   craftUIMove: {fileID: 2545504599802197064}
+  applyToAllMeshes: 1
 --- !u!1 &1234619965348348849
 GameObject:
   m_ObjectHideFlags: 0
@@ -3697,6 +3700,7 @@ MonoBehaviour:
   defaultCloudSize: {x: 1, y: 1, z: 1}
   cloudScaling: 0.25
   craftUIMove: {fileID: 2545504599802197064}
+  applyToAllMeshes: 1
 --- !u!1 &2025023890327419977
 GameObject:
   m_ObjectHideFlags: 0
@@ -3994,6 +3998,7 @@ MonoBehaviour:
   defaultCloudSize: {x: 1, y: 1, z: 1}
   cloudScaling: 0.25
   craftUIMove: {fileID: 2545504599802197064}
+  applyToAllMeshes: 0
 --- !u!1 &2086221693003217193
 GameObject:
   m_ObjectHideFlags: 0
@@ -5380,6 +5385,7 @@ MonoBehaviour:
   defaultCloudSize: {x: 1, y: 1, z: 1}
   cloudScaling: 0.25
   craftUIMove: {fileID: 2545504599802197064}
+  applyToAllMeshes: 1
 --- !u!1 &2754500853462704206
 GameObject:
   m_ObjectHideFlags: 0
@@ -6305,6 +6311,7 @@ MonoBehaviour:
   defaultCloudSize: {x: 1, y: 1, z: 1}
   cloudScaling: 0.25
   craftUIMove: {fileID: 2545504599802197064}
+  applyToAllMeshes: 1
 --- !u!1 &3015944800902840934
 GameObject:
   m_ObjectHideFlags: 0
@@ -7429,6 +7436,7 @@ MonoBehaviour:
   defaultCloudSize: {x: 1, y: 1, z: 1}
   cloudScaling: 0.25
   craftUIMove: {fileID: 2545504599802197064}
+  applyToAllMeshes: 0
 --- !u!1 &3503525344247556777
 GameObject:
   m_ObjectHideFlags: 0
@@ -7989,6 +7997,7 @@ MonoBehaviour:
   defaultCloudSize: {x: 1, y: 1, z: 1}
   cloudScaling: 0.25
   craftUIMove: {fileID: 2545504599802197064}
+  applyToAllMeshes: 1
 --- !u!1 &3685652646587518270
 GameObject:
   m_ObjectHideFlags: 0
@@ -11776,6 +11785,7 @@ MonoBehaviour:
   defaultCloudSize: {x: 1, y: 1, z: 1}
   cloudScaling: 0.25
   craftUIMove: {fileID: 2545504599802197064}
+  applyToAllMeshes: 0
 --- !u!1 &5133275740415814243
 GameObject:
   m_ObjectHideFlags: 0
@@ -14923,6 +14933,7 @@ MonoBehaviour:
   defaultCloudSize: {x: 1, y: 1, z: 1}
   cloudScaling: 0.25
   craftUIMove: {fileID: 2545504599802197064}
+  applyToAllMeshes: 1
 --- !u!1 &6291039406196242436
 GameObject:
   m_ObjectHideFlags: 0
@@ -15776,6 +15787,7 @@ MonoBehaviour:
   defaultCloudSize: {x: 1, y: 1, z: 1}
   cloudScaling: 0.25
   craftUIMove: {fileID: 2545504599802197064}
+  applyToAllMeshes: 1
 --- !u!1 &6826909208074240386
 GameObject:
   m_ObjectHideFlags: 0
@@ -16873,6 +16885,7 @@ MonoBehaviour:
   defaultCloudSize: {x: 1, y: 1, z: 1}
   cloudScaling: 0.25
   craftUIMove: {fileID: 2545504599802197064}
+  applyToAllMeshes: 1
 --- !u!1 &7049978399640618584
 GameObject:
   m_ObjectHideFlags: 0
@@ -17173,6 +17186,7 @@ MonoBehaviour:
   defaultCloudSize: {x: 1, y: 1, z: 1}
   cloudScaling: 0.25
   craftUIMove: {fileID: 2545504599802197064}
+  applyToAllMeshes: 1
 --- !u!1 &7237049141304130347
 GameObject:
   m_ObjectHideFlags: 0
@@ -17332,6 +17346,7 @@ MonoBehaviour:
   defaultCloudSize: {x: 1, y: 1, z: 1}
   cloudScaling: 0.25
   craftUIMove: {fileID: 2545504599802197064}
+  applyToAllMeshes: 0
 --- !u!1 &7248505680367531363
 GameObject:
   m_ObjectHideFlags: 0
@@ -19984,6 +19999,7 @@ MonoBehaviour:
   defaultCloudSize: {x: 1, y: 1, z: 1}
   cloudScaling: 0.25
   craftUIMove: {fileID: 2545504599802197064}
+  applyToAllMeshes: 1
 --- !u!1 &7949398490373676545
 GameObject:
   m_ObjectHideFlags: 0
@@ -20365,6 +20381,7 @@ MonoBehaviour:
   defaultCloudSize: {x: 1, y: 1, z: 1}
   cloudScaling: 0.25
   craftUIMove: {fileID: 2545504599802197064}
+  applyToAllMeshes: 1
 --- !u!1 &8171193338099439905
 GameObject:
   m_ObjectHideFlags: 0
@@ -22969,6 +22986,7 @@ MonoBehaviour:
   defaultCloudSize: {x: 1, y: 1, z: 1}
   cloudScaling: 0.25
   craftUIMove: {fileID: 2545504599802197064}
+  applyToAllMeshes: 1
 --- !u!1 &9183397389214404720
 GameObject:
   m_ObjectHideFlags: 0
