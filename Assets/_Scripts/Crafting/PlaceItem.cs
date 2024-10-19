@@ -39,42 +39,57 @@ public class PlaceItem : MonoBehaviour
     }
 
     void Update()
+{
+    // Not placing anything -> skip
+    if (!isPlacingItem || itemToPlace == null)
     {
-        // Not placing anything -> skip
-        if (!isPlacingItem || itemToPlace == null)
-        {
-            return;
-        }
-
-        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-        Debug.DrawRay(ray.origin, ray.direction * 10, Color.yellow);
-
-        if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, LayerMask.GetMask("TerrainLayer")))
-        {
-            // Place the item at the hit point
-            Vector3 placePosition = hit.point;
-            if (instantiatedItem == null)
-            {
-                instantiatedItem = Instantiate(itemToPlace, placePosition, itemToPlace.transform.rotation);
-                instantiatedItemLayerMask = instantiatedItem.layer;
-                instantiatedItem.layer = LayerMask.NameToLayer("NoCollision");
-
-                // Apply blueprint material to all RendererMeshes + move to NoCollision layer
-                ModifyAllMeshes(instantiatedItem);
-            }
-            else
-            {
-                instantiatedItem.transform.position = placePosition;
-                instantiatedItem.transform.LookAt(player.transform);
-            }
-        }
-
-        if (Input.GetKeyDown(KeyCode.Mouse0) && instantiatedItem != null)
-        {
-            StopPlacingItem();
-        }
-
+        return;
     }
+
+    Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+    Debug.DrawRay(ray.origin, ray.direction * 10, Color.yellow);
+
+    if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, LayerMask.GetMask("TerrainLayer")))
+    {
+        // Place the item at the hit point
+        Vector3 placePosition = hit.point;
+        
+        if (instantiatedItem == null)
+        {
+            // Instantiate the item with its prefab's original rotation
+            instantiatedItem = Instantiate(itemToPlace, placePosition, itemToPlace.transform.rotation);
+            instantiatedItemLayerMask = instantiatedItem.layer;
+            instantiatedItem.layer = LayerMask.NameToLayer("NoCollision");
+
+            // Apply blueprint material to all RendererMeshes + move to NoCollision layer
+            ModifyAllMeshes(instantiatedItem);
+        }
+        else
+        {
+            // Update the item's position
+            instantiatedItem.transform.position = placePosition;
+
+            // Retain the prefab's original rotation
+            Vector3 originalRotation = itemToPlace.transform.eulerAngles;
+
+            // Calculate the direction to look at the player
+            Vector3 lookDirection = player.transform.position - instantiatedItem.transform.position;
+            lookDirection.y = 0;  // Ignore any height differences
+
+            // Calculate the Y-axis angle to face the player
+            float targetYRotation = Quaternion.LookRotation(lookDirection).eulerAngles.y;
+
+            // Apply only the Y-axis rotation to face the player, while keeping the original X and Z rotation from the prefab
+            instantiatedItem.transform.eulerAngles = new Vector3(originalRotation.x, targetYRotation, originalRotation.z);
+        }
+    }
+
+    if (Input.GetKeyDown(KeyCode.Mouse0) && instantiatedItem != null)
+    {
+        StopPlacingItem();
+    }
+}
+
 
     public void StartPlacingItem(GameObject gameObject)
     {
