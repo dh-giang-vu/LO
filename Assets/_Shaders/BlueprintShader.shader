@@ -76,8 +76,8 @@ Shader "Custom/EnhancedBlueprintShader"
                 float anim = _AnimIntensity * _Time.y;
                 float holoEffect = sin(rotate * _HoloIntensity + anim) * 0.5 + 0.5;
 
-                // Pulsing effect based on time
-                float pulse = sin(_Time.y * _PulsingSpeed) * 0.5 + 0.5;
+                // Pulsing effect adjusted to go from 100% to 50%
+                float pulse = sin(_Time.y * _PulsingSpeed) * 0.25 + 0.75;
                 
                 // Blend the colors based on the rotation and pulse effect
                 float4 mixedColor = lerp(_Color1, _Color2, rotate) * holoEffect * pulse;

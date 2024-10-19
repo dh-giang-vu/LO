@@ -12,7 +12,7 @@ public class MenuCraft : MonoBehaviour
     [SerializeField] private int requiredMetal = 0;
     [SerializeField] private int requiredFiber = 0;
 
-    [SerializeField] private LightClass itemToCraft; // This is now of type LightClass (ScriptableObject)
+    [SerializeField] private ItemClass itemToCraft; // This is now of type LightClass (ScriptableObject)
     private float itemPlaceDistance = 30.0f;
 
     [SerializeField] private Inventory inventory;  // Reference to the Inventory
