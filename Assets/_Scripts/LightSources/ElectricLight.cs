@@ -4,18 +4,13 @@ using UnityEngine;
 
 public class ElectricLight : LightSource
 {
-    private Light ElecLight;
-    private bool active;
+    protected Light light;
 
     // Start is called before the first frame update
     void Start()
     {
         // Get the Light component and turn it off initially
-         ElecLight = GetComponentInChildren<Light>();
-        if (ElecLight != null)
-        {
-            ElecLight.enabled = false;
-        }
+        light = GetComponentInChildren<Light>();
     }
 
     // Update is called once per frame
@@ -26,26 +21,26 @@ public class ElectricLight : LightSource
      // Method to turn on the light
     public override void Refuel()
     {
-        if (ElecLight != null)
+        if (light != null)
         {
-            ElecLight.enabled = true;
-            active = true;
+            light.enabled = true;
+            alive = true;
         }
     }
 
     // Method to turn off the light
     public override void Die()
     {
-        if (ElecLight != null)
+        if (light != null)
         {
-            ElecLight.enabled = false;
-            active = false;
+            light.enabled = false;
+            alive = false;
         }
     }
 
     public override bool isActive()
     {
-        return active;
+        return alive;
     }
 
     public override float getSanityEffect()
