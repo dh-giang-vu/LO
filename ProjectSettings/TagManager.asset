@@ -10,6 +10,7 @@ TagManager:
   - Bush
   - lb_bird
   - crow
+  - inventory
   layers:
   - Default
   - TransparentFX

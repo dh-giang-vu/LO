@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class lb_Bird : MonoBehaviour {
+public class CrowIdle : MonoBehaviour {
     enum birdBehaviors {
         sing,
         preen,

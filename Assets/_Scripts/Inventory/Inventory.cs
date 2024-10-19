@@ -3,8 +3,6 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    public static Inventory Instance { get; private set; }
-
     public List<CollectableClass> items = new List<CollectableClass>();
 
     // Variables to store the amounts of materials
@@ -13,19 +11,6 @@ public class Inventory : MonoBehaviour
     public int coalAmount { get; private set; }
     public int metalAmount { get; private set; }
     public int fiberAmount { get; private set; }
-
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
 
     public void Start()
     {

@@ -8,6 +8,10 @@ public class InterfaceManager : MonoBehaviour
     public TextMeshProUGUI resourceText;
     public TextMeshProUGUI progressText;
 
+    // Remove the serialized Inventory and ProgressTracker fields
+    private Inventory inventory;
+    private ProgressTracker progressTracker;
+
     private Dictionary<string, int> resourceAmounts;
 
     private string part1 = "<sprite name=\"";
@@ -21,6 +25,20 @@ public class InterfaceManager : MonoBehaviour
 
     private void Start()
     {
+        // Find the Inventory and ProgressTracker in the scene
+        inventory = FindObjectOfType<Inventory>();
+        progressTracker = FindObjectOfType<ProgressTracker>();
+
+        // Check if Inventory and ProgressTracker were found
+        if (inventory == null)
+        {
+            Debug.LogError("Inventory not found in the scene.");
+        }
+        if (progressTracker == null)
+        {
+            Debug.LogError("ProgressTracker not found in the scene.");
+        }
+
         // Initialize resourceAmounts dictionary
         resourceAmounts = new Dictionary<string, int>()
         {
@@ -38,7 +56,6 @@ public class InterfaceManager : MonoBehaviour
         // Update resource amounts and display
         UpdateResourceAmounts();
         DisplayResources();
-        DisplayStats();
         DisplayProgress();
     }
 
@@ -47,7 +64,6 @@ public class InterfaceManager : MonoBehaviour
         // Optionally update the resources in real-time
         UpdateResourceAmounts();
         DisplayResources();
-        DisplayStats();
         DisplayProgress();
 
         // Check for the "E" key press to interact with the crow
@@ -63,8 +79,11 @@ public class InterfaceManager : MonoBehaviour
 
     private void UpdateResourceAmounts()
     {
-        // Retrieve the inventory instance
-        Inventory inventory = Inventory.Instance;
+        if (inventory == null)
+        {
+            Debug.LogError("Inventory is null. Cannot update resource amounts.");
+            return;
+        }
 
         // Update the quantities of each resource from the inventory
         foreach (CollectableClass item in inventory.items)
@@ -88,15 +107,15 @@ public class InterfaceManager : MonoBehaviour
         }
     }
 
-    private void DisplayStats()
-    {
-        Inventory inventory = Inventory.Instance;
-        // Clear the resourceText before displaying resources
-    }
-
     private void DisplayProgress()
     {
-        float currentProgress = ProgressTracker.Instance.GetProgress();
+        if (progressTracker == null)
+        {
+            Debug.LogError("ProgressTracker is null. Cannot display progress.");
+            return;
+        }
+
+        float currentProgress = progressTracker.GetProgress();
         currentProgress = currentProgress * 100;
         currentProgress = Mathf.Round(currentProgress);
         progressText.text = "Progress: " + currentProgress.ToString() + "%";
@@ -113,9 +132,4 @@ public class InterfaceManager : MonoBehaviour
     {
         isCrowInRange = false;
     }
-
-
-
-   
-
 }

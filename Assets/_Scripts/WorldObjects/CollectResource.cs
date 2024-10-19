@@ -7,10 +7,24 @@ public class CollectResource : MonoBehaviour
     [SerializeField] private float destroyWaitTime = 1f;
     [SerializeField] private CollectableClass[] collectables;
 
+    private Inventory inventory;  // Dynamically found reference to the player's Inventory
+
+    void Start()
+    {
+        // Find Inventory instance in the scene if it's not assigned
+        if (inventory == null)
+        {
+            inventory = FindObjectOfType<Inventory>();
+            if (inventory == null)
+            {
+                Debug.LogError("Inventory not found in the scene. Ensure an Inventory exists.");
+            }
+        }
+    }
+
     public void Interact()
     {
         StartCoroutine(DelayedRemoveSelf());
-        
     }
 
     IEnumerator DelayedRemoveSelf()
@@ -21,9 +35,9 @@ public class CollectResource : MonoBehaviour
     }
 
     void UpdateInventory()
-    {   
-        var inventory = Inventory.Instance;
-        for (int i = 0; i < collectables.Length; i++) {
+    {
+        for (int i = 0; i < collectables.Length; i++)
+        {
             Debug.Log(collectables[i]);
             inventory.AddItem(collectables[i]);
         }
