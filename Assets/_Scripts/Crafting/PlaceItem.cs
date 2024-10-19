@@ -5,21 +5,31 @@ using UnityEngine;
 
 public class PlaceItem : MonoBehaviour
 {
-    [SerializeField] private Camera cam;
-    [SerializeField] private bool isPlacingItem = false;
+    // Base properties for Item Placement
     [SerializeField] private GameObject itemToPlace = null;
     [SerializeField] private GameObject instantiatedItem = null;
+    [SerializeField] private bool isPlacingItem = false;
+    private Camera cam;
+
+    // Debug mode
+    [SerializeField] private bool debugMode = false;
+
+    // For preventing collision during placing item
+    private LayerMask instantiatedItemLayerMask;
+
+    // Object rotate to look at player
+    private GameObject player;
+
+    // Cloud particle system
     [SerializeField] private ParticleSystem cloudParticleSystem;
     [SerializeField] private Vector3 defaultCloudSize = new Vector3(1.0f, 1.0f, 1.0f);
     [SerializeField] private float cloudScaling = 0.25f;
 
-    [SerializeField] private bool debugMode = false;
-    private LayerMask instantiatedItemLayerMask;
 
     // Material handling variables
     [SerializeField] private Material craftingMaterial; // The material to apply while crafting
-    private Material originalMaterial; // Store the original material
-    private GameObject player;
+    private List<Material> originalMaterials = new List<Material>(); // Store original materials for all meshes
+    private List<int> originalLayers = new List<int>(); // Store original layers for all meshes
 
     void Start()
     {
@@ -45,16 +55,12 @@ public class PlaceItem : MonoBehaviour
             Vector3 placePosition = hit.point;
             if (instantiatedItem == null)
             {
-                instantiatedItem = Instantiate(itemToPlace, placePosition, Quaternion.identity);
+                instantiatedItem = Instantiate(itemToPlace, placePosition, itemToPlace.transform.rotation);
                 instantiatedItemLayerMask = instantiatedItem.layer;
                 instantiatedItem.layer = LayerMask.NameToLayer("NoCollision");
 
-                // Assign blueprint material
-                if (instantiatedItem.TryGetComponent<Renderer>(out var instantiatedItemRenderer))
-                {
-                    originalMaterial = instantiatedItemRenderer.material;
-                    instantiatedItemRenderer.material = craftingMaterial;
-                }
+                // Apply blueprint material to all RendererMeshes + move to NoCollision layer
+                ModifyAllMeshes(instantiatedItem);
             }
             else
             {
@@ -83,15 +89,15 @@ public class PlaceItem : MonoBehaviour
             isPlacingItem = false;
             itemToPlace = null;
         }
-        
+
+        // Change materials and layer to original configuration
+        RevertToOriginal(instantiatedItem);
+
         // Play cloud particle system, size adjusted to item being placed
         if (instantiatedItem.TryGetComponent<Renderer>(out var instantiatedItemRenderer))
         {
             Vector3 size = instantiatedItemRenderer.bounds.size;
             cloudParticleSystem.transform.localScale = size * cloudScaling;
-
-            // Revert back to the original material
-            instantiatedItemRenderer.material = originalMaterial;
         }
         else
         {
@@ -103,5 +109,64 @@ public class PlaceItem : MonoBehaviour
 
         instantiatedItem.layer = instantiatedItemLayerMask;
         instantiatedItem = null;
+    }
+
+    private void ModifyAllMeshes(GameObject instantiatedItem)
+    {
+        originalMaterials.Clear();
+        originalLayers.Clear();
+
+        // Get all MeshRenderer components in the GameObject and its children
+        MeshRenderer[] renderers = instantiatedItem.GetComponentsInChildren<MeshRenderer>();
+
+        // Loop through each MeshRenderer
+        foreach (MeshRenderer renderer in renderers)
+        {
+            // Save original material and layer for each renderer
+            originalMaterials.AddRange(renderer.materials);
+            originalLayers.Add(renderer.gameObject.layer);
+
+            // Apply crafting material to all sub-meshes
+            Material[] craftingMaterials = new Material[renderer.materials.Length];
+            for (int i = 0; i < renderer.materials.Length; i++)
+            {
+                craftingMaterials[i] = craftingMaterial;
+            }
+            renderer.materials = craftingMaterials;
+
+            // Change the layer to NoCollision for each renderer
+            renderer.gameObject.layer = LayerMask.NameToLayer("NoCollision");
+        }
+    }
+
+    private void RevertToOriginal(GameObject instantiatedItem)
+    {
+        // Get all MeshRenderer components in the GameObject and its children
+        MeshRenderer[] renderers = instantiatedItem.GetComponentsInChildren<MeshRenderer>();
+        int materialIndex = 0;
+
+        // Loop through each MeshRenderer
+        for (int i = 0; i < renderers.Length; i++)
+        {
+            MeshRenderer renderer = renderers[i];
+
+            // Set the materials back to their original
+            Material[] materials = new Material[renderer.materials.Length];
+            for (int j = 0; j < renderer.materials.Length; j++)
+            {
+                if (materialIndex < originalMaterials.Count)
+                {
+                    materials[j] = originalMaterials[materialIndex];
+                    materialIndex++;
+                }
+            }
+            renderer.materials = materials;
+
+            // Revert back to the original layer
+            if (i < originalLayers.Count)
+            {
+                renderer.gameObject.layer = originalLayers[i];
+            }
+        }
     }
 }
