@@ -471,7 +471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013097492628, guid: e1f35f4b9ee7e9747b7f35059ac4423f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 36.9
+      value: 39.83
       objectReference: {fileID: 0}
     - target: {fileID: 4000013097492628, guid: e1f35f4b9ee7e9747b7f35059ac4423f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -479,7 +479,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013097492628, guid: e1f35f4b9ee7e9747b7f35059ac4423f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 44.2
+      value: 48.41
       objectReference: {fileID: 0}
     - target: {fileID: 4000013097492628, guid: e1f35f4b9ee7e9747b7f35059ac4423f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -884,6 +884,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToSpawn: {fileID: 1000010349089634, guid: ce4eef43afcd3ee429c6b4d8ffda53d2, type: 3}
+  thorns: {fileID: 2363938681925551106, guid: 20fd414af9fb07343b89d7c700f36df8, type: 3}
   terrain: {fileID: 1507183531}
   numberOfInitObjects: 45
   autoSpawnInterval: 20
@@ -3439,6 +3440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToSpawn: {fileID: 1000011449246696, guid: e1f35f4b9ee7e9747b7f35059ac4423f, type: 3}
+  thorns: {fileID: 2363938681925551106, guid: 20fd414af9fb07343b89d7c700f36df8, type: 3}
   terrain: {fileID: 1507183531}
   numberOfInitObjects: 100
   autoSpawnInterval: 20
@@ -4409,6 +4411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToSpawn: {fileID: 6336855543573918107, guid: 8fe2c0543598f4a4998fe1212fb05710, type: 3}
+  thorns: {fileID: 2363938681925551106, guid: 20fd414af9fb07343b89d7c700f36df8, type: 3}
   terrain: {fileID: 1507183531}
   numberOfInitObjects: 50
   autoSpawnInterval: 20
@@ -6577,6 +6580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToSpawn: {fileID: 2303205053959840659, guid: 2349e85a434643647a7f10137f1a5a42, type: 3}
+  thorns: {fileID: 2363938681925551106, guid: 20fd414af9fb07343b89d7c700f36df8, type: 3}
   terrain: {fileID: 1507183531}
   numberOfInitObjects: 50
   autoSpawnInterval: 40
@@ -7099,6 +7103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToSpawn: {fileID: 8827697149842317551, guid: 19e48c26020fafe418cb4c2298a4fd3f, type: 3}
+  thorns: {fileID: 2363938681925551106, guid: 20fd414af9fb07343b89d7c700f36df8, type: 3}
   terrain: {fileID: 1507183531}
   numberOfInitObjects: 75
   autoSpawnInterval: 20
@@ -9329,6 +9334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToSpawn: {fileID: 3574884054442196509, guid: 64fb995fc63a0534bafa6da6b37e1124, type: 3}
+  thorns: {fileID: 2363938681925551106, guid: 20fd414af9fb07343b89d7c700f36df8, type: 3}
   terrain: {fileID: 1507183531}
   numberOfInitObjects: 100
   autoSpawnInterval: 20
@@ -10126,6 +10132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToSpawn: {fileID: 2142975841462047055, guid: 539de0ad0d93a5748ba75f2d185f146e, type: 3}
+  thorns: {fileID: 2363938681925551106, guid: 20fd414af9fb07343b89d7c700f36df8, type: 3}
   terrain: {fileID: 1507183531}
   numberOfInitObjects: 50
   autoSpawnInterval: 40

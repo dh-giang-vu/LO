@@ -5,6 +5,7 @@ using UnityEngine;
 public class ObjectsGen : MonoBehaviour
 {
     public GameObject objectToSpawn;
+    public GameObject thorns;
     public Terrain terrain;
     public int numberOfInitObjects; // Number of objects when game starts
     public float autoSpawnInterval; // Auto spawn time interval
@@ -42,7 +43,14 @@ public class ObjectsGen : MonoBehaviour
             Vector3 spawnPosition = new Vector3(randomX, terrainHeight, randomZ);
 
             // Spawn the object at the calculated position
-            Instantiate(objectToSpawn, spawnPosition, Quaternion.identity);
+            GameObject instantiatedObject = Instantiate(objectToSpawn, spawnPosition, Quaternion.identity);
+
+            // 20% chance to spawn thorns
+            if (Random.Range(0, 100) > 80 && thorns != null)
+            {
+                GameObject thorn = Instantiate(thorns, instantiatedObject.transform.position, thorns.transform.rotation, instantiatedObject.transform);
+                thorn.transform.localScale = new Vector3(250.0f, 250.0f, 354.160f);
+            }
         
     }
 
