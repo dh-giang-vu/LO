@@ -54,23 +54,23 @@ public class SanityManager : MonoBehaviour
 
     private void UpdateSanity()
     {
+        bool inLight = false;
         List<ISanityProvider> activeSanityProviders = GetActiveSanityProviders();
 
-        if (activeSanityProviders.Count == 0)
+        foreach (ISanityProvider sanityProvider in activeSanityProviders)
         {
-            // Deduct a flat percentage of the total sanity (e.g., 5% of 1.0 = 0.05 per second if deductionRate = 5)
+            if (sanityProvider is LightSource) {
+                inLight = true;
+            }
+            float sanityEffect = sanityProvider.getSanityEffect();
+            // Clamp sanity amount between 0.0 and 1.0
+            sanityAmount = Mathf.Clamp(sanityAmount + sanityEffect / 5.0f, 0.0f, 1.0f);
+        }
+        if (!inLight) {
             float sanityReduction = deductionRate / 10.0f; // Converts 5% to 0.05
             sanityAmount = Mathf.Clamp(sanityAmount - sanityReduction, 0.0f, 1.0f); // Ensure sanity doesn't go below 0
         }
-        else
-        {
-            foreach (ISanityProvider sanityProvider in activeSanityProviders)
-            {
-                float sanityEffect = sanityProvider.getSanityEffect();
-                // Clamp sanity amount between 0.0 and 1.0
-                sanityAmount = Mathf.Clamp(sanityAmount + sanityEffect / 5.0f, 0.0f, 1.0f);
-            }
-        }
+
 
         if (sanityAmount < lowSanityThreshold)
         {

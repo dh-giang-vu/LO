@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TentSanity : MonoBehaviour, ISanityProvider
+public class BuildingSanity : MonoBehaviour, ISanityProvider
 {
     [SerializeField] private float sanityEffect = 0.2f;
     public float getSanityEffect()
