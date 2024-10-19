@@ -1088,7 +1088,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Burning barrel
+  m_text: Motel
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95d7686b568839b4aa30b21886d6f0c1, type: 2}
   m_sharedMaterial: {fileID: -8020612493836900852, guid: 95d7686b568839b4aa30b21886d6f0c1, type: 2}
@@ -8063,7 +8063,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Christmas Lights
+  m_text: Wooden House
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95d7686b568839b4aa30b21886d6f0c1, type: 2}
   m_sharedMaterial: {fileID: -8020612493836900852, guid: 95d7686b568839b4aa30b21886d6f0c1, type: 2}
@@ -8955,7 +8955,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Traffic Light
+  m_text: Desert House
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95d7686b568839b4aa30b21886d6f0c1, type: 2}
   m_sharedMaterial: {fileID: -8020612493836900852, guid: 95d7686b568839b4aa30b21886d6f0c1, type: 2}
@@ -13258,7 +13258,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Campfire
+  m_text: Small House
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95d7686b568839b4aa30b21886d6f0c1, type: 2}
   m_sharedMaterial: {fileID: -8020612493836900852, guid: 95d7686b568839b4aa30b21886d6f0c1, type: 2}
@@ -19771,7 +19771,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Street Light
+  m_text: Medieval House
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95d7686b568839b4aa30b21886d6f0c1, type: 2}
   m_sharedMaterial: {fileID: -8020612493836900852, guid: 95d7686b568839b4aa30b21886d6f0c1, type: 2}
@@ -20585,7 +20585,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Torch
+  m_text: Tent
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95d7686b568839b4aa30b21886d6f0c1, type: 2}
   m_sharedMaterial: {fileID: -8020612493836900852, guid: 95d7686b568839b4aa30b21886d6f0c1, type: 2}
