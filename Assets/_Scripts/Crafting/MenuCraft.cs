@@ -22,7 +22,8 @@ public class MenuCraft : MonoBehaviour
 
     // Material handling variables
     [SerializeField] private Material craftingMaterial; // The material to apply while crafting
-    private Material originalMaterial; // Store the original material
+    private List<Material> originalMaterials = new List<Material>(); // Store original materials for all meshes
+    private List<int> originalLayers = new List<int>(); // Store original layers for all meshes
 
     // Cloud effect when placing items
     [SerializeField] private ParticleSystem cloudParticleSystem;
@@ -117,8 +118,29 @@ public class MenuCraft : MonoBehaviour
             if (instantiatedItem == null)
             {
                 instantiatedItem = Instantiate(itemToCraft.model, Vector3.zero, itemToCraft.model.transform.rotation); // Instantiate at a temporary position
-                originalMaterial = instantiatedItem.GetComponent<Renderer>().material; // Store original material
-                instantiatedItem.GetComponent<Renderer>().material = craftingMaterial; // Apply new material
+                
+                // Store original materials and layers of all meshes
+                originalMaterials.Clear();
+                originalLayers.Clear();
+                Renderer[] renderers = instantiatedItem.GetComponentsInChildren<Renderer>();
+                foreach (Renderer renderer in renderers)
+                {
+                    // Save the original material and layer for each renderer
+                    originalMaterials.AddRange(renderer.materials);
+                    originalLayers.Add(renderer.gameObject.layer); // Store original layer
+                    
+                    // Apply crafting material to all sub-meshes
+                    Material[] craftingMaterials = new Material[renderer.materials.Length];
+                    for (int i = 0; i < renderer.materials.Length; i++)
+                    {
+                        craftingMaterials[i] = craftingMaterial;
+                    }
+                    renderer.materials = craftingMaterials;
+
+                    // Change the layer to NoCollision for each renderer
+                    renderer.gameObject.layer = LayerMask.NameToLayer("NoCollision");
+                }
+
                 instantiatedItemLayerMask = instantiatedItem.layer;
                 instantiatedItem.layer = LayerMask.NameToLayer("NoCollision");
             }
@@ -162,30 +184,55 @@ public class MenuCraft : MonoBehaviour
     }
 
     // Method to stop placing the item
-    private void StopPlacingItem()
+
+    // Method to stop placing the item
+private void StopPlacingItem()
+{
+    isPlacingItem = false;
+    instantiatedItem.layer = instantiatedItemLayerMask;
+
+    // Revert back to the original materials and layers for all meshes
+    Renderer[] renderers = instantiatedItem.GetComponentsInChildren<Renderer>();
+    int materialIndex = 0;
+
+    for (int i = 0; i < renderers.Length; i++)
     {
-        isPlacingItem = false;
-        instantiatedItem.layer = instantiatedItemLayerMask;
-
-        // Revert back to the original material
-        if (instantiatedItem != null)
+        Renderer renderer = renderers[i];
+        
+        // Set the materials back to their original
+        Material[] materials = new Material[renderer.materials.Length];
+        for (int j = 0; j < renderer.materials.Length; j++)
         {
-            instantiatedItem.GetComponent<Renderer>().material = originalMaterial;
+            if (materialIndex < originalMaterials.Count)
+            {
+                materials[j] = originalMaterials[materialIndex];
+                materialIndex++;
+            }
         }
+        renderer.materials = materials;
 
-        // Play cloud particle system, size adjusted to item being placed
-        if (instantiatedItem.TryGetComponent<Renderer>(out var instantiatedItemRenderer))
+        // Revert back to the original layer
+        if (i < originalLayers.Count)
         {
-            Vector3 size = instantiatedItemRenderer.bounds.size;
-            cloudParticleSystem.transform.localScale = size * cloudScaling;
+            int originalLayer = originalLayers[i];
+            renderer.gameObject.layer = originalLayer;
         }
-        else
-        {
-            cloudParticleSystem.transform.localScale = defaultCloudSize;
-        }
-        cloudParticleSystem.transform.position = instantiatedItem.transform.position;
-        cloudParticleSystem.Play();
-
-        instantiatedItem = null;  // Clear the reference so no further updates happen
     }
+
+    // Play cloud particle system, size adjusted to item being placed
+    if (instantiatedItem.TryGetComponent<Renderer>(out var instantiatedItemRenderer))
+    {
+        Vector3 size = instantiatedItemRenderer.bounds.size;
+        cloudParticleSystem.transform.localScale = size * cloudScaling;
+    }
+    else
+    {
+        cloudParticleSystem.transform.localScale = defaultCloudSize;
+    }
+    cloudParticleSystem.transform.position = instantiatedItem.transform.position;
+    cloudParticleSystem.Play();
+
+    instantiatedItem = null;  // Clear the reference so no further updates happen
+}
+
 }

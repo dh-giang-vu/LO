@@ -1882,6 +1882,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9071980159745529512, guid: 19e48c26020fafe418cb4c2298a4fd3f, type: 3}
   m_PrefabInstance: {fileID: 1712889155}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &386477106 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 208800020157535579, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+  m_PrefabInstance: {fileID: 1604961810}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbfc42ffe18c5944cb6a42586fd9b7d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &402045053
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2711,7 +2722,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de4834ba919cb8b48ab1d4f95f8eef13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sanityEffect: 0.2
 --- !u!1001 &575171480
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3904,6 +3914,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c62f17f5e9c0784084c0f370e228d3c, type: 3}
+--- !u!114 &913200000 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2618154400222515832, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+  m_PrefabInstance: {fileID: 1604961810}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbfc42ffe18c5944cb6a42586fd9b7d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &914592569 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9071980159745529512, guid: 19e48c26020fafe418cb4c2298a4fd3f, type: 3}
@@ -7323,6 +7344,22 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 802012023}
     - target: {fileID: 71574709396060696, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: itemToCraft
+      value: 
+      objectReference: {fileID: 11400000, guid: 4538e855bb07d48459d5dd3b93858ee8, type: 2}
+    - target: {fileID: 71574709396060696, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: requiredCoal
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 71574709396060696, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: requiredWood
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 71574709396060696, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: requiredStone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 71574709396060696, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: cloudParticleSystem
       value: 
       objectReference: {fileID: 1435722634}
@@ -7351,9 +7388,33 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 802012023}
     - target: {fileID: 208800020157535579, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: itemToCraft
+      value: 
+      objectReference: {fileID: 11400000, guid: 17b6abb9e4d8c1d43a23e736c202ea9d, type: 2}
+    - target: {fileID: 208800020157535579, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: requiredCoal
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 208800020157535579, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: requiredWood
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 208800020157535579, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: requiredMetal
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 208800020157535579, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: cloudParticleSystem
       value: 
       objectReference: {fileID: 1435722634}
+    - target: {fileID: 266349808770177301, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1996992519}
+    - target: {fileID: 266349808770177301, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftAndPlaceItem
+      objectReference: {fileID: 0}
     - target: {fileID: 508426183975423598, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -7446,10 +7507,34 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2227442028082845846, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 386477106}
+    - target: {fileID: 2227442028082845846, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftAndPlaceItem
+      objectReference: {fileID: 0}
     - target: {fileID: 2618154400222515832, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: inventory
       value: 
       objectReference: {fileID: 802012023}
+    - target: {fileID: 2618154400222515832, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: itemToCraft
+      value: 
+      objectReference: {fileID: 11400000, guid: 8c61c1218689077478a72ac888921531, type: 2}
+    - target: {fileID: 2618154400222515832, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: requiredCoal
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618154400222515832, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: requiredWood
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618154400222515832, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: requiredMetal
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2618154400222515832, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: cloudParticleSystem
       value: 
@@ -7579,6 +7664,22 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 802012023}
     - target: {fileID: 3215354917917897043, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: itemToCraft
+      value: 
+      objectReference: {fileID: 11400000, guid: 79b60a4ac8f191f4e992c34c3007068b, type: 2}
+    - target: {fileID: 3215354917917897043, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: requiredCoal
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3215354917917897043, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: requiredWood
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3215354917917897043, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: requiredMetal
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3215354917917897043, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: cloudParticleSystem
       value: 
       objectReference: {fileID: 1435722634}
@@ -7641,6 +7742,14 @@ PrefabInstance:
     - target: {fileID: 3571611104537548009, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3614826065865318564, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 913200000}
+    - target: {fileID: 3614826065865318564, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftAndPlaceItem
       objectReference: {fileID: 0}
     - target: {fileID: 3687155961014006274, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: m_AnchorMax.y
@@ -7754,6 +7863,22 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 802012023}
+    - target: {fileID: 4687100613192901515, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: itemToCraft
+      value: 
+      objectReference: {fileID: 11400000, guid: db603f459ad6c8c46bbbb9817530cc34, type: 2}
+    - target: {fileID: 4687100613192901515, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: requiredCoal
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4687100613192901515, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: requiredWood
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4687100613192901515, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: requiredMetal
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4687100613192901515, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: cloudParticleSystem
       value: 
@@ -7990,6 +8115,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6154017450292257065, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1883805076}
+    - target: {fileID: 6154017450292257065, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CraftAndPlaceItem
+      objectReference: {fileID: 0}
     - target: {fileID: 6182834085109140159, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -8026,6 +8159,14 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 802012023}
+    - target: {fileID: 6694458158808686666, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: itemToCraft
+      value: 
+      objectReference: {fileID: 11400000, guid: 1a71f02e5f0b31341bced1e8756d2355, type: 2}
+    - target: {fileID: 6694458158808686666, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: requiredCoal
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6694458158808686666, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: cloudParticleSystem
       value: 
@@ -9566,6 +9707,17 @@ Transform:
   - {fileID: 691947884}
   m_Father: {fileID: 2076357118}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1883805076 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3215354917917897043, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+  m_PrefabInstance: {fileID: 1604961810}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbfc42ffe18c5944cb6a42586fd9b7d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1895865047
 GameObject:
   m_ObjectHideFlags: 0
@@ -10010,6 +10162,17 @@ Transform:
   - {fileID: 1322991867}
   m_Father: {fileID: 2076357118}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1996992519 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4687100613192901515, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+  m_PrefabInstance: {fileID: 1604961810}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbfc42ffe18c5944cb6a42586fd9b7d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1999097393
 PrefabInstance:
   m_ObjectHideFlags: 0
