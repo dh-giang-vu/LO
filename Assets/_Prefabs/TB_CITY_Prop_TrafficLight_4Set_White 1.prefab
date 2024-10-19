@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 5556170586107711784}
   - component: {fileID: 8766045334991499994}
   - component: {fileID: 8697071453192087186}
+  - component: {fileID: 1889646611754092165}
+  - component: {fileID: 2749941037967354289}
   m_Layer: 0
   m_Name: TB_CITY_Prop_TrafficLight_4Set_White 1
   m_TagString: Untagged
@@ -106,6 +108,50 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 17
   m_Center: {x: 0.0009152889, y: 3.7674413, z: -0.002662599}
+--- !u!114 &1889646611754092165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4867208053688840335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d040dfcdc99d13345b8f5897a001a69c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxLifespan: 1000
+  lifespan: 0
+  alive: 0
+  score: 0
+  switchInterval: 1
+--- !u!54 &2749941037967354289
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4867208053688840335}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6669415909186315845
 GameObject:
   m_ObjectHideFlags: 0

@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 3676460647177422428}
   - component: {fileID: 4242251519431387278}
   - component: {fileID: 2639526602326800546}
+  - component: {fileID: 2311492804639692139}
   m_Layer: 0
   m_Name: Christmas_Tree_V1_03 (1)
   m_TagString: Untagged
@@ -273,11 +274,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b5717e3dba13b5409f1aa602df21979, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLifespan: 10
+  maxLifespan: 1000
   lifespan: 0
   alive: 0
   score: 0
-  hueSpeed: 0.1
+  switchInterval: 0.4
 --- !u!135 &2639526602326800546
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -293,12 +294,39 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 14
   m_Center: {x: -0.0031912327, y: 1.7574284, z: -0.001585424}
+--- !u!54 &2311492804639692139
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6759752195238450314}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &252747582031181031
 PrefabInstance:
   m_ObjectHideFlags: 0
