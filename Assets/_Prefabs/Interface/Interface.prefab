@@ -1117,6 +1117,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourceText: {fileID: 1183858059777437216}
+  progressText: {fileID: 0}
+  dialogueBox: {fileID: 0}
 --- !u!1 &5100319564491305847
 GameObject:
   m_ObjectHideFlags: 0

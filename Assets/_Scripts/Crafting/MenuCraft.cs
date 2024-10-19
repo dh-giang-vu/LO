@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class MenuCraft : MonoBehaviour
@@ -13,7 +15,7 @@ public class MenuCraft : MonoBehaviour
     [SerializeField] private LightClass itemToCraft; // This is now of type LightClass (ScriptableObject)
     private float itemPlaceDistance = 30.0f;
 
-    private Inventory inventory;  // Reference to the Inventory singleton
+    [SerializeField] private Inventory inventory;  // Reference to the Inventory
     private bool isPlacingItem = false;
     private GameObject instantiatedItem = null;
     private LayerMask instantiatedItemLayerMask;
@@ -32,13 +34,10 @@ public class MenuCraft : MonoBehaviour
 
     private void Start()
     {
-        // Get the singleton instance of the Inventory
-        inventory = Inventory.Instance;
-
         // Ensure the inventory instance is valid
         if (inventory == null)
         {
-            Debug.LogError("Inventory singleton instance is null. Ensure Inventory is instantiated.");
+            Debug.LogError("Inventory reference is missing. Assign the script in the inspector.");
         }
 
         // Make sure itemToCraft is assigned
