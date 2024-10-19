@@ -67,7 +67,7 @@ public class CraftUIMove : MonoBehaviour
     }
 
     // Method to toggle the object's position between up and down
-    private void ToggleObjectPosition()
+    public void ToggleObjectPosition()
     {
         // Check the current position of objectToMove
         if (Vector3.Distance(objectToMove.transform.position, originalPosition + new Vector3(0, -Screen.height, 0)) < 0.1f)
@@ -80,7 +80,7 @@ public class CraftUIMove : MonoBehaviour
         }
         else
         {
-            // Move object down 500 units
+            // Move object down by screen height
             targetPosition = originalPosition + new Vector3(0, -Screen.height, 0);
             objectIsDown = true; // Update the state
             isFadingOut = true; // Start fading out

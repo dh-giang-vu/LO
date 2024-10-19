@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class MenuCraft : MonoBehaviour
@@ -13,7 +15,7 @@ public class MenuCraft : MonoBehaviour
     [SerializeField] private LightClass itemToCraft; // This is now of type LightClass (ScriptableObject)
     private float itemPlaceDistance = 30.0f;
 
-    private Inventory inventory;  // Reference to the Inventory singleton
+    [SerializeField] private Inventory inventory;  // Reference to the Inventory
     private bool isPlacingItem = false;
     private GameObject instantiatedItem = null;
     private LayerMask instantiatedItemLayerMask;
@@ -22,29 +24,20 @@ public class MenuCraft : MonoBehaviour
     [SerializeField] private Material craftingMaterial; // The material to apply while crafting
     private Material originalMaterial; // Store the original material
 
-    // Variables to handle the movement of the objectToDisable
-    private bool isMovingObject = false; // Track if the object is moving
-    private Vector3 targetPosition; // Target position for the movement
-    private float movementDuration = 1f; // Duration of movement
-    private float movementProgress = 0f; // Track how far we are in the movement
-
-    // Track if crafting is in progress
-    private bool isCraftingInProgress = false;
-
     // Cloud effect when placing items
     [SerializeField] private ParticleSystem cloudParticleSystem;
     [SerializeField] private Vector3 defaultCloudSize = new Vector3(1.0f, 1.0f, 1.0f);
     [SerializeField] private float cloudScaling = 0.25f;
 
+    // Reference to the CraftUIMove script to control the UI movement
+    [SerializeField] private CraftUIMove craftUIMove;
+
     private void Start()
     {
-        // Get the singleton instance of the Inventory
-        inventory = Inventory.Instance;
-
         // Ensure the inventory instance is valid
         if (inventory == null)
         {
-            Debug.LogError("Inventory singleton instance is null. Ensure Inventory is instantiated.");
+            Debug.LogError("Inventory reference is missing. Assign the script in the inspector.");
         }
 
         // Make sure itemToCraft is assigned
@@ -54,30 +47,25 @@ public class MenuCraft : MonoBehaviour
         }
 
         instantiatedItemLayerMask = LayerMask.NameToLayer("Default");
+
+        // Ensure the CraftUIMove script is assigned
+        if (craftUIMove == null)
+        {
+            Debug.LogError("CraftUIMove reference is missing. Assign the script in the inspector.");
+        }
     }
 
     // Method to handle crafting the item and starting placement
     public void CraftAndPlaceItem()
     {
-        // Prevent crafting if already in progress
-        if (isCraftingInProgress || isMovingObject)
-        {
-            Debug.LogWarning("Crafting or movement is already in progress.");
-            return;
-        }
-
         // Check if enough materials exist for crafting
         if (HasRequiredMaterials())
         {
-            isCraftingInProgress = true; // Set the crafting flag
-
             UseRequiredMaterials(); // Consume the materials
             StartPlacingItem();      // Start placing the item
 
-            // Set target position and start moving the object down
-            targetPosition = objectToMove.transform.position + new Vector3(0, -500, 0);
-            isMovingObject = true; // Start the movement
-            movementProgress = 0f; // Reset progress
+            // Call ToggleObjectPosition from CraftUIMove to move the UI element
+            craftUIMove.ToggleObjectPosition();
         }
         else
         {
@@ -168,21 +156,6 @@ public class MenuCraft : MonoBehaviour
                 StopPlacingItem();
             }
         }
-
-        // Handle movement of objectToDisable
-        if (isMovingObject)
-        {
-            movementProgress += Time.deltaTime / movementDuration; // Increment progress based on time
-            objectToMove.transform.position = Vector3.Lerp(objectToMove.transform.position, targetPosition, movementProgress);
-
-            // Stop moving if we reached the target position
-            if (movementProgress >= 1f)
-            {
-                isMovingObject = false; // Stop the movement
-                movementProgress = 0f; // Reset progress
-                isCraftingInProgress = false; // Reset crafting state
-            }
-        }
     }
 
     // Method to stop placing the item
@@ -196,7 +169,6 @@ public class MenuCraft : MonoBehaviour
         {
             instantiatedItem.GetComponent<Renderer>().material = originalMaterial;
         }
-
 
         // Play cloud particle system, size adjusted to item being placed
         if (instantiatedItem.TryGetComponent<Renderer>(out var instantiatedItemRenderer))

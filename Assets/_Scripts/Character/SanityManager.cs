@@ -5,28 +5,12 @@ using UnityEngine.Events;
 
 public class SanityManager : MonoBehaviour
 {
-    // Singleton instance
-    public static SanityManager Instance { get; private set; }
-
     [SerializeField, Range(0, 100)] private float deductionRate = 5.0f; // Deduction rate percentage per second (5 means 5% per second)
     [SerializeField, Range(0, 1)] private float lowSanityThreshold = 0.5f;
     [SerializeField] private UnityEvent onLowSanity;
+    
     private float sanityAmount; // Sanity value between 0.0 and 1.0
     private List<ISanityProvider> inRangeSanityProviders;
-
-    void Awake()
-    {
-        // Ensure only one instance exists
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject); // Optional: keep this manager across scenes
-        }
-        else
-        {
-            Destroy(gameObject); // Destroy duplicate instances
-        }
-    }
 
     void Start()
     {
@@ -50,6 +34,7 @@ public class SanityManager : MonoBehaviour
             inRangeSanityProviders.Remove(sanityProvider);
         }
     }
+
     /*
      * Return a list of active SanityProvider in range with the player.
     */
@@ -83,8 +68,7 @@ public class SanityManager : MonoBehaviour
             {
                 float sanityEffect = sanityProvider.getSanityEffect();
                 // Clamp sanity amount between 0.0 and 1.0
-                sanityAmount = Mathf.Clamp(sanityAmount + sanityEffect, 0.0f, 1.0f);
-                
+                sanityAmount = Mathf.Clamp(sanityAmount + sanityEffect / 5.0f, 0.0f, 1.0f);
             }
         }
 
