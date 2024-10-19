@@ -21,13 +21,10 @@ public class MenuCraft : MonoBehaviour
 
     // Reference to ItemPlacer
     [SerializeField] private PlaceItem itemPlacer;
-    private GameObject player;
 
 
     private void Start()
     {
-        player = GameObject.FindWithTag("Player");
-
         // Ensure the inventory instance is valid
         if (inventory == null)
         {
