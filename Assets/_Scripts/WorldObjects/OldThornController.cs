@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ThornController : MonoBehaviour
+public class OldThornController : MonoBehaviour
 {
 
     private List<LightSource> inRangeLightSource = new List<LightSource>();
@@ -12,10 +12,8 @@ public class ThornController : MonoBehaviour
     //      1 - budding green thorns
     //      2 - flower bloom
     private int currentState = 0;
-    [SerializeField] private float flowerScaleAnimationTime = 2.0f;
-    [SerializeField] private float flowerScaleMultiplier = 1.5f;
-    [SerializeField] private float greenBudScaleAnimationTime = 2.0f;
-    [SerializeField] private float greenBudScaleMultiplier = 1.5f;
+    [SerializeField] private float scaleAnimationTime = 2.0f;
+    [SerializeField] private float scaleMultiplier = 1.0f;
     [SerializeField] private float checkLightInterval = 5.0f; // interval between checking for active light sources
     [SerializeField] private float destroyWaitTime = 5.0f;
 
@@ -26,12 +24,13 @@ public class ThornController : MonoBehaviour
         DeactivateChildren(this.gameObject);
 
         // Deactivate each flower
-
-        foreach (Transform flower in this.gameObject.transform)
+        foreach (Transform flower_group in this.gameObject.transform)
         {
-            DeactivateChildObjectsByName(flower.gameObject, "pPipe28");
+            foreach (Transform flower in flower_group.transform)
+            {
+                DeactivateChildObjectsByName(flower.gameObject, "pPipe28");
+            }
         }
-
 
         // Check if is in range of any active light sources every `checkLightInterval`
         InvokeRepeating(nameof(CheckLightLevel), checkLightInterval, checkLightInterval);
@@ -61,13 +60,13 @@ public class ThornController : MonoBehaviour
         }
     }
 
-    // For activating flower groups (only green buds if flower is disabled)
+    // For activating flower groups (only green buds if flowe is disabled)
     private void ActivateChildren(GameObject parent)
     {
         foreach (Transform child in parent.transform)
         {
             child.gameObject.SetActive(true);
-            StartCoroutine(ScaleUp(child.gameObject, greenBudScaleAnimationTime, "greenBud"));
+            StartCoroutine(ScaleUp(child.gameObject, scaleAnimationTime, false));
         }
     }
 
@@ -79,28 +78,24 @@ public class ThornController : MonoBehaviour
             if (child.name == childName)
             {
                 child.gameObject.SetActive(true);
-                StartCoroutine(ScaleUp(child.gameObject, flowerScaleAnimationTime, "flower"));
+                StartCoroutine(ScaleUp(child.gameObject, scaleAnimationTime, true));
             }
         }
 
     }
 
     // Scaling up animation
-    private IEnumerator ScaleUp(GameObject child, float duration, string useScale)
+    private IEnumerator ScaleUp(GameObject child, float duration, bool useScale)
     {
         Vector3 originalScale = child.transform.localScale; // Store original scale
         child.transform.localScale = Vector3.zero; // Set to tiny (zero scale)
 
         float elapsedTime = 0f;
-
+        
         // Use a user-set scale
-        if (useScale == "flower")
+        if (useScale)
         {
-            originalScale *= flowerScaleMultiplier;
-        }
-        else if (useScale == "greenBud")
-        {
-            originalScale *= greenBudScaleMultiplier;
+            originalScale *= scaleMultiplier;
         }
 
         while (elapsedTime < duration)
@@ -145,7 +140,6 @@ public class ThornController : MonoBehaviour
     // Show green buds (flower groups with each flower deactivated)
     private IEnumerator BudGreenThorn()
     {
-        Debug.LogWarning("Bud Green Thorn");
         ActivateChildren(this.gameObject);
         yield return new WaitForSeconds(0.0f);
     }
@@ -153,13 +147,14 @@ public class ThornController : MonoBehaviour
     // Show flowers + destroy the thorn after some time
     private IEnumerator BloomFlower()
     {
-        Debug.LogWarning("Bloom Flower");
         // Activate each flower
-        foreach (Transform flower in this.gameObject.transform)
+        foreach (Transform flower_group in this.gameObject.transform)
         {
-            ActivateChildObjectsByName(flower.gameObject, "pPipe28");
+            foreach (Transform flower in flower_group.transform)
+            {
+                ActivateChildObjectsByName(flower.gameObject, "pPipe28");
+            }
         }
-
         yield return new WaitForSeconds(destroyWaitTime);
         Destroy(this.gameObject);
     }
