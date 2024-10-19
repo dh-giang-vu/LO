@@ -7304,6 +7304,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 802012023}
     - target: {fileID: 71574709396060696, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: itemPlacer
+      value: 
+      objectReference: {fileID: 1678650639}
+    - target: {fileID: 71574709396060696, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: cloudParticleSystem
       value: 
       objectReference: {fileID: 1435722634}
@@ -7311,6 +7315,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 802012023}
+    - target: {fileID: 208800020157535579, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: itemPlacer
+      value: 
+      objectReference: {fileID: 1678650639}
     - target: {fileID: 208800020157535579, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: cloudParticleSystem
       value: 
@@ -7339,6 +7347,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 802012023}
+    - target: {fileID: 1022398953247858813, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: itemPlacer
+      value: 
+      objectReference: {fileID: 1678650639}
     - target: {fileID: 1022398953247858813, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: cloudParticleSystem
       value: 
@@ -7392,6 +7404,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 802012023}
     - target: {fileID: 2618154400222515832, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: itemPlacer
+      value: 
+      objectReference: {fileID: 1678650639}
+    - target: {fileID: 2618154400222515832, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: cloudParticleSystem
       value: 
       objectReference: {fileID: 1435722634}
@@ -7399,6 +7415,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 802012023}
+    - target: {fileID: 2844249012295245389, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: itemPlacer
+      value: 
+      objectReference: {fileID: 1678650639}
     - target: {fileID: 2844249012295245389, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: cloudParticleSystem
       value: 
@@ -7407,6 +7427,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 802012023}
+    - target: {fileID: 2878229709006748998, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: itemPlacer
+      value: 
+      objectReference: {fileID: 1678650639}
     - target: {fileID: 2878229709006748998, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: cloudParticleSystem
       value: 
@@ -7439,6 +7463,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 802012023}
+    - target: {fileID: 3215354917917897043, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: itemPlacer
+      value: 
+      objectReference: {fileID: 1678650639}
     - target: {fileID: 3215354917917897043, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: cloudParticleSystem
       value: 
@@ -7524,6 +7552,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 802012023}
     - target: {fileID: 3736249554951534553, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: itemPlacer
+      value: 
+      objectReference: {fileID: 1678650639}
+    - target: {fileID: 3736249554951534553, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: cloudParticleSystem
       value: 
       objectReference: {fileID: 1435722634}
@@ -7560,6 +7592,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 802012023}
     - target: {fileID: 4217501723327256605, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: itemPlacer
+      value: 
+      objectReference: {fileID: 1678650639}
+    - target: {fileID: 4217501723327256605, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: cloudParticleSystem
       value: 
       objectReference: {fileID: 1435722634}
@@ -7580,6 +7616,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 802012023}
     - target: {fileID: 4687100613192901515, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: itemPlacer
+      value: 
+      objectReference: {fileID: 1678650639}
+    - target: {fileID: 4687100613192901515, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: cloudParticleSystem
       value: 
       objectReference: {fileID: 1435722634}
@@ -7611,6 +7651,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 802012023}
+    - target: {fileID: 5133740165853586684, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: itemPlacer
+      value: 
+      objectReference: {fileID: 1678650639}
     - target: {fileID: 5133740165853586684, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: cloudParticleSystem
       value: 
@@ -7663,6 +7707,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 802012023}
+    - target: {fileID: 5785420856090231190, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: itemPlacer
+      value: 
+      objectReference: {fileID: 1678650639}
     - target: {fileID: 5785420856090231190, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: cloudParticleSystem
       value: 
@@ -7671,6 +7719,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 802012023}
+    - target: {fileID: 6033952962381244602, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: itemPlacer
+      value: 
+      objectReference: {fileID: 1678650639}
     - target: {fileID: 6033952962381244602, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: cloudParticleSystem
       value: 
@@ -7679,6 +7731,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 802012023}
+    - target: {fileID: 6590435797283442883, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: itemPlacer
+      value: 
+      objectReference: {fileID: 1678650639}
     - target: {fileID: 6590435797283442883, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: cloudParticleSystem
       value: 
@@ -7687,6 +7743,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 802012023}
+    - target: {fileID: 6694458158808686666, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: itemPlacer
+      value: 
+      objectReference: {fileID: 1678650639}
     - target: {fileID: 6694458158808686666, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: cloudParticleSystem
       value: 
@@ -7695,6 +7755,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 802012023}
+    - target: {fileID: 6695132793519567120, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: itemPlacer
+      value: 
+      objectReference: {fileID: 1678650639}
     - target: {fileID: 6695132793519567120, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: cloudParticleSystem
       value: 
@@ -7703,6 +7767,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 802012023}
+    - target: {fileID: 6870749561355545218, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: itemPlacer
+      value: 
+      objectReference: {fileID: 1678650639}
     - target: {fileID: 6870749561355545218, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: cloudParticleSystem
       value: 
@@ -7735,6 +7803,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 802012023}
+    - target: {fileID: 8267129279265091940, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: itemPlacer
+      value: 
+      objectReference: {fileID: 1678650639}
     - target: {fileID: 8267129279265091940, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: cloudParticleSystem
       value: 
@@ -8300,59 +8372,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59c11859077357741ad00e6c87489eb7, type: 3}
---- !u!1 &1678650637
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1678650638}
-  - component: {fileID: 1678650639}
-  m_Layer: 0
-  m_Name: ItemPlacer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1678650638
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1678650637}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.25114894, y: 0.42142868, z: 0.135216}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1678650639
+--- !u!114 &1678650639 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 8712353179047368057, guid: d18a5185afe985e48a7fd3819a8ae6d8, type: 3}
+  m_PrefabInstance: {fileID: 3237645805511833672}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1678650637}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff8fee63eacff1d48ae7bfc80cee9d0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  isPlacingItem: 0
-  itemToPlace: {fileID: 7447549833156671741, guid: 7296d957f1057334a956e41e05a46f27, type: 3}
-  instantiatedItem: {fileID: 0}
-  cloudParticleSystem: {fileID: 1435722634}
-  defaultCloudSize: {x: 1, y: 1, z: 1}
-  cloudScaling: 0.2
-  debugMode: 0
-  craftingMaterial: {fileID: 2100000, guid: 487176412ce5158449983c87bb983b52, type: 2}
 --- !u!1001 &1712889155
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9751,6 +9781,67 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4396687668845171004, guid: 8fe2c0543598f4a4998fe1212fb05710, type: 3}
   m_PrefabInstance: {fileID: 1656085156}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3237645805511833672
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7640156981561786920, guid: d18a5185afe985e48a7fd3819a8ae6d8, type: 3}
+      propertyPath: m_Name
+      value: ItemPlacer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8712353179047368057, guid: d18a5185afe985e48a7fd3819a8ae6d8, type: 3}
+      propertyPath: cloudParticleSystem
+      value: 
+      objectReference: {fileID: 1435722634}
+    - target: {fileID: 9037132458766449994, guid: d18a5185afe985e48a7fd3819a8ae6d8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.25114894
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037132458766449994, guid: d18a5185afe985e48a7fd3819a8ae6d8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.42142868
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037132458766449994, guid: d18a5185afe985e48a7fd3819a8ae6d8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.135216
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037132458766449994, guid: d18a5185afe985e48a7fd3819a8ae6d8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037132458766449994, guid: d18a5185afe985e48a7fd3819a8ae6d8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037132458766449994, guid: d18a5185afe985e48a7fd3819a8ae6d8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037132458766449994, guid: d18a5185afe985e48a7fd3819a8ae6d8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037132458766449994, guid: d18a5185afe985e48a7fd3819a8ae6d8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037132458766449994, guid: d18a5185afe985e48a7fd3819a8ae6d8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037132458766449994, guid: d18a5185afe985e48a7fd3819a8ae6d8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d18a5185afe985e48a7fd3819a8ae6d8, type: 3}
 --- !u!1001 &6818056761298613844
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9935,7 +10026,7 @@ SceneRoots:
   - {fileID: 7228574847172194008}
   - {fileID: 1497480601}
   - {fileID: 802012024}
-  - {fileID: 1678650638}
+  - {fileID: 3237645805511833672}
   - {fileID: 1193908082}
   - {fileID: 1315217712}
   - {fileID: 1205047579}
