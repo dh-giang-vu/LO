@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8697071453192087186}
   - component: {fileID: 1889646611754092165}
   - component: {fileID: 2749941037967354289}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: TB_CITY_Prop_TrafficLight_4Set_White 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +163,7 @@ GameObject:
   - component: {fileID: 7370329959599744509}
   - component: {fileID: 8411194228847768883}
   - component: {fileID: 3525648135547749891}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7623209693365404512}
   - component: {fileID: 1425649137522154865}
   - component: {fileID: 6991123898322337382}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 7095092432617211292}
   - component: {fileID: 7071854562338726387}
   - component: {fileID: 3484413727869535449}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: StreetLampRound1A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -264,7 +264,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 15
+  m_Radius: 16
   m_Center: {x: 0.000000007450581, y: 1.3281018, z: 0}
 --- !u!54 &3484413727869535449
 Rigidbody:

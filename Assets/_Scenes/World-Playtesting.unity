@@ -9984,7 +9984,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   progress: 0
   updateInterval: 2
-  raycastDistance: 10
+  raycastDistance: 50
   gridSpacing: 5
   terrain: {fileID: 1507183531}
 --- !u!4 &2141285690 stripped
