@@ -11,6 +11,7 @@ public class TrafficLight : ElectricLight
     void Start()
     {
         light = GetComponentInChildren<Light>();
+        Refuel();
         StartCoroutine(SwitchColor());
     }
 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 304597667690457316}
   - component: {fileID: 304597667690457314}
   - component: {fileID: 304597667690457315}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: EmbersFlickering
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4826,7 +4826,7 @@ GameObject:
   - component: {fileID: 304597668147876016}
   - component: {fileID: 304597668147876030}
   - component: {fileID: 304597668147876031}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: FireMains
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9506,7 +9506,7 @@ GameObject:
   - component: {fileID: 304597669050860585}
   - component: {fileID: 304597669050860631}
   - component: {fileID: 304597669050860584}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GlowWide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14406,7 +14406,7 @@ GameObject:
   - component: {fileID: 304597669272747782}
   - component: {fileID: 304597669272747780}
   - component: {fileID: 304597669272747781}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: TorchFire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19090,7 +19090,7 @@ GameObject:
   - component: {fileID: 304597669719248887}
   - component: {fileID: 304597669719248885}
   - component: {fileID: 304597669719248886}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: EmbersSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23864,7 +23864,7 @@ GameObject:
   - component: {fileID: 4044251886308743661}
   - component: {fileID: 864811687563920476}
   - component: {fileID: 2926031511443406450}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: SM_irontorch_001_AmbienceFX Variant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24036,7 +24036,7 @@ GameObject:
   - component: {fileID: 232999558278850453}
   - component: {fileID: 1024888774253903835}
   - component: {fileID: 2767543744029357320}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
