@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1118019531664188360}
   - component: {fileID: 4533416983967101906}
   - component: {fileID: 4564611167321427302}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,7 +132,8 @@ GameObject:
   - component: {fileID: 3676460647177422428}
   - component: {fileID: 4242251519431387278}
   - component: {fileID: 2639526602326800546}
-  m_Layer: 0
+  - component: {fileID: 2311492804639692139}
+  m_Layer: 13
   m_Name: Christmas_Tree_V1_03 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -273,11 +274,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b5717e3dba13b5409f1aa602df21979, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLifespan: 10
+  maxLifespan: 1000
   lifespan: 0
   alive: 0
   score: 0
-  hueSpeed: 0.1
+  switchInterval: 0.4
 --- !u!135 &2639526602326800546
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -293,12 +294,39 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 14
   m_Center: {x: -0.0031912327, y: 1.7574284, z: -0.001585424}
+--- !u!54 &2311492804639692139
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6759752195238450314}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &252747582031181031
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -310,6 +338,10 @@ PrefabInstance:
     - target: {fileID: 151608, guid: 9524b77da7900e2448a2bbf6302deb30, type: 3}
       propertyPath: m_Name
       value: Christmas_Ball_08 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 151608, guid: 9524b77da7900e2448a2bbf6302deb30, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 429842, guid: 9524b77da7900e2448a2bbf6302deb30, type: 3}
       propertyPath: m_RootOrder
@@ -365,6 +397,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Christmas_Ball_03 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 175328, guid: d24a2ef07343af2459b251fc9b9e1db8, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 476940, guid: d24a2ef07343af2459b251fc9b9e1db8, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -418,6 +454,10 @@ PrefabInstance:
     - target: {fileID: 170010, guid: 9d21682eb45dd044a9a0d26d5352f4e2, type: 3}
       propertyPath: m_Name
       value: Christmas_Candy_00 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 170010, guid: 9d21682eb45dd044a9a0d26d5352f4e2, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 486130, guid: 9d21682eb45dd044a9a0d26d5352f4e2, type: 3}
       propertyPath: m_RootOrder
@@ -473,6 +513,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Christmas_Ball_07 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 151722, guid: 7abb5fa6bbe4acd47bdcd63e0ad8fa4d, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 465746, guid: 7abb5fa6bbe4acd47bdcd63e0ad8fa4d, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -526,6 +570,10 @@ PrefabInstance:
     - target: {fileID: 150382, guid: 346f449c586a86f4e8f51c9bfc6f8ac0, type: 3}
       propertyPath: m_Name
       value: Christmas_Ball_00 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 150382, guid: 346f449c586a86f4e8f51c9bfc6f8ac0, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 485078, guid: 346f449c586a86f4e8f51c9bfc6f8ac0, type: 3}
       propertyPath: m_RootOrder
@@ -581,6 +629,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Christmas_Ball_05 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 107174, guid: 7ad324a9f0845a248a5ee8baff2855a7, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 424338, guid: 7ad324a9f0845a248a5ee8baff2855a7, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -634,6 +686,10 @@ PrefabInstance:
     - target: {fileID: 119890, guid: 998fb6df537612b4b93fd1efbbb9c4a7, type: 3}
       propertyPath: m_Name
       value: Christmas_Ball_09 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 119890, guid: 998fb6df537612b4b93fd1efbbb9c4a7, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 488652, guid: 998fb6df537612b4b93fd1efbbb9c4a7, type: 3}
       propertyPath: m_RootOrder
@@ -689,6 +745,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Christmas_Ball_07 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 151722, guid: 7abb5fa6bbe4acd47bdcd63e0ad8fa4d, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 465746, guid: 7abb5fa6bbe4acd47bdcd63e0ad8fa4d, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -742,6 +802,10 @@ PrefabInstance:
     - target: {fileID: 119890, guid: 998fb6df537612b4b93fd1efbbb9c4a7, type: 3}
       propertyPath: m_Name
       value: Christmas_Ball_09 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 119890, guid: 998fb6df537612b4b93fd1efbbb9c4a7, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 488652, guid: 998fb6df537612b4b93fd1efbbb9c4a7, type: 3}
       propertyPath: m_RootOrder
@@ -797,6 +861,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Christmas_Ball_04 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 140688, guid: 86cca0d98031dba4883c01dbd59f8e2f, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 422390, guid: 86cca0d98031dba4883c01dbd59f8e2f, type: 3}
       propertyPath: m_RootOrder
       value: 40
@@ -850,6 +918,10 @@ PrefabInstance:
     - target: {fileID: 131520, guid: 1ed533a8c248eac4299454be839f4bd2, type: 3}
       propertyPath: m_Name
       value: Christmas_Candy_04 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 131520, guid: 1ed533a8c248eac4299454be839f4bd2, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 402608, guid: 1ed533a8c248eac4299454be839f4bd2, type: 3}
       propertyPath: m_RootOrder
@@ -905,6 +977,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Christmas_Ball_00 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 150382, guid: 346f449c586a86f4e8f51c9bfc6f8ac0, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 485078, guid: 346f449c586a86f4e8f51c9bfc6f8ac0, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -958,6 +1034,10 @@ PrefabInstance:
     - target: {fileID: 165738, guid: 842467ccc4ad3264d8b43bcea1454771, type: 3}
       propertyPath: m_Name
       value: Christmas_Ball_06 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 165738, guid: 842467ccc4ad3264d8b43bcea1454771, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 407982, guid: 842467ccc4ad3264d8b43bcea1454771, type: 3}
       propertyPath: m_RootOrder
@@ -1013,6 +1093,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Christmas_Candy_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 193638, guid: e7b730946c7cdbb41bc1d7911633430b, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 458024, guid: e7b730946c7cdbb41bc1d7911633430b, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1066,6 +1150,10 @@ PrefabInstance:
     - target: {fileID: 170010, guid: 9d21682eb45dd044a9a0d26d5352f4e2, type: 3}
       propertyPath: m_Name
       value: Christmas_Candy_00 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 170010, guid: 9d21682eb45dd044a9a0d26d5352f4e2, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 486130, guid: 9d21682eb45dd044a9a0d26d5352f4e2, type: 3}
       propertyPath: m_RootOrder
@@ -1121,6 +1209,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Christmas_Ball_10 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 113156, guid: 5424cda683fac0e4ea61e5245094a7e5, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 461714, guid: 5424cda683fac0e4ea61e5245094a7e5, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1174,6 +1266,10 @@ PrefabInstance:
     - target: {fileID: 113156, guid: 5424cda683fac0e4ea61e5245094a7e5, type: 3}
       propertyPath: m_Name
       value: Christmas_Ball_10 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 113156, guid: 5424cda683fac0e4ea61e5245094a7e5, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 461714, guid: 5424cda683fac0e4ea61e5245094a7e5, type: 3}
       propertyPath: m_RootOrder
@@ -1229,6 +1325,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Christmas_Ball_05 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 107174, guid: 7ad324a9f0845a248a5ee8baff2855a7, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 424338, guid: 7ad324a9f0845a248a5ee8baff2855a7, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1282,6 +1382,10 @@ PrefabInstance:
     - target: {fileID: 178902, guid: 2b77c0dac663d2f41b92953df12127da, type: 3}
       propertyPath: m_Name
       value: Christmas_Ball_01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 178902, guid: 2b77c0dac663d2f41b92953df12127da, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 403440, guid: 2b77c0dac663d2f41b92953df12127da, type: 3}
       propertyPath: m_RootOrder
@@ -1337,6 +1441,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Christmas_Ball_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 178902, guid: 2b77c0dac663d2f41b92953df12127da, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 403440, guid: 2b77c0dac663d2f41b92953df12127da, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1390,6 +1498,10 @@ PrefabInstance:
     - target: {fileID: 165738, guid: 842467ccc4ad3264d8b43bcea1454771, type: 3}
       propertyPath: m_Name
       value: Christmas_Ball_06 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 165738, guid: 842467ccc4ad3264d8b43bcea1454771, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 407982, guid: 842467ccc4ad3264d8b43bcea1454771, type: 3}
       propertyPath: m_RootOrder
@@ -1445,6 +1557,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Christmas_Ball_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 178902, guid: 2b77c0dac663d2f41b92953df12127da, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 403440, guid: 2b77c0dac663d2f41b92953df12127da, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1498,6 +1614,10 @@ PrefabInstance:
     - target: {fileID: 113156, guid: 5424cda683fac0e4ea61e5245094a7e5, type: 3}
       propertyPath: m_Name
       value: Christmas_Ball_10 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 113156, guid: 5424cda683fac0e4ea61e5245094a7e5, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 461714, guid: 5424cda683fac0e4ea61e5245094a7e5, type: 3}
       propertyPath: m_RootOrder
@@ -1553,6 +1673,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Christmas_Candy_03 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 193158, guid: a6803f38f5492a846a254a30a359f917, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 464506, guid: a6803f38f5492a846a254a30a359f917, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1606,6 +1730,10 @@ PrefabInstance:
     - target: {fileID: 140688, guid: 86cca0d98031dba4883c01dbd59f8e2f, type: 3}
       propertyPath: m_Name
       value: Christmas_Ball_04 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 140688, guid: 86cca0d98031dba4883c01dbd59f8e2f, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 422390, guid: 86cca0d98031dba4883c01dbd59f8e2f, type: 3}
       propertyPath: m_RootOrder
@@ -1661,6 +1789,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Christmas_Ball_03 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 175328, guid: d24a2ef07343af2459b251fc9b9e1db8, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 476940, guid: d24a2ef07343af2459b251fc9b9e1db8, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1714,6 +1846,10 @@ PrefabInstance:
     - target: {fileID: 168756, guid: 5cfbdf185452a6c46bb39eec1b9f4a2e, type: 3}
       propertyPath: m_Name
       value: Christmas_Candy_02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 168756, guid: 5cfbdf185452a6c46bb39eec1b9f4a2e, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 448176, guid: 5cfbdf185452a6c46bb39eec1b9f4a2e, type: 3}
       propertyPath: m_RootOrder
@@ -1769,6 +1905,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Christmas_Ball_05 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 107174, guid: 7ad324a9f0845a248a5ee8baff2855a7, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 424338, guid: 7ad324a9f0845a248a5ee8baff2855a7, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1822,6 +1962,10 @@ PrefabInstance:
     - target: {fileID: 131520, guid: 1ed533a8c248eac4299454be839f4bd2, type: 3}
       propertyPath: m_Name
       value: Christmas_Candy_04 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 131520, guid: 1ed533a8c248eac4299454be839f4bd2, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 402608, guid: 1ed533a8c248eac4299454be839f4bd2, type: 3}
       propertyPath: m_RootOrder
@@ -1877,6 +2021,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Christmas_Ball_01 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 178902, guid: 2b77c0dac663d2f41b92953df12127da, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 403440, guid: 2b77c0dac663d2f41b92953df12127da, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1930,6 +2078,10 @@ PrefabInstance:
     - target: {fileID: 131520, guid: 1ed533a8c248eac4299454be839f4bd2, type: 3}
       propertyPath: m_Name
       value: Christmas_Candy_04 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 131520, guid: 1ed533a8c248eac4299454be839f4bd2, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 402608, guid: 1ed533a8c248eac4299454be839f4bd2, type: 3}
       propertyPath: m_RootOrder
@@ -1985,6 +2137,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Christmas_Ball_00 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 150382, guid: 346f449c586a86f4e8f51c9bfc6f8ac0, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 485078, guid: 346f449c586a86f4e8f51c9bfc6f8ac0, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2039,6 +2195,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Christmas_Ball_05 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 107174, guid: 7ad324a9f0845a248a5ee8baff2855a7, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 424338, guid: 7ad324a9f0845a248a5ee8baff2855a7, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2092,6 +2252,10 @@ PrefabInstance:
     - target: {fileID: 168756, guid: 5cfbdf185452a6c46bb39eec1b9f4a2e, type: 3}
       propertyPath: m_Name
       value: Christmas_Candy_02 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 168756, guid: 5cfbdf185452a6c46bb39eec1b9f4a2e, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 448176, guid: 5cfbdf185452a6c46bb39eec1b9f4a2e, type: 3}
       propertyPath: m_RootOrder

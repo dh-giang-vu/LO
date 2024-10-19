@@ -12,6 +12,7 @@ public class ElectricLight : LightSource
         
         // Get the Light component and turn it off initially
         light = GetComponentInChildren<Light>();
+        Refuel();
     }
 
     // Update is called once per frame

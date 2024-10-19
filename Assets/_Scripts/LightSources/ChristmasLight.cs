@@ -4,27 +4,43 @@ using UnityEngine;
 
 public class ChristmasLight : ElectricLight
 {
-    private float hueValue = 0f;  // Start at the beginning of the color wheel (red)
-    public float hueSpeed = 0.1f; // Speed at which the hue changes
+    private Color[] colors = new Color[] {
+    new Color(1, 0, 0, 0.7f),   // Red
+    new Color(1, 0.5f, 0, 0.7f), // Orange
+    new Color(1, 1, 0, 0.7f),   // Yellow
+    new Color(0, 1, 0, 0.7f),   // Green
+    new Color(0, 0, 1, 0.7f),   // Blue
+    new Color(0.29f, 0, 0.51f, 0.7f), // Indigo
+    new Color(0.56f, 0, 1, 0.7f)  // Violet
+};
+    private int currentColorIndex = 0;
+    public float switchInterval = 0.4f;
 
     // Start is called before the first frame update
     void Start()
     {
         light = GetComponentInChildren<Light>();
+        StartCoroutine(SwitchColor());
+        Refuel();
     }
 
     void Update()
     {
-        // Increment hueValue over time, wrapping it back to 0 after it reaches 1
-        hueValue += hueSpeed * Time.deltaTime%1;
-        // if (hueValue >= 1f)
-        // {
-        //     hueValue -= 1f;  // Wrap the hue value back to 0 to keep cycling through the color wheel
-        //     Debug.Log("Hue DEAD "+ hueValue);
-        // }
-        Debug.Log("Hue Value "+ hueValue);
-        // Convert the HSV value to RGB and assign it to the light's color
-        light.color = Color.HSVToRGB(hueValue, 1f, 1f);  // Saturation and Value are set to 1 for full color
-        Debug.Log("Current Light Color: " + light.color);
+    }
+
+        IEnumerator SwitchColor()
+    {
+        // Loop indefinitely
+        while (true)
+        {
+            // Set the light color to the current color
+            light.color = colors[currentColorIndex];
+
+            // Move to the next color in the array (loop back to 0 if at the end)
+            currentColorIndex = (currentColorIndex + 1) % colors.Length;
+
+            // Wait for the interval before switching again
+            yield return new WaitForSeconds(switchInterval);
+        }
     }
 }
