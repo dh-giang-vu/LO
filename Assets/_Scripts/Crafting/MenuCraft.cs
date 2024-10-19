@@ -31,9 +31,11 @@ public class MenuCraft : MonoBehaviour
 
     // Reference to the CraftUIMove script to control the UI movement
     [SerializeField] private CraftUIMove craftUIMove;
+    private GameObject player;
 
     private void Start()
     {
+        player = GameObject.FindWithTag("Player");
         // Ensure the inventory instance is valid
         if (inventory == null)
         {
@@ -147,6 +149,7 @@ public class MenuCraft : MonoBehaviour
                 else
                 {
                     instantiatedItem.transform.position = placePosition;  // Update its position as the player moves the cursor
+                    instantiatedItem.transform.LookAt(player.transform);
                 }
             }
 

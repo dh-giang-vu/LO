@@ -19,9 +19,11 @@ public class PlaceItem : MonoBehaviour
     // Material handling variables
     [SerializeField] private Material craftingMaterial; // The material to apply while crafting
     private Material originalMaterial; // Store the original material
+    private GameObject player;
 
     void Start()
     {
+        player = GameObject.FindWithTag("Player");
         cam = Camera.main;
         instantiatedItemLayerMask = LayerMask.NameToLayer("Default");
     }
@@ -57,6 +59,7 @@ public class PlaceItem : MonoBehaviour
             else
             {
                 instantiatedItem.transform.position = placePosition;
+                instantiatedItem.transform.LookAt(player.transform);
             }
         }
 
