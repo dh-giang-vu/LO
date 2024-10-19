@@ -14,6 +14,7 @@ public class KeyboardInput : MonoBehaviour
     private Movement movement;
     private StaminaManager staminaManager;
     private InteractionHandler interactionHandler;
+    [SerializeField] private Transform cameraTransform; // for calculating player's movement vector relative to camera's orientation
 
     void Start()
     {
@@ -31,6 +32,7 @@ public class KeyboardInput : MonoBehaviour
     void Update()
     {
         directionVector = new(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        directionVector = CalculateCameraRelativeMovement(directionVector);
         directionVector = Vector3.ClampMagnitude(directionVector, 1f);
         isMoving = !isGathering && directionVector != Vector3.zero;
         
@@ -57,6 +59,24 @@ public class KeyboardInput : MonoBehaviour
             characterAnimation.PlayGatheringAnimation(animationType);
             interactionHandler.RefuelLightSources();
         }
+    }
+
+    // Converts the input to be relative to the camera's direction
+    private Vector3 CalculateCameraRelativeMovement(Vector3 inputVector)
+    {
+        // Get the forward direction of the camera (parallel to x-z plane)
+        Vector3 cameraForward = cameraTransform.forward;
+        cameraForward.y = 0f;
+        cameraForward.Normalize();
+
+        // Get the right direction relative to the camera (parallel to x-z plane)
+        Vector3 cameraRight = cameraTransform.right;
+        cameraRight.y = 0f;
+        cameraRight.Normalize();
+
+        // Calculate the movement relative to the camera's forward and right directions
+        Vector3 relativeMovement = inputVector.z * cameraForward + inputVector.x * cameraRight;
+        return relativeMovement;
     }
 
     private bool CheckIfSprinting()
