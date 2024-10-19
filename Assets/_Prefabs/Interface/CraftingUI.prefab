@@ -469,7 +469,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4687100613192901515}
         m_TargetAssemblyTypeName: MenuCraft, Assembly-CSharp
         m_MethodName: CraftAndPlaceItem
         m_Mode: 1
@@ -494,12 +494,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToMove: {fileID: 7691141295810130644}
-  requiredWood: 5
-  requiredCoal: 3
+  requiredWood: 1
+  requiredCoal: 0
   requiredStone: 0
-  requiredMetal: 5
+  requiredMetal: 0
   requiredFiber: 0
-  itemToCraft: {fileID: 0}
+  itemToCraft: {fileID: 11400000, guid: db603f459ad6c8c46bbbb9817530cc34, type: 2}
   inventory: {fileID: 0}
   craftingMaterial: {fileID: 2100000, guid: 487176412ce5158449983c87bb983b52, type: 2}
   cloudParticleSystem: {fileID: 0}
@@ -2472,7 +2472,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 6590435797283442883}
         m_TargetAssemblyTypeName: MenuCraft, Assembly-CSharp
         m_MethodName: CraftAndPlaceItem
         m_Mode: 1
@@ -2497,12 +2497,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToMove: {fileID: 7691141295810130644}
-  requiredWood: 0
-  requiredCoal: 1
+  requiredWood: 1
+  requiredCoal: 0
   requiredStone: 0
-  requiredMetal: 2
+  requiredMetal: 0
   requiredFiber: 0
-  itemToCraft: {fileID: 0}
+  itemToCraft: {fileID: 11400000, guid: d76543e1456ff7f48a4f94efc1106ff6, type: 2}
   inventory: {fileID: 0}
   craftingMaterial: {fileID: 2100000, guid: 487176412ce5158449983c87bb983b52, type: 2}
   cloudParticleSystem: {fileID: 0}
@@ -3660,7 +3660,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3215354917917897043}
         m_TargetAssemblyTypeName: MenuCraft, Assembly-CSharp
         m_MethodName: CraftAndPlaceItem
         m_Mode: 1
@@ -3685,12 +3685,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToMove: {fileID: 7691141295810130644}
-  requiredWood: 0
-  requiredCoal: 10
+  requiredWood: 1
+  requiredCoal: 0
   requiredStone: 0
-  requiredMetal: 10
+  requiredMetal: 0
   requiredFiber: 0
-  itemToCraft: {fileID: 0}
+  itemToCraft: {fileID: 11400000, guid: 79b60a4ac8f191f4e992c34c3007068b, type: 2}
   inventory: {fileID: 0}
   craftingMaterial: {fileID: 2100000, guid: 487176412ce5158449983c87bb983b52, type: 2}
   cloudParticleSystem: {fileID: 0}
@@ -5343,7 +5343,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2844249012295245389}
         m_TargetAssemblyTypeName: MenuCraft, Assembly-CSharp
         m_MethodName: CraftAndPlaceItem
         m_Mode: 1
@@ -5368,12 +5368,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToMove: {fileID: 7691141295810130644}
-  requiredWood: 5
-  requiredCoal: 3
+  requiredWood: 1
+  requiredCoal: 0
   requiredStone: 0
-  requiredMetal: 5
+  requiredMetal: 0
   requiredFiber: 0
-  itemToCraft: {fileID: 0}
+  itemToCraft: {fileID: 11400000, guid: 1cdcd0ed6a63dc04e865478263e56a8c, type: 2}
   inventory: {fileID: 0}
   craftingMaterial: {fileID: 2100000, guid: 487176412ce5158449983c87bb983b52, type: 2}
   cloudParticleSystem: {fileID: 0}
@@ -5830,10 +5830,10 @@ RectTransform:
   - {fileID: 97292948675436455}
   m_Father: {fileID: 1354119012578426592}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -178.19809}
-  m_SizeDelta: {x: 216.1834, y: 73.603836}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8228594358646515105
 MonoBehaviour:
@@ -5894,9 +5894,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 5255582133444679651}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 30.205696, y: -11.9579}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 40.3768, y: 23.9158}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &42765587055945380
@@ -6268,7 +6268,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4217501723327256605}
         m_TargetAssemblyTypeName: MenuCraft, Assembly-CSharp
         m_MethodName: CraftAndPlaceItem
         m_Mode: 1
@@ -6293,12 +6293,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToMove: {fileID: 7691141295810130644}
-  requiredWood: 0
-  requiredCoal: 1
+  requiredWood: 1
+  requiredCoal: 0
   requiredStone: 0
-  requiredMetal: 2
+  requiredMetal: 0
   requiredFiber: 0
-  itemToCraft: {fileID: 0}
+  itemToCraft: {fileID: 11400000, guid: 2310d7288fcad63498842c3eab82276b, type: 2}
   inventory: {fileID: 0}
   craftingMaterial: {fileID: 2100000, guid: 487176412ce5158449983c87bb983b52, type: 2}
   cloudParticleSystem: {fileID: 0}
@@ -6339,10 +6339,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 4508714848445046354}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 176.48616, y: -36.24019}
-  m_SizeDelta: {x: 63.394463, y: 64.48038}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 64.48038}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1867488459887838389
 CanvasRenderer:
@@ -6682,10 +6682,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 8875313520797204915}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 176.48616, y: -36.801918}
-  m_SizeDelta: {x: 63.394463, y: 65.603836}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 65.603836}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1191635123089243047
 CanvasRenderer:
@@ -7417,12 +7417,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToMove: {fileID: 7691141295810130644}
-  requiredWood: 0
-  requiredCoal: 10
+  requiredWood: 1
+  requiredCoal: 0
   requiredStone: 0
-  requiredMetal: 10
+  requiredMetal: 0
   requiredFiber: 0
-  itemToCraft: {fileID: 0}
+  itemToCraft: {fileID: 11400000, guid: b2050fedbb7484a4c9a948abc378af08, type: 2}
   inventory: {fileID: 0}
   craftingMaterial: {fileID: 2100000, guid: 487176412ce5158449983c87bb983b52, type: 2}
   cloudParticleSystem: {fileID: 0}
@@ -7978,11 +7978,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToMove: {fileID: 7691141295810130644}
   requiredWood: 1
-  requiredCoal: 1
+  requiredCoal: 0
   requiredStone: 0
   requiredMetal: 0
   requiredFiber: 0
-  itemToCraft: {fileID: 11400000, guid: 94477c2f9d3e05e43853b789e80edf9a, type: 2}
+  itemToCraft: {fileID: 11400000, guid: 1a71f02e5f0b31341bced1e8756d2355, type: 2}
   inventory: {fileID: 0}
   craftingMaterial: {fileID: 2100000, guid: 487176412ce5158449983c87bb983b52, type: 2}
   cloudParticleSystem: {fileID: 0}
@@ -9184,10 +9184,10 @@ RectTransform:
   - {fileID: 5281638414736018670}
   m_Father: {fileID: 1354119012578426592}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -15}
-  m_SizeDelta: {x: 216.1834, y: 30}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2293877200637172097
 CanvasRenderer:
@@ -9495,9 +9495,9 @@ RectTransform:
   - {fileID: 2268509072871203483}
   m_Father: {fileID: 5255582133444679651}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.2801, y: -11.9579}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 95.772, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3480968645914400351
@@ -9592,10 +9592,10 @@ RectTransform:
   - {fileID: 7966457669798162332}
   m_Father: {fileID: 1354119012578426592}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -100.15599}
-  m_SizeDelta: {x: 216.1834, y: 72.48038}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2804335154183115352
 MonoBehaviour:
@@ -11238,10 +11238,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 8875313520797204915}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 39.69723, y: -36.801918}
-  m_SizeDelta: {x: 63.394463, y: 65.603836}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 65.603836}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9061440809460678755
 CanvasRenderer:
@@ -13026,10 +13026,10 @@ RectTransform:
   - {fileID: 8245331704444947111}
   m_Father: {fileID: 1354119012578426592}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -46.9579}
-  m_SizeDelta: {x: 216.1834, y: 23.9158}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3737439507342926443
 MonoBehaviour:
@@ -14104,10 +14104,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 8875313520797204915}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.09169, y: -36.801918}
-  m_SizeDelta: {x: 63.394463, y: 65.603836}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 65.603836}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4153935412184502012
 CanvasRenderer:
@@ -14296,10 +14296,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 4508714848445046354}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.09169, y: -36.24019}
-  m_SizeDelta: {x: 63.394463, y: 64.48038}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 64.48038}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7252284214120880292
 CanvasRenderer:
@@ -14916,7 +14916,7 @@ MonoBehaviour:
   requiredStone: 0
   requiredMetal: 0
   requiredFiber: 0
-  itemToCraft: {fileID: 11400000, guid: 94477c2f9d3e05e43853b789e80edf9a, type: 2}
+  itemToCraft: {fileID: 11400000, guid: bbd68844fdd97c04fa13bd27dbf70244, type: 2}
   inventory: {fileID: 0}
   craftingMaterial: {fileID: 2100000, guid: 487176412ce5158449983c87bb983b52, type: 2}
   cloudParticleSystem: {fileID: 0}
@@ -15022,10 +15022,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 4508714848445046354}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 39.69723, y: -36.24019}
-  m_SizeDelta: {x: 63.394463, y: 64.48038}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 64.48038}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &364239438312914039
 CanvasRenderer:
@@ -15308,10 +15308,10 @@ RectTransform:
   - {fileID: 9168125680140871525}
   m_Father: {fileID: 1354119012578426592}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -260}
-  m_SizeDelta: {x: 216.1834, y: 80}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1047962587625659258
 MonoBehaviour:
@@ -15764,12 +15764,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToMove: {fileID: 7691141295810130644}
-  requiredWood: 4
-  requiredCoal: 2
-  requiredStone: 4
+  requiredWood: 1
+  requiredCoal: 0
+  requiredStone: 0
   requiredMetal: 0
   requiredFiber: 0
-  itemToCraft: {fileID: 11400000, guid: a5e1370a5b0fc5246b76873e86da9702, type: 2}
+  itemToCraft: {fileID: 11400000, guid: c6c94d3418f2d544c94126cc3f4c7ba1, type: 2}
   inventory: {fileID: 0}
   craftingMaterial: {fileID: 2100000, guid: 487176412ce5158449983c87bb983b52, type: 2}
   cloudParticleSystem: {fileID: 0}
@@ -16836,7 +16836,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2878229709006748998}
         m_TargetAssemblyTypeName: MenuCraft, Assembly-CSharp
         m_MethodName: CraftAndPlaceItem
         m_Mode: 1
@@ -16861,12 +16861,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToMove: {fileID: 7691141295810130644}
-  requiredWood: 0
-  requiredCoal: 10
+  requiredWood: 1
+  requiredCoal: 0
   requiredStone: 0
-  requiredMetal: 10
+  requiredMetal: 0
   requiredFiber: 0
-  itemToCraft: {fileID: 0}
+  itemToCraft: {fileID: 11400000, guid: 96426686bd09bb048a79c2b7cb4cd93b, type: 2}
   inventory: {fileID: 0}
   craftingMaterial: {fileID: 2100000, guid: 487176412ce5158449983c87bb983b52, type: 2}
   cloudParticleSystem: {fileID: 0}
@@ -19947,7 +19947,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2618154400222515832}
         m_TargetAssemblyTypeName: MenuCraft, Assembly-CSharp
         m_MethodName: CraftAndPlaceItem
         m_Mode: 1
@@ -19972,12 +19972,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToMove: {fileID: 7691141295810130644}
-  requiredWood: 0
-  requiredCoal: 1
+  requiredWood: 1
+  requiredCoal: 0
   requiredStone: 0
-  requiredMetal: 2
+  requiredMetal: 0
   requiredFiber: 0
-  itemToCraft: {fileID: 0}
+  itemToCraft: {fileID: 11400000, guid: 8c61c1218689077478a72ac888921531, type: 2}
   inventory: {fileID: 0}
   craftingMaterial: {fileID: 2100000, guid: 487176412ce5158449983c87bb983b52, type: 2}
   cloudParticleSystem: {fileID: 0}
@@ -20143,10 +20143,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 5957761033432657895}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -40}
-  m_SizeDelta: {x: 216.1834, y: 80}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &449399736090358266
 CanvasRenderer:
@@ -20353,12 +20353,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToMove: {fileID: 7691141295810130644}
-  requiredWood: 4
-  requiredCoal: 2
-  requiredStone: 4
+  requiredWood: 1
+  requiredCoal: 0
+  requiredStone: 0
   requiredMetal: 0
   requiredFiber: 0
-  itemToCraft: {fileID: 11400000, guid: a5e1370a5b0fc5246b76873e86da9702, type: 2}
+  itemToCraft: {fileID: 11400000, guid: 4538e855bb07d48459d5dd3b93858ee8, type: 2}
   inventory: {fileID: 0}
   craftingMaterial: {fileID: 2100000, guid: 487176412ce5158449983c87bb983b52, type: 2}
   cloudParticleSystem: {fileID: 0}
@@ -22932,7 +22932,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 208800020157535579}
         m_TargetAssemblyTypeName: MenuCraft, Assembly-CSharp
         m_MethodName: CraftAndPlaceItem
         m_Mode: 1
@@ -22957,12 +22957,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToMove: {fileID: 7691141295810130644}
-  requiredWood: 0
-  requiredCoal: 1
+  requiredWood: 1
+  requiredCoal: 0
   requiredStone: 0
-  requiredMetal: 2
+  requiredMetal: 0
   requiredFiber: 0
-  itemToCraft: {fileID: 0}
+  itemToCraft: {fileID: 11400000, guid: 17b6abb9e4d8c1d43a23e736c202ea9d, type: 2}
   inventory: {fileID: 0}
   craftingMaterial: {fileID: 2100000, guid: 487176412ce5158449983c87bb983b52, type: 2}
   cloudParticleSystem: {fileID: 0}
@@ -23002,9 +23002,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 5255582133444679651}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 186.1661, y: -11.9579}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 40, y: 23.915771}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1328120330446958602
