@@ -13,6 +13,7 @@ public class ProgressTracker : MonoBehaviour
     [SerializeField] private float raycastDistance = 10.0f;
     [SerializeField] private int gridSpacing = 5; 
     [SerializeField] private Terrain terrain;
+    [SerializeField] private LayerMask layerMask;
     private float terrainWidth;
     private float terrainHeight;
 
@@ -52,7 +53,7 @@ public class ProgressTracker : MonoBehaviour
                 Ray ray = new(point, Vector3.down);
                 Debug.DrawRay(ray.origin, ray.direction * raycastDistance, Color.yellow);
 
-                if (Physics.Raycast(ray, out RaycastHit hit, raycastDistance))
+                if (Physics.Raycast(ray, out RaycastHit hit, raycastDistance, layerMask))
                 {
                     LightSource lightSource = hit.collider.GetComponentInParent<LightSource>();
                     if (lightSource != null && lightSource.alive)

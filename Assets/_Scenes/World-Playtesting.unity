@@ -5307,6 +5307,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 564067032479621880, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 564067032479621880, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 140
+      objectReference: {fileID: 0}
     - target: {fileID: 3846886346836103074, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
       propertyPath: sanityManager
       value: 
@@ -10946,6 +10954,9 @@ MonoBehaviour:
   raycastDistance: 50
   gridSpacing: 5
   terrain: {fileID: 1507183531}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 8192
 --- !u!1 &2128811970
 GameObject:
   m_ObjectHideFlags: 0
