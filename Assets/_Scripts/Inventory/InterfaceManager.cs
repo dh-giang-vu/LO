@@ -51,7 +51,6 @@ public class InterfaceManager : MonoBehaviour
 
         // Initialize the DialogueBox and its script
         dialogueScript = dialogueBox.GetComponent<DialogueScript>();
-        dialogueBox.SetActive(false); // Make sure DialogueBox is initially inactive
 
         // Update resource amounts and display
         UpdateResourceAmounts();
