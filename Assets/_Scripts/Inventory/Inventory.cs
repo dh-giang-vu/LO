@@ -35,6 +35,7 @@ public class Inventory : MonoBehaviour
         else
         {
             // Add new item to the inventory
+            newItem.quantity = 1;
             items.Add(newItem);
         }
 

@@ -886,8 +886,8 @@ MonoBehaviour:
   objectToSpawn: {fileID: 1000010349089634, guid: ce4eef43afcd3ee429c6b4d8ffda53d2, type: 3}
   thorns: {fileID: 2363938681925551106, guid: 20fd414af9fb07343b89d7c700f36df8, type: 3}
   terrain: {fileID: 1507183531}
-  numberOfInitObjects: 45
-  autoSpawnInterval: 20
+  numberOfInitObjects: 35
+  autoSpawnInterval: 60
 --- !u!1001 &215597207
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3441,8 +3441,8 @@ MonoBehaviour:
   objectToSpawn: {fileID: 1000011449246696, guid: e1f35f4b9ee7e9747b7f35059ac4423f, type: 3}
   thorns: {fileID: 2363938681925551106, guid: 20fd414af9fb07343b89d7c700f36df8, type: 3}
   terrain: {fileID: 1507183531}
-  numberOfInitObjects: 100
-  autoSpawnInterval: 20
+  numberOfInitObjects: 80
+  autoSpawnInterval: 25
 --- !u!1 &802012022
 GameObject:
   m_ObjectHideFlags: 0
@@ -4402,7 +4402,7 @@ MonoBehaviour:
   thorns: {fileID: 2363938681925551106, guid: 20fd414af9fb07343b89d7c700f36df8, type: 3}
   terrain: {fileID: 1507183531}
   numberOfInitObjects: 50
-  autoSpawnInterval: 20
+  autoSpawnInterval: 30
 --- !u!4 &1118258912 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9071980159745529512, guid: 19e48c26020fafe418cb4c2298a4fd3f, type: 3}
@@ -6563,8 +6563,8 @@ MonoBehaviour:
   objectToSpawn: {fileID: 2303205053959840659, guid: 2349e85a434643647a7f10137f1a5a42, type: 3}
   thorns: {fileID: 2363938681925551106, guid: 20fd414af9fb07343b89d7c700f36df8, type: 3}
   terrain: {fileID: 1507183531}
-  numberOfInitObjects: 50
-  autoSpawnInterval: 40
+  numberOfInitObjects: 40
+  autoSpawnInterval: 30
 --- !u!1 &1483911495
 GameObject:
   m_ObjectHideFlags: 0
@@ -7086,7 +7086,7 @@ MonoBehaviour:
   objectToSpawn: {fileID: 8827697149842317551, guid: 19e48c26020fafe418cb4c2298a4fd3f, type: 3}
   thorns: {fileID: 2363938681925551106, guid: 20fd414af9fb07343b89d7c700f36df8, type: 3}
   terrain: {fileID: 1507183531}
-  numberOfInitObjects: 75
+  numberOfInitObjects: 70
   autoSpawnInterval: 20
 --- !u!1001 &1585911820
 PrefabInstance:
@@ -8884,7 +8884,7 @@ MonoBehaviour:
   objectToSpawn: {fileID: 3574884054442196509, guid: 64fb995fc63a0534bafa6da6b37e1124, type: 3}
   thorns: {fileID: 2363938681925551106, guid: 20fd414af9fb07343b89d7c700f36df8, type: 3}
   terrain: {fileID: 1507183531}
-  numberOfInitObjects: 100
+  numberOfInitObjects: 75
   autoSpawnInterval: 20
 --- !u!4 &1825060554 stripped
 Transform:
@@ -9671,7 +9671,7 @@ MonoBehaviour:
   objectToSpawn: {fileID: 2142975841462047055, guid: 539de0ad0d93a5748ba75f2d185f146e, type: 3}
   thorns: {fileID: 2363938681925551106, guid: 20fd414af9fb07343b89d7c700f36df8, type: 3}
   terrain: {fileID: 1507183531}
-  numberOfInitObjects: 50
+  numberOfInitObjects: 30
   autoSpawnInterval: 40
 --- !u!4 &2058828619 stripped
 Transform:
