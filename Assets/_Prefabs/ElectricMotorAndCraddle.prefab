@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4232012027248765218}
   - component: {fileID: 8797876117001306060}
-  - component: {fileID: -7851862695139441185}
   - component: {fileID: 4489640852013236572}
   - component: {fileID: -4126572424281593738}
   - component: {fileID: -3238473194363944667}
@@ -58,27 +57,6 @@ MonoBehaviour:
   - {fileID: 756144905928032726}
   - {fileID: 5113367580878562331}
   rotationSpeed: 20
---- !u!65 &-7851862695139441185
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 195687230349882789}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!135 &4489640852013236572
 SphereCollider:
   m_ObjectHideFlags: 0

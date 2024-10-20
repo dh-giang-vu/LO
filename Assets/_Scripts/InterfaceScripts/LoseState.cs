@@ -2,18 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WinState : MonoBehaviour
+public class LoseState : MonoBehaviour
 {
     [SerializeField] private GameObject objectToActivate; // GameObject to activate when sanity is zero
-    [SerializeField] private ProgressTracker progressTracker; // Reference to the SanityManager
+    [SerializeField] private SanityManager sanityManager; // Reference to the SanityManager
 
     void Update()
     {
         // Get the current sanity amount from the SanityManager instance (value between 0.0 and 1.0)
-        float progressAmount = progressTracker.GetProgress();
+        float sanityAmount = sanityManager.GetSanityAmount();
 
         // Check if sanity amount is less than or equal to zero
-        if (progressAmount >= 0.15)
+        if (sanityAmount <= 0)
         {
             // Activate the specified GameObject
             if (objectToActivate != null)
@@ -27,4 +27,3 @@ public class WinState : MonoBehaviour
         }
     }
 }
-
