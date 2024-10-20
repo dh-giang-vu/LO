@@ -11363,6 +11363,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 129196819}
     - target: {fileID: 1019392068101882643, guid: 06f17c02817a13042bcf328895d511d2, type: 3}
+      propertyPath: audioVolume
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1019392068101882643, guid: 06f17c02817a13042bcf328895d511d2, type: 3}
       propertyPath: gainSanityAudio
       value: 
       objectReference: {fileID: 8300000, guid: 08b10b1fc404bdf44a76e1da0938ac42, type: 3}
