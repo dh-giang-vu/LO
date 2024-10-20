@@ -15,12 +15,14 @@ public class DialogueScript : MonoBehaviour
     // New variables for audio
     public AudioClip audioClip; // Audio clip to play
     private AudioSource audioSource; // AudioSource component
+    [SerializeField, Range(0,1)] private float audioSourceVolume = 0.1f;
 
     void Start()
     {
         textComponent.text = string.Empty; // Clear text on start
         audioSource = gameObject.AddComponent<AudioSource>(); // Add an AudioSource component
         audioSource.clip = audioClip; // Assign the audio clip
+        audioSource.volume = audioSourceVolume;
         StartDialogue(); // Start the dialogue
     }
 
