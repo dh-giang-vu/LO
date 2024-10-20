@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 4103542887317707685}
   - component: {fileID: 4074270535631890837}
   - component: {fileID: 4084634654175116887}
-  - component: {fileID: 586942283284841353}
   - component: {fileID: 7055232795046161919}
+  - component: {fileID: 6171641812183878237}
   m_Layer: 0
   m_Name: small_house2
   m_TagString: Untagged
@@ -85,28 +85,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &586942283284841353
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4105067394002818019}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 1da38fb91a9e9104681f0446eea03f14, type: 3}
 --- !u!135 &7055232795046161919
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -128,3 +106,24 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 11
   m_Center: {x: 0.007914543, y: 4.570365, z: 0.48239923}
+--- !u!65 &6171641812183878237
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4105067394002818019}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 6.4857407, y: 9.189116, z: 7}
+  m_Center: {x: 0.007914543, y: 4.570365, z: 0}

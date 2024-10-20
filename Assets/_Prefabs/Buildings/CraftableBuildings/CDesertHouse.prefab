@@ -343,7 +343,6 @@ GameObject:
   - component: {fileID: 7122070754163379531}
   - component: {fileID: 300888500080399236}
   - component: {fileID: 4246145922909515375}
-  - component: {fileID: 5903020550336048141}
   m_Layer: 0
   m_Name: House_3_Base
   m_TagString: Untagged
@@ -416,28 +415,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5903020550336048141
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5306762927231967864}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2088821315472981080, guid: feb0b2c230a9ce64a8d3864403493271, type: 3}
 --- !u!1 &7021131371068311065
 GameObject:
   m_ObjectHideFlags: 0
@@ -532,6 +509,7 @@ GameObject:
   - component: {fileID: 7354829425864538108}
   - component: {fileID: -3033743955152658028}
   - component: {fileID: -213130285767052842}
+  - component: {fileID: -5916582868040971239}
   m_Layer: 0
   m_Name: CDesertHouse
   m_TagString: Untagged
@@ -594,3 +572,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sanityEffect: 0.13
+--- !u!65 &-5916582868040971239
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7879692728048463174}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 6, y: 3, z: 6}
+  m_Center: {x: 0, y: 1.5, z: -0.5}

@@ -9,6 +9,7 @@ public class PlaceItem : MonoBehaviour
     [SerializeField] private GameObject itemToPlace = null;
     [SerializeField] private GameObject instantiatedItem = null;
     [SerializeField] private bool isPlacingItem = false;
+    
     private Camera cam;
 
     // Debug mode
@@ -30,6 +31,7 @@ public class PlaceItem : MonoBehaviour
     [SerializeField] private Material craftingMaterial; // The material to apply while crafting
     private List<Material> originalMaterials = new List<Material>(); // Store original materials for all meshes
     private List<int> originalLayers = new List<int>(); // Store original layers for all meshes
+    private bool overlaps = false;
 
     void Start()
     {
@@ -81,14 +83,65 @@ public class PlaceItem : MonoBehaviour
 
             // Apply only the Y-axis rotation to face the player, while keeping the original X and Z rotation from the prefab
             instantiatedItem.transform.eulerAngles = new Vector3(originalRotation.x, targetYRotation, originalRotation.z);
+            List<Collider> colliders = GetNonTriggerColliders();
+            Renderer renderer = instantiatedItem.GetComponent<Renderer>();
+            if (IsOverlappingWithAny(instantiatedItem.GetComponent<BoxCollider>(), colliders)) {
+                renderer.material.SetColor("_Color1", new Color(0.55f, 0.0f, 0.0f));
+                renderer.material.SetColor("_Color2", new Color(1.0f, 0.6f, 0.6f));
+                overlaps = true;
+            } else {
+                renderer.material.SetColor("_Color1", new Color(0.0f, 0.0f, 0.55f));
+                renderer.material.SetColor("_Color2", new Color(0.68f, 0.85f, 0.9f));
+                overlaps = false;
+            }
+
+             
         }
     }
-
-    if (Input.GetKeyDown(KeyCode.Mouse0) && instantiatedItem != null)
+    if (isPlacingItem && Input.GetKeyDown(KeyCode.C))
+    {
+        Destroy(instantiatedItem);
+        instantiatedItem = null;
+        isPlacingItem = false;
+    }
+    if (Input.GetKeyDown(KeyCode.Mouse0) && instantiatedItem != null && !overlaps)
     {
         StopPlacingItem();
     }
 }
+
+    private bool IsOverlappingWithAny(Collider itemCollider, List<Collider> colliders)
+    {
+        foreach (Collider collider in colliders)
+        {
+            // Use Bounds.Intersects to check if their bounds overlap
+            if (collider.bounds.Intersects(itemCollider.bounds))
+            {
+                return true;  // Overlap found
+            }
+        }
+        return false;  // No overlaps
+    }
+    private List<Collider> GetNonTriggerColliders()
+    {
+        // Get all colliders in the scene
+        Collider[] allColliders = FindObjectsOfType<Collider>();
+
+        // Create a list to store the non-trigger colliders
+        List<Collider> nonTriggerColliders = new List<Collider>();
+
+        // Iterate through all colliders and filter out those with isTrigger = true
+        foreach (Collider collider in allColliders)
+        {
+            if (!collider.isTrigger && (collider.gameObject.layer == 0 || collider.gameObject.layer == 13))
+            {
+                nonTriggerColliders.Add(collider);
+            }
+        }
+
+        return nonTriggerColliders;
+    }
+
 
 
     public void StartPlacingItem(GameObject gameObject)

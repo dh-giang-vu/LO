@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8697071453192087186}
   - component: {fileID: 1889646611754092165}
   - component: {fileID: 2749941037967354289}
+  - component: {fileID: 1902100418724418366}
   m_Layer: 13
   m_Name: LightTraffic
   m_TagString: Untagged
@@ -152,6 +153,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1902100418724418366
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4867208053688840335}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.7607884, y: 7.5348825, z: 2.760788}
+  m_Center: {x: 0.0009152889, y: 3.7674413, z: -0.002662599}
 --- !u!1 &6669415909186315845
 GameObject:
   m_ObjectHideFlags: 0
