@@ -9,7 +9,7 @@ public class PlaceItem : MonoBehaviour
     [SerializeField] private GameObject itemToPlace = null;
     [SerializeField] private GameObject instantiatedItem = null;
     [SerializeField] private bool isPlacingItem = false;
-    
+
     private Camera cam;
 
     // Debug mode
@@ -84,15 +84,12 @@ public class PlaceItem : MonoBehaviour
             // Apply only the Y-axis rotation to face the player, while keeping the original X and Z rotation from the prefab
             instantiatedItem.transform.eulerAngles = new Vector3(originalRotation.x, targetYRotation, originalRotation.z);
             List<Collider> colliders = GetNonTriggerColliders();
-            Renderer renderer = instantiatedItem.GetComponent<Renderer>();
             if (IsOverlappingWithAny(instantiatedItem.GetComponent<BoxCollider>(), colliders)) {
-                renderer.material.SetColor("_Color1", new Color(0.55f, 0.0f, 0.0f));
-                renderer.material.SetColor("_Color2", new Color(1.0f, 0.6f, 0.6f));
-                overlaps = true;
+                SetUnplaceable();
+                Debug.Log("OVERLAPPING");
             } else {
-                renderer.material.SetColor("_Color1", new Color(0.0f, 0.0f, 0.55f));
-                renderer.material.SetColor("_Color2", new Color(0.68f, 0.85f, 0.9f));
-                overlaps = false;
+                SetPlaceable();
+                Debug.Log("NOT OVERLAPPING");
             }
 
              
@@ -109,6 +106,46 @@ public class PlaceItem : MonoBehaviour
         StopPlacingItem();
     }
 }
+
+    private void SetPlaceable()
+    {
+        // Get the Renderer components from the GameObject and all its children
+        Renderer[] renderers = instantiatedItem.GetComponentsInChildren<Renderer>();
+
+        // Loop through each Renderer and set the colors
+        foreach (Renderer renderer in renderers)
+        {
+            foreach (Material material in renderer.materials)
+            {
+                // Set the colors on each material
+                material.SetColor("_Color1", new Color(0.0f, 0.0f, 0.55f));
+                material.SetColor("_Color2", new Color(0.68f, 0.85f, 0.9f));
+            }
+
+        }
+
+        overlaps = false;  // Some additional logic, if needed
+    }
+
+    private void SetUnplaceable()
+    {
+        // Get the Renderer components from the GameObject and all its children
+        Renderer[] renderers = instantiatedItem.GetComponentsInChildren<Renderer>();
+
+        // Loop through each Renderer and set the colors
+        foreach (Renderer renderer in renderers)
+        {
+            foreach (Material material in renderer.materials)
+            {
+                // Set the colors on each material
+                material.SetColor("_Color1", new Color(0.55f, 0.0f, 0.0f));  // Dark Red
+                material.SetColor("_Color2", new Color(1.0f, 0.6f, 0.6f));   // Light Red
+            }
+
+        }
+
+        overlaps = true;  // Some additional logic, if needed
+    }
 
     private bool IsOverlappingWithAny(Collider itemCollider, List<Collider> colliders)
     {

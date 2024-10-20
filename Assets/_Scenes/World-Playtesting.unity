@@ -961,6 +961,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rpgpp_lt_mountain_01 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1185380165875998, guid: 59c11859077357741ad00e6c87489eb7, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4099890921740684, guid: 59c11859077357741ad00e6c87489eb7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.4
@@ -1017,6 +1021,10 @@ PrefabInstance:
     - target: {fileID: 1185380165875998, guid: 59c11859077357741ad00e6c87489eb7, type: 3}
       propertyPath: m_Name
       value: rpgpp_lt_mountain_01 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1185380165875998, guid: 59c11859077357741ad00e6c87489eb7, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4099890921740684, guid: 59c11859077357741ad00e6c87489eb7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2026,6 +2034,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rpgpp_lt_mountain_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1185380165875998, guid: 59c11859077357741ad00e6c87489eb7, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4099890921740684, guid: 59c11859077357741ad00e6c87489eb7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 101.8
@@ -2420,6 +2432,10 @@ PrefabInstance:
     - target: {fileID: 1185380165875998, guid: 59c11859077357741ad00e6c87489eb7, type: 3}
       propertyPath: m_Name
       value: rpgpp_lt_mountain_01 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1185380165875998, guid: 59c11859077357741ad00e6c87489eb7, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4099890921740684, guid: 59c11859077357741ad00e6c87489eb7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5577,6 +5593,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rpgpp_lt_mountain_01 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1185380165875998, guid: 59c11859077357741ad00e6c87489eb7, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4099890921740684, guid: 59c11859077357741ad00e6c87489eb7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 187.3
@@ -6243,6 +6263,10 @@ PrefabInstance:
     - target: {fileID: 1185380165875998, guid: 59c11859077357741ad00e6c87489eb7, type: 3}
       propertyPath: m_Name
       value: rpgpp_lt_mountain_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1185380165875998, guid: 59c11859077357741ad00e6c87489eb7, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4099890921740684, guid: 59c11859077357741ad00e6c87489eb7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7556,6 +7580,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1678650639}
     - target: {fileID: 3736249554951534553, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: requiredCoal
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3736249554951534553, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: requiredMetal
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3736249554951534553, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: cloudParticleSystem
       value: 
       objectReference: {fileID: 1435722634}
@@ -7926,6 +7958,10 @@ PrefabInstance:
     - target: {fileID: 1185380165875998, guid: 59c11859077357741ad00e6c87489eb7, type: 3}
       propertyPath: m_Name
       value: rpgpp_lt_mountain_01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1185380165875998, guid: 59c11859077357741ad00e6c87489eb7, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4099890921740684, guid: 59c11859077357741ad00e6c87489eb7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8327,6 +8363,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rpgpp_lt_mountain_01 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1185380165875998, guid: 59c11859077357741ad00e6c87489eb7, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4099890921740684, guid: 59c11859077357741ad00e6c87489eb7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 178.7
@@ -8594,6 +8634,10 @@ PrefabInstance:
     - target: {fileID: 1185380165875998, guid: 59c11859077357741ad00e6c87489eb7, type: 3}
       propertyPath: m_Name
       value: rpgpp_lt_mountain_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1185380165875998, guid: 59c11859077357741ad00e6c87489eb7, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4099890921740684, guid: 59c11859077357741ad00e6c87489eb7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8902,6 +8946,10 @@ PrefabInstance:
     - target: {fileID: 1185380165875998, guid: 59c11859077357741ad00e6c87489eb7, type: 3}
       propertyPath: m_Name
       value: rpgpp_lt_mountain_01 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1185380165875998, guid: 59c11859077357741ad00e6c87489eb7, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4099890921740684, guid: 59c11859077357741ad00e6c87489eb7, type: 3}
       propertyPath: m_LocalPosition.x
