@@ -3690,7 +3690,7 @@ MonoBehaviour:
   requiredStone: 0
   requiredMetal: 0
   requiredFiber: 0
-  itemToCraft: {fileID: 11400000, guid: 92642e83b11557d449c0bafeb4025ae7, type: 2}
+  itemToCraft: {fileID: 11400000, guid: 0a2c1beba4d5ecf468735f4a3504737f, type: 2}
   inventory: {fileID: 0}
   craftUIMove: {fileID: 2545504599802197064}
   itemPlacer: {fileID: 0}
