@@ -10265,6 +10265,10 @@ PrefabInstance:
       propertyPath: cameraTransform
       value: 
       objectReference: {fileID: 129196819}
+    - target: {fileID: 1019392068101882643, guid: 06f17c02817a13042bcf328895d511d2, type: 3}
+      propertyPath: gainSanityAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 08b10b1fc404bdf44a76e1da0938ac42, type: 3}
     - target: {fileID: 3738711090394718851, guid: 06f17c02817a13042bcf328895d511d2, type: 3}
       propertyPath: m_Name
       value: Player
