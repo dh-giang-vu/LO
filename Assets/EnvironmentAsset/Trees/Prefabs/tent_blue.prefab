@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1896502428325798137}
   - component: {fileID: 8834114591306301719}
   - component: {fileID: 3842518520115931628}
+  - component: {fileID: 2226231322197769163}
   m_Layer: 0
   m_Name: tent_blue
   m_TagString: Untagged
@@ -133,3 +134,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2226231322197769163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6238572378601711981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 697cd810a1190e240846e5e455ef1df4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sanityEffect: 0.2

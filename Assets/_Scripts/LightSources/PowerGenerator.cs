@@ -11,6 +11,12 @@ public class PowerGenerator : LightSource
     private Inventory inventory;  // Dynamically found reference to the player's Inventory
     private int requiredCoal = 1;
 
+    // SFX
+    [SerializeField] private AudioClip generatorStartAudio;
+    [SerializeField] private AudioClip generatorRunLoopAudio;
+    [SerializeField] private float audioBlendDuration = 0.1f;
+    private AudioSource audioSource;
+
     void Start()
     {
         // Find Inventory instance in the scene if it's not assigned
@@ -22,6 +28,8 @@ public class PowerGenerator : LightSource
                 Debug.LogError("Inventory not found in the scene. Ensure an Inventory exists.");
             }
         }
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -32,6 +40,11 @@ public class PowerGenerator : LightSource
         }
         else if (lifespan <= 0 && alive)
         {
+            // Stop the generator run loop audio
+            if (audioSource.isPlaying)
+            {
+                audioSource.Stop();
+            }
             Die();
         }
     }
@@ -70,6 +83,15 @@ public class PowerGenerator : LightSource
             yield return new WaitForSeconds(refuelWaitTime);
             Refuel();
             Debug.Log("Generator refueled, 1 coal consumed.");
+
+            // Play the generator start sound
+            audioSource.PlayOneShot(generatorStartAudio);
+
+            // Wait for the startup sound to finish, then loop the running sound
+            yield return new WaitForSeconds(generatorStartAudio.length - audioBlendDuration);
+            audioSource.clip = generatorRunLoopAudio;
+            audioSource.loop = true; // Loop the run audio
+            audioSource.Play();
         }
         else
         {
@@ -107,6 +129,6 @@ public class PowerGenerator : LightSource
 
     public override float getSanityEffect()
     {
-        return -1f;
+        return 0.0f;
     }
 }
