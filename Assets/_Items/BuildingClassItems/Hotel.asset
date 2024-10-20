@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Hotel
   quantity: 1
-  model: {fileID: 441413946771326489, guid: ad4039a6b5dc3c245a977d6e31c1ca90, type: 3}
+  model: {fileID: 2082922607834137827, guid: cc7ae2cd363b40748abc00bedd652cfb, type: 3}
