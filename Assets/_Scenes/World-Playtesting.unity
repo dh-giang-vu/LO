@@ -8213,10 +8213,6 @@ PrefabInstance:
       propertyPath: craftingController
       value: 
       objectReference: {fileID: 1136693392}
-    - target: {fileID: 71574709396060696, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
-      propertyPath: cloudParticleSystem
-      value: 
-      objectReference: {fileID: 1435722634}
     - target: {fileID: 208800020157535579, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: inventory
       value: 
@@ -8229,10 +8225,6 @@ PrefabInstance:
       propertyPath: craftingController
       value: 
       objectReference: {fileID: 1136693392}
-    - target: {fileID: 208800020157535579, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
-      propertyPath: cloudParticleSystem
-      value: 
-      objectReference: {fileID: 1435722634}
     - target: {fileID: 553933109863274763, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -8285,10 +8277,6 @@ PrefabInstance:
       propertyPath: craftingController
       value: 
       objectReference: {fileID: 1136693392}
-    - target: {fileID: 1022398953247858813, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
-      propertyPath: cloudParticleSystem
-      value: 
-      objectReference: {fileID: 1435722634}
     - target: {fileID: 1045192315550153648, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -8329,10 +8317,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1494570908388358897, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 506c9635469436348850f279170b9815, type: 3}
     - target: {fileID: 2618154400222515832, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: inventory
       value: 
@@ -8345,10 +8329,6 @@ PrefabInstance:
       propertyPath: craftingController
       value: 
       objectReference: {fileID: 1136693392}
-    - target: {fileID: 2618154400222515832, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
-      propertyPath: cloudParticleSystem
-      value: 
-      objectReference: {fileID: 1435722634}
     - target: {fileID: 2844249012295245389, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: inventory
       value: 
@@ -8361,10 +8341,6 @@ PrefabInstance:
       propertyPath: craftingController
       value: 
       objectReference: {fileID: 1136693392}
-    - target: {fileID: 2844249012295245389, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
-      propertyPath: cloudParticleSystem
-      value: 
-      objectReference: {fileID: 1435722634}
     - target: {fileID: 2878229709006748998, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: inventory
       value: 
@@ -8377,14 +8353,6 @@ PrefabInstance:
       propertyPath: craftingController
       value: 
       objectReference: {fileID: 1136693392}
-    - target: {fileID: 2878229709006748998, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
-      propertyPath: cloudParticleSystem
-      value: 
-      objectReference: {fileID: 1435722634}
-    - target: {fileID: 2895501041651250618, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3108892697124986939, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -8417,10 +8385,6 @@ PrefabInstance:
       propertyPath: craftingController
       value: 
       objectReference: {fileID: 1136693392}
-    - target: {fileID: 3215354917917897043, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
-      propertyPath: cloudParticleSystem
-      value: 
-      objectReference: {fileID: 1435722634}
     - target: {fileID: 3300149205364698163, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -8506,25 +8470,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1678650639}
     - target: {fileID: 3736249554951534553, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
-      propertyPath: requiredCoal
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3736249554951534553, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
-      propertyPath: requiredMetal
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3736249554951534553, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: craftingController
       value: 
       objectReference: {fileID: 1136693392}
-    - target: {fileID: 3736249554951534553, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
-      propertyPath: cloudParticleSystem
-      value: 
-      objectReference: {fileID: 1435722634}
-    - target: {fileID: 3827455203722281734, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 243eb64093dd1c64f88daa41ce6047d3, type: 3}
     - target: {fileID: 3888866620558648541, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -8585,10 +8533,6 @@ PrefabInstance:
       propertyPath: craftingController
       value: 
       objectReference: {fileID: 1136693392}
-    - target: {fileID: 4217501723327256605, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
-      propertyPath: cloudParticleSystem
-      value: 
-      objectReference: {fileID: 1435722634}
     - target: {fileID: 4526636049189581201, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: m_Name
       value: CraftingUI
@@ -8617,10 +8561,6 @@ PrefabInstance:
       propertyPath: craftingController
       value: 
       objectReference: {fileID: 1136693392}
-    - target: {fileID: 4687100613192901515, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
-      propertyPath: cloudParticleSystem
-      value: 
-      objectReference: {fileID: 1435722634}
     - target: {fileID: 4943312871781710488, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -8657,10 +8597,6 @@ PrefabInstance:
       propertyPath: craftingController
       value: 
       objectReference: {fileID: 1136693392}
-    - target: {fileID: 5133740165853586684, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
-      propertyPath: cloudParticleSystem
-      value: 
-      objectReference: {fileID: 1435722634}
     - target: {fileID: 5425886558295074092, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -8717,10 +8653,6 @@ PrefabInstance:
       propertyPath: craftingController
       value: 
       objectReference: {fileID: 1136693392}
-    - target: {fileID: 5785420856090231190, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
-      propertyPath: cloudParticleSystem
-      value: 
-      objectReference: {fileID: 1435722634}
     - target: {fileID: 6033952962381244602, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: inventory
       value: 
@@ -8733,10 +8665,6 @@ PrefabInstance:
       propertyPath: craftingController
       value: 
       objectReference: {fileID: 1136693392}
-    - target: {fileID: 6033952962381244602, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
-      propertyPath: cloudParticleSystem
-      value: 
-      objectReference: {fileID: 1435722634}
     - target: {fileID: 6590435797283442883, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: inventory
       value: 
@@ -8749,10 +8677,6 @@ PrefabInstance:
       propertyPath: craftingController
       value: 
       objectReference: {fileID: 1136693392}
-    - target: {fileID: 6590435797283442883, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
-      propertyPath: cloudParticleSystem
-      value: 
-      objectReference: {fileID: 1435722634}
     - target: {fileID: 6694458158808686666, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: inventory
       value: 
@@ -8765,10 +8689,6 @@ PrefabInstance:
       propertyPath: craftingController
       value: 
       objectReference: {fileID: 1136693392}
-    - target: {fileID: 6694458158808686666, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
-      propertyPath: cloudParticleSystem
-      value: 
-      objectReference: {fileID: 1435722634}
     - target: {fileID: 6695132793519567120, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: inventory
       value: 
@@ -8781,10 +8701,6 @@ PrefabInstance:
       propertyPath: craftingController
       value: 
       objectReference: {fileID: 1136693392}
-    - target: {fileID: 6695132793519567120, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
-      propertyPath: cloudParticleSystem
-      value: 
-      objectReference: {fileID: 1435722634}
     - target: {fileID: 6870749561355545218, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: inventory
       value: 
@@ -8797,10 +8713,6 @@ PrefabInstance:
       propertyPath: craftingController
       value: 
       objectReference: {fileID: 1136693392}
-    - target: {fileID: 6870749561355545218, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
-      propertyPath: cloudParticleSystem
-      value: 
-      objectReference: {fileID: 1435722634}
     - target: {fileID: 7406226833269452906, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -8837,10 +8749,6 @@ PrefabInstance:
       propertyPath: craftingController
       value: 
       objectReference: {fileID: 1136693392}
-    - target: {fileID: 8267129279265091940, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
-      propertyPath: cloudParticleSystem
-      value: 
-      objectReference: {fileID: 1435722634}
     - target: {fileID: 8304269796584671607, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -8885,10 +8793,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8662796773093454331, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: bb95e9bb901590445b2d22465fc608ee, type: 3}
     - target: {fileID: 9107040911798205949, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -8905,10 +8809,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9154051113073625731, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 1ef6ab7ded3006445bd924f7a8703b5c, type: 3}
     - target: {fileID: 9187839848403249823, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
