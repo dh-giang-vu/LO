@@ -14990,7 +14990,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7786956516491452999, guid: 7296d957f1057334a956e41e05a46f27, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 70.76401
+      value: 74.84
       objectReference: {fileID: 0}
     - target: {fileID: 7786956516491452999, guid: 7296d957f1057334a956e41e05a46f27, type: 3}
       propertyPath: m_LocalRotation.w
@@ -15107,6 +15107,10 @@ PrefabInstance:
     - target: {fileID: 3738711090394718851, guid: 06f17c02817a13042bcf328895d511d2, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3738711090394718851, guid: 06f17c02817a13042bcf328895d511d2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4920966705891362370, guid: 06f17c02817a13042bcf328895d511d2, type: 3}
       propertyPath: mining
