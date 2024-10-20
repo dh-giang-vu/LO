@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlaceItem : MonoBehaviour
 {
@@ -32,6 +33,11 @@ public class PlaceItem : MonoBehaviour
     private List<Material> originalMaterials = new List<Material>(); // Store original materials for all meshes
     private List<int> originalLayers = new List<int>(); // Store original layers for all meshes
     private bool overlaps = false;
+
+    // Events
+    [SerializeField] private UnityEvent onCancelCrafting;
+    [SerializeField] private UnityEvent onSuccessfulCrafting;
+
 
     void Start()
     {
@@ -100,10 +106,12 @@ public class PlaceItem : MonoBehaviour
         Destroy(instantiatedItem);
         instantiatedItem = null;
         isPlacingItem = false;
+        onCancelCrafting.Invoke();
     }
     if (Input.GetKeyDown(KeyCode.Mouse0) && instantiatedItem != null && !overlaps)
     {
         StopPlacingItem();
+        onSuccessfulCrafting.Invoke();
     }
 }
 

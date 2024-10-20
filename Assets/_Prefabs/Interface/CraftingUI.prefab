@@ -501,12 +501,9 @@ MonoBehaviour:
   requiredFiber: 0
   itemToCraft: {fileID: 11400000, guid: db603f459ad6c8c46bbbb9817530cc34, type: 2}
   inventory: {fileID: 0}
-  craftingMaterial: {fileID: 2100000, guid: 487176412ce5158449983c87bb983b52, type: 2}
-  cloudParticleSystem: {fileID: 0}
-  defaultCloudSize: {x: 1, y: 1, z: 1}
-  cloudScaling: 0.25
   craftUIMove: {fileID: 2545504599802197064}
-  applyToAllMeshes: 1
+  itemPlacer: {fileID: 0}
+  craftingController: {fileID: 0}
 --- !u!1 &148333208249694832
 GameObject:
   m_ObjectHideFlags: 0
@@ -2211,12 +2208,9 @@ MonoBehaviour:
   requiredFiber: 0
   itemToCraft: {fileID: 11400000, guid: a5e1370a5b0fc5246b76873e86da9702, type: 2}
   inventory: {fileID: 0}
-  craftingMaterial: {fileID: 2100000, guid: 487176412ce5158449983c87bb983b52, type: 2}
-  cloudParticleSystem: {fileID: 0}
-  defaultCloudSize: {x: 1, y: 1, z: 1}
-  cloudScaling: 0.25
   craftUIMove: {fileID: 2545504599802197064}
-  applyToAllMeshes: 0
+  itemPlacer: {fileID: 0}
+  craftingController: {fileID: 0}
 --- !u!1 &1152898206042817134
 GameObject:
   m_ObjectHideFlags: 0
@@ -2506,12 +2500,9 @@ MonoBehaviour:
   requiredFiber: 0
   itemToCraft: {fileID: 11400000, guid: d76543e1456ff7f48a4f94efc1106ff6, type: 2}
   inventory: {fileID: 0}
-  craftingMaterial: {fileID: 2100000, guid: 487176412ce5158449983c87bb983b52, type: 2}
-  cloudParticleSystem: {fileID: 0}
-  defaultCloudSize: {x: 1, y: 1, z: 1}
-  cloudScaling: 0.25
   craftUIMove: {fileID: 2545504599802197064}
-  applyToAllMeshes: 1
+  itemPlacer: {fileID: 0}
+  craftingController: {fileID: 0}
 --- !u!1 &1234619965348348849
 GameObject:
   m_ObjectHideFlags: 0
@@ -3695,12 +3686,9 @@ MonoBehaviour:
   requiredFiber: 0
   itemToCraft: {fileID: 11400000, guid: 79b60a4ac8f191f4e992c34c3007068b, type: 2}
   inventory: {fileID: 0}
-  craftingMaterial: {fileID: 2100000, guid: 487176412ce5158449983c87bb983b52, type: 2}
-  cloudParticleSystem: {fileID: 0}
-  defaultCloudSize: {x: 1, y: 1, z: 1}
-  cloudScaling: 0.25
   craftUIMove: {fileID: 2545504599802197064}
-  applyToAllMeshes: 1
+  itemPlacer: {fileID: 0}
+  craftingController: {fileID: 0}
 --- !u!1 &2025023890327419977
 GameObject:
   m_ObjectHideFlags: 0
@@ -3993,12 +3981,9 @@ MonoBehaviour:
   requiredFiber: 0
   itemToCraft: {fileID: 11400000, guid: 05dc4af311e9db14e9519fd320046a92, type: 2}
   inventory: {fileID: 0}
-  craftingMaterial: {fileID: 2100000, guid: 487176412ce5158449983c87bb983b52, type: 2}
-  cloudParticleSystem: {fileID: 0}
-  defaultCloudSize: {x: 1, y: 1, z: 1}
-  cloudScaling: 0.25
   craftUIMove: {fileID: 2545504599802197064}
-  applyToAllMeshes: 0
+  itemPlacer: {fileID: 0}
+  craftingController: {fileID: 0}
 --- !u!1 &2086221693003217193
 GameObject:
   m_ObjectHideFlags: 0
@@ -5380,12 +5365,9 @@ MonoBehaviour:
   requiredFiber: 0
   itemToCraft: {fileID: 11400000, guid: 1cdcd0ed6a63dc04e865478263e56a8c, type: 2}
   inventory: {fileID: 0}
-  craftingMaterial: {fileID: 2100000, guid: 487176412ce5158449983c87bb983b52, type: 2}
-  cloudParticleSystem: {fileID: 0}
-  defaultCloudSize: {x: 1, y: 1, z: 1}
-  cloudScaling: 0.25
   craftUIMove: {fileID: 2545504599802197064}
-  applyToAllMeshes: 1
+  itemPlacer: {fileID: 0}
+  craftingController: {fileID: 0}
 --- !u!1 &2754500853462704206
 GameObject:
   m_ObjectHideFlags: 0
@@ -6306,12 +6288,9 @@ MonoBehaviour:
   requiredFiber: 0
   itemToCraft: {fileID: 11400000, guid: 2310d7288fcad63498842c3eab82276b, type: 2}
   inventory: {fileID: 0}
-  craftingMaterial: {fileID: 2100000, guid: 487176412ce5158449983c87bb983b52, type: 2}
-  cloudParticleSystem: {fileID: 0}
-  defaultCloudSize: {x: 1, y: 1, z: 1}
-  cloudScaling: 0.25
   craftUIMove: {fileID: 2545504599802197064}
-  applyToAllMeshes: 1
+  itemPlacer: {fileID: 0}
+  craftingController: {fileID: 0}
 --- !u!1 &3015944800902840934
 GameObject:
   m_ObjectHideFlags: 0
@@ -7431,12 +7410,9 @@ MonoBehaviour:
   requiredFiber: 0
   itemToCraft: {fileID: 11400000, guid: a76ceded336f4864482d341e9f338274, type: 2}
   inventory: {fileID: 0}
-  craftingMaterial: {fileID: 2100000, guid: 487176412ce5158449983c87bb983b52, type: 2}
-  cloudParticleSystem: {fileID: 0}
-  defaultCloudSize: {x: 1, y: 1, z: 1}
-  cloudScaling: 0.25
   craftUIMove: {fileID: 2545504599802197064}
-  applyToAllMeshes: 0
+  itemPlacer: {fileID: 0}
+  craftingController: {fileID: 0}
 --- !u!1 &3503525344247556777
 GameObject:
   m_ObjectHideFlags: 0
@@ -7992,12 +7968,9 @@ MonoBehaviour:
   requiredFiber: 0
   itemToCraft: {fileID: 11400000, guid: 1a71f02e5f0b31341bced1e8756d2355, type: 2}
   inventory: {fileID: 0}
-  craftingMaterial: {fileID: 2100000, guid: 487176412ce5158449983c87bb983b52, type: 2}
-  cloudParticleSystem: {fileID: 0}
-  defaultCloudSize: {x: 1, y: 1, z: 1}
-  cloudScaling: 0.25
   craftUIMove: {fileID: 2545504599802197064}
-  applyToAllMeshes: 1
+  itemPlacer: {fileID: 0}
+  craftingController: {fileID: 0}
 --- !u!1 &3685652646587518270
 GameObject:
   m_ObjectHideFlags: 0
@@ -11780,12 +11753,9 @@ MonoBehaviour:
   requiredFiber: 0
   itemToCraft: {fileID: 11400000, guid: 0970f9034c117b749b941ca7e07505b2, type: 2}
   inventory: {fileID: 0}
-  craftingMaterial: {fileID: 2100000, guid: 487176412ce5158449983c87bb983b52, type: 2}
-  cloudParticleSystem: {fileID: 0}
-  defaultCloudSize: {x: 1, y: 1, z: 1}
-  cloudScaling: 0.25
   craftUIMove: {fileID: 2545504599802197064}
-  applyToAllMeshes: 0
+  itemPlacer: {fileID: 0}
+  craftingController: {fileID: 0}
 --- !u!1 &5133275740415814243
 GameObject:
   m_ObjectHideFlags: 0
@@ -14928,12 +14898,9 @@ MonoBehaviour:
   requiredFiber: 0
   itemToCraft: {fileID: 11400000, guid: bbd68844fdd97c04fa13bd27dbf70244, type: 2}
   inventory: {fileID: 0}
-  craftingMaterial: {fileID: 2100000, guid: 487176412ce5158449983c87bb983b52, type: 2}
-  cloudParticleSystem: {fileID: 0}
-  defaultCloudSize: {x: 1, y: 1, z: 1}
-  cloudScaling: 0.25
   craftUIMove: {fileID: 2545504599802197064}
-  applyToAllMeshes: 1
+  itemPlacer: {fileID: 0}
+  craftingController: {fileID: 0}
 --- !u!1 &6291039406196242436
 GameObject:
   m_ObjectHideFlags: 0
@@ -15782,12 +15749,9 @@ MonoBehaviour:
   requiredFiber: 0
   itemToCraft: {fileID: 11400000, guid: c6c94d3418f2d544c94126cc3f4c7ba1, type: 2}
   inventory: {fileID: 0}
-  craftingMaterial: {fileID: 2100000, guid: 487176412ce5158449983c87bb983b52, type: 2}
-  cloudParticleSystem: {fileID: 0}
-  defaultCloudSize: {x: 1, y: 1, z: 1}
-  cloudScaling: 0.25
   craftUIMove: {fileID: 2545504599802197064}
-  applyToAllMeshes: 1
+  itemPlacer: {fileID: 0}
+  craftingController: {fileID: 0}
 --- !u!1 &6826909208074240386
 GameObject:
   m_ObjectHideFlags: 0
@@ -16880,12 +16844,9 @@ MonoBehaviour:
   requiredFiber: 0
   itemToCraft: {fileID: 11400000, guid: 96426686bd09bb048a79c2b7cb4cd93b, type: 2}
   inventory: {fileID: 0}
-  craftingMaterial: {fileID: 2100000, guid: 487176412ce5158449983c87bb983b52, type: 2}
-  cloudParticleSystem: {fileID: 0}
-  defaultCloudSize: {x: 1, y: 1, z: 1}
-  cloudScaling: 0.25
   craftUIMove: {fileID: 2545504599802197064}
-  applyToAllMeshes: 1
+  itemPlacer: {fileID: 0}
+  craftingController: {fileID: 0}
 --- !u!1 &7049978399640618584
 GameObject:
   m_ObjectHideFlags: 0
@@ -17181,12 +17142,9 @@ MonoBehaviour:
   requiredFiber: 0
   itemToCraft: {fileID: 11400000, guid: 92642e83b11557d449c0bafeb4025ae7, type: 2}
   inventory: {fileID: 0}
-  craftingMaterial: {fileID: 2100000, guid: 487176412ce5158449983c87bb983b52, type: 2}
-  cloudParticleSystem: {fileID: 0}
-  defaultCloudSize: {x: 1, y: 1, z: 1}
-  cloudScaling: 0.25
   craftUIMove: {fileID: 2545504599802197064}
-  applyToAllMeshes: 1
+  itemPlacer: {fileID: 0}
+  craftingController: {fileID: 0}
 --- !u!1 &7237049141304130347
 GameObject:
   m_ObjectHideFlags: 0
@@ -17341,12 +17299,9 @@ MonoBehaviour:
   requiredFiber: 0
   itemToCraft: {fileID: 11400000, guid: 94477c2f9d3e05e43853b789e80edf9a, type: 2}
   inventory: {fileID: 0}
-  craftingMaterial: {fileID: 2100000, guid: 487176412ce5158449983c87bb983b52, type: 2}
-  cloudParticleSystem: {fileID: 0}
-  defaultCloudSize: {x: 1, y: 1, z: 1}
-  cloudScaling: 0.25
   craftUIMove: {fileID: 2545504599802197064}
-  applyToAllMeshes: 0
+  itemPlacer: {fileID: 0}
+  craftingController: {fileID: 0}
 --- !u!1 &7248505680367531363
 GameObject:
   m_ObjectHideFlags: 0
@@ -19994,12 +19949,9 @@ MonoBehaviour:
   requiredFiber: 0
   itemToCraft: {fileID: 11400000, guid: 8c61c1218689077478a72ac888921531, type: 2}
   inventory: {fileID: 0}
-  craftingMaterial: {fileID: 2100000, guid: 487176412ce5158449983c87bb983b52, type: 2}
-  cloudParticleSystem: {fileID: 0}
-  defaultCloudSize: {x: 1, y: 1, z: 1}
-  cloudScaling: 0.25
   craftUIMove: {fileID: 2545504599802197064}
-  applyToAllMeshes: 1
+  itemPlacer: {fileID: 0}
+  craftingController: {fileID: 0}
 --- !u!1 &7949398490373676545
 GameObject:
   m_ObjectHideFlags: 0
@@ -20376,12 +20328,9 @@ MonoBehaviour:
   requiredFiber: 0
   itemToCraft: {fileID: 11400000, guid: 4538e855bb07d48459d5dd3b93858ee8, type: 2}
   inventory: {fileID: 0}
-  craftingMaterial: {fileID: 2100000, guid: 487176412ce5158449983c87bb983b52, type: 2}
-  cloudParticleSystem: {fileID: 0}
-  defaultCloudSize: {x: 1, y: 1, z: 1}
-  cloudScaling: 0.25
   craftUIMove: {fileID: 2545504599802197064}
-  applyToAllMeshes: 1
+  itemPlacer: {fileID: 0}
+  craftingController: {fileID: 0}
 --- !u!1 &8171193338099439905
 GameObject:
   m_ObjectHideFlags: 0
@@ -22981,12 +22930,9 @@ MonoBehaviour:
   requiredFiber: 0
   itemToCraft: {fileID: 11400000, guid: 17b6abb9e4d8c1d43a23e736c202ea9d, type: 2}
   inventory: {fileID: 0}
-  craftingMaterial: {fileID: 2100000, guid: 487176412ce5158449983c87bb983b52, type: 2}
-  cloudParticleSystem: {fileID: 0}
-  defaultCloudSize: {x: 1, y: 1, z: 1}
-  cloudScaling: 0.25
   craftUIMove: {fileID: 2545504599802197064}
-  applyToAllMeshes: 1
+  itemPlacer: {fileID: 0}
+  craftingController: {fileID: 0}
 --- !u!1 &9183397389214404720
 GameObject:
   m_ObjectHideFlags: 0

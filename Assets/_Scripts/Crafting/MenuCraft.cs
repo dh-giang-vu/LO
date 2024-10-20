@@ -22,6 +22,9 @@ public class MenuCraft : MonoBehaviour
     // Reference to ItemPlacer
     [SerializeField] private PlaceItem itemPlacer;
 
+    // Reference to CraftingController
+    [SerializeField] private CraftingController craftingController;
+
 
     private void Start()
     {
@@ -42,7 +45,7 @@ public class MenuCraft : MonoBehaviour
         {
             Debug.LogError("CraftUIMove reference is missing. Assign the script in the inspector.");
         }
-        
+
         // itemPlacer = FindObjectOfType<PlaceItem>();
         if (itemPlacer != null)
         {
@@ -61,6 +64,7 @@ public class MenuCraft : MonoBehaviour
         if (HasRequiredMaterials())
         {
             UseRequiredMaterials(); // Consume the materials
+            craftingController.StartCraftingItem(this);
             itemPlacer.StartPlacingItem(itemToCraft.model);      // Start placing the item
 
             // Call ToggleObjectPosition from CraftUIMove to move the UI element
@@ -100,6 +104,26 @@ public class MenuCraft : MonoBehaviour
 
         // Update material counts in the Inventory
         inventory.UpdateMaterialCounts();
+    }
+
+    public void RefundMaterials()
+    {
+        // Find and reduce the quantities in the inventory
+        CollectableClass wood = inventory.items.Find(item => item.itemName == "Wood");
+        CollectableClass stone = inventory.items.Find(item => item.itemName == "Stone");
+        CollectableClass coal = inventory.items.Find(item => item.itemName == "Coal");
+        CollectableClass metal = inventory.items.Find(item => item.itemName == "Metal");
+        CollectableClass fiber = inventory.items.Find(item => item.itemName == "Fiber");
+
+        if (wood != null) wood.quantity += requiredWood;
+        if (stone != null) stone.quantity += requiredStone;
+        if (coal != null) coal.quantity += requiredCoal;
+        if (metal != null) metal.quantity += requiredMetal;
+        if (fiber != null) fiber.quantity += requiredFiber;
+
+        // Update material counts in the Inventory
+        inventory.UpdateMaterialCounts();
+
     }
 
 }
