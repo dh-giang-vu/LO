@@ -46,6 +46,7 @@ public class GhostController : MonoBehaviour, ISanityProvider
     {
         // Make the ghost face the player
         Vector3 directionToPlayer = player.transform.position - transform.position;
+        directionToPlayer.y = 0;
         transform.rotation = Quaternion.LookRotation(directionToPlayer);
     }
 

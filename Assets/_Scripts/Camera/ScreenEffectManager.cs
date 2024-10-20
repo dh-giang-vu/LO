@@ -48,7 +48,6 @@ public class ScreenEffectManager : MonoBehaviour
             else if (provider is BuildingSanity)
             {
                 inBuilding = true;  // Player is inside a building
-                Debug.Log("INBUILDING");
             }
         }
     }

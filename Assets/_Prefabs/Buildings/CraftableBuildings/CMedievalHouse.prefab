@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 931842977361832361}
   - component: {fileID: 7203769326932002912}
   - component: {fileID: 7469190598277717370}
-  - component: {fileID: 3903461532948500280}
   - component: {fileID: -156239481539326329}
   - component: {fileID: 3129811157975981518}
+  - component: {fileID: 7157442985420503671}
   m_Layer: 0
   m_Name: CMedievalHouse
   m_TagString: Untagged
@@ -86,28 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3903461532948500280
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8738635109517301211}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 190601c6ad4761d45b65274b5f33fb3d, type: 3}
 --- !u!135 &-156239481539326329
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -142,3 +120,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sanityEffect: 0.1
+--- !u!65 &7157442985420503671
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8738635109517301211}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 12.598295, y: 10.36704, z: 6.980392}
+  m_Center: {x: 0.09160924, y: 4.78352, z: 3.0802238}
