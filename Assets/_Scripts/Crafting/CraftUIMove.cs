@@ -7,9 +7,8 @@ public class CraftUIMove : MonoBehaviour
     [SerializeField] private Image backgroundToFade; // New serialized field for the UI image
     [SerializeField, Range(0f, 1f)] private float maxTransparency = 0.5f; // Set default max transparency to 50%
 
-    private Vector3 originalPosition;
-    private Vector3 targetPosition;
-    private bool objectIsDown = true; // Track if the object is down
+    private Vector3 centerScreenPosition; // Center of the screen
+    private Vector3 offScreenPosition; // Position off the bottom of the screen
     private float movementDuration = 1f; // Duration of movement
     private float movementProgress = 0f; // Track how far we are in the movement
     private bool isMovingObject = false; // Track if the object is moving
@@ -17,28 +16,26 @@ public class CraftUIMove : MonoBehaviour
     private bool isFadingIn = false; // Track if we are fading in
     private bool isFadingOut = false; // Track if we are fading out
     private float fadeProgress = 0f; // Track the progress of the fade
-
-    private int screenHeight;
+    private bool objectIsDown = true; // Track if the object is down
 
     private void Start()
     {
-        screenHeight = Screen.height;
-        // Store the original position of objectToMove
-        originalPosition = objectToMove.transform.position;
-
-        // Move the object down at the start
-        objectToMove.transform.position = originalPosition + new Vector3(0, -screenHeight, 0);
-        objectIsDown = true; // Set the initial state to down
-
         // Initialize the background image to be fully transparent
         Color imageColor = backgroundToFade.color;
         imageColor.a = 0f; // Set alpha to 0
         backgroundToFade.color = imageColor;
+
+        // Calculate positions initially based on screen size
+        UpdatePositions();
+        // Set initial position off-screen
+        objectToMove.transform.position = offScreenPosition;
     }
 
     private void Update()
     {
-        screenHeight = Screen.height;
+        // Continuously update screen positions to ensure responsiveness to resolution changes
+        UpdatePositions();
+
         // Check if the user wants to move the object up or down
         if (Input.GetKeyDown(KeyCode.C))
         {
@@ -49,7 +46,7 @@ public class CraftUIMove : MonoBehaviour
         if (isMovingObject)
         {
             movementProgress += Time.deltaTime / movementDuration; // Increment progress based on time
-            objectToMove.transform.position = Vector3.Lerp(objectToMove.transform.position, targetPosition, movementProgress);
+            objectToMove.transform.position = Vector3.Lerp(objectToMove.transform.position, objectIsDown ? offScreenPosition : centerScreenPosition, movementProgress);
 
             // Stop moving if we reached the target position
             if (movementProgress >= 1f)
@@ -73,19 +70,16 @@ public class CraftUIMove : MonoBehaviour
     // Method to toggle the object's position between up and down
     public void ToggleObjectPosition()
     {
-        // Check the current position of objectToMove
-        if (Vector3.Distance(objectToMove.transform.position, originalPosition + new Vector3(0, -screenHeight, 0)) < 0.1f)
+        if (objectIsDown)
         {
-            // If it's close to the down position, move it back up to its original position
-            targetPosition = originalPosition;
+            // Move it to the center of the screen
             objectIsDown = false; // Update the state
             isFadingIn = true; // Start fading in
             fadeProgress = 0f; // Reset fade progress
         }
         else
         {
-            // Move object down by screen height
-            targetPosition = originalPosition + new Vector3(0, -screenHeight, 0);
+            // Move object off the bottom of the screen
             objectIsDown = true; // Update the state
             isFadingOut = true; // Start fading out
             fadeProgress = 0f; // Reset fade progress
@@ -125,5 +119,12 @@ public class CraftUIMove : MonoBehaviour
             isFadingOut = false; // Stop fading out
             fadeProgress = 0f; // Reset fade progress
         }
+    }
+
+    // Recalculate positions based on screen size
+    private void UpdatePositions()
+    {
+        centerScreenPosition = new Vector3(Screen.width / 2f, Screen.height / 2f, objectToMove.transform.position.z);
+        offScreenPosition = centerScreenPosition + new Vector3(0, -Screen.height, 0);
     }
 }
