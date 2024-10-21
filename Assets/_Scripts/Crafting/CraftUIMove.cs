@@ -9,7 +9,6 @@ public class CraftUIMove : MonoBehaviour
 
     private Vector3 originalPosition;
     private Vector3 targetPosition;
-    private bool objectIsDown = true; // Track if the object is down
     private float movementDuration = 1f; // Duration of movement
     private float movementProgress = 0f; // Track how far we are in the movement
     private bool isMovingObject = false; // Track if the object is moving
@@ -17,28 +16,24 @@ public class CraftUIMove : MonoBehaviour
     private bool isFadingIn = false; // Track if we are fading in
     private bool isFadingOut = false; // Track if we are fading out
     private float fadeProgress = 0f; // Track the progress of the fade
-
-    private int screenHeight;
+    private bool objectIsDown = true; // Track if the object is down
 
     private void Start()
     {
-        screenHeight = Screen.height;
         // Store the original position of objectToMove
         originalPosition = objectToMove.transform.position;
-
-        // Move the object down at the start
-        objectToMove.transform.position = originalPosition + new Vector3(0, -screenHeight, 0);
-        objectIsDown = true; // Set the initial state to down
 
         // Initialize the background image to be fully transparent
         Color imageColor = backgroundToFade.color;
         imageColor.a = 0f; // Set alpha to 0
         backgroundToFade.color = imageColor;
+
+        // Set initial position off-screen
+        objectToMove.transform.position = originalPosition + new Vector3(0, -Screen.height, 0);
     }
 
     private void Update()
     {
-        screenHeight = Screen.height;
         // Check if the user wants to move the object up or down
         if (Input.GetKeyDown(KeyCode.C))
         {
@@ -74,10 +69,10 @@ public class CraftUIMove : MonoBehaviour
     public void ToggleObjectPosition()
     {
         // Check the current position of objectToMove
-        if (Vector3.Distance(objectToMove.transform.position, originalPosition + new Vector3(0, -screenHeight, 0)) < 0.1f)
+        if (objectIsDown)
         {
-            // If it's close to the down position, move it back up to its original position
-            targetPosition = originalPosition;
+            // Move it back up to its original position
+            targetPosition = originalPosition; // Set target position to original position
             objectIsDown = false; // Update the state
             isFadingIn = true; // Start fading in
             fadeProgress = 0f; // Reset fade progress
@@ -85,7 +80,7 @@ public class CraftUIMove : MonoBehaviour
         else
         {
             // Move object down by screen height
-            targetPosition = originalPosition + new Vector3(0, -screenHeight, 0);
+            targetPosition = originalPosition + new Vector3(0, -Screen.height, 0); // Set target position to down
             objectIsDown = true; // Update the state
             isFadingOut = true; // Start fading out
             fadeProgress = 0f; // Reset fade progress
