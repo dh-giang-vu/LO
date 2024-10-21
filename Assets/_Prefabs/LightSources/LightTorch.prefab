@@ -23972,14 +23972,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a3aec6e311e38b4c8053eff2e0fd037, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLifespan: 1000
+  maxLifespan: 90
   lifespan: 0
   alive: 0
   score: 0
   intensity: 1
   refuelWaitTime: 1
   fireCrackle: {fileID: 8300000, guid: 85027199221c8fc42bc6c831c9c7b01a, type: 3}
-  fadeDuration: 0.5
 --- !u!135 &864811687563920476
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -23999,7 +23998,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 7
+  m_Radius: 6
   m_Center: {x: -0.0009012893, y: -0.1847496, z: 0.00025564432}
 --- !u!54 &2926031511443406450
 Rigidbody:
@@ -24170,9 +24169,9 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0.8126813, b: 0, a: 1}
   m_Intensity: 1
-  m_Range: 7
-  m_SpotAngle: 145.80267
-  m_InnerSpotAngle: 145.80267
+  m_Range: 6
+  m_SpotAngle: 136.80768
+  m_InnerSpotAngle: 136.80768
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0

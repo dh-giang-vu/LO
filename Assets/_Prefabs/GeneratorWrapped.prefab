@@ -77,7 +77,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 10
+  m_Radius: 50
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &160015976621095231
 MonoBehaviour:
@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63f29b7a273f780449ac2b0adc24f816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLifespan: 10
+  maxLifespan: 300
   lifespan: 0
   alive: 0
   score: 0
