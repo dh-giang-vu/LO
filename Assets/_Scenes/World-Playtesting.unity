@@ -9728,6 +9728,15 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4389656751607381963, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: m_text
+      value: 'Requires
+
+        <sprite name="Wood"> x2
+
+        <sprite name="Fiber">
+        x10'
+      objectReference: {fileID: 0}
     - target: {fileID: 4462151686469284551, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: m_SizeDelta.x
       value: 348.61
