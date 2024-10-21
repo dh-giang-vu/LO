@@ -9556,6 +9556,17 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -35.935898
       objectReference: {fileID: 0}
+    - target: {fileID: 3251733374565106559, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: m_text
+      value: 'Requires
+
+        <sprite name="Wood"> x25
+
+        <sprite name="Stone">
+        x25
+
+        <sprite name="Fiber"> x25'
+      objectReference: {fileID: 0}
     - target: {fileID: 3264356856918929993, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -9868,6 +9879,15 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3939598785789814880, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: m_text
+      value: 'Need a place to stay the night? It is always night here though...
+
+        Recovery:
+        20% sanity per second.
+
+        AoE Radius: 17'
+      objectReference: {fileID: 0}
     - target: {fileID: 4071482949698214911, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -10011,6 +10031,15 @@ PrefabInstance:
     - target: {fileID: 4372266331556892863, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4389656751607381963, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: m_text
+      value: 'Requires
+
+        <sprite name="Wood"> x2
+
+        <sprite name="Fiber">
+        x10'
       objectReference: {fileID: 0}
     - target: {fileID: 4462151686469284551, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: m_SizeDelta.x
@@ -10869,6 +10898,15 @@ PrefabInstance:
       propertyPath: craftingController
       value: 
       objectReference: {fileID: 1136693392}
+    - target: {fileID: 6850982706286996975, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: m_text
+      value: 'Powers light sources for electrical light sources in its range.
+
+        Duration:
+        5 minutes
+
+        AoE Radius: 50'
+      objectReference: {fileID: 0}
     - target: {fileID: 6856290987999987409, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -11387,6 +11425,17 @@ PrefabInstance:
     - target: {fileID: 8304269796584671607, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8378804026562742081, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
+      propertyPath: m_text
+      value: 'Requires
+
+        <sprite name="Wood"> x10
+
+        <sprite name="Coal">
+        x20
+
+        <sprite name="Metal"> x20'
       objectReference: {fileID: 0}
     - target: {fileID: 8480295550877036211, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: m_AnchorMax.y
