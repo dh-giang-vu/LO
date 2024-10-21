@@ -18,13 +18,16 @@ public class CraftUIMove : MonoBehaviour
     private bool isFadingOut = false; // Track if we are fading out
     private float fadeProgress = 0f; // Track the progress of the fade
 
+    private int screenHeight;
+
     private void Start()
     {
+        screenHeight = Screen.height;
         // Store the original position of objectToMove
         originalPosition = objectToMove.transform.position;
 
-        // Move the object 500 units down at the start
-        objectToMove.transform.position = originalPosition + new Vector3(0, -Screen.height, 0);
+        // Move the object down at the start
+        objectToMove.transform.position = originalPosition + new Vector3(0, -screenHeight, 0);
         objectIsDown = true; // Set the initial state to down
 
         // Initialize the background image to be fully transparent
@@ -35,6 +38,7 @@ public class CraftUIMove : MonoBehaviour
 
     private void Update()
     {
+        screenHeight = Screen.height;
         // Check if the user wants to move the object up or down
         if (Input.GetKeyDown(KeyCode.C))
         {
@@ -70,7 +74,7 @@ public class CraftUIMove : MonoBehaviour
     public void ToggleObjectPosition()
     {
         // Check the current position of objectToMove
-        if (Vector3.Distance(objectToMove.transform.position, originalPosition + new Vector3(0, -Screen.height, 0)) < 0.1f)
+        if (Vector3.Distance(objectToMove.transform.position, originalPosition + new Vector3(0, -screenHeight, 0)) < 0.1f)
         {
             // If it's close to the down position, move it back up to its original position
             targetPosition = originalPosition;
@@ -81,7 +85,7 @@ public class CraftUIMove : MonoBehaviour
         else
         {
             // Move object down by screen height
-            targetPosition = originalPosition + new Vector3(0, -Screen.height, 0);
+            targetPosition = originalPosition + new Vector3(0, -screenHeight, 0);
             objectIsDown = true; // Update the state
             isFadingOut = true; // Start fading out
             fadeProgress = 0f; // Reset fade progress
