@@ -95,7 +95,7 @@ public class PlaceItem : MonoBehaviour
             // Apply only the Y-axis rotation to face the player, while keeping the original X and Z rotation from the prefab
             instantiatedItem.transform.eulerAngles = new Vector3(originalRotation.x, targetYRotation, originalRotation.z);
             List<Collider> colliders = GetNonTriggerColliders();
-            if (IsOverlappingWithAny(instantiatedItem.GetComponent<BoxCollider>(), colliders)) {
+            if (!debugMode && IsOverlappingWithAny(instantiatedItem.GetComponent<BoxCollider>(), colliders)) {
                 SetUnplaceable();
                 Debug.Log("OVERLAPPING");
             } else {

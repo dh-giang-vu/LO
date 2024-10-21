@@ -21,6 +21,7 @@ public class ChristmasLight : ElectricLight
     {
         light = GetComponentInChildren<Light>();
         StartCoroutine(SwitchColor());
+        Die();
     }
 
     void Update()

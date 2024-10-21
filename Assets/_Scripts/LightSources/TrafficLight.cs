@@ -12,6 +12,7 @@ public class TrafficLight : ElectricLight
     {
         light = GetComponentInChildren<Light>();
         StartCoroutine(SwitchColor());
+        Die();
     }
 
     // Update is called once per frame
