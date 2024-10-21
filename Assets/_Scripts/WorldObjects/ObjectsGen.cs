@@ -7,6 +7,8 @@ public class ObjectsGen : MonoBehaviour
     public GameObject objectToSpawn;
     public GameObject thorns;
     public Terrain terrain;
+    [SerializeField] private Transform character;
+    private float noSpawnDistance = 40f;
     public int numberOfInitObjects; // Number of objects when game starts
     public float autoSpawnInterval; // Auto spawn time interval
     // Start is called before the first frame update
@@ -58,12 +60,58 @@ public class ObjectsGen : MonoBehaviour
 
     }
 
+    void GenerateObjectsOutsideCharacterView()
+    {
+        // Get the terrain size
+        TerrainData terrainData = terrain.terrainData;
+        float terrainWidth = terrainData.size.x;
+        float terrainLength = terrainData.size.z;
+
+        Vector3 characterPosition = character.position;
+
+        // Variables to store random X and Z positions
+        float randomX = 0;
+        float randomZ = 0;
+
+        bool isTooClose = true;
+        while (isTooClose)
+        {
+            // Generate random X and Z positions within terrain bounds
+            randomX = Random.Range(0, terrainWidth);
+            randomZ = Random.Range(0, terrainLength);
+
+            // Calculate the distance from the character to the generated position
+            float distanceFromCharacter = Vector3.Distance(new Vector3(randomX, 0, randomZ), new Vector3(characterPosition.x, 0, characterPosition.z));
+
+            // Check if the generated position is far enough from the character
+            if (distanceFromCharacter > noSpawnDistance)
+            {
+                isTooClose = false; // Exit the loop if the position is far enough
+            }
+        }
+
+        // Get the height of the terrain at the random X and Z positions
+        float terrainHeight = terrain.SampleHeight(new Vector3(randomX, 0, randomZ));
+
+        // Spawn the object at the calculated position
+        Vector3 spawnPosition = new Vector3(randomX, terrainHeight, randomZ);
+        GameObject instantiatedObject = Instantiate(objectToSpawn, spawnPosition, Quaternion.identity);
+
+        // 20% chance to spawn thorns
+        if (Random.Range(0, 100) > 80 && thorns != null)
+        {
+            GameObject thorn = Instantiate(thorns, instantiatedObject.transform.position, thorns.transform.rotation, instantiatedObject.transform);
+            thorn.transform.localScale = new Vector3(250.0f, 250.0f, 354.160f);
+        }
+    }
+
     //Initial spawn 
     void InitGenerate()
     {
         for (int i = 0; i < numberOfInitObjects; i++)
         {
-            GenerateObjectsOnTerrain();
+            // GenerateObjectsOnTerrain();
+            GenerateObjectsOutsideCharacterView();
         }
     }
     // Coroutine to auto-spawn 1 object every interval
@@ -72,7 +120,8 @@ public class ObjectsGen : MonoBehaviour
         while (true) // Infinite loop to keep spawning indefinitely
         {
             yield return new WaitForSeconds(autoSpawnInterval);
-            GenerateObjectsOnTerrain();
+            // GenerateObjectsOnTerrain();
+            GenerateObjectsOutsideCharacterView();
         }
     }
 
