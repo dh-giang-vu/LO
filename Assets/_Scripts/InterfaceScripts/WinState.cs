@@ -13,7 +13,7 @@ public class WinState : MonoBehaviour
         float progressAmount = progressTracker.GetProgress();
 
         // Check if sanity amount is less than or equal to zero
-        if (progressAmount >= 0.90)
+        if (progressAmount >= 0.99)
         {
             // Activate the specified GameObject
             if (objectToActivate != null)

@@ -5075,6 +5075,7 @@ MonoBehaviour:
   terrain: {fileID: 1507183531}
   numberOfInitObjects: 5
   autoSpawnInterval: 2
+  initialThornSpawnPoints: {fileID: 0}
 --- !u!1 &791159238
 GameObject:
   m_ObjectHideFlags: 0
@@ -6816,6 +6817,7 @@ MonoBehaviour:
   terrain: {fileID: 1507183531}
   numberOfInitObjects: 5
   autoSpawnInterval: 2
+  initialThornSpawnPoints: {fileID: 0}
 --- !u!1001 &1125951684
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9924,6 +9926,7 @@ MonoBehaviour:
   terrain: {fileID: 1507183531}
   numberOfInitObjects: 100
   autoSpawnInterval: 100
+  initialThornSpawnPoints: {fileID: 0}
 --- !u!1001 &1478474199
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10501,6 +10504,7 @@ MonoBehaviour:
   terrain: {fileID: 1507183531}
   numberOfInitObjects: 5
   autoSpawnInterval: 2
+  initialThornSpawnPoints: {fileID: 0}
 --- !u!1001 &1585911820
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13024,6 +13028,7 @@ MonoBehaviour:
   terrain: {fileID: 1507183531}
   numberOfInitObjects: 5
   autoSpawnInterval: 2
+  initialThornSpawnPoints: {fileID: 0}
 --- !u!4 &1856138812 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9071980159745529512, guid: 19e48c26020fafe418cb4c2298a4fd3f, type: 3}
@@ -14323,6 +14328,7 @@ MonoBehaviour:
   terrain: {fileID: 1507183531}
   numberOfInitObjects: 5
   autoSpawnInterval: 2
+  initialThornSpawnPoints: {fileID: 0}
 --- !u!1001 &2036741952
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15229,6 +15235,8 @@ MonoBehaviour:
   - ..then, press "C" to craft things..
   - For more information, you can open to "Guidebook" in your Crafting Menu..
   - ..access your Guidebook at any time if you get lost on what to do..
+  - In order to get out of here, you must light up the world..
+  - ..check your progress and light up as much of the world as possible..
   - Remember, don't stay in the dark for too long..
   - ..or you just may encounter some things..
   - ..good luck.

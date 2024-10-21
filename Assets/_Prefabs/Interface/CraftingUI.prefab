@@ -4320,8 +4320,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 72.28468, y: -4.5779}
-  m_SizeDelta: {x: 318.3563, y: 343.1553}
+  m_AnchoredPosition: {x: 64.90004, y: -4.5779}
+  m_SizeDelta: {x: 333.1256, y: 343.1553}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8566485407267341773
 CanvasRenderer:
@@ -4351,9 +4351,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "1. Movement and Camera Controls\n\nHow to control your character movement:\n\n\u2022
-    Press W,A,S,D to move around.\n\nHow to control the camera:\n\n\u2022 Right-click
-    and drag the camera to move the camera around."
+  m_text: "1. How to Play, Movement and Camera Controls\n\nHow to Play:\n\u2022 In
+    order to win, you must light up as much of the world as possible while maintaining
+    your sanity\n\u2022 Check the progress of how much closer you are to winning
+    at the top right\n\nHow to control your character movement:\n\u2022 Press W,A,S,D
+    to move around.\n\nHow to control the camera:\n\u2022 Right-click and drag the
+    camera to move the camera around."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
   m_sharedMaterial: {fileID: 5931831309752250766, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
