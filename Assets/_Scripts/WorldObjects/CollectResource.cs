@@ -7,7 +7,7 @@ public class CollectResource : MonoBehaviour
     [SerializeField] private float destroyWaitTime = 1f;
     [SerializeField] private CollectableClass[] collectables;
     [SerializeField] private AudioClip resourceCollectionSound;
-    [SerializeField, Range(0,1)] private float audioVolume = 1.0f;
+    private AudioSource audioSource;
 
     private Inventory inventory;  // Dynamically found reference to the player's Inventory
 
@@ -22,11 +22,13 @@ public class CollectResource : MonoBehaviour
                 Debug.LogError("Inventory not found in the scene. Ensure an Inventory exists.");
             }
         }
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void Interact()
     {
-        AudioSource.PlayClipAtPoint(resourceCollectionSound, transform.position, audioVolume);
+        audioSource.PlayOneShot(resourceCollectionSound);
         StartCoroutine(DelayedRemoveSelf());
     }
 

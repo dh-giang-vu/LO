@@ -34,6 +34,10 @@ public class PlaceItem : MonoBehaviour
     private List<int> originalLayers = new List<int>(); // Store original layers for all meshes
     private bool overlaps = false;
 
+    // SFX
+    [SerializeField] AudioClip placeItemSfx;
+    private AudioSource audioSource;
+
     // Events
     [SerializeField] private UnityEvent onCancelCrafting;
     [SerializeField] private UnityEvent onSuccessfulCrafting;
@@ -44,6 +48,7 @@ public class PlaceItem : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         cam = Camera.main;
         instantiatedItemLayerMask = LayerMask.NameToLayer("Default");
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -206,8 +211,11 @@ public class PlaceItem : MonoBehaviour
         // Change materials and layer to original configuration
         RevertToOriginal(instantiatedItem);
 
-        // Placing item effect
+        // Placing item VFX
         PlayCloudParticleSystem();
+
+        // Placing item SFX
+        audioSource.PlayOneShot(placeItemSfx);
 
         instantiatedItem.layer = instantiatedItemLayerMask;
         instantiatedItem = null;

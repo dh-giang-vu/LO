@@ -248,6 +248,8 @@ MonoBehaviour:
   score: 0
   intensity: 1
   refuelWaitTime: 1
+  fireCrackle: {fileID: 8300000, guid: 85027199221c8fc42bc6c831c9c7b01a, type: 3}
+  fadeDuration: 0.5
 --- !u!135 &2744261172793940567
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -328,8 +330,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -1512308610030402329, guid: 283ecc35094931247813cc9a86a31bc7, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 85027199221c8fc42bc6c831c9c7b01a, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
   m_Volume: 0.8
   m_Pitch: 1
   Loop: 1

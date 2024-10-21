@@ -16,11 +16,16 @@ public class PilotoLightSourceScript : LightSource
 
     [SerializeField] private float refuelWaitTime = 1f;
 
+    // SFX
+    [SerializeField] private AudioClip fireCrackle;    
+    private AudioSource audioSource;
+
     void Start()
     {
         renderer = GetComponent<Renderer>();
         light = GetComponentInChildren<Light>();
         smokes = GetComponentInChildren<ParticleSystem>();
+        audioSource = GetComponent<AudioSource>();
 
         // Find Inventory instance in the scene if it's not assigned
         if (inventory == null)
@@ -79,6 +84,8 @@ public class PilotoLightSourceScript : LightSource
         TurnOnSmoke();
         refuelTime = Time.time;
         alive = true;
+
+        PlayRefuelSFX();
     }
 
     public override void Die()
@@ -87,6 +94,8 @@ public class PilotoLightSourceScript : LightSource
         lifespan = -1;
         light.intensity = 0;
         alive = false;
+
+        StopRefuelSFX();
     }
 
     private void TurnOffSmoke()
@@ -107,5 +116,25 @@ public class PilotoLightSourceScript : LightSource
     public override float getSanityEffect()
     {
         return 0.0f;
+    }
+
+    private void PlayRefuelSFX()
+    {
+        if (!audioSource.isPlaying)
+        {
+            audioSource.clip = fireCrackle;
+            audioSource.loop = true;
+            audioSource.Play();
+        }
+
+    }
+
+    private void StopRefuelSFX()
+    {
+        // Stop the generator run loop audio
+        if (audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
     }
 }
