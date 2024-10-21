@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PilotoLightSourceScript : LightSource
+public class LightSourceManager : LightSource
 {
     private Light light = null;
     private ParticleSystem smokes;
@@ -50,7 +50,7 @@ public class PilotoLightSourceScript : LightSource
         if (lifespan > 0)
         {
             lifespan = maxLifespan - (Time.time - refuelTime);
-            renderer.material.SetFloat("_Dimming", 0.1f + 0.7f * (1 - ((maxLifespan - lifespan) / maxLifespan)));
+            // renderer.material.SetFloat("_Dimming", 0.1f + 0.7f * (1 - ((maxLifespan - lifespan) / maxLifespan)));
             light.intensity = intensity * (1 - ((maxLifespan - lifespan) / maxLifespan));
         }
         else if (lifespan <= 0 && alive)
