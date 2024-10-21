@@ -8,17 +8,27 @@ public class ScreenPostProcessing : MonoBehaviour
     private ColorAdjustments colorAdjustments;
     private Vignette vignette;
     private Color currentColor;
+    private Volume globalVolume;
+    private LensDistortion lensDistortion;
     [SerializeField] SanityManager sanityManager;
+    public float distortionIntensity = 0f; // Current distortion intensity
+    public float speed = 1f;              // Speed of the distortion change
+    public float maxDistortion = 1f;    // Maximum distortion intensity
+    public float minDistortion = -1f;   // Minimum distortion intensity
+
+    private bool increasing = true;       // Whether the distortion is increasing or decreasing
 
     // Start is called before the first frame update
     void Start()
     {
-        Volume globalVolume = GetComponent<Volume>();
+        globalVolume = GetComponent<Volume>();
         if (globalVolume.profile.TryGet<ColorAdjustments>(out colorAdjustments) &&
-            globalVolume.profile.TryGet<Vignette>(out vignette))
+            globalVolume.profile.TryGet<Vignette>(out vignette) &&
+            globalVolume.profile.TryGet<LensDistortion>(out lensDistortion))
         {
             // Get the current color from Color Adjustments' Color Filter
             currentColor = colorAdjustments.colorFilter.value;
+            lensDistortion.intensity.overrideState = true;
         }
         else
         {
@@ -27,7 +37,7 @@ public class ScreenPostProcessing : MonoBehaviour
     }
     void Update() {
         currentColor = colorAdjustments.colorFilter.value;
-        // UpdateVignette();
+        Distort();
         
     }
 
@@ -52,5 +62,31 @@ public class ScreenPostProcessing : MonoBehaviour
     private void UpdateVignette() {
         float vignetteAmount = sanityManager.GetSanityAmount();
         vignette.intensity.value = (1 - vignetteAmount);
+    }
+
+    private void Distort() {
+        if (lensDistortion != null)
+        {
+            // Smoothly change the distortion intensity for a nausea effect
+            if (increasing)
+            {
+                distortionIntensity += speed * Time.deltaTime;
+                if (distortionIntensity >= maxDistortion)
+                {
+                    increasing = false;
+                }
+            }
+            else
+            {
+                distortionIntensity -= speed * Time.deltaTime;
+                if (distortionIntensity <= minDistortion)
+                {
+                    increasing = true;
+                }
+            }
+
+            // Apply the changing intensity to the lens distortion effect
+            lensDistortion.intensity.value = distortionIntensity;
+        }
     }
 }

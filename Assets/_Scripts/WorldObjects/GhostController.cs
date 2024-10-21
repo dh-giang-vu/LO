@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GhostController : MonoBehaviour
+public class GhostController : MonoBehaviour, ISanityProvider
 {
     [SerializeField] private float timeToLive = 30.0f; // Time before the ghost is destroyed
     [SerializeField] private float fadeDuration = 1.0f; // Duration of fade in seconds
@@ -46,6 +46,7 @@ public class GhostController : MonoBehaviour
     {
         // Make the ghost face the player
         Vector3 directionToPlayer = player.transform.position - transform.position;
+        directionToPlayer.y = 0;
         transform.rotation = Quaternion.LookRotation(directionToPlayer);
     }
 
@@ -85,5 +86,11 @@ public class GhostController : MonoBehaviour
         yield return new WaitForSeconds(timeToLive);
         ghostSpawner.RemoveGhost(gameObject);
         Destroy(gameObject);
+    }
+    public float getSanityEffect() {
+        return -0.5f;
+    }
+    public bool isActive() {
+        return true;
     }
 }

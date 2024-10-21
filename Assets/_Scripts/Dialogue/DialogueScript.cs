@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Playables;  // Include PlayableDirector for timeline control
+using UnityEngine.SceneManagement;
 
 public class DialogueScript : MonoBehaviour
 {
@@ -15,19 +17,24 @@ public class DialogueScript : MonoBehaviour
     // New variables for audio
     public AudioClip audioClip; // Audio clip to play
     private AudioSource audioSource; // AudioSource component
+    [SerializeField, Range(0,1)] private float audioSourceVolume = 0.1f;
+
+    // Reference to the PlayableDirector controlling the cutscene
+    public PlayableDirector timeline; 
 
     void Start()
     {
         textComponent.text = string.Empty; // Clear text on start
         audioSource = gameObject.AddComponent<AudioSource>(); // Add an AudioSource component
         audioSource.clip = audioClip; // Assign the audio clip
-        StartDialogue(); // Start the dialogue
+        audioSource.volume = audioSourceVolume;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F)) // Check for F key press
+        
+
+        if (Input.GetKeyDown(KeyCode.E)) // Check for E key press
         {
             if (textComponent.text == lines[index]) // If the text is fully displayed
             {
@@ -38,16 +45,44 @@ public class DialogueScript : MonoBehaviour
                 StopAllCoroutines(); // Stop typing coroutine
                 textComponent.text = lines[index]; // Show full text immediately
             }
-            // Play audio clip when F is pressed
+
+            // Play audio clip when E is pressed
             audioSource.Play();
         }
     }
 
-    void StartDialogue()
+    public void StartDialogue()
     {
+        
+        Debug.Log("i should work");
+        
         index = 0; // Reset index
-        StartCoroutine(TypeLine()); // Start typing the first line
+        timeline.Pause(); // Pause the timeline here
+
+        // Enable the dialogue UI components (image, text, character image)
+        Transform dialogueUI = transform.Find("DialogueUI"); // Find child by name
+        Transform textComponentTransform = transform.Find("Text"); // Find the Text object
+        Transform textContinueTransform = transform.Find("ContinueText");
+        Transform characterImage = transform.Find("CharacterImage"); // Find character image
+        
+
+        // Enable these components if they are found
+        if (dialogueUI != null) dialogueUI.gameObject.SetActive(true);
+        if (textComponentTransform != null) textComponentTransform.gameObject.SetActive(true);
+        if (textContinueTransform != null) textContinueTransform.gameObject.SetActive(true);
+        if (characterImage != null) characterImage.gameObject.SetActive(true);
+
+        // Assuming Text is the component you want to display dialogue
+        textComponent = textComponentTransform.GetComponent<TextMeshProUGUI>();
+        
+        // Start typing the dialogue text
+        if (textComponent != null)
+        {
+            textComponent.text = string.Empty;
+            StartCoroutine(TypeLine());
+        }
     }
+
 
     IEnumerator TypeLine()
     {
@@ -94,7 +129,42 @@ public class DialogueScript : MonoBehaviour
         }
         else
         {
-            gameObject.SetActive(false); // Deactivate the dialogue object if done
+            EndDialogue(); // End the dialogue when all lines are done
         }
     }
+
+    IEnumerator WaitForTimelineAndLoadScene()
+    {
+        // Wait until the timeline has finished playing
+        while (timeline.state == PlayState.Playing)
+        {
+            yield return null; // Wait for the next frame
+        }
+
+        // Load the next scene
+        SceneManager.LoadScene(2); // Replace with your actual scene name
+    }
+    void EndDialogue()
+    {
+        // Disable the dialogue UI components (image, text, character image)
+        Transform dialogueUI = transform.Find("DialogueUI"); 
+        Transform textComponentTransform = transform.Find("Text");
+        Transform textContinueTransform = transform.Find("ContinueText");
+        Transform characterImage = transform.Find("CharacterImage");
+
+        // Disable these components
+        if (dialogueUI != null) dialogueUI.gameObject.SetActive(false);
+        if (textComponentTransform != null) textComponentTransform.gameObject.SetActive(false);
+        if (textContinueTransform != null) textContinueTransform.gameObject.SetActive(false);
+        if (characterImage != null) characterImage.gameObject.SetActive(false);
+
+        // Resume the timeline
+        if (timeline != null)
+        {
+            timeline.Play();
+        }
+
+        StartCoroutine(WaitForTimelineAndLoadScene());
+    }
+
 }

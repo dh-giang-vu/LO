@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-
 public class InteractionHandler : MonoBehaviour
 {
     private List<CollectResource> inRangeResources;
     private List<LightSource> inRangeLightSources;
+    private List<GameObject> inRangeCrows;  // List to store nearby crows
 
     // Reference to the parent GameObject containing both the image and text
     public GameObject resourceUIParent;
@@ -16,27 +16,42 @@ public class InteractionHandler : MonoBehaviour
     public TextMeshProUGUI resourceText;
 
     private Vector3 targetScale;
+
+    public InterfaceManager interfaceManager;
+
+
     private float animationSpeed = 5f;  // Speed of the scaling animation
 
     void Start()
     {
         inRangeResources = new List<CollectResource>();
         inRangeLightSources = new List<LightSource>();
+        inRangeCrows = new List<GameObject>();  // Initialize the crow list
 
         // Start with scale at zero (hidden)
         resourceUIParent.transform.localScale = Vector3.zero;
-
     }
 
     void Update()
     {
-        // Check if there are any resources in range
-        if (inRangeResources.Count > 0)
+        // Check if there are any crows in range
+        if (inRangeCrows.Count > 0)
+        {
+            // Show "E - Speak" when near a crow
+            resourceText.text = "E - Speak";
+
+            // Set the target scale to full size (pop in)
+            targetScale = Vector3.one;
+
+            interfaceManager.OnCrowEnter();
+        }
+        // Check if there are any resources in range if no crows are nearby
+        else if (inRangeResources.Count > 0)
         {
             // Get the tag of the nearest resource in range
             string resourceTag = GetNearestInRangeResource().gameObject.tag;
-            
-            // Format and display the text
+
+            // Format and display the text for resource interaction
             resourceText.text = $"E - Collect {resourceTag}";
 
             // Set the target scale to full size (pop in)
@@ -44,9 +59,11 @@ public class InteractionHandler : MonoBehaviour
         }
         else
         {
-            // Hide the parent UI GameObject if no resources are in range
+            // Hide the parent UI GameObject if no resources or crows are in range
             targetScale = Vector3.zero;
         }
+
+        // Smoothly transition the UI scaling
         resourceUIParent.transform.localScale = Vector3.Lerp(resourceUIParent.transform.localScale, targetScale, Time.deltaTime * animationSpeed);
     }
 
@@ -60,7 +77,7 @@ public class InteractionHandler : MonoBehaviour
         string resourceTag = nearestResource.gameObject.tag;
         inRangeResources.Remove(nearestResource);
         nearestResource.Interact();
-        
+
         if (resourceTag == "Ore" || resourceTag == "Stone")
         {
             return "mining";
@@ -106,9 +123,15 @@ public class InteractionHandler : MonoBehaviour
         {
             inRangeResources.Add(resource);
         }
-        if (other.TryGetComponent<LightSource>(out var lightSource))
+        if (other.TryGetComponent<LightSource>(out var lightSource) && other is BoxCollider)
         {
             inRangeLightSources.Add(lightSource);
+        }
+
+        // Detect GameObjects tagged as "crow" and add them to the inRangeCrows list
+        if (other.CompareTag("crow"))
+        {
+            inRangeCrows.Add(other.gameObject);
         }
     }
 
@@ -122,6 +145,12 @@ public class InteractionHandler : MonoBehaviour
         {
             inRangeLightSources.Remove(lightSource);
         }
-    }
 
+        // Remove crows from the list when they exit the trigger area
+        if (other.CompareTag("crow"))
+        {
+            inRangeCrows.Remove(other.gameObject);
+            interfaceManager.OnCrowExit();
+        }
+    }
 }

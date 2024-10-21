@@ -8,6 +8,9 @@ TagManager:
   - Stone
   - Ore
   - Bush
+  - lb_bird
+  - crow
+  - inventory
   layers:
   - Default
   - TransparentFX

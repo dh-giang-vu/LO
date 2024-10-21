@@ -4845,6 +4845,7 @@ GameObject:
   - component: {fileID: 8487384039557402597}
   - component: {fileID: 5782923884466665960}
   - component: {fileID: 1019392068101882643}
+  - component: {fileID: 1213673089327156885}
   m_Layer: 0
   m_Name: Adam
   m_TagString: Player
@@ -4909,6 +4910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94944d67297ac914789c9a35a6fc036c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraTransform: {fileID: 0}
 --- !u!114 &8322549211923366363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4982,6 +4984,104 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sanityManager: {fileID: 8487384039557402597}
   objectToToggle: {fileID: 6798033043715677940}
+  gainSanityAudio: {fileID: 8300000, guid: 08b10b1fc404bdf44a76e1da0938ac42, type: 3}
+  audioVolume: 1
+--- !u!82 &1213673089327156885
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3738711090394718851}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.3
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &6798033043715677940
 GameObject:
   m_ObjectHideFlags: 0
@@ -9880,37 +9980,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourceUIParent: {fileID: 0}
   resourceText: {fileID: 0}
---- !u!1 &7803917579296557164
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4101468708279206671}
-  m_Layer: 0
-  m_Name: PickaxeSpawnPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4101468708279206671
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7803917579296557164}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2050002536838402261}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  interfaceManager: {fileID: 0}
 --- !u!1001 &6304051361234154728
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9974,20 +10044,12 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 3957147910669805390, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 5408663870200538173, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4101468708279206671}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1782702501690864755, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4920966705891362370}
   m_SourcePrefab: {fileID: 100100000, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
---- !u!4 &2050002536838402261 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5408663870200538173, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
-  m_PrefabInstance: {fileID: 6304051361234154728}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4938974923334244897 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1438546959266459337, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
@@ -10013,6 +10075,7 @@ MonoBehaviour:
   idle: {fileID: 9000000, guid: 379ee8a09dcdcdb46b2d2aef9792c84a, type: 3}
   running: {fileID: 9000000, guid: 49af61a7bff56144e806c4331e85909e, type: 3}
   gathering: {fileID: 9000000, guid: 57acbb80eced1f845aca858c810ee944, type: 3}
-  mining: {fileID: 0}
-  pickaxePrefab: {fileID: 0}
-  pickaxeSpawnPoint: {fileID: 0}
+  mining: {fileID: 9000000, guid: ff6d26bf0a326534c92ea7bd9fbc2067, type: 3}
+  chopping: {fileID: 9000000, guid: 337a802e1a50ad746827a890f372c41e, type: 3}
+  pickaxePrefab: {fileID: 5676840300738598790, guid: 2ce7f3f60a7219d478bdc624979d8024, type: 3}
+  axePrefab: {fileID: 6454499749934941597, guid: 5c266243bdd7a6a4c8d069957f6bff9f, type: 3}
