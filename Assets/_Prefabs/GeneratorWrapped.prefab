@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63f29b7a273f780449ac2b0adc24f816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLifespan: 100
+  maxLifespan: 10
   lifespan: 0
   alive: 0
   score: 0
@@ -135,10 +135,10 @@ AudioSource:
   m_GameObject: {fileID: 4595345936416279369}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -4296763371844667, guid: 283ecc35094931247813cc9a86a31bc7, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -146,7 +146,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 3
+  MinDistance: 5
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
