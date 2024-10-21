@@ -25,6 +25,8 @@ public class MenuCraft : MonoBehaviour
     // Reference to CraftingController
     [SerializeField] private CraftingController craftingController;
 
+    [SerializeField] private PopUpController popUpController;
+
 
     private void Start()
     {
@@ -72,8 +74,15 @@ public class MenuCraft : MonoBehaviour
         }
         else
         {
+            DisplayNotEnough();
             Debug.LogWarning("Not enough materials to craft the item.");
         }
+    }
+
+    void DisplayNotEnough()
+    {
+        popUpController.ActivateAndFadeOut();
+        
     }
 
     // Check if the inventory has the required materials
