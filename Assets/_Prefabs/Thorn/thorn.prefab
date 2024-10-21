@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a59e867d49009e41907c8ccca46fecf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionMaterial: {fileID: 2100000, guid: 985c40485de558840b02e312250ebd67, type: 2}
   flowerScaleAnimationTime: 2
   flowerScaleMultiplier: 1.5
   greenBudScaleAnimationTime: 3
