@@ -168,7 +168,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -10.299595}
+  m_AnchoredPosition: {x: 108.0917, y: -20.080936}
   m_SizeDelta: {x: 216.1834, y: 12.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8400142788098294509
@@ -304,8 +304,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -45.893784}
-  m_SizeDelta: {x: 200, y: 42}
+  m_AnchoredPosition: {x: 108.0917, y: -40.010002}
+  m_SizeDelta: {x: 200.00009, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8072228882309776728
 MonoBehaviour:
@@ -384,7 +384,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -67.390625}
+  m_AnchoredPosition: {x: 108.0917, y: -68.955605}
   m_SizeDelta: {x: 100.3482, y: 20.1382}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8944985876234790705
@@ -494,12 +494,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToMove: {fileID: 7691141295810130644}
-  requiredWood: 1
+  requiredWood: 25
   requiredCoal: 0
-  requiredStone: 0
+  requiredStone: 25
   requiredMetal: 0
-  requiredFiber: 0
-  itemToCraft: {fileID: 11400000, guid: db603f459ad6c8c46bbbb9817530cc34, type: 2}
+  requiredFiber: 25
+  itemToCraft: {fileID: 11400000, guid: 17b6abb9e4d8c1d43a23e736c202ea9d, type: 2}
   inventory: {fileID: 0}
   craftUIMove: {fileID: 2545504599802197064}
   itemPlacer: {fileID: 0}
@@ -752,9 +752,9 @@ RectTransform:
   - {fileID: 346533522526397289}
   m_Father: {fileID: 735395217707615207}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 108.2801, y: -11.9579}
   m_SizeDelta: {x: 95.772, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2051071488354189959
@@ -1196,7 +1196,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -10.299595}
+  m_AnchoredPosition: {x: 108.0917, y: -6.9803}
   m_SizeDelta: {x: 216.1834, y: 12.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8290789962818847338
@@ -1227,7 +1227,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Motel
+  m_text: Wooden House
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95d7686b568839b4aa30b21886d6f0c1, type: 2}
   m_sharedMaterial: {fileID: -8020612493836900852, guid: 95d7686b568839b4aa30b21886d6f0c1, type: 2}
@@ -1497,12 +1497,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Requires
 
-    <sprite name="Wood"> x4
+    <sprite name="Wood"> x2
 
-    <sprite name="Coal"> x2
-
-    <sprite
-    name="Stone"> x4'
+    <sprite name="Fiber"> x2'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
   m_sharedMaterial: {fileID: 5931831309752250766, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
@@ -1605,8 +1602,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -21}
-  m_SizeDelta: {x: 100, y: 42}
+  m_AnchoredPosition: {x: 75.0673, y: -21}
+  m_SizeDelta: {x: 150.1346, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2174168416953556746
 CanvasRenderer:
@@ -1636,8 +1633,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Creates a light bulb with a light radius of 5 lasting for 3 seconds. Gives
-    you 5 lighting points.
+  m_text: 'The property where your ancestors lived in, lacks modern commodities.
+
+    Recovery:
+    11% per second
+
+    AoE Radius: 13'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
   m_sharedMaterial: {fileID: 5931831309752250766, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
@@ -1916,8 +1917,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -49.957886}
-  m_SizeDelta: {x: 216.1834, y: 99.91577}
+  m_AnchoredPosition: {x: 108.0917, y: -79.30191}
+  m_SizeDelta: {x: 216.1834, y: 158.60382}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6428815359999248028
 CanvasRenderer:
@@ -2492,7 +2493,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -85.55208}
+  m_AnchoredPosition: {x: 108.0917, y: -78.0791}
   m_SizeDelta: {x: 100.3482, y: 20.1382}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5578087045747762274
@@ -2602,9 +2603,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToMove: {fileID: 7691141295810130644}
-  requiredWood: 1
-  requiredCoal: 0
-  requiredStone: 0
+  requiredWood: 3
+  requiredCoal: 2
+  requiredStone: 3
   requiredMetal: 0
   requiredFiber: 0
   itemToCraft: {fileID: 11400000, guid: a5e1370a5b0fc5246b76873e86da9702, type: 2}
@@ -2722,8 +2723,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -21}
-  m_SizeDelta: {x: 100, y: 42}
+  m_AnchoredPosition: {x: 81.5362, y: -21}
+  m_SizeDelta: {x: 163.0724, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7289280754984716672
 CanvasRenderer:
@@ -2753,8 +2754,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Creates a campfire with a light radius of 10 lasting for 3 seconds. Gives
-    you 1 lighting point.
+  m_text: 'A nice upgrade from the tent, no need to sleep on the street anymore!
+
+    Recovery:
+    +8% sanity per second
+
+    AoE Radius: 11'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
   m_sharedMaterial: {fileID: 5931831309752250766, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
@@ -3154,8 +3159,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -49.957886}
-  m_SizeDelta: {x: 216.1834, y: 99.91577}
+  m_AnchoredPosition: {x: 108.0917, y: -79.30191}
+  m_SizeDelta: {x: 216.1834, y: 158.60382}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5527027851300474561
 CanvasRenderer:
@@ -3241,6 +3246,81 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!1 &1283786563217691080
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1799796800603189232}
+  - component: {fileID: 1258952274138692954}
+  - component: {fileID: 1750301336111875292}
+  m_Layer: 5
+  m_Name: GuideUI (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1799796800603189232
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283786563217691080}
+  m_LocalRotation: {x: -0, y: -0, z: 0.040709272, w: -0.999171}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1538384346323026866}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -4.666}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -188.77255, y: 102.55037}
+  m_SizeDelta: {x: 57.1702, y: 57.2844}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1258952274138692954
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283786563217691080}
+  m_CullTransparentMesh: 1
+--- !u!114 &1750301336111875292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283786563217691080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 1861427a7a343624081e98ce6dc58990, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &1416210503286160825
 GameObject:
   m_ObjectHideFlags: 0
@@ -3454,7 +3534,7 @@ GameObject:
   - component: {fileID: 2840118734175519114}
   - component: {fileID: 8863738001472781134}
   m_Layer: 5
-  m_Name: B3_Image
+  m_Name: B6_Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3472,12 +3552,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6062662653339377553}
+  m_Father: {fileID: 5237283320806683454}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 64.48038}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 176.48616, y: -36.24019}
+  m_SizeDelta: {x: 63.394463, y: 64.48038}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6290012591575009447
 CanvasRenderer:
@@ -3618,7 +3698,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -67.390625}
+  m_AnchoredPosition: {x: 108.0917, y: -68.955605}
   m_SizeDelta: {x: 100.3482, y: 20.1382}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2437120310127753210
@@ -3728,10 +3808,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToMove: {fileID: 7691141295810130644}
-  requiredWood: 1
-  requiredCoal: 0
+  requiredWood: 10
+  requiredCoal: 20
   requiredStone: 0
-  requiredMetal: 0
+  requiredMetal: 20
   requiredFiber: 0
   itemToCraft: {fileID: 11400000, guid: 0a2c1beba4d5ecf468735f4a3504737f, type: 2}
   inventory: {fileID: 0}
@@ -3753,7 +3833,7 @@ GameObject:
   - component: {fileID: 3840000989119524106}
   - component: {fileID: 2376153458112550326}
   m_Layer: 5
-  m_Name: B6_Image
+  m_Name: B3_Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3771,12 +3851,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5237283320806683454}
+  m_Father: {fileID: 6062662653339377553}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 65.603836}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 176.48616, y: -36.801918}
+  m_SizeDelta: {x: 63.394463, y: 65.603836}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4420691495906403173
 CanvasRenderer:
@@ -3991,8 +4071,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -45.893784}
-  m_SizeDelta: {x: 200, y: 42}
+  m_AnchoredPosition: {x: 108.0917, y: -35.935898}
+  m_SizeDelta: {x: 198.787, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2381579227875829368
 MonoBehaviour:
@@ -4379,7 +4459,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -67.398384}
+  m_AnchoredPosition: {x: 108.0917, y: -68.955605}
   m_SizeDelta: {x: 100.3482, y: 20.1382}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2068187101818092565
@@ -4489,11 +4569,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToMove: {fileID: 7691141295810130644}
-  requiredWood: 1
+  requiredWood: 10
   requiredCoal: 0
-  requiredStone: 0
+  requiredStone: 20
   requiredMetal: 0
-  requiredFiber: 0
+  requiredFiber: 10
   itemToCraft: {fileID: 11400000, guid: 79b60a4ac8f191f4e992c34c3007068b, type: 2}
   inventory: {fileID: 0}
   craftUIMove: {fileID: 2545504599802197064}
@@ -4729,8 +4809,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -21}
-  m_SizeDelta: {x: 100, y: 42}
+  m_AnchoredPosition: {x: 174.42476, y: -21}
+  m_SizeDelta: {x: 49.4515, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5016105012200141664
 CanvasRenderer:
@@ -4762,9 +4842,12 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Requires
 
-    <sprite name="Coal"> x10
+    <sprite name="Coal"> x14
 
-    <sprite name="Metal"> x10'
+    <sprite name="Metal"> x10
+
+    <sprite
+    name="Wood"> x5'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
   m_sharedMaterial: {fileID: 5931831309752250766, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
@@ -4870,7 +4953,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -67.398384}
+  m_AnchoredPosition: {x: 108.0917, y: -78.0791}
   m_SizeDelta: {x: 100.3482, y: 20.1382}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2602443455934134488
@@ -4980,10 +5063,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToMove: {fileID: 7691141295810130644}
-  requiredWood: 0
-  requiredCoal: 0
+  requiredWood: 5
+  requiredCoal: 12
   requiredStone: 0
-  requiredMetal: 0
+  requiredMetal: 7
   requiredFiber: 0
   itemToCraft: {fileID: 11400000, guid: 05dc4af311e9db14e9519fd320046a92, type: 2}
   inventory: {fileID: 0}
@@ -4991,6 +5074,81 @@ MonoBehaviour:
   itemPlacer: {fileID: 0}
   craftingController: {fileID: 0}
   popUpController: {fileID: 6533531868153471895}
+--- !u!1 &2068469241292223047
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 481987453420971097}
+  - component: {fileID: 4195617414776297349}
+  - component: {fileID: 3563293146770689703}
+  m_Layer: 5
+  m_Name: GuideUI (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &481987453420971097
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068469241292223047}
+  m_LocalRotation: {x: -0, y: -0, z: 0.07909724, w: 0.99686694}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1538384346323026866}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 9.073}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -151.29097, y: 137.47942}
+  m_SizeDelta: {x: 57.1702, y: 57.2844}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &4195617414776297349
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068469241292223047}
+  m_CullTransparentMesh: 1
+--- !u!114 &3563293146770689703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068469241292223047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 2a4a6d68edc543648b0d837914cf0f21, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &2086221693003217193
 GameObject:
   m_ObjectHideFlags: 0
@@ -5025,7 +5183,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -8.537523}
+  m_AnchoredPosition: {x: 108.0917, y: -6.005}
   m_SizeDelta: {x: 216.1834, y: 12.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8764776496650498341
@@ -5056,7 +5214,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Street Light
+  m_text: Street Light (Requires Generator)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95d7686b568839b4aa30b21886d6f0c1, type: 2}
   m_sharedMaterial: {fileID: -8020612493836900852, guid: 95d7686b568839b4aa30b21886d6f0c1, type: 2}
@@ -5161,8 +5319,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -45.893784}
-  m_SizeDelta: {x: 200, y: 42}
+  m_AnchoredPosition: {x: 108.0917, y: -40.010002}
+  m_SizeDelta: {x: 200.87401, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5042903134322501040
 MonoBehaviour:
@@ -5382,8 +5540,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -21}
-  m_SizeDelta: {x: 100, y: 42}
+  m_AnchoredPosition: {x: 77.2233, y: -21}
+  m_SizeDelta: {x: 154.4465, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3473287547897623040
 CanvasRenderer:
@@ -5413,8 +5571,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Creates a torch with a light radius of 1 lasting for 1 second. Gives you
-    1 lighting point.
+  m_text: 'A staple light source for every adventure.
+
+    Duration: 1.5 minutes
+
+    AoE
+    Radius: 6'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
   m_sharedMaterial: {fileID: 5931831309752250766, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
@@ -5670,10 +5832,10 @@ RectTransform:
   - {fileID: 5921862123288261554}
   m_Father: {fileID: 8304269796584671607}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 108.0917, y: -40}
+  m_SizeDelta: {x: 216.1834, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7910908200420762946
 CanvasRenderer:
@@ -5751,7 +5913,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 0
+  m_Spacing: 7
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -5759,6 +5921,81 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!1 &2360469019852769161
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8226830632177982825}
+  - component: {fileID: 7108826092694393784}
+  - component: {fileID: 7421964274141407923}
+  m_Layer: 5
+  m_Name: GuideUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &8226830632177982825
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2360469019852769161}
+  m_LocalRotation: {x: -0, y: -0, z: 0.034175266, w: -0.9994159}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1538384346323026866}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -3.917}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -187.76505, y: 179.9989}
+  m_SizeDelta: {x: 57.1702, y: 57.2844}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &7108826092694393784
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2360469019852769161}
+  m_CullTransparentMesh: 1
+--- !u!114 &7421964274141407923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2360469019852769161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 5f598f370b27c734aa0ecddf1abf1772, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &2385406612400976801
 GameObject:
   m_ObjectHideFlags: 0
@@ -5999,10 +6236,10 @@ RectTransform:
   - {fileID: 6230346885657700630}
   m_Father: {fileID: 8304269796584671607}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 108.0917, y: -40}
+  m_SizeDelta: {x: 216.1834, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6756707943250495489
 CanvasRenderer:
@@ -6080,7 +6317,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 0
+  m_Spacing: 7
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -6196,9 +6433,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 735395217707615207}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 30.205696, y: -11.9579}
   m_SizeDelta: {x: 40.3768, y: 23.9158}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7629586459710115841
@@ -6346,8 +6583,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -49.957886}
-  m_SizeDelta: {x: 216.1834, y: 99.91577}
+  m_AnchoredPosition: {x: 108.0917, y: -40}
+  m_SizeDelta: {x: 216.1834, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4425184481323448034
 CanvasRenderer:
@@ -6425,7 +6662,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 0
+  m_Spacing: 7
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -6467,8 +6704,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -21}
-  m_SizeDelta: {x: 100, y: 42}
+  m_AnchoredPosition: {x: 182.194, y: -21}
+  m_SizeDelta: {x: 37.36, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5490102097817554399
 CanvasRenderer:
@@ -6500,9 +6737,12 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Requires
 
-    <sprite name="Coal"> x1
+    <sprite name="Wood"> x4
 
-    <sprite name="Metal"> x2'
+    <sprite name="Coal"> x3
+
+    <sprite
+    name="Metal"> x2'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
   m_sharedMaterial: {fileID: 5931831309752250766, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
@@ -6762,9 +7002,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 735395217707615207}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 186.1661, y: -11.9579}
   m_SizeDelta: {x: 40, y: 23.915771}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2051693222342287884
@@ -6907,8 +7147,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -21}
-  m_SizeDelta: {x: 100, y: 42}
+  m_AnchoredPosition: {x: 176.75114, y: -21}
+  m_SizeDelta: {x: 45.8223, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1011566597204194903
 CanvasRenderer:
@@ -6940,9 +7180,12 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Requires
 
-    <sprite name="Coal"> x10
+    <sprite name="Wood"> x15
 
-    <sprite name="Metal"> x10'
+    <sprite name="Stone"> x15
+
+    <sprite
+    name="Fiber"> x10'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
   m_sharedMaterial: {fileID: 5931831309752250766, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
@@ -7179,10 +7422,10 @@ RectTransform:
   - {fileID: 97292948675436455}
   m_Father: {fileID: 1354119012578426592}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 108.0917, y: -178.19809}
+  m_SizeDelta: {x: 216.1834, y: 73.603836}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8228594358646515105
 MonoBehaviour:
@@ -7243,9 +7486,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 5255582133444679651}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 30.205696, y: -11.9579}
   m_SizeDelta: {x: 40.3768, y: 23.9158}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &42765587055945380
@@ -7463,8 +7706,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -21}
-  m_SizeDelta: {x: 100, y: 42}
+  m_AnchoredPosition: {x: 177.60675, y: -21}
+  m_SizeDelta: {x: 44.7867, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9040462161134277861
 CanvasRenderer:
@@ -7496,12 +7739,12 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Requires
 
-    <sprite name="Wood"> x4
+    <sprite name="Wood"> x3
 
     <sprite name="Coal"> x2
 
     <sprite
-    name="Stone"> x4'
+    name="Stone"> x3'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
   m_sharedMaterial: {fileID: 5931831309752250766, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
@@ -7607,7 +7850,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -85.55208}
+  m_AnchoredPosition: {x: 108.0917, y: -134.45879}
   m_SizeDelta: {x: 100.3482, y: 20.1382}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7436067837160330716
@@ -7717,11 +7960,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToMove: {fileID: 7691141295810130644}
-  requiredWood: 1
+  requiredWood: 3
   requiredCoal: 0
   requiredStone: 0
   requiredMetal: 0
-  requiredFiber: 0
+  requiredFiber: 2
   itemToCraft: {fileID: 11400000, guid: 2310d7288fcad63498842c3eab82276b, type: 2}
   inventory: {fileID: 0}
   craftUIMove: {fileID: 2545504599802197064}
@@ -7762,10 +8005,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 4508714848445046354}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 64.48038}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 176.48616, y: -36.24019}
+  m_SizeDelta: {x: 63.394463, y: 64.48038}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1867488459887838389
 CanvasRenderer:
@@ -8219,10 +8462,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 8875313520797204915}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 65.603836}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 176.48616, y: -36.801918}
+  m_SizeDelta: {x: 63.394463, y: 65.603836}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1191635123089243047
 CanvasRenderer:
@@ -8398,7 +8641,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -10.299595}
+  m_AnchoredPosition: {x: 108.0917, y: -6.005}
   m_SizeDelta: {x: 216.1834, y: 12.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &546756604131360227
@@ -8569,8 +8812,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -21}
-  m_SizeDelta: {x: 100, y: 42}
+  m_AnchoredPosition: {x: 181.81961, y: -21}
+  m_SizeDelta: {x: 41.7192, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2915538096641893705
 CanvasRenderer:
@@ -8712,8 +8955,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.091675, y: -45.8938}
-  m_SizeDelta: {x: 200, y: 42}
+  m_AnchoredPosition: {x: 108.091675, y: -35.935898}
+  m_SizeDelta: {x: 202.6792, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3059593922328306999
 MonoBehaviour:
@@ -8789,7 +9032,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -8.53125}
+  m_AnchoredPosition: {x: 108.0917, y: -6.9803}
   m_SizeDelta: {x: 216.1834, y: 12.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8648625218212738821
@@ -8820,7 +9063,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Christmas Lights
+  m_text: Christmas Lights (Requires Generator)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95d7686b568839b4aa30b21886d6f0c1, type: 2}
   m_sharedMaterial: {fileID: -8020612493836900852, guid: 95d7686b568839b4aa30b21886d6f0c1, type: 2}
@@ -8923,8 +9166,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -21}
-  m_SizeDelta: {x: 100, y: 42}
+  m_AnchoredPosition: {x: 180.32335, y: -21}
+  m_SizeDelta: {x: 35.3103, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6697240586282480196
 CanvasRenderer:
@@ -9064,7 +9307,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -67.398384}
+  m_AnchoredPosition: {x: 108.0917, y: -68.955605}
   m_SizeDelta: {x: 100.3482, y: 20.1382}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8505365078084277922
@@ -9174,10 +9417,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToMove: {fileID: 7691141295810130644}
-  requiredWood: 1
-  requiredCoal: 0
+  requiredWood: 5
+  requiredCoal: 14
   requiredStone: 0
-  requiredMetal: 0
+  requiredMetal: 10
   requiredFiber: 0
   itemToCraft: {fileID: 11400000, guid: a76ceded336f4864482d341e9f338274, type: 2}
   inventory: {fileID: 0}
@@ -9219,10 +9462,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 6062662653339377553}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 64.48038}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 39.69723, y: -36.24019}
+  m_SizeDelta: {x: 63.394463, y: 64.48038}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3146219251914562307
 CanvasRenderer:
@@ -9365,7 +9608,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 113.0917, y: -40}
+  m_AnchoredPosition: {x: 108.0917, y: -40}
   m_SizeDelta: {x: 216.1834, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2089191392800547629
@@ -9463,7 +9706,7 @@ GameObject:
   - component: {fileID: 7139350003574292414}
   - component: {fileID: 8938606909007119600}
   m_Layer: 5
-  m_Name: GuideBox
+  m_Name: GuideBookBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9673,7 +9916,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -85.55208}
+  m_AnchoredPosition: {x: 108.0917, y: -68.955605}
   m_SizeDelta: {x: 100.3482, y: 20.1382}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8693027879098140861
@@ -9783,11 +10026,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToMove: {fileID: 7691141295810130644}
-  requiredWood: 1
+  requiredWood: 2
   requiredCoal: 0
   requiredStone: 0
   requiredMetal: 0
-  requiredFiber: 0
+  requiredFiber: 10
   itemToCraft: {fileID: 11400000, guid: 1a71f02e5f0b31341bced1e8756d2355, type: 2}
   inventory: {fileID: 0}
   craftUIMove: {fileID: 2545504599802197064}
@@ -9828,7 +10071,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -8.53125}
+  m_AnchoredPosition: {x: 108.0917, y: -6.9803}
   m_SizeDelta: {x: 216.1834, y: 12.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &751497363770887312
@@ -9859,7 +10102,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Wooden House
+  m_text: Motel
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95d7686b568839b4aa30b21886d6f0c1, type: 2}
   m_sharedMaterial: {fileID: -8020612493836900852, guid: 95d7686b568839b4aa30b21886d6f0c1, type: 2}
@@ -9995,9 +10238,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Requires
 
-    <sprite name="Wood"> x1
+    <sprite name="Stone"> x3
 
-    <sprite name="Coal"> x1'
+    <sprite name="Fiber"> x2'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
   m_sharedMaterial: {fileID: 5931831309752250766, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
@@ -10100,8 +10343,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -21}
-  m_SizeDelta: {x: 100, y: 42}
+  m_AnchoredPosition: {x: 177.79836, y: -21}
+  m_SizeDelta: {x: 46.7037, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3214460366524243689
 CanvasRenderer:
@@ -10404,7 +10647,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "6. Thorns\n\nThorns and Resource Nodes:\n\n\u2022 20% of resource nodes
+  m_text: "7. Thorns\n\nThorns and Resource Nodes:\n\n\u2022 20% of resource nodes
     are covered in thorns.\n\n\u2022 Thorns will bloom and then disappear when the
     node is within the range of a light source, allowing you to gather the resource
     safely.\n"
@@ -10855,8 +11098,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -45.893784}
-  m_SizeDelta: {x: 200, y: 42}
+  m_AnchoredPosition: {x: 108.0917, y: -35.935898}
+  m_SizeDelta: {x: 205.47409, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2792641601116197354
 MonoBehaviour:
@@ -10932,7 +11175,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -8.537523}
+  m_AnchoredPosition: {x: 108.0917, y: -6.9803}
   m_SizeDelta: {x: 216.1834, y: 12.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1188422023439929023
@@ -11097,8 +11340,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Creates a torch with a light radius of 1 lasting for 1 second. Gives you
-    1 lighting point.
+  m_text: Some people uses this to make their fish sauce
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
   m_sharedMaterial: {fileID: 5931831309752250766, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
@@ -11201,10 +11443,10 @@ RectTransform:
   - {fileID: 5281638414736018670}
   m_Father: {fileID: 1354119012578426592}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 108.0917, y: -15}
+  m_SizeDelta: {x: 216.1834, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2293877200637172097
 CanvasRenderer:
@@ -11329,7 +11571,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "7. Exploration\n\nFinding Landmarks:\n\n\u2022 Keep an eye out for distinct
+  m_text: "9. Exploration\n\nFinding Landmarks:\n\n\u2022 Keep an eye out for distinct
     landmarks or environmental features. These can lead you to hidden treasures or
     special resources.\n\n\u2022 Certain areas may contain unique items that can
     aid your progress."
@@ -11437,8 +11679,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 103.091675, y: -45.8938}
-  m_SizeDelta: {x: 200, y: 42}
+  m_AnchoredPosition: {x: 108.0917, y: -35.935898}
+  m_SizeDelta: {x: 199.15051, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3925549349016718244
 MonoBehaviour:
@@ -11649,9 +11891,9 @@ RectTransform:
   - {fileID: 2268509072871203483}
   m_Father: {fileID: 5255582133444679651}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 108.2801, y: -11.9579}
   m_SizeDelta: {x: 95.772, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3480968645914400351
@@ -11821,10 +12063,10 @@ RectTransform:
   - {fileID: 7966457669798162332}
   m_Father: {fileID: 1354119012578426592}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 108.0917, y: -100.15599}
+  m_SizeDelta: {x: 216.1834, y: 72.48038}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2804335154183115352
 MonoBehaviour:
@@ -12057,10 +12299,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 6062662653339377553}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 64.48038}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 108.09169, y: -36.24019}
+  m_SizeDelta: {x: 63.394463, y: 64.48038}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6795767388401932015
 CanvasRenderer:
@@ -12275,8 +12517,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.091675, y: -45.8938}
-  m_SizeDelta: {x: 200, y: 42}
+  m_AnchoredPosition: {x: 108.091675, y: -35.935898}
+  m_SizeDelta: {x: 191.5045, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6127079812533250855
 MonoBehaviour:
@@ -12352,7 +12594,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -10.299595}
+  m_AnchoredPosition: {x: 108.0917, y: -6.005}
   m_SizeDelta: {x: 216.1834, y: 12.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8855544615035258353
@@ -12383,7 +12625,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Burning barrel
+  m_text: Burning Barrel
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95d7686b568839b4aa30b21886d6f0c1, type: 2}
   m_sharedMaterial: {fileID: -8020612493836900852, guid: 95d7686b568839b4aa30b21886d6f0c1, type: 2}
@@ -12583,7 +12825,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -10.299595}
+  m_AnchoredPosition: {x: 108.0917, y: -6.9803}
   m_SizeDelta: {x: 216.1834, y: 12.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9067958426981731650
@@ -13019,8 +13261,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Creates a campfire with a light radius of 10 lasting for 3 seconds. Gives
-    you 1 lighting point.
+  m_text: Must be tiring standing up, unluckily you can not sit in this chair..
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
   m_sharedMaterial: {fileID: 5931831309752250766, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
@@ -13123,8 +13364,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -21}
-  m_SizeDelta: {x: 100, y: 42}
+  m_AnchoredPosition: {x: 78.7817, y: -21}
+  m_SizeDelta: {x: 157.5634, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5491105931178747086
 CanvasRenderer:
@@ -13263,8 +13504,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -49.957886}
-  m_SizeDelta: {x: 216.1834, y: 99.91577}
+  m_AnchoredPosition: {x: 108.0917, y: -79.30191}
+  m_SizeDelta: {x: 216.1834, y: 158.60382}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &949004354144966554
 CanvasRenderer:
@@ -13527,7 +13768,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -45.893784}
+  m_AnchoredPosition: {x: 108.0917, y: -75.23781}
   m_SizeDelta: {x: 200, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8339382944968599884
@@ -13570,6 +13811,142 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 2
   m_VerticalFit: 0
+--- !u!1 &4842109279142934994
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3474400572795078752}
+  - component: {fileID: 8843989980485811691}
+  - component: {fileID: 1415531309202947685}
+  m_Layer: 5
+  m_Name: Text (TMP) (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3474400572795078752
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4842109279142934994}
+  m_LocalRotation: {x: -0, y: -0, z: 0.06064769, w: 0.9981592}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1538384346323026866}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 6.954}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -136.9, y: 2.8}
+  m_SizeDelta: {x: 166.8, y: 16.4892}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &8843989980485811691
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4842109279142934994}
+  m_CullTransparentMesh: 1
+--- !u!114 &1415531309202947685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4842109279142934994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 'This is the generator
+
+    you need'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
+  m_sharedMaterial: {fileID: 5931831309752250766, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278249215
+  m_fontColor: {r: 1, g: 0.9022858, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 12
+  m_fontSizeBase: 12
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 1.3536644, y: 0, z: 4.701524, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &4859169103153166299
 GameObject:
   m_ObjectHideFlags: 0
@@ -13606,7 +13983,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 103.091675, y: -45.8938}
+  m_AnchoredPosition: {x: 108.0917, y: -40.010002}
   m_SizeDelta: {x: 200, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5790912843785142515
@@ -13683,10 +14060,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 8875313520797204915}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 65.603836}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 39.69723, y: -36.801918}
+  m_SizeDelta: {x: 63.394463, y: 65.603836}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9061440809460678755
 CanvasRenderer:
@@ -13824,8 +14201,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -21}
-  m_SizeDelta: {x: 100, y: 42}
+  m_AnchoredPosition: {x: 172.23715, y: -21}
+  m_SizeDelta: {x: 44.2051, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5317636916437892226
 CanvasRenderer:
@@ -13857,9 +14234,12 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Requires
 
-    <sprite name="Coal"> x10
+    <sprite name="Wood"> x10
 
-    <sprite name="Metal"> x1'
+    <sprite name="Stone"> x10
+
+    <sprite
+    name="Fiber"> x10'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
   m_sharedMaterial: {fileID: 5931831309752250766, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
@@ -14271,6 +14651,140 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &4923757455000420882
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 880255949650786699}
+  - component: {fileID: 3995825547324467460}
+  - component: {fileID: 3086453631542327881}
+  m_Layer: 5
+  m_Name: Text (TMP) (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &880255949650786699
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4923757455000420882}
+  m_LocalRotation: {x: -0, y: -0, z: 0.07034497, w: -0.9975227}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1538384346323026866}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -8.068}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -147, y: 50.4}
+  m_SizeDelta: {x: 166.8, y: 16.4892}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &3995825547324467460
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4923757455000420882}
+  m_CullTransparentMesh: 1
+--- !u!114 &3086453631542327881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4923757455000420882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: These are electric light sources
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
+  m_sharedMaterial: {fileID: 5931831309752250766, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278249215
+  m_fontColor: {r: 1, g: 0.9022858, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 12
+  m_fontSizeBase: 12
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 1.3536644, y: 0, z: 4.701524, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &4957604173657390025
 GameObject:
   m_ObjectHideFlags: 0
@@ -14308,7 +14822,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -85.55208}
+  m_AnchoredPosition: {x: 108.0917, y: -78.0791}
   m_SizeDelta: {x: 100.3482, y: 20.1382}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8325439680271487756
@@ -14418,10 +14932,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToMove: {fileID: 7691141295810130644}
-  requiredWood: 1
-  requiredCoal: 0
+  requiredWood: 4
+  requiredCoal: 3
   requiredStone: 0
-  requiredMetal: 0
+  requiredMetal: 2
   requiredFiber: 0
   itemToCraft: {fileID: 11400000, guid: 0970f9034c117b749b941ca7e07505b2, type: 2}
   inventory: {fileID: 0}
@@ -14571,9 +15085,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Requires
 
-    <sprite name="Coal"> x1
+    <sprite name="Wood"> x3
 
-    <sprite name="Metal"> x2'
+    <sprite name="Fiber"> x2'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
   m_sharedMaterial: {fileID: 5931831309752250766, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
@@ -14681,8 +15195,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -49.957886}
-  m_SizeDelta: {x: 216.1834, y: 99.91577}
+  m_AnchoredPosition: {x: 108.0917, y: -40}
+  m_SizeDelta: {x: 216.1834, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6458705171872776718
 CanvasRenderer:
@@ -14802,8 +15316,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -21}
-  m_SizeDelta: {x: 100, y: 42}
+  m_AnchoredPosition: {x: 83.0604, y: -21}
+  m_SizeDelta: {x: 166.1207, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3600936835148550731
 CanvasRenderer:
@@ -14833,8 +15347,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Creates a campfire with a light radius of 2 lasting for 2 seconds. Gives
-    you 2 lighting point.
+  m_text: 'Too much wood but cant get rid of them? This would make a nice solution
+
+    Recovery:
+    10%
+
+    AoE Radius: 11'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
   m_sharedMaterial: {fileID: 5931831309752250766, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
@@ -15099,8 +15617,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -21}
-  m_SizeDelta: {x: 100, y: 42}
+  m_AnchoredPosition: {x: 71.4513, y: -21}
+  m_SizeDelta: {x: 142.9026, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8531866009844869595
 CanvasRenderer:
@@ -15130,8 +15648,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Creates a burning barrel with a light radius of 5 lasting for 4 seconds.
-    Gives you 10 lighting points.
+  m_text: "Everyone loves a festive spirit, might be a good light source for a rave\r\nDuration:
+    Generator-based\nAoE Radius: 14\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
   m_sharedMaterial: {fileID: 5931831309752250766, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
@@ -15289,8 +15807,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -45.893784}
-  m_SizeDelta: {x: 200, y: 42}
+  m_AnchoredPosition: {x: 108.0917, y: -35.935898}
+  m_SizeDelta: {x: 197.9785, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1702761571659582983
 MonoBehaviour:
@@ -15368,7 +15886,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -45.893784}
+  m_AnchoredPosition: {x: 108.0917, y: -75.23781}
   m_SizeDelta: {x: 200, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3685455646780607321
@@ -15719,6 +16237,7 @@ RectTransform:
   - {fileID: 6365129424916494165}
   - {fileID: 5918651947260295691}
   - {fileID: 6865640483381243876}
+  - {fileID: 1538384346323026866}
   - {fileID: 4939141936971942965}
   - {fileID: 1820055359679724835}
   - {fileID: 1244328271966150836}
@@ -15764,10 +16283,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 504202428644039907}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 108.0917, y: -40}
+  m_SizeDelta: {x: 216.1834, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2615667592662796270
 CanvasRenderer:
@@ -15861,10 +16380,10 @@ RectTransform:
   - {fileID: 8245331704444947111}
   m_Father: {fileID: 1354119012578426592}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 108.0917, y: -46.9579}
+  m_SizeDelta: {x: 216.1834, y: 23.9158}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3737439507342926443
 MonoBehaviour:
@@ -16090,7 +16609,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -10.299595}
+  m_AnchoredPosition: {x: 108.0917, y: -6.9803}
   m_SizeDelta: {x: 216.1834, y: 12.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5623289855143317562
@@ -16190,6 +16709,81 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &5694501966341357407
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1789115126843088063}
+  - component: {fileID: 8486732535344875366}
+  - component: {fileID: 82145774697026778}
+  m_Layer: 5
+  m_Name: GuideUI (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1789115126843088063
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5694501966341357407}
+  m_LocalRotation: {x: -0, y: -0, z: 0.072548255, w: 0.99736494}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1538384346323026866}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 8.321}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -123.7, y: -65.6}
+  m_SizeDelta: {x: 57.1702, y: 57.2844}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &8486732535344875366
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5694501966341357407}
+  m_CullTransparentMesh: 1
+--- !u!114 &82145774697026778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5694501966341357407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: c875956ac5550bd4b9808bd4313f06ef, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &5718609284865130156
 GameObject:
   m_ObjectHideFlags: 0
@@ -16499,8 +17093,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -21}
-  m_SizeDelta: {x: 100, y: 42}
+  m_AnchoredPosition: {x: 80.48, y: -21}
+  m_SizeDelta: {x: 160.96, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8362759544116772250
 CanvasRenderer:
@@ -16947,8 +17541,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -21}
-  m_SizeDelta: {x: 100, y: 42}
+  m_AnchoredPosition: {x: 76.92, y: -21}
+  m_SizeDelta: {x: 153.84, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4665618944190495081
 CanvasRenderer:
@@ -16978,8 +17572,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Creates a street lamp with a light radius of 10 lasting for 5 seconds.
-    Gives you 10 lighting points.
+  m_text: 'Might turns you into a witch, only if you are rich..
+
+    Recovery: 12%
+    per second
+
+    AoE Radius: 15'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
   m_sharedMaterial: {fileID: 5931831309752250766, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
@@ -17190,10 +17788,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 8875313520797204915}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 65.603836}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 108.09169, y: -36.801918}
+  m_SizeDelta: {x: 63.394463, y: 65.603836}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4153935412184502012
 CanvasRenderer:
@@ -17397,10 +17995,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 4508714848445046354}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 64.48038}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 108.09169, y: -36.24019}
+  m_SizeDelta: {x: 63.394463, y: 64.48038}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7252284214120880292
 CanvasRenderer:
@@ -17540,8 +18138,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.091675, y: -45.8938}
-  m_SizeDelta: {x: 200, y: 42}
+  m_AnchoredPosition: {x: 108.091675, y: -35.935898}
+  m_SizeDelta: {x: 195.3484, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8397034308896815329
 MonoBehaviour:
@@ -17617,8 +18215,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -21}
-  m_SizeDelta: {x: 100, y: 42}
+  m_AnchoredPosition: {x: 180.9297, y: -21}
+  m_SizeDelta: {x: 35.7146, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7598315472880992188
 CanvasRenderer:
@@ -17650,12 +18248,12 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Requires
 
-    <sprite name="Wood"> x4
+    <sprite name="Wood"> x5
 
-    <sprite name="Coal"> x2
+    <sprite name="Stone"> x10
 
     <sprite
-    name="Stone"> x4'
+    name="Fiber"> x5'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
   m_sharedMaterial: {fileID: 5931831309752250766, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
@@ -17977,7 +18575,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -85.55208}
+  m_AnchoredPosition: {x: 108.0917, y: -134.45879}
   m_SizeDelta: {x: 100.3482, y: 20.1382}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4606861902819538066
@@ -18087,11 +18685,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToMove: {fileID: 7691141295810130644}
-  requiredWood: 1
+  requiredWood: 0
   requiredCoal: 0
-  requiredStone: 0
+  requiredStone: 3
   requiredMetal: 0
-  requiredFiber: 0
+  requiredFiber: 2
   itemToCraft: {fileID: 11400000, guid: bbd68844fdd97c04fa13bd27dbf70244, type: 2}
   inventory: {fileID: 0}
   craftUIMove: {fileID: 2545504599802197064}
@@ -18132,10 +18730,10 @@ RectTransform:
   - {fileID: 6167871878560366534}
   m_Father: {fileID: 3231262201850910929}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 108.0917, y: -46.9579}
+  m_SizeDelta: {x: 216.1834, y: 23.9158}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5010495007154034052
 MonoBehaviour:
@@ -18197,10 +18795,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 4508714848445046354}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 64.48038}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 39.69723, y: -36.24019}
+  m_SizeDelta: {x: 63.394463, y: 64.48038}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &364239438312914039
 CanvasRenderer:
@@ -18767,10 +19365,10 @@ RectTransform:
   - {fileID: 9168125680140871525}
   m_Father: {fileID: 1354119012578426592}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 108.0917, y: -181.39618}
+  m_SizeDelta: {x: 216.1834, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1047962587625659258
 MonoBehaviour:
@@ -19322,7 +19920,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -85.55208}
+  m_AnchoredPosition: {x: 108.0917, y: -134.45879}
   m_SizeDelta: {x: 100.3482, y: 20.1382}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6439732381134452065
@@ -19432,11 +20030,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToMove: {fileID: 7691141295810130644}
-  requiredWood: 1
+  requiredWood: 2
   requiredCoal: 0
   requiredStone: 0
   requiredMetal: 0
-  requiredFiber: 0
+  requiredFiber: 2
   itemToCraft: {fileID: 11400000, guid: c6c94d3418f2d544c94126cc3f4c7ba1, type: 2}
   inventory: {fileID: 0}
   craftUIMove: {fileID: 2545504599802197064}
@@ -19477,7 +20075,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -8.53125}
+  m_AnchoredPosition: {x: 108.0917, y: -6.9803}
   m_SizeDelta: {x: 216.1834, y: 12.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1598187668210869423
@@ -19745,7 +20343,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -10.299595}
+  m_AnchoredPosition: {x: 108.0917, y: -20.080936}
   m_SizeDelta: {x: 216.1834, y: 12.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8677527251874208690
@@ -20222,8 +20820,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -21}
-  m_SizeDelta: {x: 100, y: 42}
+  m_AnchoredPosition: {x: 74.8495, y: -21}
+  m_SizeDelta: {x: 149.699, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1642284093343960241
 CanvasRenderer:
@@ -20253,8 +20851,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Creates a street lamp with a light radius of 10 lasting for 5 seconds.
-    Gives you 10 lighting points.
+  m_text: "3 times the size of a normal traffic light, also 3 times the light\r\nDuration:
+    Generator-based\nAoE Radius: 19\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
   m_sharedMaterial: {fileID: 5931831309752250766, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
@@ -20357,10 +20955,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 5237283320806683454}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 65.603836}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 108.09169, y: -36.801918}
+  m_SizeDelta: {x: 63.394463, y: 65.603836}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7573030993327991411
 CanvasRenderer:
@@ -20889,6 +21487,50 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &7075620179726026168
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1538384346323026866}
+  m_Layer: 5
+  m_Name: DescImage (9)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1538384346323026866
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7075620179726026168}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4035155629221598068}
+  - {fileID: 880255949650786699}
+  - {fileID: 3474400572795078752}
+  - {fileID: 8226830632177982825}
+  - {fileID: 481987453420971097}
+  - {fileID: 1799796800603189232}
+  - {fileID: 1789115126843088063}
+  - {fileID: 1456831567765317056}
+  - {fileID: 824863110924327243}
+  m_Father: {fileID: 876898297677413475}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -166.50107, y: -186.99997}
+  m_SizeDelta: {x: 449.2784, y: 341.2466}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7075864667657526660
 GameObject:
   m_ObjectHideFlags: 0
@@ -20954,7 +21596,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "4. Sanity\n\nSanity Mechanics:\n\n\u2022 Sanity decreases when you are
+  m_text: "5. Sanity\n\nSanity Mechanics:\n\n\u2022 Sanity decreases when you are
     in darkness.\n\n\u2022 Sanity stops decreasing when you are within \nthe range
     of a light source.\n\n\u2022 Sanity increases only when you are within the range
     of \nboth a light source and a building."
@@ -21063,7 +21705,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -67.390625}
+  m_AnchoredPosition: {x: 108.0917, y: -68.955605}
   m_SizeDelta: {x: 100.3482, y: 20.1382}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8406826632609448564
@@ -21173,11 +21815,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToMove: {fileID: 7691141295810130644}
-  requiredWood: 1
-  requiredCoal: 0
+  requiredWood: 10
+  requiredCoal: 10
   requiredStone: 0
   requiredMetal: 0
-  requiredFiber: 0
+  requiredFiber: 10
   itemToCraft: {fileID: 11400000, guid: 92642e83b11557d449c0bafeb4025ae7, type: 2}
   inventory: {fileID: 0}
   craftUIMove: {fileID: 2545504599802197064}
@@ -21221,7 +21863,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -85.55208}
+  m_AnchoredPosition: {x: 108.0917, y: -68.955605}
   m_SizeDelta: {x: 100.3482, y: 20.1382}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1647351231201743844
@@ -21332,7 +21974,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToMove: {fileID: 7691141295810130644}
   requiredWood: 1
-  requiredCoal: 0
+  requiredCoal: 1
   requiredStone: 0
   requiredMetal: 0
   requiredFiber: 0
@@ -21376,7 +22018,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -10.299595}
+  m_AnchoredPosition: {x: 108.0917, y: -20.080936}
   m_SizeDelta: {x: 216.1834, y: 12.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5460224698105702232
@@ -21515,7 +22157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 113.0917, y: -40}
+  m_AnchoredPosition: {x: 108.0917, y: -40}
   m_SizeDelta: {x: 216.1834, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4053960705183610801
@@ -21594,7 +22236,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 0
+  m_Spacing: 7
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -21736,6 +22378,143 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &7349097058528866260
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4035155629221598068}
+  - component: {fileID: 7583015638072414199}
+  - component: {fileID: 1205485840540729324}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4035155629221598068
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7349097058528866260}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1538384346323026866}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 89.94927, y: -4.5779}
+  m_SizeDelta: {x: 283.0271, y: 343.1553}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &7583015638072414199
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7349097058528866260}
+  m_CullTransparentMesh: 1
+--- !u!114 &1205485840540729324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7349097058528866260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "4. Electric Light Sources\n\n\u2022  Are far more efficient compared to
+    non-electric light sources\n\n\u2022  Requires a generator to power light sources\n\n\u2022
+    A single generator powers all light sources within its range\n\n\u2022 Only the
+    generator needs to be refueled to power all electric sources within range"
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
+  m_sharedMaterial: {fileID: 5931831309752250766, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278249215
+  m_fontColor: {r: 1, g: 0.9022858, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 16
+  m_fontSizeBase: 16
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 1.3536644, y: 0, z: 26.602585, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &7398430695912878048
 GameObject:
   m_ObjectHideFlags: 0
@@ -21770,8 +22549,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -21}
-  m_SizeDelta: {x: 100, y: 42}
+  m_AnchoredPosition: {x: 81.3341, y: -21}
+  m_SizeDelta: {x: 162.6682, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7486193625362639555
 CanvasRenderer:
@@ -21801,8 +22580,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Creates a torch with a light radius of 1 lasting for 1 second. Gives you
-    1 lighting point.
+  m_text: 'A good starting refuge, might not shelter you well during sleep though
+
+    Recovery:
+    +5% sanity per second
+
+    AoE Radius: 9'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
   m_sharedMaterial: {fileID: 5931831309752250766, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
@@ -21905,8 +22688,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -21}
-  m_SizeDelta: {x: 100, y: 42}
+  m_AnchoredPosition: {x: 176.4559, y: -21}
+  m_SizeDelta: {x: 37.785, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3550225272122230047
 CanvasRenderer:
@@ -22046,8 +22829,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -21}
-  m_SizeDelta: {x: 100, y: 42}
+  m_AnchoredPosition: {x: 77.8229, y: -21}
+  m_SizeDelta: {x: 155.6459, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1565164327464667514
 CanvasRenderer:
@@ -22077,8 +22860,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Creates a light bulb with a light radius of 5 lasting for 3 seconds. Gives
-    you 5 lighting points.
+  m_text: 'The primary light source back in your real world, will you ever get out
+    of here?
+
+    Duration: Generator-based
+
+    AoE Radius: 16'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
   m_sharedMaterial: {fileID: 5931831309752250766, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
@@ -22181,10 +22968,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 5237283320806683454}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 65.603836}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 39.69723, y: -36.801918}
+  m_SizeDelta: {x: 63.394463, y: 65.603836}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3892384230512764309
 CanvasRenderer:
@@ -22322,8 +23109,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -21}
-  m_SizeDelta: {x: 100, y: 42}
+  m_AnchoredPosition: {x: 77.6067, y: -21}
+  m_SizeDelta: {x: 155.2134, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2736488021820596349
 CanvasRenderer:
@@ -22353,8 +23140,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Creates a campfire with a light radius of 10 lasting for 3 seconds. Gives
-    you 1 lighting point.
+  m_text: 'More wood, more coal, and more light, what else can you ask for?
+
+    Duration:
+    3 minutes
+
+    AoE Radius: 9'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
   m_sharedMaterial: {fileID: 5931831309752250766, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
@@ -22462,8 +23253,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -49.957886}
-  m_SizeDelta: {x: 216.1834, y: 99.91577}
+  m_AnchoredPosition: {x: 108.0917, y: -40}
+  m_SizeDelta: {x: 216.1834, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &882155507753864163
 CanvasRenderer:
@@ -22955,13 +23746,13 @@ RectTransform:
   m_Children:
   - {fileID: 297369947964950158}
   - {fileID: 7867271505238391437}
-  - {fileID: 8119758731404343781}
+  - {fileID: 4752338705729552054}
   m_Father: {fileID: 3231262201850910929}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 108.0917, y: -100.71772}
+  m_SizeDelta: {x: 216.1834, y: 73.603836}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4353214519120661188
 MonoBehaviour:
@@ -23025,8 +23816,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -45.893784}
-  m_SizeDelta: {x: 200, y: 42}
+  m_AnchoredPosition: {x: 108.0917, y: -35.935898}
+  m_SizeDelta: {x: 201.1502, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8793267197275145481
 MonoBehaviour:
@@ -23068,6 +23859,81 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 2
   m_VerticalFit: 0
+--- !u!1 &7678734630884251385
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 824863110924327243}
+  - component: {fileID: 7083145765432446565}
+  - component: {fileID: 3999517874443554411}
+  m_Layer: 5
+  m_Name: Image (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &824863110924327243
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7678734630884251385}
+  m_LocalRotation: {x: -0, y: -0, z: 0.9932781, w: -0.11575302}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1538384346323026866}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -526.706}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -140.9989, y: -20.318008}
+  m_SizeDelta: {x: 20.1378, y: 23.9337}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &7083145765432446565
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7678734630884251385}
+  m_CullTransparentMesh: 1
+--- !u!114 &3999517874443554411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7678734630884251385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: bde4ba0aa38b0f343aa69e35a7cec396, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &7691141295810130644
 GameObject:
   m_ObjectHideFlags: 0
@@ -23179,8 +24045,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -21}
-  m_SizeDelta: {x: 100, y: 42}
+  m_AnchoredPosition: {x: 167.20355, y: -21}
+  m_SizeDelta: {x: 48.6019, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5922587163090865869
 CanvasRenderer:
@@ -23212,12 +24078,12 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Requires
 
-    <sprite name="Wood"> x5
+    <sprite name="Wood"> x10
 
-    <sprite name="Coal"> x3
+    <sprite name="Coal"> x10
 
     <sprite
-    name="Metal"> x5'
+    name="Fiber"> x10'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
   m_sharedMaterial: {fileID: 5931831309752250766, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
@@ -23702,8 +24568,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -49.957886}
-  m_SizeDelta: {x: 216.1834, y: 99.91577}
+  m_AnchoredPosition: {x: 108.0917, y: -40}
+  m_SizeDelta: {x: 216.1834, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6543279382364484429
 CanvasRenderer:
@@ -24097,7 +24963,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -8.537523}
+  m_AnchoredPosition: {x: 108.0917, y: -6.9803}
   m_SizeDelta: {x: 216.1834, y: 12.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4363137354935333406
@@ -24234,7 +25100,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -67.398384}
+  m_AnchoredPosition: {x: 108.0917, y: -68.955605}
   m_SizeDelta: {x: 100.3482, y: 20.1382}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6689893260383259180
@@ -24344,11 +25210,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToMove: {fileID: 7691141295810130644}
-  requiredWood: 1
+  requiredWood: 10
   requiredCoal: 0
-  requiredStone: 0
+  requiredStone: 10
   requiredMetal: 0
-  requiredFiber: 0
+  requiredFiber: 10
   itemToCraft: {fileID: 11400000, guid: 8c61c1218689077478a72ac888921531, type: 2}
   inventory: {fileID: 0}
   craftUIMove: {fileID: 2545504599802197064}
@@ -24514,8 +25380,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -49.957886}
-  m_SizeDelta: {x: 216.1834, y: 99.91577}
+  m_AnchoredPosition: {x: 108.0917, y: -40}
+  m_SizeDelta: {x: 216.1834, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3961567242254536546
 CanvasRenderer:
@@ -24593,7 +25459,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 0
+  m_Spacing: 7
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -24634,10 +25500,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 5957761033432657895}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 108.0917, y: -40}
+  m_SizeDelta: {x: 216.1834, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &449399736090358266
 CanvasRenderer:
@@ -24941,7 +25807,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -85.55208}
+  m_AnchoredPosition: {x: 108.0917, y: -68.955605}
   m_SizeDelta: {x: 100.3482, y: 20.1382}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5036480364687289032
@@ -25051,11 +25917,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToMove: {fileID: 7691141295810130644}
-  requiredWood: 1
+  requiredWood: 5
   requiredCoal: 0
-  requiredStone: 0
+  requiredStone: 10
   requiredMetal: 0
-  requiredFiber: 0
+  requiredFiber: 5
   itemToCraft: {fileID: 11400000, guid: 4538e855bb07d48459d5dd3b93858ee8, type: 2}
   inventory: {fileID: 0}
   craftUIMove: {fileID: 2545504599802197064}
@@ -25127,7 +25993,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "5. Sprinting\n\nHow to Sprint:\n\n\u2022 Hold Shift to sprint.\n\n\u2022
+  m_text: "6. Sprinting\n\nHow to Sprint:\n\n\u2022 Hold Shift to sprint.\n\n\u2022
     Sprinting consumes stamina, which will\nregenerate when you stop sprinting."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
@@ -25197,6 +26063,81 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &8166809707899749614
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1456831567765317056}
+  - component: {fileID: 6746048342198164624}
+  - component: {fileID: 823902825916671945}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1456831567765317056
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8166809707899749614}
+  m_LocalRotation: {x: -0, y: -0, z: 0.1669191, w: -0.9859706}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1538384346323026866}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -379.217}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -132.79997, y: 81.69998}
+  m_SizeDelta: {x: 28.162, y: 33.4704}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &6746048342198164624
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8166809707899749614}
+  m_CullTransparentMesh: 1
+--- !u!114 &823902825916671945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8166809707899749614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: bde4ba0aa38b0f343aa69e35a7cec396, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &8171193338099439905
 GameObject:
   m_ObjectHideFlags: 0
@@ -25231,8 +26172,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -21}
-  m_SizeDelta: {x: 100, y: 42}
+  m_AnchoredPosition: {x: 185.7974, y: -21}
+  m_SizeDelta: {x: 39.3534, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4691010792447075813
 CanvasRenderer:
@@ -25264,9 +26205,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Requires
 
-    <sprite name="Coal"> x1
+    <sprite name="Wood"> x20
 
-    <sprite name="Metal"> x2'
+    <sprite name="Fiber"> x10'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
   m_sharedMaterial: {fileID: 5931831309752250766, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
@@ -25369,7 +26310,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -10.299595}
+  m_AnchoredPosition: {x: 108.0917, y: -6.9803}
   m_SizeDelta: {x: 216.1834, y: 12.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6508874027274405099
@@ -25845,8 +26786,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -21}
-  m_SizeDelta: {x: 100, y: 42}
+  m_AnchoredPosition: {x: 81.757, y: -21}
+  m_SizeDelta: {x: 163.514, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &145049510402768434
 CanvasRenderer:
@@ -25876,8 +26817,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Creates a campfire with a light radius of 2 lasting for 2 seconds. Gives
-    you 2 lighting point.
+  m_text: 'Massive light range for outdoor activities, unfortunately you have no
+    friends in this realm.
+
+    Duration: 5 minutes
+
+    AoE Radius: 9'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
   m_sharedMaterial: {fileID: 5931831309752250766, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
@@ -26011,8 +26956,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Creates a campfire with a light radius of 2 lasting for 2 seconds. Gives
-    you 2 lighting point.
+  m_text: What is the point of chairs when there are no tables?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
   m_sharedMaterial: {fileID: 5931831309752250766, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
@@ -26115,8 +27059,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -21}
-  m_SizeDelta: {x: 100, y: 42}
+  m_AnchoredPosition: {x: 177.82295, y: -21}
+  m_SizeDelta: {x: 44.3541, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1918530733360216581
 CanvasRenderer:
@@ -26148,9 +27092,12 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Requires
 
-    <sprite name="Coal"> x10
+    <sprite name="Coal"> x12
 
-    <sprite name="Metal"> x1'
+    <sprite name="Metal"> x7
+
+    <sprite
+    name="Wood"> x5'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
   m_sharedMaterial: {fileID: 5931831309752250766, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
@@ -26389,8 +27336,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 103.091675, y: -45.8938}
-  m_SizeDelta: {x: 200, y: 42}
+  m_AnchoredPosition: {x: 108.0917, y: -35.935898}
+  m_SizeDelta: {x: 199.6623, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6525821302676130276
 MonoBehaviour:
@@ -26470,10 +27417,10 @@ RectTransform:
   - {fileID: 3509424477432483952}
   m_Father: {fileID: 3231262201850910929}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 108.0917, y: -261.12347}
+  m_SizeDelta: {x: 216.1834, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2438312533971087135
 MonoBehaviour:
@@ -26540,8 +27487,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -49.957886}
-  m_SizeDelta: {x: 216.1834, y: 99.91577}
+  m_AnchoredPosition: {x: 108.0917, y: -40}
+  m_SizeDelta: {x: 216.1834, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3773680077599024959
 CanvasRenderer:
@@ -26664,10 +27611,10 @@ RectTransform:
   - {fileID: 4071482949698214911}
   m_Father: {fileID: 504202428644039907}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 108.0917, y: -40}
+  m_SizeDelta: {x: 216.1834, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8301320241038082250
 CanvasRenderer:
@@ -26792,7 +27739,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 113.0917, y: -40}
+  m_AnchoredPosition: {x: 108.0917, y: -40}
   m_SizeDelta: {x: 216.1834, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &851298782287637877
@@ -26871,7 +27818,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 0
+  m_Spacing: 7
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -27039,7 +27986,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -8.537523}
+  m_AnchoredPosition: {x: 108.0917, y: -6.9803}
   m_SizeDelta: {x: 216.1834, y: 12.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9084330397678271530
@@ -27070,7 +28017,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Traffic Light
+  m_text: Traffic Light (Requires Generator)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95d7686b568839b4aa30b21886d6f0c1, type: 2}
   m_sharedMaterial: {fileID: -8020612493836900852, guid: 95d7686b568839b4aa30b21886d6f0c1, type: 2}
@@ -27379,13 +28326,13 @@ RectTransform:
   m_Children:
   - {fileID: 4904659700293053602}
   - {fileID: 3901957802924980517}
-  - {fileID: 4752338705729552054}
+  - {fileID: 8119758731404343781}
   m_Father: {fileID: 3231262201850910929}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 108.0917, y: -179.32156}
+  m_SizeDelta: {x: 216.1834, y: 73.603836}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6951377402296427072
 MonoBehaviour:
@@ -27687,10 +28634,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "3. Crafting\n\nAccessing Crafting:\n\u2022  Press C to open the crafting
-    menu.\n\nAvailable Crafting Items:\n\u2022  Light Sources: Keeps you out of the
-    darkness\n\n\u2022  Buildings: Recovers sanity while near them with lighting\n\n\u2022
-    Decorations: Enhances your surroundings"
+  m_text: "3. Crafting, Light Sources, Buildings, and Decorations\n\nAccessing Crafting:\n\u2022 
+    Press C to open the crafting menu.\n\nAvailable Crafting Items:\n\u2022  Light
+    Sources: Keeps you out of the darkness\n\n\u2022  Buildings: Recovers sanity
+    while near them with lighting\n\n\u2022 Decorations: These are\npurely cosmetic"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
   m_sharedMaterial: {fileID: 5931831309752250766, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
@@ -27753,7 +28700,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 1.3536644, y: 0, z: 0, w: 0}
+  m_margin: {x: 1.3536644, y: 0, z: 26.602585, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -27795,7 +28742,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -45.893784}
+  m_AnchoredPosition: {x: 108.0917, y: -75.23781}
   m_SizeDelta: {x: 200, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8911607188917205005
@@ -27885,10 +28832,10 @@ MonoBehaviour:
   buttons:
   - {fileID: 4675103647147495793}
   - {fileID: 8668061038879752682}
-  - {fileID: 8863738001472781134}
+  - {fileID: 2376153458112550326}
   - {fileID: 8259144375306775822}
   - {fileID: 6986868364817657951}
-  - {fileID: 2376153458112550326}
+  - {fileID: 8863738001472781134}
   parentObject: {fileID: 8418772982997973121}
 --- !u!1 &9072908969926335347
 GameObject:
@@ -27929,7 +28876,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 113.0917, y: -40}
+  m_AnchoredPosition: {x: 108.0917, y: -40}
   m_SizeDelta: {x: 216.1834, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7698640573517905765
@@ -28206,8 +29153,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 103.091675, y: -45.8938}
-  m_SizeDelta: {x: 200, y: 42}
+  m_AnchoredPosition: {x: 108.0917, y: -35.935898}
+  m_SizeDelta: {x: 194.33969, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5834679698217044574
 MonoBehaviour:
@@ -28320,10 +29267,10 @@ RectTransform:
   - {fileID: 223942489695580197}
   m_Father: {fileID: 3231262201850910929}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 108.0917, y: -15}
+  m_SizeDelta: {x: 216.1834, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3318606958343569277
 CanvasRenderer:
@@ -28420,7 +29367,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108.0917, y: -85.55208}
+  m_AnchoredPosition: {x: 108.0917, y: -68.955605}
   m_SizeDelta: {x: 100.3482, y: 20.1382}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1083484692800197782
@@ -28530,12 +29477,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToMove: {fileID: 7691141295810130644}
-  requiredWood: 1
+  requiredWood: 20
   requiredCoal: 0
   requiredStone: 0
   requiredMetal: 0
-  requiredFiber: 0
-  itemToCraft: {fileID: 11400000, guid: 17b6abb9e4d8c1d43a23e736c202ea9d, type: 2}
+  requiredFiber: 10
+  itemToCraft: {fileID: 11400000, guid: db603f459ad6c8c46bbbb9817530cc34, type: 2}
   inventory: {fileID: 0}
   craftUIMove: {fileID: 2545504599802197064}
   itemPlacer: {fileID: 0}
@@ -28574,9 +29521,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 5255582133444679651}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 186.1661, y: -11.9579}
   m_SizeDelta: {x: 40, y: 23.915771}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1328120330446958602

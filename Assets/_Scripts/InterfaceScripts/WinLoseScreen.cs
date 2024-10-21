@@ -14,6 +14,7 @@ public class WinLoseScreen : MonoBehaviour
     public float totalDuration = 4f;      // Total duration for fade in and color change
 
     [SerializeField] private bool testGameOver = false;  // Serialize boolean to trigger game over
+    [SerializeField] private bool turnTextWhite = true;   // New boolean to control text color change
 
     private void Start()
     {
@@ -79,15 +80,18 @@ public class WinLoseScreen : MonoBehaviour
         SetTextAlpha(glowText, 1f);
         glowText.fontSize = targetGlowSize;
 
-        // Second phase: Change color to white over the remaining time
+        // Second phase: Change color to white over the remaining time if the boolean is true
         elapsedTime = 0f; // Reset elapsed time for color change
         while (elapsedTime < (totalDuration - fadeDuration)) // Remaining time
         {
             // Lerp color for both texts to white while maintaining the alpha
             float alpha = 1f; // Keep alpha at 1
 
-            gameOverText.color = Color.Lerp(initialColorGameOver, targetColor, elapsedTime / (totalDuration - fadeDuration));
-            glowText.color = Color.Lerp(glowText.color, targetColor, elapsedTime / (totalDuration - fadeDuration));
+            if (turnTextWhite) // Only change color if the boolean is true
+            {
+                gameOverText.color = Color.Lerp(initialColorGameOver, targetColor, elapsedTime / (totalDuration - fadeDuration));
+                glowText.color = Color.Lerp(glowText.color, targetColor, elapsedTime / (totalDuration - fadeDuration));
+            }
 
             // Set alpha to 1 to avoid flashing
             SetTextAlpha(gameOverText, alpha);
@@ -97,9 +101,12 @@ public class WinLoseScreen : MonoBehaviour
             yield return null;
         }
 
-        // Ensure both texts are set to white at the end
-        gameOverText.color = targetColor;
-        glowText.color = targetColor;
+        // Ensure both texts are set to white at the end if the boolean is true
+        if (turnTextWhite)
+        {
+            gameOverText.color = targetColor;
+            glowText.color = targetColor;
+        }
 
         // Fade in the restart and quit buttons after the texts have turned white
         elapsedTime = 0f; // Reset elapsed time for button fade-in

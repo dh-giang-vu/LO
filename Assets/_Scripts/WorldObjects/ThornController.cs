@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ThornController : MonoBehaviour
 {
-
     private List<LightSource> inRangeLightSource = new List<LightSource>();
 
     // States: 
@@ -12,33 +11,30 @@ public class ThornController : MonoBehaviour
     //      1 - budding green thorns
     //      2 - flower bloom
     private int currentState = 0;
+
+    [SerializeField] private GameObject fragmentPrefab;  // Prefab for fragments
+    [SerializeField] private Material explosionMaterial;  // Explosion shader material
+
     [SerializeField] private float flowerScaleAnimationTime = 2.0f;
     [SerializeField] private float flowerScaleMultiplier = 1.5f;
     [SerializeField] private float greenBudScaleAnimationTime = 2.0f;
     [SerializeField] private float greenBudScaleMultiplier = 1.5f;
     [SerializeField] private float checkLightInterval = 5.0f; // interval between checking for active light sources
     [SerializeField] private float destroyWaitTime = 5.0f;
-
+    [SerializeField] private int fragmentCount = 10; // Number of fragments to create
 
     void Start()
     {
-        // Deactivate flower groups
         DeactivateChildren(this.gameObject);
-
-        // Deactivate each flower
-
         foreach (Transform flower in this.gameObject.transform)
         {
             DeactivateChildObjectsByName(flower.gameObject, "pPipe28");
         }
 
-
         // Check if is in range of any active light sources every `checkLightInterval`
         InvokeRepeating(nameof(CheckLightLevel), checkLightInterval, checkLightInterval);
-
     }
 
-    // For deactivating flower groups
     private void DeactivateChildren(GameObject parentObject)
     {
         foreach (Transform child in parentObject.transform)
@@ -47,21 +43,17 @@ public class ThornController : MonoBehaviour
         }
     }
 
-    // For deactivating each flower
     private void DeactivateChildObjectsByName(GameObject parentObject, string childName)
     {
         foreach (Transform child in parentObject.transform)
         {
-            // Check if the child's name matches the specified name
             if (child.name == childName)
             {
-                // Disable the child object
                 child.gameObject.SetActive(false);
             }
         }
     }
 
-    // For activating flower groups (only green buds if flower is disabled)
     private void ActivateChildren(GameObject parent)
     {
         foreach (Transform child in parent.transform)
@@ -71,7 +63,6 @@ public class ThornController : MonoBehaviour
         }
     }
 
-    // For activating each flower
     private void ActivateChildObjectsByName(GameObject parentObject, string childName)
     {
         foreach (Transform child in parentObject.transform)
@@ -82,10 +73,8 @@ public class ThornController : MonoBehaviour
                 StartCoroutine(ScaleUp(child.gameObject, flowerScaleAnimationTime, "flower"));
             }
         }
-
     }
 
-    // Scaling up animation
     private IEnumerator ScaleUp(GameObject child, float duration, string useScale)
     {
         Vector3 originalScale = child.transform.localScale; // Store original scale
@@ -93,7 +82,6 @@ public class ThornController : MonoBehaviour
 
         float elapsedTime = 0f;
 
-        // Use a user-set scale
         if (useScale == "flower")
         {
             originalScale *= flowerScaleMultiplier;
@@ -105,17 +93,14 @@ public class ThornController : MonoBehaviour
 
         while (elapsedTime < duration)
         {
-            // Smoothly interpolate between zero scale and original scale over time
             child.transform.localScale = Vector3.Lerp(Vector3.zero, originalScale, elapsedTime / duration);
             elapsedTime += Time.deltaTime;
-            yield return null; // Wait until the next frame
+            yield return null;
         }
 
-        // Ensure the final scale is set exactly to the original scale
         child.transform.localScale = originalScale;
     }
 
-    // Get active light sources from list of in range light sources
     private List<LightSource> GetActiveLightSources()
     {
         List<LightSource> activeLightSources = new();
@@ -126,11 +111,9 @@ public class ThornController : MonoBehaviour
                 activeLightSources.Add(lightSource);
             }
         }
-
         return activeLightSources;
     }
 
-    // Check if is within range of any active light source and set state of thorn
     private void CheckLightLevel()
     {
         List<LightSource> activeLightSources = GetActiveLightSources();
@@ -142,7 +125,6 @@ public class ThornController : MonoBehaviour
         }
     }
 
-    // Show green buds (flower groups with each flower deactivated)
     private IEnumerator BudGreenThorn()
     {
         Debug.LogWarning("Bud Green Thorn");
@@ -150,21 +132,68 @@ public class ThornController : MonoBehaviour
         yield return new WaitForSeconds(0.0f);
     }
 
-    // Show flowers + destroy the thorn after some time
     private IEnumerator BloomFlower()
     {
         Debug.LogWarning("Bloom Flower");
+
         // Activate each flower
         foreach (Transform flower in this.gameObject.transform)
         {
             ActivateChildObjectsByName(flower.gameObject, "pPipe28");
         }
 
+        // Wait before exploding
         yield return new WaitForSeconds(destroyWaitTime);
+
+        // Trigger explosion effect on the thorn itself
+        StartCoroutine(ApplyExplosionShader());
+
+        // Animate fragmentation on the thorn
+        StartCoroutine(FragmentThorn());
+
+        // Wait a bit for the effect to complete
+        yield return new WaitForSeconds(1.5f);
+
+        // Destroy the thorn object after explosion
         Destroy(this.gameObject);
     }
 
-    // Set state of thorn + execute corresponding action: bud green thorns + bloom flower
+    private IEnumerator FragmentThorn()
+    {
+        float fragmentationDuration = 1.0f; // Duration for fragmentation effect
+        float elapsedTime = 0f;
+
+        // Get the current scale of the thorn
+        Vector3 originalScale = transform.localScale;
+        
+        while (elapsedTime < fragmentationDuration)
+        {
+            float progress = elapsedTime / fragmentationDuration;
+            
+            // Scale down the thorn to simulate fragmentation
+            transform.localScale = Vector3.Lerp(originalScale, Vector3.zero, progress);
+
+            // Apply random offsets to vertices to simulate jagged fragmentation
+            float randomOffset = Mathf.Sin(progress * Mathf.PI) * 0.03f; // Use sin for gradual increase
+            foreach (Transform child in transform)
+            {
+                Vector3 offset = new Vector3(
+                    Random.Range(-randomOffset, randomOffset),
+                    Random.Range(-randomOffset, randomOffset),
+                    Random.Range(-randomOffset, randomOffset)
+                );
+
+                child.localPosition += offset * progress; // Apply offset based on progress
+            }
+
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        // Ensure thorn is fully "fragmented" at the end
+        transform.localScale = Vector3.zero; // Final scale to zero
+    }
+
     private void SetThornState(int state)
     {
         if (state == 1)
@@ -178,29 +207,65 @@ public class ThornController : MonoBehaviour
         }
     }
 
-    // Detect when a LightSource enters the Thorn's trigger area
     private void OnTriggerEnter(Collider other)
     {
-        // Check if the object entering the trigger is a LightSource
         LightSource lightSource = other.GetComponent<LightSource>();
-        if (lightSource != null)
+        if (lightSource != null && !inRangeLightSource.Contains(lightSource))
         {
-            if (!inRangeLightSource.Contains(lightSource))
-            {
-                inRangeLightSource.Add(lightSource); // Add the LightSource to the list
-            }
+            inRangeLightSource.Add(lightSource);
         }
     }
 
-    // Detect when a LightSource exits the Thorn's trigger area
     private void OnTriggerExit(Collider other)
     {
-        // Check if the object leaving the trigger is a LightSource
         LightSource lightSource = other.GetComponent<LightSource>();
         if (lightSource != null)
         {
-            inRangeLightSource.Remove(lightSource); // Remove the LightSource from the list
+            inRangeLightSource.Remove(lightSource);
         }
     }
 
+    private IEnumerator ApplyExplosionShader()
+    {
+        Renderer[] renderers = GetComponentsInChildren<Renderer>();
+        foreach (Renderer rend in renderers)
+        {
+            rend.material = explosionMaterial;
+        }
+
+        float explosionDuration = 1.0f;
+        float elapsedTime = 0f;
+
+        while (elapsedTime < explosionDuration)
+        {
+            float progress = elapsedTime / explosionDuration;
+            foreach (Renderer rend in renderers)
+            {
+                rend.material.SetFloat("_ExplosionProgress", progress);
+            }
+
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        foreach (Renderer rend in renderers)
+        {
+            rend.material.SetFloat("_ExplosionProgress", 1.0f);
+        }
+
+        yield return new WaitForSeconds(0.5f);
+    }
+
+    private void CreateFragments()
+    {
+        for (int i = 0; i < fragmentCount; i++)
+        {
+            GameObject fragment = Instantiate(fragmentPrefab, transform.position, Random.rotation);
+            fragment.transform.localScale = Vector3.one * Random.Range(0.5f, 1.5f); // Randomize scale for fragments
+            Rigidbody rb = fragment.AddComponent<Rigidbody>();
+            rb.AddExplosionForce(500f, transform.position, 5f); // Explode fragments
+            // Optional: Add a fragment shader controller if needed
+            // fragment.AddComponent<FragmentShaderController>().Initialize(this);
+        }
+    }
 }
