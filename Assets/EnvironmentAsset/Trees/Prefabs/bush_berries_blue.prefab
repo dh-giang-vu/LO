@@ -152,6 +152,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f0f67934248f6c5478bf4917bd8c370c, type: 2}
   - {fileID: 11400000, guid: f0f67934248f6c5478bf4917bd8c370c, type: 2}
   - {fileID: 11400000, guid: f0f67934248f6c5478bf4917bd8c370c, type: 2}
+  - {fileID: 11400000, guid: f0f67934248f6c5478bf4917bd8c370c, type: 2}
+  - {fileID: 11400000, guid: f0f67934248f6c5478bf4917bd8c370c, type: 2}
   resourceCollectionSound: {fileID: 8300000, guid: 95fb064a3a7bb4043bf04df69df37e41, type: 3}
 --- !u!82 &1966496940200345419
 AudioSource:

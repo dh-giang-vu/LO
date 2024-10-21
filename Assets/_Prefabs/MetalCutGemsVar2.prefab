@@ -127,6 +127,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 22f79ec8e9e4b5849b05476d2b10da33, type: 2}
   - {fileID: 11400000, guid: 084d311cae0e97342bcdfc8c66006cb9, type: 2}
   - {fileID: 11400000, guid: 084d311cae0e97342bcdfc8c66006cb9, type: 2}
+  - {fileID: 11400000, guid: 084d311cae0e97342bcdfc8c66006cb9, type: 2}
   resourceCollectionSound: {fileID: 8300000, guid: d1bcf871da68d7f45a40014de4d0c815, type: 3}
 --- !u!54 &3268555078555677332
 Rigidbody:
