@@ -59,7 +59,7 @@ public class ScreenPostProcessing : MonoBehaviour
 
         public void GhostFilterOn()
     {
-        Color targetColor = new Color(0.7f, 0.7f, 0.7f); // Target ghost filter color
+        Color targetColor = new Color(0.3f, 0.3f, 0.3f); // Target ghost filter color
         if (!isFading) StartCoroutine(FadeColor(targetColor));
     }
 
