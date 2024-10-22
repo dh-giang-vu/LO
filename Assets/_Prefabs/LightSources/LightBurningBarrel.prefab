@@ -28776,7 +28776,7 @@ MonoBehaviour:
   lifespan: 0
   alive: 0
   score: 0
-  intensity: 1
+  intensity: 3
   refuelWaitTime: 1
   fireCrackle: {fileID: 8300000, guid: 85027199221c8fc42bc6c831c9c7b01a, type: 3}
 --- !u!135 &6184782832801052070
