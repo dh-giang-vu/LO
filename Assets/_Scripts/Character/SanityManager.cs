@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 public class SanityManager : MonoBehaviour
 {
-    [SerializeField, Range(0, 100)] private float deductionRate = 5.0f; // Deduction rate percentage per second (5 means 5% per second)
+    [SerializeField, Range(0, 100)] private float deductionRate = 3f; // Deduction rate percentage per second (5 means 5% per second)
     [SerializeField, Range(0, 1)] private float lowSanityThreshold = 0.5f;
     [SerializeField] private UnityEvent onLowSanity;
     
