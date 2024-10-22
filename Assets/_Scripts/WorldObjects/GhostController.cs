@@ -14,6 +14,7 @@ public class GhostController : MonoBehaviour, ISanityProvider
     // Store the original values for restoration later
     private float originalTransparency;
     private Color originalAuraColor;
+    bool active = true;
 
     void Start()
     {
@@ -85,12 +86,14 @@ public class GhostController : MonoBehaviour, ISanityProvider
     {
         yield return new WaitForSeconds(timeToLive);
         ghostSpawner.RemoveGhost(gameObject);
+        active = false;
         Destroy(gameObject);
     }
     public float getSanityEffect() {
-        return -0.05f;
+        // return -0.05f;
+        return 0;
     }
     public bool isActive() {
-        return true;
+        return active;
     }
 }
