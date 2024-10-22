@@ -88,7 +88,7 @@ public class GhostController : MonoBehaviour, ISanityProvider
         Destroy(gameObject);
     }
     public float getSanityEffect() {
-        return -0.5f;
+        return -0.05f;
     }
     public bool isActive() {
         return true;
