@@ -72,7 +72,7 @@ public class InteractionHandler : MonoBehaviour
         CollectResource nearestResource = GetNearestInRangeResource();
         if (nearestResource == null)
         {
-            return "";
+            return "NOTHING";
         }
         string resourceTag = nearestResource.gameObject.tag;
         inRangeResources.Remove(nearestResource);
@@ -109,12 +109,16 @@ public class InteractionHandler : MonoBehaviour
         return nearest;
     }
 
-    public void RefuelLightSources()
+    public bool RefuelLightSources()
     {
         for (int i = 0; i < inRangeLightSources.Count; i++)
         {
             StartCoroutine(inRangeLightSources[i].ManualRefuel());
         }
+        if (inRangeLightSources.Count == 0) {
+            return false;
+        }
+        return true;
     }
 
     void OnTriggerEnter(Collider other)
