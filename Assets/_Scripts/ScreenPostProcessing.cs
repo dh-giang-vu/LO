@@ -17,6 +17,8 @@ public class ScreenPostProcessing : MonoBehaviour
     public float minDistortion = -1f;   // Minimum distortion intensity
 
     private bool increasing = true;       // Whether the distortion is increasing or decreasing
+    bool isFading = false;
+    public float fadeDuration = 1f; // Duration of the fade
 
     // Start is called before the first frame update
     void Start()
@@ -53,6 +55,37 @@ public class ScreenPostProcessing : MonoBehaviour
     }
     public void LightSourceFilterOff() {
         colorAdjustments.colorFilter.value = new Color(colorAdjustments.colorFilter.value.r, colorAdjustments.colorFilter.value.g, 1);
+    }
+
+        public void GhostFilterOn()
+    {
+        Color targetColor = new Color(0.7f, 0.7f, 0.7f); // Target ghost filter color
+        if (!isFading) StartCoroutine(FadeColor(targetColor));
+    }
+
+    public void GhostFilterOff()
+    {
+        Color targetColor = new Color(1f, 1f, 1f); // Target default color
+        if (!isFading) StartCoroutine(FadeColor(targetColor));
+    }
+
+        private IEnumerator FadeColor(Color newColor)
+    {
+        isFading = true;
+        Color currentColor = colorAdjustments.colorFilter.value; // Current color
+        float elapsedTime = 0f;
+
+        while (elapsedTime < fadeDuration)
+        {
+            // Lerp between the current and target color
+            colorAdjustments.colorFilter.value = Color.Lerp(currentColor, newColor, elapsedTime / fadeDuration);
+            elapsedTime += Time.deltaTime; // Increase elapsed time
+            yield return null; // Wait for the next frame
+        }
+
+        // Ensure final color is set at the end of the fade
+        colorAdjustments.colorFilter.value = newColor;
+        isFading = false;
     }
 
     public void AdjustFade(float intensity) {
