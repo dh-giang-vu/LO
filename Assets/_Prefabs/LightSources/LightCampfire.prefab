@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceForce: 5
-  groundYLevel: 3
+  BottomYLevel: 3
   targetCamera: {fileID: 0}
 --- !u!54 &1865793871344932105
 Rigidbody:

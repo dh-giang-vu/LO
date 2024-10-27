@@ -322,7 +322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceForce: 5
-  groundYLevel: 2
+  BottomYLevel: 3
   targetCamera: {fileID: 0}
 --- !u!54 &5442362224014904094
 Rigidbody:
@@ -359,6 +359,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6940551035694054606}
     m_Modifications:
+    - target: {fileID: 232999558278850453, guid: 9becd698a0db57748bebba3c965857a9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 232999558278850453, guid: 9becd698a0db57748bebba3c965857a9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024888774253903835, guid: 9becd698a0db57748bebba3c965857a9, type: 3}
+      propertyPath: m_Range
+      value: 6.328355
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024888774253903835, guid: 9becd698a0db57748bebba3c965857a9, type: 3}
+      propertyPath: m_SpotAngle
+      value: 139.9072
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024888774253903835, guid: 9becd698a0db57748bebba3c965857a9, type: 3}
+      propertyPath: m_InnerSpotAngle
+      value: 139.9072
+      objectReference: {fileID: 0}
     - target: {fileID: 4711600199874302990, guid: 9becd698a0db57748bebba3c965857a9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
