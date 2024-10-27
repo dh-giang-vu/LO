@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -2983594061022451150}
   - component: {fileID: 2013308808606432399}
   - component: {fileID: 3840699651878008531}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: WrappedTorch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
