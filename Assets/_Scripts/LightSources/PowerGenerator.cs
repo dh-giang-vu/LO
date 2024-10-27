@@ -130,7 +130,7 @@ public class PowerGenerator : LightSource
 
     public override bool isActive()
     {
-        return alive;
+        return false;
     }
 
     public override float getSanityEffect()
