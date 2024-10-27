@@ -16,6 +16,7 @@ public class PowerGenerator : LightSource
     [SerializeField] private AudioClip generatorRunLoopAudio;
     [SerializeField] private float audioBlendDuration = 0.1f;
     private AudioSource audioSource;
+    [SerializeField] RefuelMarker refuelMarker; 
 
     void Start()
     {
@@ -46,6 +47,11 @@ public class PowerGenerator : LightSource
                 audioSource.Stop();
             }
             Die();
+        }
+        if (refuelMarker != null && Refuelable()) {
+            refuelMarker.Activate();
+        } else {
+            refuelMarker.Deactivate();
         }
     }
 

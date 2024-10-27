@@ -17,7 +17,8 @@ public class LightSourceManager : LightSource
     [SerializeField] private float refuelWaitTime = 1f;
 
     // SFX
-    [SerializeField] private AudioClip fireCrackle;    
+    [SerializeField] private AudioClip fireCrackle;   
+    [SerializeField] RefuelMarker refuelMarker; 
     private AudioSource audioSource;
 
     void Start()
@@ -56,6 +57,11 @@ public class LightSourceManager : LightSource
         else if (lifespan <= 0 && alive)
         {
             Die();
+        }
+        if (refuelMarker != null && Refuelable()) {
+            refuelMarker.Activate();
+        } else {
+            refuelMarker.Deactivate();
         }
     }
 
