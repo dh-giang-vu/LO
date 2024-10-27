@@ -7697,6 +7697,7 @@ MonoBehaviour:
   speed: 1
   maxDistortion: 1
   minDistortion: -1
+  fadeDuration: 1
 --- !u!114 &1315217711
 MonoBehaviour:
   m_ObjectHideFlags: 0

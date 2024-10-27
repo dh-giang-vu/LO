@@ -131,4 +131,11 @@ public class PowerGenerator : LightSource
     {
         return 0.0f;
     }
+
+    public override bool Refuelable()
+    {
+        if (lifespan < maxLifespan*0.25)
+            return true;
+        return false;
+    }
 }

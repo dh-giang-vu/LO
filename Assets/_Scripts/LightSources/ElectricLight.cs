@@ -55,4 +55,8 @@ public class ElectricLight : LightSource
         // throw new System.NotImplementedException();
         return null;
     }
+    public override bool Refuelable()
+    {
+        return false;
+    }
 }
