@@ -4845,6 +4845,7 @@ GameObject:
   - component: {fileID: 8487384039557402597}
   - component: {fileID: 5782923884466665960}
   - component: {fileID: 1019392068101882643}
+  - component: {fileID: 1906078653825207311}
   - component: {fileID: 1213673089327156885}
   m_Layer: 0
   m_Name: Adam
@@ -4954,6 +4955,36 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onInGhostRange:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1906078653825207311}
+        m_TargetAssemblyTypeName: CharacterSFX, Assembly-CSharp
+        m_MethodName: PlayGhostSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onNotInGhostRange:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1906078653825207311}
+        m_TargetAssemblyTypeName: CharacterSFX, Assembly-CSharp
+        m_MethodName: StopGhostAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &5782923884466665960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4984,8 +5015,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sanityManager: {fileID: 8487384039557402597}
   objectToToggle: {fileID: 6798033043715677940}
+  onSanityGain:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1906078653825207311}
+        m_TargetAssemblyTypeName: CharacterSFX, Assembly-CSharp
+        m_MethodName: PlaySanityGain
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onStopSanityGain:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1906078653825207311}
+        m_TargetAssemblyTypeName: CharacterSFX, Assembly-CSharp
+        m_MethodName: StopSanityGainAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1906078653825207311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3738711090394718851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c96e453116dd55843a60b2493671aedc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inGhostRangeAudio: {fileID: 8300000, guid: e4ed9d1e3bb66614883978f463918fc6, type: 3}
   gainSanityAudio: {fileID: 8300000, guid: 08b10b1fc404bdf44a76e1da0938ac42, type: 3}
-  audioVolume: 1
+  sanityAudioVolume: 0.3
+  ghostAudioVolume: 1
 --- !u!82 &1213673089327156885
 AudioSource:
   m_ObjectHideFlags: 0

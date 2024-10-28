@@ -1,20 +1,15 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BuildingObjectToggle : MonoBehaviour
 {
     [SerializeField] private SanityManager sanityManager; // Reference to the SanityManager
     [SerializeField] private GameObject objectToToggle;   // The GameObject to enable/disable
-    AudioSource audioSource;
-    [SerializeField] private AudioClip gainSanityAudio;   // The GameObject to enable/disable
-    [SerializeField, Range(0, 1)] private float audioVolume = 1.0f;
+    [SerializeField] UnityEvent onSanityGain;
+    [SerializeField] UnityEvent onStopSanityGain;
 
     private bool inBuilding = false;
-
-    void Start()
-    {
-        audioSource = GetComponent<AudioSource>();
-    }
 
     void Update()
     {
@@ -26,19 +21,11 @@ public class BuildingObjectToggle : MonoBehaviour
         
         if (inBuilding && currentSanity < 1.0f)
         {
-            // If audio is not already playing, play the sanity gain sound
-            if (!audioSource.isPlaying)
-            {
-                audioSource.PlayOneShot(gainSanityAudio, audioVolume);
-            }
+            onSanityGain.Invoke();
         }
         else
         {
-            // Stop the audio if the player is not in the building or sanity is full
-            if (audioSource.isPlaying)
-            {
-                audioSource.Stop();
-            }
+            onStopSanityGain.Invoke();
         }
     }
 
