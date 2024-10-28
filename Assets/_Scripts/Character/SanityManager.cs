@@ -6,9 +6,11 @@ using UnityEngine.Events;
 
 public class SanityManager : MonoBehaviour
 {
-    [SerializeField, Range(0, 100)] private float deductionRate = 5.0f; // Deduction rate percentage per second (5 means 5% per second)
+    [SerializeField, Range(0, 100)] private float deductionRate = 3f; // Deduction rate percentage per second (5 means 5% per second)
     [SerializeField, Range(0, 1)] private float lowSanityThreshold = 0.5f;
     [SerializeField] private UnityEvent onLowSanity;
+    [SerializeField] private UnityEvent onInGhostRange;
+    [SerializeField] private UnityEvent onNotInGhostRange;
     
     private float sanityAmount; // Sanity value between 0.0 and 1.0
     private List<ISanityProvider> inRangeSanityProviders;
@@ -58,6 +60,7 @@ public class SanityManager : MonoBehaviour
     private void UpdateSanity()
     {
         bool inLight = false;
+        bool inGhost = false;
         List<ISanityProvider> activeSanityProviders = GetActiveSanityProviders();
 
         foreach (ISanityProvider sanityProvider in activeSanityProviders)
@@ -65,9 +68,12 @@ public class SanityManager : MonoBehaviour
             if (sanityProvider is LightSource) {
                 inLight = true;
             }
+
+            inGhost |= sanityProvider is GhostController;
+
             float sanityEffect = sanityProvider.getSanityEffect();
             // Clamp sanity amount between 0.0 and 1.0
-            sanityAmount = Mathf.Clamp(sanityAmount + sanityEffect / 5.0f, 0.0f, 1.0f);
+            sanityAmount = Mathf.Clamp(sanityAmount + sanityEffect, 0.0f, 1.0f);
         }
         if (!inLight) {
             float sanityReduction = deductionRate / 10.0f; // Converts 5% to 0.05
@@ -78,6 +84,15 @@ public class SanityManager : MonoBehaviour
         if (sanityAmount < lowSanityThreshold)
         {
             this.onLowSanity.Invoke();
+        }
+
+        if (inGhost)
+        {
+            this.onInGhostRange.Invoke();
+        }
+        else
+        {
+            this.onNotInGhostRange.Invoke();
         }
     }
 

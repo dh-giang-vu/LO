@@ -34,6 +34,7 @@ public class InteractionHandler : MonoBehaviour
 
     void Update()
     {
+        Component interactable = GetNearestInRangeInteractable();
         // Check if there are any crows in range
         if (inRangeCrows.Count > 0)
         {
@@ -46,14 +47,13 @@ public class InteractionHandler : MonoBehaviour
             interfaceManager.OnCrowEnter();
         }
         // Check if there are any resources in range if no crows are nearby
-        else if (inRangeResources.Count > 0)
+        else if (interactable != null)
         {
-            // Get the tag of the nearest resource in range
-            string resourceTag = GetNearestInRangeResource().gameObject.tag;
-
-            // Format and display the text for resource interaction
-            resourceText.text = $"E - Collect {resourceTag}";
-
+            if (interactable is LightSource) {
+                resourceText.text = $"E - Refuel";
+            } else if (interactable is CollectResource){
+                resourceText.text = $"E - Collect {interactable.gameObject.tag}";
+            }
             // Set the target scale to full size (pop in)
             targetScale = Vector3.one;
         }
@@ -72,7 +72,7 @@ public class InteractionHandler : MonoBehaviour
         CollectResource nearestResource = GetNearestInRangeResource();
         if (nearestResource == null)
         {
-            return "";
+            return "NOTHING";
         }
         string resourceTag = nearestResource.gameObject.tag;
         inRangeResources.Remove(nearestResource);
@@ -109,12 +109,50 @@ public class InteractionHandler : MonoBehaviour
         return nearest;
     }
 
-    public void RefuelLightSources()
+    private Component GetNearestInRangeInteractable()
     {
+        Component nearest = null;
+        float minDistance = Mathf.Infinity;
+        Vector3 playerPosition = transform.position;
+
+        foreach (CollectResource resource in inRangeResources)
+        {
+            float distance = Vector3.Distance(playerPosition, resource.transform.position);
+            if (distance < minDistance)
+            {
+                minDistance = distance;
+                nearest = resource;
+            }
+        }
+        foreach (LightSource lightsource in inRangeLightSources)
+        {
+            if (lightsource.Refuelable()) {
+                float distance = Vector3.Distance(playerPosition, lightsource.transform.position);
+                if (distance < minDistance)
+                {
+                    minDistance = distance;
+                    nearest = lightsource;
+                }
+            }
+        }
+
+        return nearest;
+    }
+
+    public bool RefuelLightSources()
+    {
+        bool refueled = false;
         for (int i = 0; i < inRangeLightSources.Count; i++)
         {
-            StartCoroutine(inRangeLightSources[i].ManualRefuel());
+            if (inRangeLightSources[i].Refuelable()) {
+                StartCoroutine(inRangeLightSources[i].ManualRefuel());
+                refueled = true;
+            }
         }
+        if (!refueled) {
+            return false;
+        }
+        return true;
     }
 
     void OnTriggerEnter(Collider other)

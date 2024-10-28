@@ -26,4 +26,5 @@ public abstract class LightSource : MonoBehaviour, ISanityProvider
 
     public abstract bool isActive();
     public abstract float getSanityEffect();
+    public abstract bool Refuelable();
 }

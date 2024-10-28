@@ -59,4 +59,9 @@ public class LanternLightSource : LightSource
     {
         return 0.0f;
     }
+
+    public override bool Refuelable()
+    {
+        throw new System.NotImplementedException();
+    }
 }

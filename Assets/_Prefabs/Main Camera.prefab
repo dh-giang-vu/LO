@@ -159,8 +159,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   offset: {x: 0, y: 3, z: -6}
-  yawSensitivity: 500
-  pitchSensitivity: 400
+  yawSensitivity: 150
+  pitchSensitivity: 150
   zoomSensitivity: 10
   minPitch: -15
   maxPitch: 30

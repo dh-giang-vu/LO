@@ -9,6 +9,7 @@ public class ScreenEffectManager : MonoBehaviour
 
     bool inBuilding = false;
     bool inLight = false;
+    bool inGhost = false;
 
     void Update()
     {
@@ -31,12 +32,20 @@ public class ScreenEffectManager : MonoBehaviour
         {
             LightSourceEffectOff();
         }
+
+        if (inGhost) {
+            screenPostProcessing.GhostFilterOn();
+        }
+        else {
+            screenPostProcessing.GhostFilterOff();
+        }
     }
 
     public void WithinAreaEffect()
     {
         inBuilding = false;
         inLight = false;
+        inGhost = false;
 
         List<ISanityProvider> sanityProviders = sanityManager.GetActiveSanityProviders();
         foreach (ISanityProvider provider in sanityProviders)
@@ -48,6 +57,9 @@ public class ScreenEffectManager : MonoBehaviour
             else if (provider is BuildingSanity)
             {
                 inBuilding = true;  // Player is inside a building
+            }
+            else if (provider is GhostController) {
+                inGhost = true;
             }
         }
     }
