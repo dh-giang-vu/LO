@@ -4639,6 +4639,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8107441000420698372, guid: 06f17c02817a13042bcf328895d511d2, type: 3}
   m_PrefabInstance: {fileID: 7228574847172194008}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &767308495 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1906078653825207311, guid: 06f17c02817a13042bcf328895d511d2, type: 3}
+  m_PrefabInstance: {fileID: 7228574847172194008}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767308475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c96e453116dd55843a60b2493671aedc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &772415405
 GameObject:
   m_ObjectHideFlags: 0
@@ -17046,32 +17057,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: ItemPlacer
       objectReference: {fileID: 0}
-    - target: {fileID: 8599974727955502566, guid: d18a5185afe985e48a7fd3819a8ae6d8, type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 2538213586668174740, guid: 283ecc35094931247813cc9a86a31bc7, type: 2}
-    - target: {fileID: 8712353179047368057, guid: d18a5185afe985e48a7fd3819a8ae6d8, type: 3}
-      propertyPath: placeItemSfx
-      value: 
-      objectReference: {fileID: 8300000, guid: d67d8be1af785d94a9db006bb675122d, type: 3}
     - target: {fileID: 8712353179047368057, guid: d18a5185afe985e48a7fd3819a8ae6d8, type: 3}
       propertyPath: cloudParticleSystem
       value: 
       objectReference: {fileID: 1435722634}
     - target: {fileID: 8712353179047368057, guid: d18a5185afe985e48a7fd3819a8ae6d8, type: 3}
-      propertyPath: onCancelCrafting.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8712353179047368057, guid: d18a5185afe985e48a7fd3819a8ae6d8, type: 3}
       propertyPath: onCancelItemPlacing.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8712353179047368057, guid: d18a5185afe985e48a7fd3819a8ae6d8, type: 3}
-      propertyPath: onSuccessfulCrafting.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8712353179047368057, guid: d18a5185afe985e48a7fd3819a8ae6d8, type: 3}
-      propertyPath: onCancelCrafting.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8712353179047368057, guid: d18a5185afe985e48a7fd3819a8ae6d8, type: 3}
@@ -17079,20 +17070,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1136693392}
     - target: {fileID: 8712353179047368057, guid: d18a5185afe985e48a7fd3819a8ae6d8, type: 3}
-      propertyPath: onSuccessfulCrafting.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8712353179047368057, guid: d18a5185afe985e48a7fd3819a8ae6d8, type: 3}
       propertyPath: onSuccessfulCrafting.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8712353179047368057, guid: d18a5185afe985e48a7fd3819a8ae6d8, type: 3}
-      propertyPath: onCancelCrafting.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8712353179047368057, guid: d18a5185afe985e48a7fd3819a8ae6d8, type: 3}
-      propertyPath: onCancelCrafting.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CancelCraftingItem
       objectReference: {fileID: 0}
     - target: {fileID: 8712353179047368057, guid: d18a5185afe985e48a7fd3819a8ae6d8, type: 3}
       propertyPath: onSuccessfulCrafting.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -17107,40 +17086,16 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8712353179047368057, guid: d18a5185afe985e48a7fd3819a8ae6d8, type: 3}
-      propertyPath: onSuccessfulCrafting.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8712353179047368057, guid: d18a5185afe985e48a7fd3819a8ae6d8, type: 3}
       propertyPath: onSuccessfulCrafting.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8712353179047368057, guid: d18a5185afe985e48a7fd3819a8ae6d8, type: 3}
-      propertyPath: onSuccessfulCrafting.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: FinishCraftingItem
       objectReference: {fileID: 0}
     - target: {fileID: 8712353179047368057, guid: d18a5185afe985e48a7fd3819a8ae6d8, type: 3}
       propertyPath: onSuccessfulCrafting.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: FinishCraftingItem
       objectReference: {fileID: 0}
     - target: {fileID: 8712353179047368057, guid: d18a5185afe985e48a7fd3819a8ae6d8, type: 3}
-      propertyPath: onCancelCrafting.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: CraftingController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8712353179047368057, guid: d18a5185afe985e48a7fd3819a8ae6d8, type: 3}
-      propertyPath: onSuccessfulCrafting.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: CraftingController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8712353179047368057, guid: d18a5185afe985e48a7fd3819a8ae6d8, type: 3}
       propertyPath: onSuccessfulCrafting.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: CraftingController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8712353179047368057, guid: d18a5185afe985e48a7fd3819a8ae6d8, type: 3}
-      propertyPath: onCancelCrafting.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 8712353179047368057, guid: d18a5185afe985e48a7fd3819a8ae6d8, type: 3}
-      propertyPath: onSuccessfulCrafting.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8712353179047368057, guid: d18a5185afe985e48a7fd3819a8ae6d8, type: 3}
       propertyPath: onSuccessfulCrafting.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -17282,13 +17237,65 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 129196819}
     - target: {fileID: 1019392068101882643, guid: 06f17c02817a13042bcf328895d511d2, type: 3}
-      propertyPath: audioVolume
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1019392068101882643, guid: 06f17c02817a13042bcf328895d511d2, type: 3}
       propertyPath: gainSanityAudio
       value: 
       objectReference: {fileID: 8300000, guid: 08b10b1fc404bdf44a76e1da0938ac42, type: 3}
+    - target: {fileID: 1019392068101882643, guid: 06f17c02817a13042bcf328895d511d2, type: 3}
+      propertyPath: onGainSanity.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1019392068101882643, guid: 06f17c02817a13042bcf328895d511d2, type: 3}
+      propertyPath: onStopGainSanity.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1019392068101882643, guid: 06f17c02817a13042bcf328895d511d2, type: 3}
+      propertyPath: onGainSanity.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1019392068101882643, guid: 06f17c02817a13042bcf328895d511d2, type: 3}
+      propertyPath: onGainSanity.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 767308495}
+    - target: {fileID: 1019392068101882643, guid: 06f17c02817a13042bcf328895d511d2, type: 3}
+      propertyPath: onStopGainSanity.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1019392068101882643, guid: 06f17c02817a13042bcf328895d511d2, type: 3}
+      propertyPath: onGainSanity.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1019392068101882643, guid: 06f17c02817a13042bcf328895d511d2, type: 3}
+      propertyPath: onGainSanity.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlaySanityGain
+      objectReference: {fileID: 0}
+    - target: {fileID: 1019392068101882643, guid: 06f17c02817a13042bcf328895d511d2, type: 3}
+      propertyPath: onStopGainSanity.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 767308495}
+    - target: {fileID: 1019392068101882643, guid: 06f17c02817a13042bcf328895d511d2, type: 3}
+      propertyPath: onStopGainSanity.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1019392068101882643, guid: 06f17c02817a13042bcf328895d511d2, type: 3}
+      propertyPath: onStopGainSanity.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StopSanityAudio
+      objectReference: {fileID: 0}
+    - target: {fileID: 1019392068101882643, guid: 06f17c02817a13042bcf328895d511d2, type: 3}
+      propertyPath: onGainSanity.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CharacterSFX, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1019392068101882643, guid: 06f17c02817a13042bcf328895d511d2, type: 3}
+      propertyPath: onStopGainSanity.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CharacterSFX, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1019392068101882643, guid: 06f17c02817a13042bcf328895d511d2, type: 3}
+      propertyPath: onGainSanity.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1019392068101882643, guid: 06f17c02817a13042bcf328895d511d2, type: 3}
+      propertyPath: onStopGainSanity.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3738711090394718851, guid: 06f17c02817a13042bcf328895d511d2, type: 3}
       propertyPath: m_Name
       value: Player
