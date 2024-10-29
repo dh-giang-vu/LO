@@ -70,6 +70,6 @@ public class ProgressTracker : MonoBehaviour
     // Public method to access progress from anywhere
     public float GetProgress()
     {
-        return progress * 4;
+        return progress * 3.5f;
     }
 }
