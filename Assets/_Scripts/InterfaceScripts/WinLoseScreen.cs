@@ -9,7 +9,6 @@ public class WinLoseScreen : MonoBehaviour
     public TextMeshProUGUI gameOverText;  // Main "Game Over" text
     public TextMeshProUGUI glowText;      // Glow layer behind the text
     public Button restartButton;          // Restart button reference
-    public Button quitButton;             // Quit button reference
     public float fadeDuration = 2f;       // Duration for fade-in effect
     public float totalDuration = 4f;      // Total duration for fade in and color change
 
@@ -22,13 +21,11 @@ public class WinLoseScreen : MonoBehaviour
         SetTextAlpha(gameOverText, 0f);
         SetTextAlpha(glowText, 0f);
         SetButtonAlpha(restartButton, 0f); // Hide the entire restart button
-        SetButtonAlpha(quitButton, 0f);    // Hide the entire quit button
 
         // Disable both texts and the buttons at start
         gameOverText.gameObject.SetActive(false);
         glowText.gameObject.SetActive(false);
         restartButton.gameObject.SetActive(false);
-        quitButton.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -47,7 +44,6 @@ public class WinLoseScreen : MonoBehaviour
         gameOverText.gameObject.SetActive(true);
         glowText.gameObject.SetActive(true);
         restartButton.gameObject.SetActive(true);
-        quitButton.gameObject.SetActive(true);
         StartCoroutine(FadeInTextAndGlow());
     }
 
@@ -114,7 +110,6 @@ public class WinLoseScreen : MonoBehaviour
         {
             float buttonAlpha = Mathf.Lerp(0f, 1f, elapsedTime / fadeDuration);
             SetButtonAlpha(restartButton, buttonAlpha); // Fade in the restart button
-            SetButtonAlpha(quitButton, buttonAlpha);    // Fade in the quit button
 
             elapsedTime += Time.deltaTime;
             yield return null;
@@ -122,7 +117,6 @@ public class WinLoseScreen : MonoBehaviour
 
         // Ensure the buttons are fully visible at the end
         SetButtonAlpha(restartButton, 1f);
-        SetButtonAlpha(quitButton, 1f);
     }
 
     // Utility function to set the alpha of the text
@@ -149,13 +143,4 @@ public class WinLoseScreen : MonoBehaviour
         buttonText.color = textColor;
     }
 
-    // Add method to handle quit button functionality
-    public void QuitGame()
-    {
-        #if UNITY_EDITOR
-            UnityEditor.EditorApplication.isPlaying = false; // Exit play mode in editor
-        #else
-            Application.Quit(); // Quit the application in build
-        #endif
-    }
 }
