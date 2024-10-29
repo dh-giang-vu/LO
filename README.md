@@ -282,7 +282,7 @@ These are bugs that were encountered during testing.
 **Blueprint Shader File:** [link](./Assets/_Shaders/BlueprintShader.shader) 
 
 **Description:**  
-The Blueprint Shader creates a holographic effect on items being placed in the game world. Its color is adjustable via uniform variables in a C# script. When an item is blocked by obstacles, it appears red; otherwise, it appears blue to indicate placement readiness.
+The Blueprint Shader applies a holographic effect on items being placed in the game world. The colour is adjustable via uniform variables in a C# script. When an item cannot be placed, i.e. blocked by obstacles, the colour is red; otherwise, the colour is blue to indicate that the item can be placed.
 
 <div align="center">
   <img src="./ReportImages/ShadersFX/blueprint_shader_gif.gif" alt="Blueprint Shader Demo" />
@@ -290,10 +290,10 @@ The Blueprint Shader creates a holographic effect on items being placed in the g
 </div>
 
 **Rationale:**  
-Crafting is central to gameplay, so polished feedback during item placement improves the player experience. This shader visually indicates placement states, reducing confusion and enhancing interaction with crafting mechanics.
+Crafting is a core mechanic of our game, therefore it's important to provide visual feedback during item placement to improve the player experience. This shader visually indicates placement states, reducing confusion and enhancing interaction with crafting mechanics.
 
 **Theory:**  
-The vertex shader is untouched given that we do not wish to displace vertices of the input object’s mesh for a blueprint / hologram effect. Instead, to emulate a hologram effect, the fragment shader renders bars running across the object using the UV coordinates and the sine wave function to set output rgb to 0 at set intervals. The animation of the bars moving is done by translating the sine wave function with respect to game time.
+The vertex shader is mostly untouched given that we do not wish to displace vertices of the input object’s mesh for a blueprint / hologram effect. Instead, to emulate a hologram effect, the fragment shader renders bars running across the object using the UV coordinates and the sine wave function to set output rgb to 0 at set intervals. The animation of the bars moving is done by translating the sine wave function with respect to game time.
 
 **Material Parameters:**
 - [Blueprint Material Link](./Assets/_Shaders/BlueprintShader_Material.mat)
@@ -386,7 +386,7 @@ The Ghost Shader is used to create a material for ghosts, giving them a slightly
 The Ghost Shader is essential for our game, as ghosts are a key feature that adds to its eerie atmosphere. The shader creates a distorted, transparent appearance that enhances the creepy effect of the ghosts. It is difficult to do vertex distortion purely through C# code, which is why a shader is used. Additionally, the ability to adjust parameters for a ghost fade-in effect adds polish to the game, ensuring a smooth transition when the ghost appears.
 
 **Theory:**  
-To create the distortion effect, the vertex shader displaces the input vertex by a sine wave function that is also translated with respect to the game time. This creates a moving wave animation on the ghost’s body. In addition, to give the ghost a more “ghostly” appearance, the fragment shader modifies the output alpha channel and RGB values to render the ghost more transparent and dimmed.
+The distortion effect is achieved by displacing the input vertex in the vertex shader using a sine wave function that varies with game time. This produces a moving wave animation on the ghost's body. To enhance the ghostly look, the fragment shader adjusts the alpha channel and RGB values, making the ghost appear more transparent and dimmed.
 
 **Material Parameters:**  
 - [Ghost Material Link](./Assets/_Shaders/BlueprintShader_Material.mat)
