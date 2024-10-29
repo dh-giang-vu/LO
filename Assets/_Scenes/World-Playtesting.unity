@@ -6232,6 +6232,14 @@ PrefabInstance:
       propertyPath: playerInventory
       value: 
       objectReference: {fileID: 802012023}
+    - target: {fileID: 443813518380927925, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
+      propertyPath: tutorObjectToEnable
+      value: 
+      objectReference: {fileID: 1238333992}
+    - target: {fileID: 443813518380927925, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
+      propertyPath: electricObjectToEnable
+      value: 
+      objectReference: {fileID: 1715222432}
     - target: {fileID: 1917698436883903848, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
       propertyPath: m_text
       value: 'Walk with "WASD"
@@ -6333,7 +6341,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1136693392}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1606424416636960389, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
@@ -6535,6 +6544,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1220598443}
   m_CullTransparentMesh: 1
+--- !u!1 &1238333992 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5661985144359601764, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
+  m_PrefabInstance: {fileID: 1205047579}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1241818938
 GameObject:
   m_ObjectHideFlags: 0
@@ -10656,6 +10670,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19e48c26020fafe418cb4c2298a4fd3f, type: 3}
+--- !u!1 &1715222432 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2032605393160286169, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
+  m_PrefabInstance: {fileID: 1205047579}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1720138961
 PrefabInstance:
   m_ObjectHideFlags: 0
