@@ -88,7 +88,6 @@ public class PowerGenerator : LightSource
             inventory.UpdateMaterialCounts();
             yield return new WaitForSeconds(refuelWaitTime);
             Refuel();
-            Debug.Log("Generator refueled, 1 coal consumed.");
 
             // Play the generator start sound
             audioSource.PlayOneShot(generatorStartAudio);
