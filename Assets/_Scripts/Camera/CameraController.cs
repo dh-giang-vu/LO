@@ -26,6 +26,7 @@ public class CameraController : MonoBehaviour
     private void Start()
     {
         currentZoom = offset.magnitude;
+        AdjustSensitivity();
     }
 
     private void LateUpdate()
@@ -35,7 +36,7 @@ public class CameraController : MonoBehaviour
         UpdateCameraPosition();
     }
 
-    void HandleRotation()
+    private void HandleRotation()
     {
         // Only handle rotation when player is holding Right Mouse Button down
         if (Input.GetMouseButton(1))
@@ -49,14 +50,14 @@ public class CameraController : MonoBehaviour
         }
     }
 
-    void HandleZoom()
+    private void HandleZoom()
     {
         // Adjust zoom based on mouse scroll wheel input
         currentZoom -= Input.GetAxis("Mouse ScrollWheel") * zoomSensitivity;
         currentZoom = Mathf.Clamp(currentZoom, minZoom, maxZoom);
     }
 
-    void UpdateCameraPosition()
+    private void UpdateCameraPosition()
     {
         // Calculate the new position and rotation of the camera based on yaw, pitch, and zoom
         Quaternion rotation = Quaternion.Euler(pitch, yaw, 0); 
@@ -65,5 +66,18 @@ public class CameraController : MonoBehaviour
         // Set camera position + points towards player
         transform.position = newPosition;
         transform.LookAt(player.position + Vector3.up * 1.5f);  // look slightly abover player's "feet"
+    }
+
+    private void AdjustSensitivity()
+    {
+        // Determine a scaling factor (smaller screen = higher sensitivity)
+        float sensitivityFactor = Mathf.Clamp(1800f / Screen.width, 0.3f, 2f);
+
+        Debug.LogWarning("sensitivity factor: " + sensitivityFactor.ToString());
+
+        // Adjust sensitivities based on screen size
+        yawSensitivity *= sensitivityFactor;
+        pitchSensitivity *= sensitivityFactor;
+        // zoomSensitivity *= sensitivityFactor;
     }
 }
