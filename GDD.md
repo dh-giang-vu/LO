@@ -288,7 +288,7 @@ The final stage of the "Thorns" obstacle, falling apart and allowing the player 
   - **Decoration**
     | Name | Image | Materials Required |
     | --- | --- | --- |
-    | Barrel | <div align="center"><img src="./GDDImages/Objects and Interactables/barrel.webp"/></div> | 3 _STONE_, 2 FIBER |
+    | Barrel | <div align="center"><img src="./GDDImages/Objects and Interactables/barrel.png"/></div> | 3 _STONE_, 2 FIBER |
     | Chair | <div align="center"><img src="./GDDImages/Objects and Interactables/chair.png"/></div> | 2 _WOOD_, 2 _FIBER_ |
     | Table | <div align="center"><img src="./GDDImages/Objects and Interactables/table.png"/></div> | 3 _WOOD_, 2 _FIBER_ |
     
