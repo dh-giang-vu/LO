@@ -219,6 +219,9 @@ Who is responsible for each task? How will you ensure that everyone contributes 
 
 In total, we conducted 7 surveys for a query technique, and 7 cooperative evaluations for an observation technique.
 
+The raw data for survey is here [survey raw data](EvaluationData/Survey_raw.pdf)
+The observation note is here [observation note raw data](EvaluationData/Observation_raw.pdf)
+
 **Quantitative Data**
 This is the average score from the survey for each category. (1-5 scaling)
 
