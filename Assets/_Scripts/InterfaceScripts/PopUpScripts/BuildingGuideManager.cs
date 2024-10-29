@@ -6,12 +6,12 @@ public class BuildingGuideManager : MonoBehaviour
 {
     [SerializeField] GameObject objectToDisable;
     [SerializeField] GameObject objectToEnable;
-    [SerializeField] PanelManager panelManager;
+    [SerializeField] CraftingController craftingController;
 
 
     void Update()
     {
-        if (panelManager.GetNumberOfBuildings() != 0) 
+        if (craftingController.buildCrafted is true) 
         {
             objectToDisable.SetActive(false);
             objectToEnable.SetActive(true);

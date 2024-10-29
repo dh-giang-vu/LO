@@ -1,22 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class LightGuideManager : MonoBehaviour
+public class SprintGuideManager : MonoBehaviour
 {
     [SerializeField] GameObject objectToDisable;
     [SerializeField] GameObject objectToEnable;
-    [SerializeField] CraftingController craftingController;
-
-
     void Update()
     {
-        if (craftingController.lightCrafted is true) 
+        if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift))
         {
             objectToDisable.SetActive(false);
             objectToEnable.SetActive(true);
-        }
+        }       
     }
-
 }

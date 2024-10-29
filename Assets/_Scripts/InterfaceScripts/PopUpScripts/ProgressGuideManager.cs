@@ -10,7 +10,7 @@ public class ProgressGuideManager : MonoBehaviour
 
     void Update()
     {
-        if (progressTracker.GetProgress() >= 0.08)
+        if (progressTracker.GetProgress() > 0.145)
         {
             objectToDisable.SetActive(false);
             objectToEnable.SetActive(true);
