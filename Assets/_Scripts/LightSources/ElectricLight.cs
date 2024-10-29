@@ -5,6 +5,7 @@ using UnityEngine;
 public class ElectricLight : LightSource
 {
     protected Light light;
+    [SerializeField] RefuelMarker refuelMarker; 
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,7 @@ public class ElectricLight : LightSource
         {
             light.enabled = true;
             alive = true;
+            DeactivateMarker();
         }
     }
 
@@ -37,6 +39,7 @@ public class ElectricLight : LightSource
         {
             light.enabled = false;
             alive = false;
+            ActivateMarker();
         }
     }
 
@@ -58,5 +61,14 @@ public class ElectricLight : LightSource
     public override bool Refuelable()
     {
         return false;
+    }
+    
+    public void ActivateMarker()
+    {
+        refuelMarker.Activate();
+    }
+    public void DeactivateMarker()
+    {
+        refuelMarker.Deactivate();
     }
 }

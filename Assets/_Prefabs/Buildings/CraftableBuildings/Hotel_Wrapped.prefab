@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6808737304601622341}
   - component: {fileID: 2181977943656960423}
   - component: {fileID: 5595335026863410676}
+  - component: {fileID: 1319701618765776213}
   m_Layer: 0
   m_Name: Hotel_Wrapped
   m_TagString: Untagged
@@ -76,6 +77,19 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 17
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1319701618765776213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2082922607834137827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 697cd810a1190e240846e5e455ef1df4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sanityEffect: 0.2
 --- !u!1001 &4987380339629268263
 PrefabInstance:
   m_ObjectHideFlags: 0

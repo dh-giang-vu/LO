@@ -6,7 +6,6 @@ Shader "Custom/GhostSineWaveShader"
         _Transparency ("Transparency", Range(0, 1)) = 0.5
         _Darkness ("Darkness", Range(0, 1)) = 0.5
         _AuraColor ("Aura Color", Color) = (1, 1, 1, 1)
-        _AuraSize ("Aura Size", Range(0, 1)) = 0.5
         _DistortionAmount ("Distortion Amount", Range(0, 1)) = 0.1
         _TimeScale ("Time Scale", Range(0, 5)) = 1.0
         
@@ -67,11 +66,7 @@ Shader "Custom/GhostSineWaveShader"
                 texColor.rgb *= (1.0 - _Darkness);
                 texColor.a *= _Transparency;
 
-                float distance = length(i.vertex.xy - float2(0.5, 0.5)) * 2.0; // Use the screen position for the aura
-                float auraAlpha = smoothstep(0.5 - _AuraSize, 0.5 + _AuraSize, distance);
-                
-                fixed4 aura = _AuraColor * auraAlpha;
-                return texColor + aura;
+                return texColor + _AuraColor;
             }
             ENDCG
         }

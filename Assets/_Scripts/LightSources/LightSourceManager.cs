@@ -75,7 +75,6 @@ public class LightSourceManager : LightSource
             inventory.UpdateMaterialCounts();
             yield return new WaitForSeconds(refuelWaitTime);
             Refuel();
-            Debug.Log("Fire refueled, 1 coal consumed.");
         }
         else
         {
@@ -106,12 +105,16 @@ public class LightSourceManager : LightSource
 
     private void TurnOffSmoke()
     {
-        smokes.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+        if (smokes != null) {
+            smokes.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+        }
     }
 
     private void TurnOnSmoke()
     {
-        smokes.Play();
+        if (smokes != null) {
+            smokes.Play();
+        }
     }
 
     public override bool isActive()
@@ -126,7 +129,7 @@ public class LightSourceManager : LightSource
 
     private void PlayRefuelSFX()
     {
-        if (!audioSource.isPlaying)
+        if (audioSource != null && !audioSource.isPlaying)
         {
             audioSource.clip = fireCrackle;
             audioSource.loop = true;
@@ -138,7 +141,7 @@ public class LightSourceManager : LightSource
     private void StopRefuelSFX()
     {
         // Stop the generator run loop audio
-        if (audioSource.isPlaying)
+        if (audioSource != null && audioSource.isPlaying)
         {
             audioSource.Stop();
         }
