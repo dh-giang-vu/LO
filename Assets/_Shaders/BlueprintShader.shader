@@ -17,9 +17,6 @@ Shader "Custom/BlueprintShader"
         _Color1("Color 1", color) = (1,1,1,1)
         _Color2("Color 2", color) = (1,1,1,1)
 
-        // _Color ("Tint Color", Color) = (0, 0, 1, 0.5) // Blue color
-        // _MainTex ("Texture", 2D) = "white" {}
-        // _Transparency ("Transparency", Range(0, 1)) = 0.5
     }
     SubShader
     {

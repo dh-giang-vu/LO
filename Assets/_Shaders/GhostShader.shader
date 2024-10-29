@@ -50,11 +50,11 @@ Shader "Custom/GhostSineWaveShader"
             v2f vert(appdata_t v)
             {
                 v2f o;
-                float time = _Time.y * _TimeScale; // Get time for animation
-                float sineWave = sin(v.vertex.y * 10.0 + time) * _DistortionAmount; // Create a sine wave
+                float time = _Time.y * _TimeScale;
+                float sineWave = sin(v.vertex.y * 10.0 + time) * _DistortionAmount;
 
-                // Distort vertex position
-                v.vertex.y += sineWave; // Apply distortion to the Y position
+                
+                v.vertex.y += sineWave;
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 o.uv = TRANSFORM_TEX(v.uv, _MainTex);
                 return o;
