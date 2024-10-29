@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3300000}
   - component: {fileID: 2300000}
   - component: {fileID: 9500000}
-  - component: {fileID: 5318396263217873476}
   m_Layer: 0
   m_Name: JackoLantern
   m_TagString: Untagged
@@ -106,23 +105,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &5318396263217873476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a3aec6e311e38b4c8053eff2e0fd037, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxLifespan: 10
-  lifespan: 0
-  alive: 0
-  score: 0
-  intensity: 200
-  refuelWaitTime: 1
-  fireCrackle: {fileID: 0}
-  refuelMarker: {fileID: 0}
