@@ -9969,11 +9969,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1181942400531428858, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: requiredWood
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1181942400531428858, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: requiredFiber
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1181942400531428858, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: requiredMetal
@@ -10026,7 +10026,7 @@ PrefabInstance:
         Duration: 5 minutes
 
         AoE
-        Radius: 9'
+        Radius: 10'
       objectReference: {fileID: 0}
     - target: {fileID: 2256987072062010018, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: m_SizeDelta.y
@@ -10220,12 +10220,12 @@ PrefabInstance:
       propertyPath: m_text
       value: 'Requires
 
-        <sprite name="Wood"> x1
+        <sprite name="Wood"> x3
 
         <sprite name="Coal">
         x2
 
-        <sprite name="Fiber"> x5'
+        <sprite name="Fiber"> x8'
       objectReference: {fileID: 0}
     - target: {fileID: 4181327018851078097, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: m_AnchorMax.y
