@@ -276,41 +276,40 @@ Almost all participants loved the theme and the concept of the game. They said t
 
 Several bugs were reported for the playtest.
 ### Improvements
-Problem:  Player were annoyed that every time they press E, the gathering animation would play, and they would not be able to move, which can be whilst exploring in the dark
-Solution:  animations will now only play if player presses E while being close to an interactable
 
-Problem: Does not know that you can relight lightsources, no indicator, no instruction for that.
-Solution: lightsources can only be relit when it is near dead, there is now an indicator for when it is relight-able
+Under the Improvement Section of our game evaluation report, several key changes were implemented to address user feedback and enhance gameplay.
 
-Problem: Menu covers up resources, player unable to know if they have sufficient resources to craft something
-Solution: Reformatted the crafting menu such that it doesnt take up as much vertical space
+One prominent issue involved the gathering animation; previously, pressing "E" would trigger the animation regardless of the player’s distance from interactable items, disrupting movement. This has been refined so that animations only play when close to an interactable object, allowing for smoother exploration.
 
-Problem: Alot of evaluators only skimmed through the tutorial, and there are no extra indicator for guiding in the game. People didnt know how to sprint, and that they can move camera angle.
-Solution: Added a step-by-step tutorial at the beginning of the game, also moved the guidebook to the main screen rather than in the crafting menu.
+Players also struggled to understand they could relight light sources due to a lack of indicators. Now, light sources become relightable only when near extinguishment, with an indicator to clearly signal this, making this mechanic more intuitive.
 
-Problem: Loss of sanity is too high
-Solutions: Reduced the sanity reduction of darkness, and ghosts, increase the sanity regeneratability of buildings, reduced the range of ghosts.
+The crafting menu was restructured due to its interference with visibility of resource counts. By reducing the menu’s vertical space, players can now view resources without obstruction, streamlining the crafting process.
 
-Problem: Game is too dark, discourages the evaluators to venture into the dark, since they cant see anything
-Solutions: Increased the brightness for darkness, also increase the brightness lightsources provide
+Due to minimal guidance, some players overlooked essential controls like sprinting and camera adjustments. To enhance clarity, a step-by-step tutorial was added at the start of the game, and the guidebook was relocated to the main screen for easier access.
 
-Problem: Cannot tell when player is inside of ghost's effect range
-Solutions: Adds extra post processing effect for when enar ghosts, add sound effect for when near ghosts.
+Feedback also revealed that sanity loss was too high, making survival overly difficult. We reduced the sanity reduction from darkness and ghost encounters, increased sanity regeneration from buildings, and lowered the ghosts' range to create a more balanced challenge.
 
-Problem: Lacked a building in the spawning area, too hard to survive
-Solutions: Move the tent from the middle of the map to the spawning area
+Additionally, lighting adjustments were made to encourage exploration, as previous brightness levels deterred players from venturing into dark areas. By increasing the brightness of both darkness and light sources, players can navigate more confidently.
 
-Problem: Camera is too sensitive
-Solution: Reduced sensitivity
+To enhance player awareness, an extra visual effect and sound cue were added when in a ghost’s range, enabling players to gauge danger more effectively.
 
-Problem:  Resources are too dark, couldnt see them clearly
-Solution: Adds outlines to resources
+Several environmental adjustments were also made: the starting area now includes a tent, improving initial survivability, and resource outlines were added to improve visibility in general.
 
-Problem: Text for initial cutscene is too slow
-Solution: Text now goes faster
+In response to camera sensitivity, which was deemed too high, sensitivity settings were lowered, providing players with smoother control.
 
-Problem: Bugs were encountered
-Solution: Fixes
+Finally, adjustments were made to increase the initial cutscene text speed for a more fast paced experience, and bugs reported by players were systematically addressed and fixed.
+
+These improvements collectively work to create a more engaging, intuitive, and enjoyable gaming experience based on player insights.
+
+
+
+
+
+
+
+
+
+
 
 ---
 
@@ -553,6 +552,14 @@ The fog particle system is essential for our game, as it deepens the eerie ambia
 ---
 
 ## Summary of Contributions
+
+#### Don Lam:
+- even out lightings (disabling URP’s fade quadratic attenuation)
+- created lightsource prefabs and lightsources scripts
+- Refueling, and refueling Marker
+- Buildings prefabs, and handling effects of buildings
+- Description for craftables
+
 
 | Team Member                | Contribution                                            |
 |----------------------------|---------------------------------------------------------|
