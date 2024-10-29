@@ -753,7 +753,7 @@ Transform:
   m_GameObject: {fileID: 116891529}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 100, y: 0, z: 200}
+  m_LocalPosition: {x: 100, y: 0, z: 150}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2433,6 +2433,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1642406846}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!224 &422144327 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7996495092280051091, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
+  m_PrefabInstance: {fileID: 1205047579}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &424270439
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4646,7 +4651,7 @@ Transform:
   m_GameObject: {fileID: 836315977}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 200, y: 0, z: 100}
+  m_LocalPosition: {x: 150, y: 0, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6149,6 +6154,56 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64fb995fc63a0534bafa6da6b37e1124, type: 3}
+--- !u!1 &1175103318
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1175103319}
+  - component: {fileID: 1175103320}
+  m_Layer: 5
+  m_Name: PopUpLaterEvents
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1175103319
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175103318}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 422144327}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1175103320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175103318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fe7d20bdc9d3044f9274c69671eeb38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electricObjectToEnable: {fileID: 0}
+  tutorObjectToEnable: {fileID: 0}
 --- !u!4 &1193908082 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3287371164604070066, guid: 4faff78e313603a4abd479f59792c6ff, type: 3}
@@ -6228,10 +6283,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 97199545798068281, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 140884617331554197, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
       propertyPath: playerInventory
       value: 
       objectReference: {fileID: 802012023}
+    - target: {fileID: 2032605393160286169, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2155059971863164694, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
       propertyPath: progressTracker
       value: 
@@ -6240,6 +6303,18 @@ PrefabInstance:
       propertyPath: craftingController
       value: 
       objectReference: {fileID: 1136693392}
+    - target: {fileID: 2616602024228529104, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
+      propertyPath: m_text
+      value: 'Did you know?
+
+
+        Electric lights are far more efficient and
+        covers a much wider area
+
+
+        If you haven''t alrready, craft a generator
+        to get started!'
+      objectReference: {fileID: 0}
     - target: {fileID: 3846886346836103074, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
       propertyPath: sanityManager
       value: 
@@ -6256,6 +6331,10 @@ PrefabInstance:
       propertyPath: objectToActivate
       value: 
       objectReference: {fileID: 1379548068}
+    - target: {fileID: 4677376766114016884, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
+      propertyPath: m_text
+      value: Quick Tip
+      objectReference: {fileID: 0}
     - target: {fileID: 5982127532826603792, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
       propertyPath: progressTracker
       value: 
@@ -6314,7 +6393,10 @@ PrefabInstance:
       objectReference: {fileID: 1136693392}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7996495092280051091, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 1175103319}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
 --- !u!1001 &1212526962
@@ -9887,11 +9969,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1181942400531428858, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: requiredWood
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1181942400531428858, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: requiredFiber
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1181942400531428858, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: requiredMetal
@@ -9944,7 +10026,7 @@ PrefabInstance:
         Duration: 5 minutes
 
         AoE
-        Radius: 9'
+        Radius: 10'
       objectReference: {fileID: 0}
     - target: {fileID: 2256987072062010018, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: m_SizeDelta.y
@@ -10138,12 +10220,12 @@ PrefabInstance:
       propertyPath: m_text
       value: 'Requires
 
-        <sprite name="Wood"> x1
+        <sprite name="Wood"> x3
 
         <sprite name="Coal">
         x2
 
-        <sprite name="Fiber"> x5'
+        <sprite name="Fiber"> x8'
       objectReference: {fileID: 0}
     - target: {fileID: 4181327018851078097, guid: e999331c6de7fe54aa65e367990acc66, type: 3}
       propertyPath: m_AnchorMax.y
