@@ -206,12 +206,12 @@ This protocol outlines the process for using questionnaires to gather feedback f
 
 Who is responsible for each task? How will you ensure that everyone contributes equally?
 
-| Team member | Responsibility            |
-|-------------|----------------------------|
-| Tan         | Observational Technique    |
-| Cala        | Query Technique            |
-| Don Lam     | Observational Technique    |
-| Giang       | Query Technique            |
+| Team member                | Responsibility             |
+|----------------------------|----------------------------|
+| Sakdiphat Tanphiphatari    | Observational Technique    |
+| Acalapati Priyatama        | Query Technique            |
+| Don Lam Nguyen             | Observational Technique    |
+| Duc Hang Giang Vu          | Query Technique            |
 
 ---
 
@@ -520,12 +520,12 @@ The fog particle system is essential for our game, as it deepens the eerie ambia
 
 ## Summary of Contributions
 
-| Team Member | Contribution                                            |
-|-------------|---------------------------------------------------------|
-| Cala        | UI, Crafting, Shader, Video Editing, Gameplay Logic     |
-| Tan         | Environment, Inventory, Gameplay Logic, Report          |
-| Don Lam     | Lighting, Fire Particle, Item Placement, Gameplay Logic |
-| Giang       | Character, Fog Particle, Gameplay Logic, Sound Effects  |
+| Team Member                | Contribution                                            |
+|----------------------------|---------------------------------------------------------|
+| Acalapati Priyatama        | UI, Crafting, Shader, Video Editing, Gameplay Logic     |
+| Sakdiphat Tanphiphatari    | Environment, Inventory, Gameplay Logic, Report          |
+| Don Lam Nguyen             | Lighting, Fire Particle, Item Placement, Gameplay Logic |
+| Duc Hang Giang Vu          | Character, Fog Particle, Gameplay Logic, Sound Effects  |
 
 ---
 
