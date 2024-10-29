@@ -233,29 +233,28 @@ The final stage of the "Thorns" obstacle, falling apart and allowing the player 
 
   - **Tree**: Trees spawn at random rates around the map in random areas. Interacting with one will trigger a chopping animation, once the animation ends, the tree will fade away and the player will gain _WOOD_ and _FIBER_.<br>
 
-    | Image                                                                                        | Resources Given       | Times Interactable |
-    | -------------------------------------------------------------------------------------------- | --------------------- | ------------------ |
-    | <div align="center"><img src="./GDDImages/Objects and Interactables/tree_small.png"/></div>  | 4 _WOOD_, 4 _FIBER_   | 1                  |
-    | <div align="center"><img src="./GDDImages/Objects and Interactables/tree_medium.png"/></div> | 10 _WOOD_, 10 _FIBER_ | 1                  |
-    | <div align="center"><img src="./GDDImages/Objects and Interactables/bush.png"/></div>        | 1 _WOOD_, 1 _FIBER_   | 1                  |
-    | <div align="center"><img src="./GDDImages/Objects and Interactables/tree_large.png"/></div>  | 15 _WOOD_, 15 _FIBER_ | 1                  |
+    | Image                                                                                        | Resources Given       |
+    | -------------------------------------------------------------------------------------------- | --------------------- |
+    | <div align="center"><img src="./GDDImages/Objects and Interactables/tree_small.png"/></div>  | 4 _WOOD_   |
+    | <div align="center"><img src="./GDDImages/Objects and Interactables/tree_medium.png"/></div> | 5 _WOOD_ |
+    | <div align="center"><img src="./GDDImages/Objects and Interactables/bush.png"/></div>        | 5 _FIBER_   |
 
-  - **Stone**: Stones spawn at random rate around the map in certain stony areas. Interacting with one will trigger a mining animation, once the animation ends, the player will gain _STONE_. Stones will fade away and disappear once the player has mined it several times. <br>
 
-    | Image                                                                                          | Resources Given | Times Interactable |
-    | ---------------------------------------------------------------------------------------------- | --------------- | ------------------ |
-    | <div align="center"><img src="./GDDImages/Objects and Interactables/stone_small.png"/></div>   | 4 _STONE_       | 4                  |
-    | <div align="center"><img src="./GDDImages/Objects and Interactables/stone_medium.png"/></div>  | 8 _STONE_       | 10                 |
-    | <div align="center"><img src="./GDDImages/Objects and Interactables/stone_large.png"/></div>   | 4 _STONE_       | 16                 |
-    | <div align="center"><img src="./GDDImages/Objects and Interactables/stone_massive.png"/></div> | 4 _STONE_       | 32                 |
+  - **Stone**: Stones spawn at random rate around the map. Interacting with one will trigger a mining animation, once the animation ends, the player will gain _STONE_. <br>
 
-  - **Ore**: Ore are more rare than stones and trees. Interacting with ores will trigger a mining animation, once the animation ends, the player will gain _COAL_ and _METAL_. Ores will fade away and disappear after being mined several times. <br>
+    | Image                                                                                          | Resources Given |
+    | ---------------------------------------------------------------------------------------------- | --------------- |
+    | <div align="center"><img src="./GDDImages/Objects and Interactables/stone_small.png"/></div>   | 2 _STONE_       |
+    | <div align="center"><img src="./GDDImages/Objects and Interactables/stone_medium.png"/></div>  | 4 _STONE_       |
+ 
 
-    | Image                                                                                        | Resources Given       | Times Interactable |
-    | -------------------------------------------------------------------------------------------- | --------------------- | ------------------ |
-    | <div align="center"><img src="./GDDImages/Objects and Interactables/ore_small.png"/></div>   | 4 _COAL_, 4 _METAL_   | 10                 |
-    | <div align="center"><img src="./GDDImages/Objects and Interactables/ore_large.png"/></div>   | 8 _COAL_, 8 _METAL_   | 12                 |
-    | <div align="center"><img src="./GDDImages/Objects and Interactables/ore_brittle.png"/></div> | 16 _COAL_, 16 _METAL_ | 4                  |
+  - **Ore**: Ore are more rare than stones and trees. Interacting with ores will trigger a mining animation, once the animation ends, the player will gain _COAL_ or _METAL_ with a few _STONE_. <br>
+
+    | Image                                                                                        | Resources Given       |
+    | -------------------------------------------------------------------------------------------- | --------------------- |
+    | <div align="center"><img src="./GDDImages/Objects and Interactables/ore_small.png"/></div>   | 1 _STONE_, 4 _COAL_   |
+    | <div align="center"><img src="./GDDImages/Objects and Interactables/ore_large.png"/></div>   | 1 _STONE_, 3 _METAL_   |
+  
 
   - **Campfire (Light Sources)**: Certain light sources requires refueling with a certain amount of _COAL_. Upon interacting, an animation of Adam refueling will play, after the animation finishes, the light sources will go back to full brightness and fuel. If light sources run out of fuel. They will stop providing light and will no longer provide protection against the darkness, however, refueling is still possible and would replenish lights and fuel.
 
@@ -265,43 +264,34 @@ The final stage of the "Thorns" obstacle, falling apart and allowing the player 
 
   - **Light Sources**
 
-    | Name           | Image                                                                                           | Materials Required            | Duration (second) | Light Radius | Points |
-    | -------------- | ----------------------------------------------------------------------------------------------- | ----------------------------- | ----------------- | ------------ | ------ |
-    | Torch          | <div align="center"><img src="./GDDImages/Objects and Interactables/torch.png"/></div>          | 1 _WOOD_, 1 _COAL_            | 1                 | 1            | 1      |
-    | Camp Fire      | <div align="center"><img src="./GDDImages/Objects and Interactables/campfire.png"/></div>       | 4 _WOOD_, 2 _COAL_, 4 _STONE_ | 3                 | 10           | 1      |
-    | Metal Lantern  | <div align="center"><img src="./GDDImages/Objects and Interactables/metal_lantern.png"/></div>  | 1 _COAL_, 2 _METAL_           | 2                 | 2            | 2      |
-    | Light Bulb     | <div align="center"><img src="./GDDImages/Objects and Interactables/light_bulb.png"/></div>     | 10 _COAL_, 1 _METAL_          | 3                 | 5            | 5      |
-    | Street Lamp    | <div align="center"><img src="./GDDImages/Objects and Interactables/street_lamp.png"/></div>    | 10 _COAL_, 10 _METAL_         | 5                 | 10           | 10     |
-    | Burning Barrel | <div align="center"><img src="./GDDImages/Objects and Interactables/burning_barrel.png"/></div> | 5 _WOOD_, 3 _COAL_, 5 _METAL_ | 4                 | 5            | 10     |
-    | Candle         | <div align="center"><img src="./GDDImages/Objects and Interactables/candle.png"/></div>         | 1 _WOOD_, 1 _FIBER_           | 1                 | 1            | 1      |
-    | Candelabra     | <div align="center"><img src="./GDDImages/Objects and Interactables/candelabra.png"/></div>     | 3 _WOOD_, 1 _METAL_,          | 2                 | 5            | 3      |
-
+    | Name           | Image                                                                                           | Materials Required            | Duration (second) | Light Radius |
+    | -------------- | ----------------------------------------------------------------------------------------------- | ----------------------------- | ----------------- | ------------ |
+    | Torch          | <div align="center"><img src="./GDDImages/Objects and Interactables/torch.png"/></div>          | 1 _WOOD_, 1 _COAL_            | 90                 | 7            |
+    | Camp Fire      | <div align="center"><img src="./GDDImages/Objects and Interactables/campfire.png"/></div>       | 3 _WOOD_, 2 _COAL_, 3 _STONE_ | 180                 | 9           |
+    | Jack o Lantern  | <div align="center"><img src="./GDDImages/Objects and Interactables/jackolantern.png"/></div>  | 3 _WOOD_, 2 _COAL_, 8 _FIBER_           | 300                 | 9            |
+    | Christmas Tree     | <div align="center"><img src="./GDDImages/Objects and Interactables/christmas_tree.png"/></div>     | 10 _WOOD_, 10 _COAL_, 10 _FIBER_          | Ongoing                 | 14            |
+    | Street Lamp    | <div align="center"><img src="./GDDImages/Objects and Interactables/street_lamp.png"/></div>    | 7 _WOOD_, 12 _COAL_, 7 _METAL_         | Ongoing                 | 16           |
+    | Burning Barrel | <div align="center"><img src="./GDDImages/Objects and Interactables/burning_barrel.png"/></div> | 4 _WOOD_, 3 _COAL_, 2 _METAL_ | 300                 | 12            |
+    | Traffic Lights         | <div align="center"><img src="./GDDImages/Objects and Interactables/traffic_light.png"/></div>         | 5 _WOOD_, 10 _METAL_, 14 _COAL_           | Ongoing                 | 19            |
+    | Generator    | <div align="center"><img src="./GDDImages/Objects and Interactables/./GDDImages/lightsout_generator.png"/></div>     | 10 _WOOD_, 20 _METAL_, 20 _COAL_          | 300                 | 50 (Provide power)            |
+ 
   - **Buildings**
-    | Name | Image | Materials Required | Effect Radius | Regen/Second
+    | Name | Image | Materials Required | Effect Radius | Regen(%)
     | --- | --- | --- | --- | --- |
-    | Tent | <div align="center"><img src="./GDDImages/Objects and Interactables/tent.png"/></div> | 10 _WOOD_, 10 _FIBER_| 1| 1 |
-    | Wooden House | <div align="center"><img src="./GDDImages/Objects and Interactables/wooden_house.png"/></div> | 50 _WOOD_| 3 | 3 |
-    | Wooden Tent | <div align="center"><img src="./GDDImages/Objects and Interactables/wooden_tent.png"/></div> | 25 _WOOD_| 2 | 1 |
-    | Big Wooden House | <div align="center"><img src="./GDDImages/Objects and Interactables/big_wooden_house.png"/></div> | 100 _WOOD_| 6 | 5 |
-    | Castle | <div align="center"><img src="./GDDImages/Objects and Interactables/castle.png"/></div> | 20 _WOOD_, 50 _STONE_| 10 | 10 |
-    | Roman House | <div align="center"><img src="./GDDImages/Objects and Interactables/roman_house.png"/></div> | 50 _WOOD_, 50 _STONE_ | 5 | 15 |
-    | Medieval House | <div align="center"><img src="./GDDImages/Objects and Interactables/medieval_house.png"/></div> | 20 _WOOD_, 50 _STONE_ | 5 | 10 |
-    | Holiday House | <div align="center"><img src="./GDDImages/Objects and Interactables/holiday_house.png"/></div> | 80 _WOOD_, 80 _STONE_ | 5 | 20 |
+    | Tent | <div align="center"><img src="./GDDImages/Objects and Interactables/tent.png"/></div> | 2 _WOOD_, 10 _FIBER_| 9| 5 |
+    | Wooden House | <div align="center"><img src="./GDDImages/Objects and Interactables/wooden_house.png"/></div> | 20 _WOOD_, 10 _FIBER_ | 11 | 10 |
+    | Small house | <div align="center"><img src="./GDDImages/Objects and Interactables/small_house.png"/></div> | 5 _WOOD_, 10 _STONE_, 5 _FIBER_ | 11 | 8 |
+    | Desert House | <div align="center"><img src="./GDDImages/Objects and Interactables/desert_house.png"/></div> | 10 _WOOD_, 20 _STONE_, 10 _FIBER_ | 17 | 20 |
+    | Medieval House | <div align="center"><img src="./GDDImages/Objects and Interactables/medieval_house.png"/></div> | 10 _WOOD_, 10 _STONE_, 10 _FIBER_ | 13 | 11 |
+    | Motel | <div align="center"><img src="./GDDImages/Objects and Interactables/motel.png"/></div> | 25 _WOOD_, 25 _STONE_, 25 _FIBER_ | 17 | 20 |
 
   - **Decoration**
     | Name | Image | Materials Required |
     | --- | --- | --- |
-    | Flower pot | <div align="center"><img src="./GDDImages/Objects and Interactables/flower_pot.png"/></div> | 1 _WOOD_, 1 _FIBER_ |
-    | Barrel | <div align="center"><img src="./GDDImages/Objects and Interactables/barrel.webp"/></div> | 5 _WOOD_ |
-    | Bush | <div align="center"><img src="./GDDImages/Objects and Interactables/bush.png"/></div> | 3 _WOOD_, 3 \*_FIBER_ |
-    | Bridge | <div align="center"><img src="./GDDImages/Objects and Interactables/bridge.webp"/></div> | 15 _WOOD_ |
-    | Fence | <div align="center"><img src="./GDDImages/Objects and Interactables/fence.png"/></div> | 10 _WOOD_ |
-    | Log | <div align="center"><img src="./GDDImages/Objects and Interactables/log.png"/></div> | 1 _WOOD_ |
-    | Boulder | <div align="center"><img src="./GDDImages/Objects and Interactables/boulder.png"/></div> | 10 _STONE_ |
-    | Chest | <div align="center"><img src="./GDDImages/Objects and Interactables/chest.webp"/></div> | 10 _WOOD_, 5 _METAL_ |
-    | Tree | <div align="center"><img src="./GDDImages/Objects and Interactables/tree.png"/></div> | 5 _WOOD_, 5 _FIBER_ |
-    | Benche | <div align="center"><img src="./GDDImages/Objects and Interactables/bench.png"/></div> | 15 _WOOD_, 5 _METAL_ |
-
+    | Barrel | <div align="center"><img src="./GDDImages/Objects and Interactables/barrel.webp"/></div> | 3 _STONE_, 2 FIBER |
+    | Chair | <div align="center"><img src="./GDDImages/Objects and Interactables/chair.png"/></div> | 2 _WOOD_, 2 _FIBER_ |
+    | Table | <div align="center"><img src="./GDDImages/Objects and Interactables/table.png"/></div> | 3 _WOOD_, 2 _FIBER_ |
+    
 ## Art and Audio 🎨 🔊
 
 ### Art Style
