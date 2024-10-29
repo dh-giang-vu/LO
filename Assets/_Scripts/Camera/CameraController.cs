@@ -71,9 +71,9 @@ public class CameraController : MonoBehaviour
     private void AdjustSensitivity()
     {
         // Determine a scaling factor (smaller screen = higher sensitivity)
-        float sensitivityFactor = Mathf.Clamp(1800f / Screen.width, 0.3f, 2f);
+        float sensitivityFactor = Mathf.Clamp(1000f / Screen.width, 0.3f, 2f);
 
-        Debug.LogWarning("sensitivity factor: " + sensitivityFactor.ToString());
+        // Debug.LogWarning("sensitivity factor: " + sensitivityFactor.ToString());
 
         // Adjust sensitivities based on screen size
         yawSensitivity *= sensitivityFactor;
