@@ -206,7 +206,7 @@ This protocol outlines the process for using questionnaires to gather feedback f
 
 Who is responsible for each task? How will you ensure that everyone contributes equally?
 
-| Team member                | Responsibility             |
+| Team Member                | Responsibility             |
 |----------------------------|----------------------------|
 | Sakdiphat Tanphiphatari    | Observational Technique    |
 | Acalapati Priyatama        | Query Technique            |
