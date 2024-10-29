@@ -9,14 +9,14 @@ public class FadeOutUI : MonoBehaviour
     public float fadeOutDuration = 2f;
     
     private Image[] uiImages;
-    private TextMeshProUGUI uiText;
+    private TextMeshProUGUI[] uiTexts;
     private float fadeTimer;
 
     private void Start()
     {
-        // Get the Image components and TMP component from the children of this GameObject
+        // Get the Image components and TMP components from the children of this GameObject
         uiImages = GetComponentsInChildren<Image>();
-        uiText = GetComponentInChildren<TextMeshProUGUI>();
+        uiTexts = GetComponentsInChildren<TextMeshProUGUI>();
 
         // Start the fade-out coroutine
         StartCoroutine(FadeOutCoroutine());
@@ -30,14 +30,18 @@ public class FadeOutUI : MonoBehaviour
         // Start fading out over the duration
         fadeTimer = 0f;
 
-        // Store the initial colors of images and text
+        // Store the initial colors of images and texts
         Color[] initialImageColors = new Color[uiImages.Length];
         for (int i = 0; i < uiImages.Length; i++)
         {
             initialImageColors[i] = uiImages[i].color;
         }
         
-        Color initialTextColor = uiText.color;
+        Color[] initialTextColors = new Color[uiTexts.Length];
+        for (int i = 0; i < uiTexts.Length; i++)
+        {
+            initialTextColors[i] = uiTexts[i].color;
+        }
 
         while (fadeTimer < fadeOutDuration)
         {
@@ -58,21 +62,24 @@ public class FadeOutUI : MonoBehaviour
                 }
             }
 
-            // Set the alpha for the TMP component
-            if (uiText)
+            // Set the alpha for each TMP component
+            for (int i = 0; i < uiTexts.Length; i++)
             {
-                uiText.color = new Color(
-                    initialTextColor.r, 
-                    initialTextColor.g, 
-                    initialTextColor.b, 
-                    alpha
-                );
+                if (uiTexts[i])
+                {
+                    uiTexts[i].color = new Color(
+                        initialTextColors[i].r, 
+                        initialTextColors[i].g, 
+                        initialTextColors[i].b, 
+                        alpha
+                    );
+                }
             }
 
             yield return null;
         }
 
-        // Ensure they are fully transparent at the end of the fade
+        // Ensure all images and texts are fully transparent at the end of the fade
         for (int i = 0; i < uiImages.Length; i++)
         {
             if (uiImages[i])
@@ -86,14 +93,17 @@ public class FadeOutUI : MonoBehaviour
             }
         }
 
-        if (uiText)
+        for (int i = 0; i < uiTexts.Length; i++)
         {
-            uiText.color = new Color(
-                initialTextColor.r, 
-                initialTextColor.g, 
-                initialTextColor.b, 
-                0f
-            );
+            if (uiTexts[i])
+            {
+                uiTexts[i].color = new Color(
+                    initialTextColors[i].r, 
+                    initialTextColors[i].g, 
+                    initialTextColors[i].b, 
+                    0f
+                );
+            }
         }
     }
 }

@@ -4250,8 +4250,8 @@ MonoBehaviour:
   thorns: {fileID: 2363938681925551106, guid: 20fd414af9fb07343b89d7c700f36df8, type: 3}
   terrain: {fileID: 1507183531}
   character: {fileID: 767308489}
-  numberOfInitObjects: 100
-  autoSpawnInterval: 20
+  numberOfInitObjects: 150
+  autoSpawnInterval: 10
   initialThornSpawnPoints: {fileID: 1642406845}
 --- !u!1 &779851169
 GameObject:
@@ -6228,58 +6228,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 97199545798068281, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 140884617331554197, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
       propertyPath: playerInventory
       value: 
       objectReference: {fileID: 802012023}
-    - target: {fileID: 300975744392712548, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
-      propertyPath: m_text
-      value: 'Good, now aim to light up to 100%
-
-
-        Don''t forget you can find
-        more info in the Guidebook at the bottom right!
-
-
-        And maybe even
-        explore forward to find better loot..'
-      objectReference: {fileID: 0}
-    - target: {fileID: 1612109804015859830, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
-      propertyPath: delayBeforeFade
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1612109804015859830, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
-      propertyPath: fadeOutDuration
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1712525241024610339, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
-      propertyPath: objectToEnable
-      value: 
-      objectReference: {fileID: 1771132622}
     - target: {fileID: 2155059971863164694, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
       propertyPath: progressTracker
       value: 
       objectReference: {fileID: 2076357119}
-    - target: {fileID: 2519533879133602757, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2600668337309403375, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
       propertyPath: craftingController
       value: 
       objectReference: {fileID: 1136693392}
-    - target: {fileID: 3813986042516146042, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 212.0324
-      objectReference: {fileID: 0}
-    - target: {fileID: 3813986042516146042, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 76.483795
-      objectReference: {fileID: 0}
     - target: {fileID: 3846886346836103074, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
       propertyPath: sanityManager
       value: 
@@ -6296,14 +6256,6 @@ PrefabInstance:
       propertyPath: objectToActivate
       value: 
       objectReference: {fileID: 1379548068}
-    - target: {fileID: 5713902037012847549, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 111.0738
-      objectReference: {fileID: 0}
-    - target: {fileID: 5713902037012847549, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 126.96304
-      objectReference: {fileID: 0}
     - target: {fileID: 5982127532826603792, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
       propertyPath: progressTracker
       value: 
@@ -6312,10 +6264,6 @@ PrefabInstance:
       propertyPath: objectToActivate
       value: 
       objectReference: {fileID: 900559826}
-    - target: {fileID: 6849693432796056969, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8127296440939583613, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
       propertyPath: m_Name
       value: Interface
@@ -11098,11 +11046,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59c11859077357741ad00e6c87489eb7, type: 3}
---- !u!1 &1771132622 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6849693432796056969, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
-  m_PrefabInstance: {fileID: 1205047579}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1788511860
 PrefabInstance:
   m_ObjectHideFlags: 0
