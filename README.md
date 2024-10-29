@@ -343,7 +343,7 @@ The vertex shader is untouched given that we do not wish to displace vertices of
    }
   </pre>
 
-  <p><strong>The colour scheme of the object is set to blue when the item can be placed at the current location.</strong></p>
+  <p align="center"><strong>The colour scheme of the object is set to blue when the item can be placed at the current location.</strong></p>
 </div>
 
 <br/>
@@ -365,7 +365,7 @@ The vertex shader is untouched given that we do not wish to displace vertices of
    }
   </pre>
 
-  <p><strong>The colour scheme of the object is set to red when the item cannot be placed at the current location.</strong></p>
+  <p align="center"><strong>The colour scheme of the object is set to red when the item cannot be placed at the current location.</strong></p>
 </div>
 
 ---
@@ -468,7 +468,7 @@ To create the distortion effect, the vertex shader displaces the input vertex by
    }
   </pre>
 
-  <p><strong>_Transparency and _AuraColor are interpolated with respect to animation time.</strong></p>
+  <p align="center"><strong>_Transparency and _AuraColor are interpolated with respect to animation time.</strong></p>
 </div>
 
 ---
