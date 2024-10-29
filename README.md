@@ -198,7 +198,7 @@ This protocol outlines the process for using questionnaires to gather feedback f
 ---
 
 ### Timeline
-<img src="timeline.png" alt="timeline photo" style="height: 100px; width:100px;"/>
+![Evaluation-Timeline](./ReportImages/evaluation_plan_timeline.png)
 
 ---
 
