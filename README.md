@@ -36,19 +36,19 @@ Remember that you must also continue to maintain the Game Design Document (GDD) 
    - Were there any moments where the atmosphere didn’t feel eerie/unsettling? What contributed to that?
    - What are your thoughts when balancing your sanity bar and crafting light sources in the game? Did you face any challenges?
 
-### Protocol for Game Testing - Cooperative Evaluation 
+#### Protocol for Game Testing - Cooperative Evaluation 
 
-#### Overview
+**Overview**
 
 This protocol outlines a process for conducting a cooperative evaluation of test players engaging with a game, focusing on collaborative assessment and feedback.
 
-#### Objectives
+**Objectives**
 
 - Observe player interactions.
 - Identify issues and gather feedback.
 - Discuss potential solutions together.
 
-#### Preparation
+**Preparation**
 
 1. **Select Participants:** 
    - Recruit at least 5 players representing your target audience.
@@ -59,7 +59,7 @@ This protocol outlines a process for conducting a cooperative evaluation of test
 3. **Materials:** 
    - Prepare observation checklists and recording tools (with consent).
 
-#### Protocol Steps
+**Protocol Steps**
 
 1. **Introduction (5 min):**
    - Introduce participants and explain the purpose of the evaluation.
@@ -74,7 +74,7 @@ This protocol outlines a process for conducting a cooperative evaluation of test
 4. **Wrap-Up (5 min):**
    - Summarise findings and thank participants for their input.
 
-#### Post-Session
+**Post-Session**
 
 1. **Analyse Notes:**
    - Review notes and recordings, compiling a report on key findings.
@@ -97,18 +97,18 @@ This protocol outlines a process for conducting a cooperative evaluation of test
    - Does the player feel incentivized to craft light sources?
 - Link to questionnaire: https://forms.gle/CN99nJRuxXeCCNT59
 
-### Query Technique Protocol for Game Testing
+#### Query Technique Protocol for Game Testing
 
-#### Overview
+**Overview**
 
 This protocol outlines the process for using questionnaires to gather feedback from participants after playing a game on WebGL. The goal is to assess various aspects of the gameplay and collect both quantitative and qualitative feedback.
 
-#### Objectives
+**Objectives**
 
 - Gather participant ratings on different gameplay aspects.
 - Collect textual feedback for each gameplay aspect and the overall game experience.
 
-#### Preparation
+**Preparation**
 
 1. **Select Participants:**
    - Recruit at least 5 players representing your target audience.
@@ -121,7 +121,7 @@ This protocol outlines the process for using questionnaires to gather feedback f
      - Rating scales for different gameplay aspects.
      - Open-ended text fields for feedback.
 
-#### Questionnaire Structure
+**Questionnaire Structure**
 
 1. **Gameplay Rating Section:**
    - Include a rating scale (e.g., 1 to 5) for each aspect, such as:
@@ -135,7 +135,7 @@ This protocol outlines the process for using questionnaires to gather feedback f
      - Comments on each gameplay aspect.
      - Overall feedback on the game.
 
-#### Protocol Steps
+**Protocol Steps**
 
 1. **Introduction (5 min):**
    - Introduce participants to the study and explain the purpose of the questionnaire.
@@ -151,7 +151,7 @@ This protocol outlines the process for using questionnaires to gather feedback f
    - Thank participants for their time and contributions.
    - Remind them of the importance of their feedback for game development.
 
-#### Post-Session
+**Post-Session**
 
 1. **Analyse Responses:**
    - Review the completed questionnaires, compiling quantitative ratings and qualitative feedback.
@@ -222,7 +222,7 @@ In total, we conducted 7 surveys for a query technique, and 7 cooperative evalua
 The raw data for survey is here [survey raw data](EvaluationData/Survey_raw.pdf)
 The observation note is here [observation note raw data](EvaluationData/Observation_raw.pdf)
 
-**Quantitative Data**
+### Quantitative Data
 This is the average score from the survey for each category. (1-5 scaling)
 
 | Category   | Average Score | Scaling                   | Note                                        |
@@ -237,7 +237,7 @@ This is the average score from the survey for each category. (1-5 scaling)
 
 To summarise, the score shows that we need to improve our game in many aspects. The difficulty is quite high which impacts the overall enjoyment of gameplay. The camera control has too high sensitivity and is difficult to control using right-click. We will discuss the problems with UI later in the next section. Audio, graphics, and story, overall are acceptable because these categories are subjective and it happened when the participants might not like the art style or did not even care about the story.
 
-**Qualitative Data**
+### Qualitative Data
 This data was gathered from the observation and survey questionnaires. We categorised the findings into 6 main themes.
 
 <div align="center">
@@ -250,37 +250,37 @@ The text in the tutorial was slow causing some participants to ignore the tutori
   <img src="./ReportImages/AD2.jpg" width="600"/>
 </div>
 
-Most of the participants said that the game was quite difficult such as they needed more resources spawned near the start location or the sanity reduction from standing near ghosts was too high causing the players to lose the game easily. We scaled down the difficulty in the current version so the player can explore and enjoy the game with a bit less challenge, however, it was not easy to win the game too.
+Due to high difficulty at the beginning of the game, participants feel difficult and frustrated. They said that the difficulty of the game was unbalanced. To mitigate this, we reduced the starting difficulty of the game.
 
 <div align="center">
   <img src="./ReportImages/AD3.jpg" width="600"/>
 </div>
 
-These are the overall graphics and UI layout problems encountered by the participants. Mostly about unclear resources needed to craft, no indication of sanity reduction when near the ghost, and crafting UI was not clear enough. 
+Most participants stated that the graphic was unclear about the crafting resources. The UI layout of the crafting system is also unclear. We updated some sprites and add labels for crafting resources in the game so they can understand what kind of resources they have.
 
 <div align="center">
   <img src="./ReportImages/AD4.jpg" width="600"/>
 </div>
 
-These are game mechanics that were not properly explained in the tutorial. We added a clear guideline for these mechanics in the current version.
+Participants feel confused about how to play the game because they could not understand the mechanic at first. Some mechanics are confusing and difficult to understand, so we added some additional tutorials and explained them.
 
 <div align="center">
   <img src="./ReportImages/AD5.jpg" width="600"/>
 </div>
 
-This is good feedback from the participants.
+Almost all participants loved the theme and the concept of the game. They said that the dark theme is interesting and they feel great to explore the castle.
 
 <div align="center">
   <img src="./ReportImages/AD6.jpg" width="600"/>
 </div>
 
-These are bugs that were encountered during testing.
+We found some bugs in the playtest.
 
 ---
 
 ## Shaders and Special Effects
 
-TODO (due milestone 3) - see specification for details
+As per the project specification, this section will be completed by milestone 3.
 
 ---
 
@@ -288,33 +288,36 @@ TODO (due milestone 3) - see specification for details
 
 | Team Member | Contribution                                            |
 |-------------|---------------------------------------------------------|
-| Cala        | UI, Crafting, Shader, Video editing, Gameplay logic     |
-| Tan         | Environment, Inventory, Gameplay logic, Report          |
-| Don Lam     | Lighting, Fire Particle, Item placement, Gameplay logic |
-| Giang       | Character, Fog Particle, Gameplay logic, Sound effect   |
+| Cala        | UI, Crafting, Shader, Video Editing, Gameplay Logic     |
+| Tan         | Environment, Inventory, Gameplay Logic, Report          |
+| Don Lam     | Lighting, Fire Particle, Item Placement, Gameplay Logic |
+| Giang       | Character, Fog Particle, Gameplay Logic, Sound Effects  |
 
 ## References and External Resources
 
-Unity. (2000a). Unity Asset Store - The Best Assets for Game Making. @UnityAssetStore; Unity Asset Store. https://assetstore.unity.com/
+- **Unity Assets and Documentation**
+   - [Unity Asset Store](https://assetstore.unity.com/)
+   - [Unity Documentation](https://docs.unity.com/)
 
-Unity. (2000b). Unity Documentation. Docs.unity.com. https://docs.unity.com/
+- **External Assets**  
+   - 	https://assetstore.unity.com/packages/3d/environments/3d-simple-building-hotel-213775
+   -	https://assetstore.unity.com/packages/3d/environments/fantasy/fantasy-house-bundle-257964
+   -	https://assetstore.unity.com/packages/3d/environments/desert-village-houses-lowpoly-200247
+   -	https://assetstore.unity.com/packages/3d/environments/historic/medieval-tent-big-19023
+   -	https://assetstore.unity.com/packages/3d/environments/low-poly-medieval-free-pack-253520
+   -	https://assetstore.unity.com/packages/3d/environments/historic/medieval-buildings-exteriors-72836
+   -	https://assetstore.unity.com/packages/3d/environments/urban/city-traffic-lights-pack-free-low-poly-3d-art-154053
+   -	https://assetstore.unity.com/packages/3d/props/jack-o-lantern-12185
+   -	https://assetstore.unity.com/packages/3d/environments/landscapes/rpg-poly-pack-lite-148410
+   -	https://assetstore.unity.com/packages/3d/environments/campfires-torches-models-and-fx-242552
+   -	https://assetstore.unity.com/packages/3d/environments/landscapes/low-poly-nature-pack-lite-288596#content
+   -	https://assetstore.unity.com/packages/3d/environments/wooden-house-free-low-poly-270889
+   -	https://assetstore.unity.com/packages/3d/props/exterior/street-lamps-2-260395
+   -	https://assetstore.unity.com/packages/3d/characters/humanoids/fantasy/free-low-poly-human-rpg-character-219979
+   -	https://assetstore.unity.com/packages/3d/props/exterior/low-poly-resource-rocks-76150
+   -	https://assetstore.unity.com/packages/3d/props/industrial/industrial-equipment-electric-motor-199519
+   -	https://assetstore.unity.com/packages/3d/vegetation/trees/polycraft-christmas-tree-108277
 
-External assets
 
-https://assetstore.unity.com/packages/3d/environments/3d-simple-building-hotel-213775
-https://assetstore.unity.com/packages/3d/environments/fantasy/fantasy-house-bundle-257964
-https://assetstore.unity.com/packages/3d/environments/desert-village-houses-lowpoly-200247
-https://assetstore.unity.com/packages/3d/environments/historic/medieval-tent-big-19023
-https://assetstore.unity.com/packages/3d/environments/low-poly-medieval-free-pack-253520
-https://assetstore.unity.com/packages/3d/environments/historic/medieval-buildings-exteriors-72836
-https://assetstore.unity.com/packages/3d/environments/urban/city-traffic-lights-pack-free-low-poly-3d-art-154053
-https://assetstore.unity.com/packages/3d/props/jack-o-lantern-12185
-https://assetstore.unity.com/packages/3d/environments/landscapes/rpg-poly-pack-lite-148410
-https://assetstore.unity.com/packages/3d/environments/campfires-torches-models-and-fx-242552
-https://assetstore.unity.com/packages/3d/environments/landscapes/low-poly-nature-pack-lite-288596#content
-https://assetstore.unity.com/packages/3d/environments/wooden-house-free-low-poly-270889
-https://assetstore.unity.com/packages/3d/props/exterior/street-lamps-2-260395
-https://assetstore.unity.com/packages/3d/characters/humanoids/fantasy/free-low-poly-human-rpg-character-219979
-https://assetstore.unity.com/packages/3d/props/exterior/low-poly-resource-rocks-76150
-https://assetstore.unity.com/packages/3d/props/industrial/industrial-equipment-electric-motor-199519
-https://assetstore.unity.com/packages/3d/vegetation/trees/polycraft-christmas-tree-108277 
+
+
