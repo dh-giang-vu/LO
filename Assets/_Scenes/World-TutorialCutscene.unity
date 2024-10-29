@@ -1449,8 +1449,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 129196813}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.12682296, y: -0.30010334, z: 0.040082, w: -0.9445885}
-  m_LocalPosition: {x: 0.9473896, y: 13.639627, z: -14.821445}
+  m_LocalRotation: {x: 0.08348963, y: -0.34705126, z: -0.031037815, w: -0.9336068}
+  m_LocalPosition: {x: 30.393454, y: 21.535318, z: 6.7308693}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5185,68 +5185,6 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 9071980159745529512, guid: 19e48c26020fafe418cb4c2298a4fd3f, type: 3}
   m_PrefabInstance: {fileID: 191079602}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &808463435
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1467761269}
-    m_Modifications:
-    - target: {fileID: 2142975841462047055, guid: 539de0ad0d93a5748ba75f2d185f146e, type: 3}
-      propertyPath: m_Name
-      value: pine (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5825311029036214684, guid: 539de0ad0d93a5748ba75f2d185f146e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 33.57
-      objectReference: {fileID: 0}
-    - target: {fileID: 5825311029036214684, guid: 539de0ad0d93a5748ba75f2d185f146e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5825311029036214684, guid: 539de0ad0d93a5748ba75f2d185f146e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 24.480003
-      objectReference: {fileID: 0}
-    - target: {fileID: 5825311029036214684, guid: 539de0ad0d93a5748ba75f2d185f146e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9542011
-      objectReference: {fileID: 0}
-    - target: {fileID: 5825311029036214684, guid: 539de0ad0d93a5748ba75f2d185f146e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5825311029036214684, guid: 539de0ad0d93a5748ba75f2d185f146e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.299166
-      objectReference: {fileID: 0}
-    - target: {fileID: 5825311029036214684, guid: 539de0ad0d93a5748ba75f2d185f146e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5825311029036214684, guid: 539de0ad0d93a5748ba75f2d185f146e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5825311029036214684, guid: 539de0ad0d93a5748ba75f2d185f146e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 34.815
-      objectReference: {fileID: 0}
-    - target: {fileID: 5825311029036214684, guid: 539de0ad0d93a5748ba75f2d185f146e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 539de0ad0d93a5748ba75f2d185f146e, type: 3}
---- !u!4 &808463436 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5825311029036214684, guid: 539de0ad0d93a5748ba75f2d185f146e, type: 3}
-  m_PrefabInstance: {fileID: 808463435}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &817153784
 PrefabInstance:
@@ -9683,7 +9621,6 @@ Transform:
   - {fileID: 13812795}
   - {fileID: 1466323825}
   - {fileID: 6411592}
-  - {fileID: 808463436}
   - {fileID: 1586576985}
   - {fileID: 1252241022}
   m_Father: {fileID: 2076357118}
@@ -13482,8 +13419,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1980195156}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.12682296, y: -0.30010334, z: 0.040082, w: -0.9445885}
-  m_LocalPosition: {x: 24.57787, y: 1.6901183, z: 18.592}
+  m_LocalRotation: {x: 0.08348963, y: -0.34705126, z: -0.031037815, w: -0.9336068}
+  m_LocalPosition: {x: 54.023933, y: 9.585809, z: 40.144314}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14986,8 +14923,8 @@ MonoBehaviour:
   - ..or you just may encounter some things..
   - ..good luck.
   textSpeed: 0.02
-  shakeMagnitude: 2
-  shakeDuration: 0.05
+  shakeMagnitude: 1
+  shakeDuration: 0.02
   audioClip: {fileID: 8300000, guid: aa29893140715234fa4c6f0f17bc3d88, type: 3}
   audioSourceVolume: 0.1
   timeline: {fileID: 1405144142}
