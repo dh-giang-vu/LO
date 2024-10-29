@@ -274,9 +274,43 @@ Almost all participants loved the theme and the concept of the game. They said t
   <img src="./ReportImages/AD6.jpg" width="600"/>
 </div>
 
-We found some bugs in the playtest.
+Several bugs were reported for the playtest.
+### Improvements
+Problem:  Player were annoyed that every time they press E, the gathering animation would play, and they would not be able to move, which can be whilst exploring in the dark
+Solution:  animations will now only play if player presses E while being close to an interactable
 
----
+Problem: Does not know that you can relight lightsources, no indicator, no instruction for that.
+Solution: lightsources can only be relit when it is near dead, there is now an indicator for when it is relight-able
+
+Problem: Menu covers up resources, player unable to know if they have sufficient resources to craft something
+Solution: Reformatted the crafting menu such that it doesnt take up as much vertical space
+
+Problem: Alot of evaluators only skimmed through the tutorial, and there are no extra indicator for guiding in the game. People didnt know how to sprint, and that they can move camera angle.
+Solution: Added a step-by-step tutorial at the beginning of the game, also moved the guidebook to the main screen rather than in the crafting menu.
+
+Problem: Loss of sanity is too high
+Solutions: Reduced the sanity reduction of darkness, and ghosts, increase the sanity regeneratability of buildings, reduced the range of ghosts.
+
+Problem: Game is too dark, discourages the evaluators to venture into the dark, since they cant see anything
+Solutions: Increased the brightness for darkness, also increase the brightness lightsources provide
+
+Problem: Cannot tell when player is inside of ghost's effect range
+Solutions: Adds extra post processing effect for when enar ghosts, add sound effect for when near ghosts.
+
+Problem: Lacked a building in the spawning area, too hard to survive
+Solutions: Move the tent from the middle of the map to the spawning area
+
+Problem: Camera is too sensitive
+Solution: Reduced sensitivity
+
+Problem:  Resources are too dark, couldnt see them clearly
+Solution: Adds outlines to resources
+
+Problem: Text for initial cutscene is too slow
+Solution: Text now goes faster
+
+Problem: Bugs were encountered
+Solution: Fixes
 
 ---
 
