@@ -217,7 +217,61 @@ Who is responsible for each task? How will you ensure that everyone contributes 
 
 ## Evaluation Report
 
-TODO (due milestone 3) - see specification for details
+In total, we conducted 7 surveys for a query technique, and 7 cooperative evaluations for an observation technique.
+
+**Quantitative Data**
+This is the average score from the survey for each category. (1-5 scaling)
+
+| Category   | Average Score | Scaling                   | Note                                        |
+|------------|---------------|---------------------------|---------------------------------------------|
+| Enjoyment  | 3.57/5        | Higher = Very enjoyable   |                                             |
+| Difficulty | 4/5           | Higher = Difficult        |                                             |
+| Control    | 3.14/5        | Higher = Easy control     | The major problem is the camera control     |
+| UI Layout  | 3.29/5        | Higher = Easy to navigate | The layout is simple but has some problems. |
+| Audio      | 3.57/5        | Higher = Satisfy          |                                             |
+| Graphic    | 3.43/5        | Higher = Satisfy          |                                             |
+| Story      | 3.43/5        | Higher = Like the story   |                                             |
+
+To summarise, the score shows that we need to improve our game in many aspects. The difficulty is quite high which impacts the overall enjoyment of gameplay. The camera control has too high sensitivity and is difficult to control using right-click. We will discuss the problems with UI later in the next section. Audio, graphics, and story, overall are acceptable because these categories are subjective and it happened when the participants might not like the art style or did not even care about the story.
+
+**Qualitative Data**
+This data was gathered from the observation and survey questionnaires. We categorised the findings into 6 main themes.
+
+<div align="center">
+  <img src="./ReportImages/AD1.jpg" width="600"/>
+</div>
+
+The text in the tutorial was slow causing some participants to ignore the tutorial and the starting tutorial did not explain all the game mechanics. All details were in the guidebook which some participants were difficult to locate. We increased the text speed and we make pan the camera to the castle so the players know there is a castle to explore.
+
+<div align="center">
+  <img src="./ReportImages/AD2.jpg" width="600"/>
+</div>
+
+Most of the participants said that the game was quite difficult such as they needed more resources spawned near the start location or the sanity reduction from standing near ghosts was too high causing the players to lose the game easily. We scaled down the difficulty in the current version so the player can explore and enjoy the game with a bit less challenge, however, it was not easy to win the game too.
+
+<div align="center">
+  <img src="./ReportImages/AD3.jpg" width="600"/>
+</div>
+
+These are the overall graphics and UI layout problems encountered by the participants. Mostly about unclear resources needed to craft, no indication of sanity reduction when near the ghost, and crafting UI was not clear enough. 
+
+<div align="center">
+  <img src="./ReportImages/AD4.jpg" width="600"/>
+</div>
+
+These are game mechanics that were not properly explained in the tutorial. We added a clear guideline for these mechanics in the current version.
+
+<div align="center">
+  <img src="./ReportImages/AD5.jpg" width="600"/>
+</div>
+
+This is good feedback from the participants.
+
+<div align="center">
+  <img src="./ReportImages/AD6.jpg" width="600"/>
+</div>
+
+These are bugs that were encountered during testing.
 
 ---
 
@@ -474,10 +528,17 @@ The fog particle system is essential for our game, as it deepens the eerie ambia
 
 ## Summary of Contributions
 
-TODO (due milestone 3) - see specification for details
+| Team Member | Contribution                                            |
+|-------------|---------------------------------------------------------|
+| Cala        | UI, Crafting, Shader, Video editing, Gameplay logic     |
+| Tan         | Environment, Inventory, Gameplay logic, Report          |
+| Don Lam     | Lighting, Fire Particle, Item placement, Gameplay logic |
+| Giang       | Character, Fog Particle, Gameplay logic, Sound effect   |
 
 ---
 
 ## References and External Resources
 
-TODO (to be continuously updated) - see specification for details
+Unity. (2000a). Unity Asset Store - The Best Assets for Game Making. @UnityAssetStore; Unity Asset Store. https://assetstore.unity.com/
+
+Unity. (2000b). Unity Documentation. Docs.unity.com. https://docs.unity.com/
