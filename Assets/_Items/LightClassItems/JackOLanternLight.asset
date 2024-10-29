@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a2771c3886af334282ef3be8aa25801, type: 3}
   m_Name: JackOLanternLight
   m_EditorClassIdentifier: 
-  itemName: 
-  quantity: 0
-  model: {fileID: 0}
+  itemName: JackOLantern
+  quantity: 1
+  model: {fileID: 9022649119488628153, guid: c871c1641bd220c408d5c5998cdbf3b4, type: 3}

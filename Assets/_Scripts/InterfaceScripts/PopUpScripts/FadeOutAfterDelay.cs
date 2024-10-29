@@ -1,49 +1,99 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
-using UnityEngine;
-
-public class FadeOutAfterDelay : MonoBehaviour
+public class FadeOutUI : MonoBehaviour
 {
-    private Renderer objectRenderer;
-    private Color objectColor;
+    public float delayBeforeFade = 5f;
+    public float fadeOutDuration = 2f;
+    
+    private Image[] uiImages;
+    private TextMeshProUGUI uiText;
+    private float fadeTimer;
 
-    void Start()
+    private void Start()
     {
-        objectRenderer = GetComponent<Renderer>();
-        objectColor = objectRenderer.material.color;
-        
-        // Start the coroutine to handle fading
-        StartCoroutine(FadeOut());
+        // Get the Image components and TMP component from the children of this GameObject
+        uiImages = GetComponentsInChildren<Image>();
+        uiText = GetComponentInChildren<TextMeshProUGUI>();
+
+        // Start the fade-out coroutine
+        StartCoroutine(FadeOutCoroutine());
     }
 
-    private IEnumerator FadeOut()
+    private IEnumerator FadeOutCoroutine()
     {
-        // Wait for 5 seconds
-        yield return new WaitForSeconds(5f);
+        // Wait for the specified delay before starting the fade-out
+        yield return new WaitForSeconds(delayBeforeFade);
 
-        // Fade out over 2 seconds
-        float fadeDuration = 2f;
-        float startAlpha = objectColor.a;
-        float timeElapsed = 0f;
+        // Start fading out over the duration
+        fadeTimer = 0f;
 
-        while (timeElapsed < fadeDuration)
+        // Store the initial colors of images and text
+        Color[] initialImageColors = new Color[uiImages.Length];
+        for (int i = 0; i < uiImages.Length; i++)
         {
-            float alpha = Mathf.Lerp(startAlpha, 0f, timeElapsed / fadeDuration);
-            objectColor.a = alpha;
-            objectRenderer.material.color = objectColor;
+            initialImageColors[i] = uiImages[i].color;
+        }
+        
+        Color initialTextColor = uiText.color;
 
-            timeElapsed += Time.deltaTime;
-            yield return null; // Wait for the next frame
+        while (fadeTimer < fadeOutDuration)
+        {
+            fadeTimer += Time.deltaTime;
+            float alpha = Mathf.Lerp(1f, 0f, fadeTimer / fadeOutDuration);
+
+            // Set the alpha for each Image component
+            for (int i = 0; i < uiImages.Length; i++)
+            {
+                if (uiImages[i])
+                {
+                    uiImages[i].color = new Color(
+                        initialImageColors[i].r, 
+                        initialImageColors[i].g, 
+                        initialImageColors[i].b, 
+                        alpha
+                    );
+                }
+            }
+
+            // Set the alpha for the TMP component
+            if (uiText)
+            {
+                uiText.color = new Color(
+                    initialTextColor.r, 
+                    initialTextColor.g, 
+                    initialTextColor.b, 
+                    alpha
+                );
+            }
+
+            yield return null;
         }
 
-        // Ensure the alpha is set to 0
-        objectColor.a = 0f;
-        objectRenderer.material.color = objectColor;
+        // Ensure they are fully transparent at the end of the fade
+        for (int i = 0; i < uiImages.Length; i++)
+        {
+            if (uiImages[i])
+            {
+                uiImages[i].color = new Color(
+                    initialImageColors[i].r, 
+                    initialImageColors[i].g, 
+                    initialImageColors[i].b, 
+                    0f
+                );
+            }
+        }
 
-        // Optionally, you can deactivate the object after fading out
-        gameObject.SetActive(false);
+        if (uiText)
+        {
+            uiText.color = new Color(
+                initialTextColor.r, 
+                initialTextColor.g, 
+                initialTextColor.b, 
+                0f
+            );
+        }
     }
 }
-
