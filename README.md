@@ -326,7 +326,7 @@ The vertex shader is untouched given that we do not wish to displace vertices of
 
 <br/>
 
-<div align="center">
+<div>
   <pre style="width: 80%; max-width: 600px; text-align: left; padding: 10px; border-radius: 5px;">
    private void SetPlaceable()
    {
@@ -348,7 +348,7 @@ The vertex shader is untouched given that we do not wish to displace vertices of
 
 <br/>
 
-<div align="center">
+<div>
   <pre style="width: 80%; max-width: 600px; text-align: left; padding: 10px; border-radius: 5px;">
    private void SetUnplaceable()
    {
@@ -438,7 +438,7 @@ To create the distortion effect, the vertex shader displaces the input vertex by
 
 <br/>
 
-<div align="center">
+<div>
   <pre style="width: 90%; text-align: left; padding: 10px; border-radius: 5px;">
    private IEnumerator FadeIn()
    {
