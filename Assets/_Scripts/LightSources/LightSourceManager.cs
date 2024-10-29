@@ -75,7 +75,6 @@ public class LightSourceManager : LightSource
             inventory.UpdateMaterialCounts();
             yield return new WaitForSeconds(refuelWaitTime);
             Refuel();
-            Debug.Log("Fire refueled, 1 coal consumed.");
         }
         else
         {
