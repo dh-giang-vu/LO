@@ -273,7 +273,7 @@ The final stage of the "Thorns" obstacle, falling apart and allowing the player 
     | Street Lamp    | <div align="center"><img src="./GDDImages/Objects and Interactables/street_lamp.png"/></div>    | 7 _WOOD_, 12 _COAL_, 7 _METAL_         | Ongoing                 | 16           |
     | Burning Barrel | <div align="center"><img src="./GDDImages/Objects and Interactables/burning_barrel.png"/></div> | 4 _WOOD_, 3 _COAL_, 2 _METAL_ | 300                 | 12            |
     | Traffic Lights         | <div align="center"><img src="./GDDImages/Objects and Interactables/traffic_light.png"/></div>         | 5 _WOOD_, 10 _METAL_, 14 _COAL_           | Ongoing                 | 19            |
-    | Generator    | <div align="center"><img src="./GDDImages/Objects and Interactables/./GDDImages/lightsout_generator.png"/></div>     | 10 _WOOD_, 20 _METAL_, 20 _COAL_          | 300                 | 50 (Provide power)            |
+    | Generator    | <div align="center"><img src="./GDDImages/lightsout_generator.png"/></div>     | 10 _WOOD_, 20 _METAL_, 20 _COAL_          | 300                 | 50 (Provide power)            |
  
   - **Buildings**
     | Name | Image | Materials Required | Effect Radius | Regen(%)
@@ -288,7 +288,7 @@ The final stage of the "Thorns" obstacle, falling apart and allowing the player 
   - **Decoration**
     | Name | Image | Materials Required |
     | --- | --- | --- |
-    | Barrel | <div align="center"><img src="./GDDImages/Objects and Interactables/barrel.webp"/></div> | 3 _STONE_, 2 FIBER |
+    | Barrel | <div align="center"><img src="./GDDImages/Objects and Interactables/barrel.png"/></div> | 3 _STONE_, 2 FIBER |
     | Chair | <div align="center"><img src="./GDDImages/Objects and Interactables/chair.png"/></div> | 2 _WOOD_, 2 _FIBER_ |
     | Table | <div align="center"><img src="./GDDImages/Objects and Interactables/table.png"/></div> | 3 _WOOD_, 2 _FIBER_ |
     
