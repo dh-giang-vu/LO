@@ -372,6 +372,10 @@ PrefabInstance:
       value: 6.328355
       objectReference: {fileID: 0}
     - target: {fileID: 1024888774253903835, guid: 9becd698a0db57748bebba3c965857a9, type: 3}
+      propertyPath: m_Intensity
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024888774253903835, guid: 9becd698a0db57748bebba3c965857a9, type: 3}
       propertyPath: m_SpotAngle
       value: 139.9072
       objectReference: {fileID: 0}
