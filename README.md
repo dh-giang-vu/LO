@@ -445,26 +445,14 @@ To create the distortion effect, the vertex shader displaces the input vertex by
       float elapsedTime = 0;
       while (elapsedTime < fadeDuration)
       {
-         // Increment elapsed time
-         elapsedTime += Time.deltaTime;
-
-         // Calculate the new transparency and aura color values
-         float t = elapsedTime / fadeDuration;
-
-         // Restore transparency and aura color over time
-         float newTransparency = Mathf.Lerp(0, originalTransparency, t); // From 0 to original transparency
-         originalAuraColor.a = Mathf.Lerp(0, originalAuraColor.a, t); // From 0 to original aura alpha
-
-         // Apply the new values to the material
+         ... Some calculations here
+         float newTransparency = Mathf.Lerp(0, originalTransparency, t);
+         originalAuraColor.a = Mathf.Lerp(0, originalAuraColor.a, t);
          ghostRenderer.material.SetFloat("_Transparency", newTransparency);
          ghostRenderer.material.SetColor("_AuraColor", originalAuraColor);
-
-         yield return null; // Wait until the next frame
+         ...
       }
-      // Ensure the final transparency and aura color are set to their original values
-      ghostRenderer.material.SetFloat("_Transparency", originalTransparency);
-      originalAuraColor.a = 1; // Ensure aura color is fully opaque
-      ghostRenderer.material.SetColor("_AuraColor", originalAuraColor);
+      ... Some cleanup logic here
    }
   </pre>
 
