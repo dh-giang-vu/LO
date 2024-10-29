@@ -25,7 +25,7 @@ public class Inventory : MonoBehaviour
     }
       public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Numlock))
+        if (Input.GetKeyDown(KeyCode.Backslash))
         {
             AddItemsCheat();
         }
