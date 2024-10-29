@@ -223,7 +223,6 @@ The raw data for survey is here [survey raw data](EvaluationData/Survey_raw.pdf)
 The observation note is here [observation note raw data](EvaluationData/Observation_raw.pdf)
 
 ### Quantitative Data
-This is the average score from the survey for each category. (1-5 scaling)
 
 | Category   | Average Score | Scaling                   | Note                                        |
 |------------|---------------|---------------------------|---------------------------------------------|
@@ -235,46 +234,47 @@ This is the average score from the survey for each category. (1-5 scaling)
 | Graphic    | 3.43/5        | Higher = Satisfy          |                                             |
 | Story      | 3.43/5        | Higher = Like the story   |                                             |
 
-To summarise, the score shows that we need to improve our game in many aspects. The difficulty is quite high which impacts the overall enjoyment of gameplay. The camera control has too high sensitivity and is difficult to control using right-click. We will discuss the problems with UI later in the next section. Audio, graphics, and story, overall are acceptable because these categories are subjective and it happened when the participants might not like the art style or did not even care about the story.
+The table displays the average score for the query technique over 7 evaluators on a scale of 1 to 5.
+
+These categories of questions gave us valueble insights into what the game was lacking. Higher scores in diffuculty means many people were struggling to experience later stages of the game, which can lead to repetitive early game experience, causing quick boredom. Scores for UI and control fluctuates at around the mid point mark, which will be reflected more efficiently in the observational section. Lower scores in graphics and audio signifies a lack in the game's erie ambience.
 
 ### Qualitative Data
-This data was gathered from the observation and survey questionnaires. We categorised the findings into 6 main themes.
+Data collected from observational evaluations are organized into an affinity diagram as follow, separating them into 6 main categories:
 
 <div align="center">
   <img src="./ReportImages/AD1.jpg" width="600"/>
 </div>
 
-The text in the tutorial was slow causing some participants to ignore the tutorial and the starting tutorial did not explain all the game mechanics. All details were in the guidebook which some participants were difficult to locate. We increased the text speed and we make pan the camera to the castle so the players know there is a castle to explore.
+The **Introduction** did not serve it's purpose, as feedbacks shows players struggling to find the goal of the game, and the incentive to explore.
 
 <div align="center">
   <img src="./ReportImages/AD2.jpg" width="600"/>
 </div>
 
-Due to high difficulty at the beginning of the game, participants feel difficult and frustrated. They said that the difficulty of the game was unbalanced. To mitigate this, we reduced the starting difficulty of the game.
+The **Difficulty** section provides an understanding into our game's progress rate. Feedbacks were mainly focused on our sanity penalization mechanics rather than the progress speed of the game itself.
 
 <div align="center">
   <img src="./ReportImages/AD3.jpg" width="600"/>
 </div>
 
-Most participants stated that the graphic was unclear about the crafting resources. The UI layout of the crafting system is also unclear. We updated some sprites and add labels for crafting resources in the game so they can understand what kind of resources they have.
+Most participants stated that the graphic was unclear about the crafting resources. The overall UI layout of the crafting system is also unclear.
 
 <div align="center">
   <img src="./ReportImages/AD4.jpg" width="600"/>
 </div>
 
-Participants feel confused about how to play the game because they could not understand the mechanic at first. Some mechanics are confusing and difficult to understand, so we added some additional tutorials and explained them.
+The general concensus of the **Game Mechanics** section is that our tutorial did not manage to serve it's purpose. Leading to evaluator's confusion upon playing. A more thorough introduction and tutorial was needed.
 
 <div align="center">
   <img src="./ReportImages/AD5.jpg" width="600"/>
 </div>
 
-Almost all participants loved the theme and the concept of the game. They said that the dark theme is interesting and they feel great to explore the castle.
+Almost all participants loved the theme and the concept of the game. The dark theme was reported to be interesting and exploration of natural artefacts provides alot to the gameplay experience
 
 <div align="center">
   <img src="./ReportImages/AD6.jpg" width="600"/>
 </div>
 
-Several bugs were reported for the playtest.
 ### Improvements
 
 Under the Improvement Section of our game evaluation report, several key changes were implemented to address user feedback and enhance gameplay.
