@@ -553,20 +553,33 @@ The fog particle system is essential for our game, as it deepens the eerie ambia
 
 ## Summary of Contributions
 
-#### Don Lam:
-- even out lightings (disabling URP’s fade quadratic attenuation)
-- created lightsource prefabs and lightsources scripts
+#### Don Lam Nguyen:
+- Even out lightings (disabling URP’s fade quadratic attenuation)
+- Created lightsource prefabs and lightsources scripts
 - Refueling, and refueling Marker
 - Buildings prefabs, and handling effects of buildings
 - Description for craftables
 
+#### Duc Hang Giang Vu:
+- Implement the player (movement, animations, sanity, sprinting, etc.)
+- Implement Ghost & Fog Particle System spawn/control logic
+- Implement crafted item placement logic
+- Add SFX (ambience, resource collection, etc.)
+- Shaders and Special Effects report
 
-| Team Member                | Contribution                                            |
-|----------------------------|---------------------------------------------------------|
-| Acalapati Priyatama        | UI, Crafting, Shader, Video Editing, Gameplay Logic     |
-| Sakdiphat Tanphiphatari    | Environment, Inventory, Gameplay Logic, Report          |
-| Don Lam Nguyen             | Lighting, Fire Particle, Item Placement, Gameplay Logic |
-| Duc Hang Giang Vu          | Character, Fog Particle, Gameplay Logic, Sound Effects  |
+#### Acalapati Priyatama:
+- Designed the user interface including the HUD, guidance, and crafting UI
+- Created the logic behind the crafting system used in the game
+- Wrote the custom shaders used in the game including the Blueprint Shader and the Ghost Shader
+- Designed the core gameplay loop
+- Created the video trailer and in-game cutscenes
+
+#### Sakdiphat Tanphiphatari:
+- Created auto spawn resources script
+- Designed the world terrain
+- Created an electric light source
+- Fixed minor bugs
+- Evaluation report summary
 
 ---
 
