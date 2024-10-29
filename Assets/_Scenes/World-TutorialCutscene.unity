@@ -5073,9 +5073,54 @@ MonoBehaviour:
   objectToSpawn: {fileID: 1000011449246696, guid: e1f35f4b9ee7e9747b7f35059ac4423f, type: 3}
   thorns: {fileID: 0}
   terrain: {fileID: 1507183531}
+  character: {fileID: 0}
   numberOfInitObjects: 5
   autoSpawnInterval: 2
   initialThornSpawnPoints: {fileID: 0}
+--- !u!1 &787758981
+GameObject:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 787758982}
+  - component: {fileID: 787758983}
+  m_Layer: 0
+  m_Name: cm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &787758982
+Transform:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787758981}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1250267177}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &787758983
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787758981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &791159238
 GameObject:
   m_ObjectHideFlags: 0
@@ -6815,6 +6860,7 @@ MonoBehaviour:
   objectToSpawn: {fileID: 6336855543573918107, guid: 8fe2c0543598f4a4998fe1212fb05710, type: 3}
   thorns: {fileID: 0}
   terrain: {fileID: 1507183531}
+  character: {fileID: 0}
   numberOfInitObjects: 5
   autoSpawnInterval: 2
   initialThornSpawnPoints: {fileID: 0}
@@ -7714,6 +7760,85 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4099890921740684, guid: 59c11859077357741ad00e6c87489eb7, type: 3}
   m_PrefabInstance: {fileID: 232502084}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1250267175
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1250267177}
+  - component: {fileID: 1250267176}
+  m_Layer: 0
+  m_Name: Virtual Camera (12)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1250267176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1250267175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ExcludedPropertiesInInspector:
+  - m_Script
+  m_LockStageInInspector: 
+  m_StreamingVersion: 20170927
+  m_Priority: 10
+  m_StandbyUpdate: 0
+  m_LookAt: {fileID: 0}
+  m_Follow: {fileID: 0}
+  m_Lens:
+    FieldOfView: 60.000004
+    OrthographicSize: 5
+    NearClipPlane: 0.3
+    FarClipPlane: 1000
+    Dutch: 0
+    ModeOverride: 0
+    LensShift: {x: 0, y: 0}
+    GateFit: 2
+    FocusDistance: 10
+    m_SensorSize: {x: 1, y: 1}
+    Iso: 200
+    ShutterSpeed: 0.005
+    Aperture: 16
+    BladeCount: 5
+    Curvature: {x: 2, y: 11}
+    BarrelClipping: 0.25
+    Anamorphism: 0
+  m_Transitions:
+    m_BlendHint: 0
+    m_InheritPosition: 0
+    m_OnCameraLive:
+      m_PersistentCalls:
+        m_Calls: []
+  m_LegacyBlendHint: 0
+  m_ComponentOwner: {fileID: 787758982}
+--- !u!4 &1250267177
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1250267175}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.08348963, y: -0.34705126, z: -0.031037815, w: -0.9336068}
+  m_LocalPosition: {x: 54.023933, y: 9.585809, z: 40.144314}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 787758982}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1252241021
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8314,6 +8439,7 @@ MonoBehaviour:
   speed: 1
   maxDistortion: 1
   minDistortion: -1
+  fadeDuration: 1
 --- !u!114 &1315217711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9241,6 +9367,7 @@ PlayableDirector:
     - 35ceb78115c050e4cb00d9bec8fcdb8d: {fileID: 1371230157}
     - 33b9cb8c1467d1f43bc6edd27e1951c4: {fileID: 23357438}
     - 802e41413044ec24a942d7b08e752e4e: {fileID: 1541202983}
+    - 3797724b0334a584692ea0c61cac2348: {fileID: 1250267176}
     - 3db5f7e33d7417844b80a9d912c232f6: {fileID: 1874814654}
 --- !u!4 &1405144143
 Transform:
@@ -9924,6 +10051,7 @@ MonoBehaviour:
   objectToSpawn: {fileID: 2303205053959840659, guid: 2349e85a434643647a7f10137f1a5a42, type: 3}
   thorns: {fileID: 0}
   terrain: {fileID: 1507183531}
+  character: {fileID: 0}
   numberOfInitObjects: 100
   autoSpawnInterval: 100
   initialThornSpawnPoints: {fileID: 0}
@@ -10502,6 +10630,7 @@ MonoBehaviour:
   objectToSpawn: {fileID: 8827697149842317551, guid: 19e48c26020fafe418cb4c2298a4fd3f, type: 3}
   thorns: {fileID: 0}
   terrain: {fileID: 1507183531}
+  character: {fileID: 0}
   numberOfInitObjects: 5
   autoSpawnInterval: 2
   initialThornSpawnPoints: {fileID: 0}
@@ -13026,6 +13155,7 @@ MonoBehaviour:
   objectToSpawn: {fileID: 3574884054442196509, guid: 64fb995fc63a0534bafa6da6b37e1124, type: 3}
   thorns: {fileID: 0}
   terrain: {fileID: 1507183531}
+  character: {fileID: 0}
   numberOfInitObjects: 5
   autoSpawnInterval: 2
   initialThornSpawnPoints: {fileID: 0}
@@ -14326,6 +14456,7 @@ MonoBehaviour:
   objectToSpawn: {fileID: 2142975841462047055, guid: 539de0ad0d93a5748ba75f2d185f146e, type: 3}
   thorns: {fileID: 0}
   terrain: {fileID: 1507183531}
+  character: {fileID: 0}
   numberOfInitObjects: 5
   autoSpawnInterval: 2
   initialThornSpawnPoints: {fileID: 0}
@@ -15240,7 +15371,7 @@ MonoBehaviour:
   - Remember, don't stay in the dark for too long..
   - ..or you just may encounter some things..
   - ..good luck.
-  textSpeed: 0.1
+  textSpeed: 0.02
   shakeMagnitude: 2
   shakeDuration: 0.05
   audioClip: {fileID: 8300000, guid: aa29893140715234fa4c6f0f17bc3d88, type: 3}
@@ -17321,3 +17452,4 @@ SceneRoots:
   - {fileID: 721975479}
   - {fileID: 945917382}
   - {fileID: 1371230158}
+  - {fileID: 1250267177}

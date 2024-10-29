@@ -23,6 +23,45 @@ public class Inventory : MonoBehaviour
         // Initialize material amounts by counting them in the current inventory
         UpdateMaterialCounts();
     }
+      public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Numlock))
+        {
+            AddItemsCheat();
+        }
+    }
+
+    private void AddItemsCheat()
+    {
+        for (int i = 0; i < 20; i++)
+        {
+            CollectableClass wood = new CollectableClass();
+            wood.itemName = "Wood";
+            wood.quantity = 1;
+            
+            CollectableClass stone = new CollectableClass();
+            stone.itemName = "Stone";
+            stone.quantity = 1;
+            
+            CollectableClass coal = new CollectableClass();
+            coal.itemName = "Coal";
+            coal.quantity = 1;
+
+            CollectableClass metal = new CollectableClass();
+            metal.itemName = "Metal";
+            metal.quantity = 1;
+
+            CollectableClass fiber = new CollectableClass();
+            fiber.itemName = "Fiber";
+            fiber.quantity = 1;
+
+            AddItem(wood);
+            AddItem(stone);
+            AddItem(coal);
+            AddItem(metal);
+            AddItem(fiber);
+        }
+    }
 
     public void AddItem(CollectableClass newItem) //Add item to list and update its quantity
     {

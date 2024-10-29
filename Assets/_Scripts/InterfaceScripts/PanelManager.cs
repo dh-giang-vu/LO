@@ -8,6 +8,9 @@ public class PanelManager : MonoBehaviour
     [SerializeField] private GameObject lightToggle;
     [SerializeField] private GameObject decorToggle;
 
+    public int numberOfLights = 0;
+    public int numberOfBuildings = 0;
+
     public void ActivateBuilding()
     {
         buildingToggle.SetActive(!buildingToggle.activeSelf);
@@ -22,4 +25,25 @@ public class PanelManager : MonoBehaviour
     {
         decorToggle.SetActive(!decorToggle.activeSelf);
     }
+
+    public void AddNumberOfLights()
+    {
+        numberOfLights++;
+    }
+
+    public void AddNumberOfBuildings()
+    {
+        numberOfBuildings++;
+    }
+
+    public int GetNumberOfLights()
+    {
+        return numberOfLights;
+    }
+
+    public int GetNumberOfBuildings()
+    {
+        return numberOfBuildings;
+    }
+
 }
