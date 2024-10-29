@@ -439,7 +439,7 @@ To create the distortion effect, the vertex shader displaces the input vertex by
 <br/>
 
 <div align="center">
-  <pre style="width: 90%; max-width: 900px; text-align: left; padding: 10px; border-radius: 5px;">
+  <pre style="width: 90%; text-align: left; padding: 10px; border-radius: 5px;">
    private IEnumerator FadeIn()
    {
       float elapsedTime = 0;
