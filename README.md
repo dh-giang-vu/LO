@@ -427,7 +427,7 @@ The Ghost Shader is essential for our game, as ghosts are a key feature that add
 The distortion effect is achieved by displacing the input vertex in the vertex shader using a sine wave function that varies with game time. This produces a moving wave animation on the ghost's body. To enhance the ghostly look, the fragment shader adjusts the alpha channel and RGB values, making the ghost appear more transparent and dimmed.
 
 **Material Parameters:**  
-- [Ghost Material Link](./Assets/_Shaders/BlueprintShader_Material.mat)
+- [Ghost Material Link](./Assets/_Shaders/GhostShader_Material.mat)
 
 <br/>
 
