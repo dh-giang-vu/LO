@@ -6202,7 +6202,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fe7d20bdc9d3044f9274c69671eeb38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToEnable: {fileID: 0}
+  electricObjectToEnable: {fileID: 0}
+  tutorObjectToEnable: {fileID: 0}
 --- !u!4 &1193908082 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3287371164604070066, guid: 4faff78e313603a4abd479f59792c6ff, type: 3}
@@ -6282,10 +6283,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 97199545798068281, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 140884617331554197, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
       propertyPath: playerInventory
       value: 
       objectReference: {fileID: 802012023}
+    - target: {fileID: 2032605393160286169, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2155059971863164694, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
       propertyPath: progressTracker
       value: 
@@ -6294,6 +6303,18 @@ PrefabInstance:
       propertyPath: craftingController
       value: 
       objectReference: {fileID: 1136693392}
+    - target: {fileID: 2616602024228529104, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
+      propertyPath: m_text
+      value: 'Did you know?
+
+
+        Electric lights are far more efficient and
+        covers a much wider area
+
+
+        If you haven''t alrready, craft a generator
+        to get started!'
+      objectReference: {fileID: 0}
     - target: {fileID: 3846886346836103074, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
       propertyPath: sanityManager
       value: 
@@ -6310,6 +6331,10 @@ PrefabInstance:
       propertyPath: objectToActivate
       value: 
       objectReference: {fileID: 1379548068}
+    - target: {fileID: 4677376766114016884, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
+      propertyPath: m_text
+      value: Quick Tip
+      objectReference: {fileID: 0}
     - target: {fileID: 5982127532826603792, guid: 0247c5877429a2645ad932efdf69cafa, type: 3}
       propertyPath: progressTracker
       value: 
