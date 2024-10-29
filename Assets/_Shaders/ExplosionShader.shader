@@ -2,7 +2,7 @@ Shader "Custom/JaggedExplosionShader" {
     Properties {
         _MainTex ("Texture", 2D) = "white" {}
         _ExplosionProgress ("Explosion Progress", Range(0, 1)) = 0.0
-        _ExplosionPower ("Explosion Power", Range(0, 1)) = 0.5 // Max value can be adjusted
+        _ExplosionPower ("Explosion Power", Range(0, 1)) = 0.5 
         _BaseColor ("Base Color", Color) = (1, 0.5, 0.5, 1)
     }
     SubShader {
@@ -41,12 +41,11 @@ Shader "Custom/JaggedExplosionShader" {
                 v2f o;
                 o.uv = v.uv;
 
-                // Use a smaller maximum displacement to achieve a jagged effect
+                
                 float explosionEffect = pow(_ExplosionProgress, 2.0);
-                float baseDisplacement = _ExplosionPower * 0.1; // Set a fixed maximum displacement for jaggedness
+                float baseDisplacement = _ExplosionPower * 0.1;
                 float displacement = explosionEffect * baseDisplacement * (0.5 + rand(v.vertex.xy) * 0.5); 
 
-                // Apply displacement in random directions based on normal and some randomness
                 float3 jaggedOffset = normalize(v.normal + rand(v.vertex.xy) * 0.2) * displacement;
                 v.vertex.xyz += jaggedOffset;
 

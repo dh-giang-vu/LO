@@ -150,7 +150,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4794888870049439696
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1433,7 +1433,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tutor Help
+  m_text: Quick Tip
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
   m_sharedMaterial: {fileID: 5931831309752250766, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
@@ -6015,6 +6015,56 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &5956465280493382361
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4377558669264657917}
+  - component: {fileID: 443813518380927925}
+  m_Layer: 5
+  m_Name: PopUpLaterEvents
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4377558669264657917
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5956465280493382361}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7996495092280051091}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &443813518380927925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5956465280493382361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fe7d20bdc9d3044f9274c69671eeb38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electricObjectToEnable: {fileID: 0}
+  tutorObjectToEnable: {fileID: 0}
 --- !u!1 &6007763351240371358
 GameObject:
   m_ObjectHideFlags: 0
@@ -7206,6 +7256,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 4377558669264657917}
   - {fileID: 1016349058938314779}
   - {fileID: 6380858412690278835}
   m_Father: {fileID: 8323328510667024632}
@@ -7715,12 +7766,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Hey, are you a tutor?
+  m_text: 'Did you know?
 
 
-    If you need to finish this game soon, you
-    can press "\" to get more materials through the debug system if you''d like to
-    test out other parts of our game.'
+    Electric lights are far more efficient and covers
+    a much wider area
+
+
+    If you haven''t alrready, craft a generator to get started!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
   m_sharedMaterial: {fileID: 5931831309752250766, guid: 8bf062ee44fe4704e9d74d7072eccae7, type: 2}
