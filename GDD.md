@@ -94,11 +94,11 @@ There is only one character in this game, whose main goal is to survive. The mai
 
 ### Player Perspective
 
-The player will experience the game from a third-person perspective, with the camera positioned behind and slightly above the character. The camera will automatically follow the player's movements, keeping them centered in the frame. There will be no manual camera rotation, ensuring a consistent view as the player navigates the game world.
+The player will experience the game from a third-person perspective, with the camera positioned behind and slightly above the character. The camera will automatically follow the player's movements, keeping them centered in the frame.
 
 ### Controls
 
-The player will use the WASD keys to move the character around the map. Pressing E will open the crafting menu, displaying items that can be crafted based on the materials the player currently possesses. The player can craft an item by left-clicking on it, and all crafted items can be placed on the map. To gather resources, the player needs to stand near a resource structure, like trees or stones, and press LEFT CLICK. The LEFT CLICK key is also used for any other interactions with objects when the player is within range, such as standing next to them. The play will also be able to quick select items from their inventory with the NUMBERS 1-9 on their keyboard.
+The player will use the WASD keys to move the character around the map. Pressing C will open the crafting menu, displaying items that can be crafted based on the materials the player currently possesses. The player can craft an item by left-clicking on it, and all crafted items can be placed on the map. To gather resources, the player needs to stand near a resource structure, like trees or stones, and press E. The E key is also used for any other interactions with objects when the player is within range, such as refueling the light sources. 
 
 <div align="center">
   <img src="./GDDImages/lightsout_controls5.jpg" width="600"/>
@@ -106,15 +106,15 @@ The player will use the WASD keys to move the character around the map. Pressing
 
 ### Crafting & Placing Items
 
-As mentioned in **Controls**, the player can open the crafting menu by pressing E. When the player left-clicks on an item in the crafting menu, the crafting menu will close, giving the player a full view of the game screen. The selected item will then follow the player's cursor temporarily, allowing the player to left-click again to place the item in the game world.
+As mentioned in **Controls**, the player can open the crafting menu by pressing C. When the player left-clicks on an item in the crafting menu and press craft, the crafting menu will close, giving the player a full view of the game screen. The selected item will then follow the player's cursor temporarily, allowing the player to left-click again to place the item in the game world.
 
 ### Progression
 
-The core gameplay revolves around illuminating new areas. Entering dark zones will cause the player's sanity to rapidly decrease, leading to death if it fully depletes. To progress, the player can collect resources and craft placeable items that allow them to create light sources, pushing back the darkness and unlocking more areas. Each light source provides a certain amount of lighting points. The goal of the game is to generate enough points for a certain area. The game blends city-building and survival elements, appealing to a broad audience. Placing light sources in the dark enhances the eerie atmosphere, adding to the overall experience.
+The core gameplay revolves around illuminating new areas. Entering dark zones will cause the player's sanity to rapidly decrease, leading to death if it fully depletes. To progress, the player can collect resources and craft placeable items that allow them to create light sources, pushing back the darkness and unlocking more areas. The goal of the game is to light the map by placing the light sources. It will be tracked by the progress bar on the UI. The game blends city-building and survival elements, appealing to a broad audience. Placing light sources in the dark enhances the eerie atmosphere, adding to the overall experience.
 
-- **Lighting up**: The player finds resources to fuel the existing light sources or create a new one. A higher-tier light source provides a wider coverage radius.
+- **Lighting up**: The player finds resources to fuel the existing light sources or create a new one. A higher-tier light source provides a wider coverage radius and longer duration.
 - **Venture into the darkness**: The only life source in this game is called “Sanity”. when it reaches 0, the game is over. Staying in the dark greatly consumes sanity. Don’t stay for too long!
-- **Stamina**: The player can run with faster movement speed for a short period while consuming stamina. When stamina reaches 0, the player cannot run for a while until the stamina bar is refilled. The stamina bar is refilled automatically.
+- **Stamina**: The player can run with faster movement speed for a short period while consuming stamina until it reaches 0. The stamina bar is refilled automatically.
 
 <div align="center">
   <img src="./GDDImages/lightsout_stamina_full.png" width="600"/>
@@ -124,24 +124,24 @@ The core gameplay revolves around illuminating new areas. Entering dark zones wi
   <img src="./GDDImages/lightsout_stamina_half.png" width="600"/>
 </div>
 
-- **Increase Sanity**: Standing near the camp building increases sanity by a fixed rate. Standing near the light sources does not increase the sanity or reduce it.
+- **Increase Sanity**: Standing near the building increases sanity by a fixed rate. Higher tier building provides more sanity. Standing near the light sources does not increase the sanity or reduce it.
 - **Crafting items**: The player can use resources to build a structure for beneficial effects or decoration.
 
 <div align="center">
   <img src="./GDDImages/lightsout_craftingexample.png" width="600"/>
 </div>
 
-- **Renewable resources**: Resources will automatically respawn after they are collected. Respawn time depends on the types of resources.
+- **Renewable resources**: Resources will automatically spawn periodically. Respawn time depends on the types of resources.
 
 ## User Interface (UI) 🛑
 
-The game’s main UI will track the player’s sanity and stamina. Additional UI components would include the crafting menu, the main menu, the pause menu, the settings menu, and more.
+The game’s main UI will track the player’s sanity, current materials, and stamina. Additional UI components would include the crafting menu, and the main menu.
 
 *Note: The images shown below are not the final art style used in-game.*
 
 ### Main Menu
 
-The Main Menu gives a vibe of eeriness and loneliness. There are three options in the Main Menu which are: Start Game, Settings, Quit Game. **Start Game** option will lead to **Game's main UI**.
+The Main Menu gives a vibe of eeriness and loneliness. There are two options in the Main Menu which are: Start Game,and Quit Game. **Start Game** option will lead to **Game's main UI**. (Since it is WebGL build, Quit game button does not work.)
 
 <div align="center">
   <img src="./GDDImages/menuUI.png" width="600"/>
@@ -155,24 +155,23 @@ The main scenario of the game. The resources counters are shown at the top of th
   <img src="./GDDImages/mainUI.png" width="600"/>
 </div>
 
-Upon hovering the cursor over an interactable, or staying near it...(continue)
+While standing near the interactable object, the pop-up guide show what the player can do.
 <div align="center">
   <img src="./GDDImages/interactableUI.png" width="600"/>
 </div>
 
 ### Crafting UI
 
-Upon opening the crafting menu, the player can choose which items to craft, items in which the player do not have enough resources to aquire will be greyed out. The player can select the **Buildings** button to switch to crafting/building buildings, and the same goes for the **Decorations** button(Not shown in concept image).
+Upon opening the crafting menu, the player can choose which items to craft. The player can click the arrow to change to the **Buildings** tab to craft buildings, and the same goes for the **Decorations** tab.
 The crafting menu would display the discription including stats and effects of the item, along with the materials required to craft it.
 <div align="center">
   <img src="./GDDImages/craftingUI.png" width="600"/>
 </div>
-Clicking on an item in which Adam has sufficient resource for will prompt the crafting menu to disappear and the player will be able to place that item on the map.
+Clicking on an item in which the player has sufficient resource for will prompt the crafting menu to disappear and the player will be able to place that item on the map. If the resources are not enough to craft, there will be a pop-up message notice the player.
 <div align="center">
   <img src="./GDDImages/placeItemUI.png" width="600"/>
 </div>
-When this happens, the chosen item will follow the player's cursor and has a shade of blue, allowing the him to place it wherever he can hover his cursor to.
-Only upon placing the item successfully would the resources be taken from Adam's inventory.
+When this happens, the chosen item will follow the player's cursor and has a shade of blue, allowing the him to place it wherever he can hover his cursor to. However, if it has a shade of red, it means that he cannot place the item there.
 
 ## Levels and World Design 🌏
 
@@ -186,25 +185,25 @@ We’re aiming to create a 2.5D game that combines 3D assets with a 2D layout. T
 
 ### Objects
 
-- **Light sources**: will be the key element in tracking progress, as the player’s goal is to gradually illuminate the world. These light sources could include items like campfires, lightbulbs, torches, and similar objects, each contributing to lighting up different parts of the game world.
+- **Light sources**: will be the key element in tracking progress, as the player’s goal is to gradually illuminate the world. These light sources could include items like campfires, torches, and electric lights, each contributing to lighting up different parts of the game world.
 
 <div align="center">
   <img src="./GDDImages/lightsout_lightsources.png" width="600"/>
 </div>
 
-- **Generator**: Certain light sources may require power to keep it on. A generator is used to keep these light sources on and must be fed power to keep it running.
+- **Generator**: Electric light sources require power to keep it on. A generator is used to keep these light sources on and must be fed power to keep it running.
 <div align="center">
   <img src="./GDDImages/lightsout_generator.png" width="300"/>
 </div>
 
 - **Collecting resources**: There are also resources that the player can collect to gather and craft new items, these resources could be wood, coal, fiber, and metal.
-- **Buildings/Structures**: Buildings would be objects that the player can create. The initial starting tent can recover sanity. The buildings that the player builds can recover sanity faster and have a larger “sanity recovery effect radius” than the initial tent. If the player's “stamina” mechanic is implemented, then the buildings will recover stamina as well.
+- **Buildings/Structures**: Buildings would be objects that the player can create. The initial starting tent can recover sanity. The buildings that the player builds can recover sanity faster and have a larger “sanity recovery effect radius” than the initial tent.
 
 <div align="center">
   <img src="./GDDImages/lightsout_tent.png" width="300"/>
 </div>
 
-- **Obstacles**: Throughout the map, the player will encounter obstacles that will prevent them from moving through it. To get through these obstacles, the player must light up a certain amount of light in the surrounding area of the obstacles to go down. An example below is a thorn plant that sprouts when given light, allowing the player to pass through.
+- **Obstacles**: Throughout the map, the player will encounter obstacles that will prevent them from moving through it. To get through these obstacles, the player must light up the surrounding area of the obstacles to go down. An example below is a thorn plant that sprouts when given light, allowing the player to pass through.
 <div align="center">
   <img src="./GDDImages/lightsout_obstacle1.png" width="300"/>
 </div>
@@ -226,9 +225,11 @@ The second stage of the "Thorns" obstacle, where the thorns start to turn into f
 The final stage of the "Thorns" obstacle, falling apart and allowing the player to pass through it.
 </div>
 
+- **Ghost**: When the player's sanity go down to a certain ratio, the ghosts will spawn on the map. When the player is near the ghost, their sanity will reduce in a faster rate, so do not go near them, they will be gone eventually.
+
 ### Craftables and Interactables
 
-- **Interactables**: Interactables are visible objects on the map, which the player can interact with by LEFT CLICKING, these Interactables will block the player's path<br>
+- **Interactables**: Interactables are visible objects on the map, which the player can interact with by pressing E, these Interactables will block the player's path<br>
 
   - **Tree**: Trees spawn at random rates around the map in random areas. Interacting with one will trigger a chopping animation, once the animation ends, the tree will fade away and the player will gain _WOOD_ and _FIBER_.<br>
 
@@ -248,7 +249,7 @@ The final stage of the "Thorns" obstacle, falling apart and allowing the player 
     | <div align="center"><img src="./GDDImages/Objects and Interactables/stone_large.png"/></div>   | 4 _STONE_       | 16                 |
     | <div align="center"><img src="./GDDImages/Objects and Interactables/stone_massive.png"/></div> | 4 _STONE_       | 32                 |
 
-  - **Ore**: Ore are more rare than stones and trees and spawns in more remote areas. Interacting with ores will trigger a mining animation, once the animation ends, the player will gain _COAL_ and _METAL_. Ores will fade away and disappear after being mined several times. <br>
+  - **Ore**: Ore are more rare than stones and trees. Interacting with ores will trigger a mining animation, once the animation ends, the player will gain _COAL_ and _METAL_. Ores will fade away and disappear after being mined several times. <br>
 
     | Image                                                                                        | Resources Given       | Times Interactable |
     | -------------------------------------------------------------------------------------------- | --------------------- | ------------------ |
@@ -258,6 +259,8 @@ The final stage of the "Thorns" obstacle, falling apart and allowing the player 
 
   - **Campfire (Light Sources)**: Certain light sources requires refueling with a certain amount of _COAL_. Upon interacting, an animation of Adam refueling will play, after the animation finishes, the light sources will go back to full brightness and fuel. If light sources run out of fuel. They will stop providing light and will no longer provide protection against the darkness, however, refueling is still possible and would replenish lights and fuel.
 
+  - **Street Lamp (Electric Light Sources)**: Electric light sources do not require refueling directly, but they need to be within the generator radius. The generator need to be refuel with a certain amount of _COAL_. If the generator is down, all the electric light sources will go down as well until the generator is refilled.
+  - 
 - **Craftables**: Craftables are items that the player can craft, these items would also be placeable on the map, allowing for city-scaping. Craftable items include: Light sources, Buildings, and Decorations<br>
 
   - **Light Sources**
@@ -307,7 +310,7 @@ Low-poly 3D models that feature a slightly dark tone that goes well with the dar
 
 ### Sound and Music
 
-Sounds that give the player a sense of loneliness would work best with this game. These could include random sounds of wind, tree branches falling, and such. The music would be somber, almost quiet.
+Sounds that give the player a sense of loneliness would work best with this game. The sound gives the errie ambience and each items have sound indicator such as generator working sound, or the sound when gaining sanity.
 
 ### Assets
 
