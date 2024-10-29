@@ -276,9 +276,13 @@ This is good feedback from the participants.
 
 These are bugs that were encountered during testing.
 
+---
+
 ## Shaders and Special Effects
 
 TODO (due milestone 3) - see specification for details
+
+---
 
 ## Summary of Contributions
 
@@ -294,3 +298,23 @@ TODO (due milestone 3) - see specification for details
 Unity. (2000a). Unity Asset Store - The Best Assets for Game Making. @UnityAssetStore; Unity Asset Store. https://assetstore.unity.com/
 
 Unity. (2000b). Unity Documentation. Docs.unity.com. https://docs.unity.com/
+
+External assets
+
+https://assetstore.unity.com/packages/3d/environments/3d-simple-building-hotel-213775
+https://assetstore.unity.com/packages/3d/environments/fantasy/fantasy-house-bundle-257964
+https://assetstore.unity.com/packages/3d/environments/desert-village-houses-lowpoly-200247
+https://assetstore.unity.com/packages/3d/environments/historic/medieval-tent-big-19023
+https://assetstore.unity.com/packages/3d/environments/low-poly-medieval-free-pack-253520
+https://assetstore.unity.com/packages/3d/environments/historic/medieval-buildings-exteriors-72836
+https://assetstore.unity.com/packages/3d/environments/urban/city-traffic-lights-pack-free-low-poly-3d-art-154053
+https://assetstore.unity.com/packages/3d/props/jack-o-lantern-12185
+https://assetstore.unity.com/packages/3d/environments/landscapes/rpg-poly-pack-lite-148410
+https://assetstore.unity.com/packages/3d/environments/campfires-torches-models-and-fx-242552
+https://assetstore.unity.com/packages/3d/environments/landscapes/low-poly-nature-pack-lite-288596#content
+https://assetstore.unity.com/packages/3d/environments/wooden-house-free-low-poly-270889
+https://assetstore.unity.com/packages/3d/props/exterior/street-lamps-2-260395
+https://assetstore.unity.com/packages/3d/characters/humanoids/fantasy/free-low-poly-human-rpg-character-219979
+https://assetstore.unity.com/packages/3d/props/exterior/low-poly-resource-rocks-76150
+https://assetstore.unity.com/packages/3d/props/industrial/industrial-equipment-electric-motor-199519
+https://assetstore.unity.com/packages/3d/vegetation/trees/polycraft-christmas-tree-108277 
