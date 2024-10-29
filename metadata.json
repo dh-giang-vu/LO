@@ -22,5 +22,8 @@
       "github": "screentime0",
       "email": "apriyatama@student.unimelb.edu.au"
     }
-  ]
+  ],
+  "gameTitle": "Lights Out",
+  "gameBlurb": "Survive the unending darkness by keeping your light source fueled and your sanity intact. Venture into the unseen world to gather resources, craft new light sources, and buildings, and expand your safe zone. Illuminate the unfamiliar world, conquer the unknown, or succumb to the darkness and desperation. ",
+  "videoUrl": "https://youtu.be/HkBFROIl9P8"
 }
