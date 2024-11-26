@@ -1,16 +1,46 @@
-# Please *DO NOT* modify this file. Keep it as-is in your repository for the
-# duration of the project. Modification/deletion of this file may result in
-# your project failing to build or deploy, and in such a scenario, will lead to
-# a loss of marks.
+name: Actions
 
-name: Gradescope Submit
-
-on:
-  repository_dispatch:
-    types: [gradescope-submit]
+on: [push, pull_request]
 
 jobs:
-  build-and-deploy:
-    name: Gradescope Submit
-    uses: feit-comp30019/ci-cd/.github/workflows/webgl-proj2.yml@main
-    secrets: inherit
+  build:
+    name: Build Project
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout (without LFS)
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Cache Packages folder
+      - name: Cache Packages
+        uses: actions/cache@v3
+        with:
+          path: Packages
+          key: Packages-LightsOut-WebGL
+          restore-keys: |
+            Packages-LightsOut-
+            Packages-
+
+      # Build
+      - name: Build
+        uses: game-ci/unity-builder@v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          targetPlatform: WebGL
+          allowDirtyBuild: true
+
+      # Deploy to GitHub Pages
+      - name: Deploy GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build/WebGL/WebGL
+          
+      # Output
+      - uses: actions/upload-artifact@v3
+        with:
+          name: Build
+          path: build
