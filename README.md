@@ -1,613 +1,361 @@
-# Project 2 Report
+# Overview
 
-Read the [project 2 specification](https://github.com/feit-comp30019/project-2-specification) for details on what needs to be covered here. You may modify this template as you see fit, but please keep the same general structure and headings.
+**Lights Out** is a survival-crafting game with eerie elements, developed as part of the University of Melbourne's COMP30019 Graphics and Interactions coursework.  
 
-Remember that you must also continue to maintain the Game Design Document (GDD) in the `GDD.md` file (as discussed in the specification). We've provided a placeholder for it [here](GDD.md).
+Play it here: [Lights Out](https://dh-giang-vu.github.io/LightsOut/)
 
----
+# Game Design Document (GDD) (Lights Out)
 
-## Table of Contents
+### Table of contents
 
-- [Evaluation Plan](#evaluation-plan)
-- [Evaluation Report](#evaluation-report)
-- [Shaders and Special Effects](#shaders-and-special-effects)
-- [Summary of Contributions](#summary-of-contributions)
-- [References and External Resources](#references-and-external-resources)
+- [Game Design Document (GDD) (Lights Out)](#game-design-document-gdd-lights-out)
+    - [Table of contents](#table-of-contents)
+  - [Game Overview 💡](#game-overview-)
+    - [Core Concept](#core-concept)
+    - [Related Genre](#related-genre)
+    - [Target Audience](#target-audience)
+    - [Unique Selling Points (USPs)](#unique-selling-points-usps)
+  - [Story and Narrative 🌃](#story-and-narrative-)
+    - [Backstory](#backstory)
+    - [Characters](#characters)
+  - [Gameplay Mechanics 🎮](#gameplay-mechanics-)
+    - [Player Perspective](#player-perspective)
+    - [Controls](#controls)
+    - [Crafting \& Placing Items](#crafting--placing-items)
+    - [Progression](#progression)
+  - [User Interface (UI) 🛑](#user-interface-ui-)
+    - [Main Menu](#main-menu)
+    - [Game's main UI](#games-main-ui)
+    - [Crafting UI](#crafting-ui)
+  - [Levels and World Design 🌏](#levels-and-world-design-)
+    - [Game World](#game-world)
+    - [Objects](#objects)
+    - [Craftables and Interactables](#craftables-and-interactables)
+  - [Art and Audio 🎨 🔊](#art-and-audio--)
+    - [Art Style](#art-style)
+    - [Sound and Music](#sound-and-music)
+    - [Assets](#assets)
+  - [Team Communication, Timeline and Task Assignment 🤝](#team-communication-timeline-and-task-assignment-)
+    - [Tools 🔧](#tools-)
+    - [Timeline \& Task Assignment 📆](#timeline--task-assignment-)
+  - [Possible Challenges ⚠️](#possible-challenges-️)
 
----
 
-## Evaluation Plan
+## Game Overview 💡
 
-### Observational Technique - Cooperative Evaluation
+<div align="center">
+  <img src="./GDDImages/lightsout_title.png" width="600"/>
+</div>
 
-- Analyst and participant evaluate the game together.
-- Identified problems and potential solutions are discussed together with participants.
-- Questions to ask participants:
-   - How did the atmosphere of the game make you feel throughout your gameplay experience?
-   - What aspect of the game stood out to you the most?
-   - Was there any moment where you felt confused or uncertain about what to do next?
-   - How did the eerie elements (SFX) affect your exploration of the game environment?
-   - How are the controls?
-   - What do you like most about our game?
-   - What do you think could be improved?
-   - What do you think of the difficulty of the game?
-   - What do you think the game is lacking to achieve a more eerie effect?
-   - What part of the game do you think is the most engaging? What part feels boring?
-   - Were there any moments where the atmosphere didn’t feel eerie/unsettling? What contributed to that?
-   - What are your thoughts when balancing your sanity bar and crafting light sources in the game? Did you face any challenges?
 
-#### Protocol for Game Testing - Cooperative Evaluation 
+### Core Concept
 
-**Overview**
+The game's core concept centres on the player surviving in the darkness by keeping their only starter light source illuminated through refueling. Without light, the player's sanity will be constantly drained. To avoid **Lights Out**, the player must navigate their way through the hostile unknown to gather materials for refueling their light source(s). They may also light up the map to broaden their safe zone by crafting new light sources with any excess materials they have. In an environment with imperceptible dangers, the player must venture out to the darkness to collect essential resources and construct and expand their base while evading environmental threats. The game ends when the player has successfully lit up all of the map.
 
-This protocol outlines a process for conducting a cooperative evaluation of test players engaging with a game, focusing on collaborative assessment and feedback.
+### Related Genre
 
-**Objectives**
+This is a survival-crafting game with an eerie atmosphere, inspired by the game "Don't Starve". We've incorporated similar sanity and crafting mechanics while introducing our own unique twist. Unlike other games of the same genre, which often use physical enemies, we've opted to use darkness and uninteractable enemies as the primary threats. This choice is to further enhance the eerie, dark aesthetic, creating a more immersive and unsettling gameplay experience.
 
-- Observe player interactions.
-- Identify issues and gather feedback.
-- Discuss potential solutions together.
 
-**Preparation**
+<div align="center">
+  <img src="./GDDImages/imageCollage.png" width="600"/>
+</div>
 
-1. **Select Participants:** 
-   - Recruit at least 5 players representing your target audience.
+(From Top Left to Bottom Right)
+_Don't Starve_ [Video game]. (2013). Klei Entertainment.
+_Darkwood_ [Video game]. (2017). Crunchy Koalas.
+_Limbo_ [Video game]. (2010). Playdead; Double Eleven.
+_Truckful_ [Video game]. (2024). Mythic Owl.
+_Core Keeper_ [Video game]. (2022). Fireshine Games.
+_Minecraft_ [Video game]. (2011). Mojang.
 
-2. **Set Up Environment:** 
-   - Ensure a comfortable, distraction-free space with all necessary equipment.
+### Target Audience
 
-3. **Materials:** 
-   - Prepare observation checklists and recording tools (with consent).
+This game's target audience is young adults and adults aged 15 - 30. This game will offer an engaging gameplay experience for players who enjoy survival-crafting games with a touch of creepy, eerie aesthetic.
 
-**Protocol Steps**
+### Unique Selling Points (USPs)
 
-1. **Introduction (5 min):**
-   - Introduce participants and explain the purpose of the evaluation.
+- **Perpetual Nighttime Setting**
+  The game world is forever stuck in nighttime, leaving the player constantly surrounded by darkness. This design choice not only creates a deeply eerie atmosphere but also evokes a haunting sense of isolation, enhancing the overall game experience.
+- **Darkness & Intangible Threats**
+  In our game, danger doesn't come from physical enemies. Instead, Darkness and Enemies that the player cannot interact with serve as the primary source of threats. With their beacon of safety - the light source, at risk of running out of fuel, the player is forced to venture into the darkness in search of materials. The tension of being in unknown danger throughout the game encourages players to continuously learn and adapt. Rather than offering a combat-focused experience, this game rewards those who are smart and brave enough to safely navigate the unknown, gather resources, and expand their base.
+- **Survive by Lighting up the Darkness, then Get Creative!**
+  Light sources are not the only craftables in this game. As the player becomes more efficient at gathering resources and maintaining their light sources, they can turn excess materials into decorative items. This adds a layer of depth to the gameplay, allowing players to express their creativity and transform the game environment.
 
-2. **Gameplay Session (15 min):**
-   - Allow participants to play while analysts observe and take notes.
+## Story and Narrative 🌃
 
-3. **Cooperative Discussion (10 min):**
-   - Gather for a discussion, encouraging participants to share their experiences.
-   - Analysts facilitate conversation about identified issues and potential solutions.
+### Backstory
 
-4. **Wrap-Up (5 min):**
-   - Summarise findings and thank participants for their input.
+The story is set in a forest during the summer, where the main character, Adam, decides to go camping to escape the stress of his current life crisis. After what seemed like a typical night of camping, he goes to sleep in his tent as usual. However, when he wakes up the next morning, he is still surrounded by darkness, even though it’s 6 AM. Strangely, Adam notices that his campfire is still burning. Now, it's up to him to figure out what’s going on by lighting up his surroundings, potentially uncovering hidden dangers as he explores the darkness, one step at a time.
 
-**Post-Session**
+### Characters
 
-1. **Analyse Notes:**
-   - Review notes and recordings, compiling a report on key findings.
+There is only one character in this game, whose main goal is to survive. The main character is an office worker in his late 20s who is facing significant stress due to several traumatic events in his life, leading him into a crisis. He initially went on this camping trip to escape reality and find some relief. However, he will soon discover that this camping trip may turn out to be his last, depending on how he manages to get out of it.
 
-2. **Prioritise Issues:**
-   - Rank issues based on how often they occur and their impact, discussing with the development team.
+<div align="center">
+  <img src="./GDDImages/lightsout_man_campfire.png" width="300"/>
+</div>
 
-3. **Follow-Up:**
-   - Share findings with everyone involved and plan future evaluations if necessary.
+## Gameplay Mechanics 🎮
 
----
+### Player Perspective
 
-### Query Technique - Questionnaire
+The player will experience the game from a third-person perspective, with the camera positioned behind and slightly above the character. The camera will automatically follow the player's movements, keeping them centered in the frame.
 
-- Participants will play the game on WebGL and fill out a survey form.
-- The survey form will include sections to rate various aspects of the gameplay and give text feedback.
--  Things we want feedback/ratings on:
-   - How does the player feel whilst playing the game?
-   - What do they think about the sanity system (does it stress them out)?
-   - Does the player feel incentivized to craft light sources?
-- Link to questionnaire: https://forms.gle/CN99nJRuxXeCCNT59
+### Controls
 
-#### Query Technique Protocol for Game Testing
+The player will use the WASD keys to move the character around the map. Pressing C will open the crafting menu, displaying items that can be crafted based on the materials the player currently possesses. The player can craft an item by left-clicking on it, and all crafted items can be placed on the map. To gather resources, the player needs to stand near a resource structure, like trees or stones, and press E. The E key is also used for any other interactions with objects when the player is within range, such as refueling the light sources. 
 
-**Overview**
+<div align="center">
+  <img src="./GDDImages/lightsout_controls5.jpg" width="600"/>
+</div>
 
-This protocol outlines the process for using questionnaires to gather feedback from participants after playing a game on WebGL. The goal is to assess various aspects of the gameplay and collect both quantitative and qualitative feedback.
+### Crafting & Placing Items
 
-**Objectives**
+As mentioned in **Controls**, the player can open the crafting menu by pressing C. When the player left-clicks on an item in the crafting menu and press craft, the crafting menu will close, giving the player a full view of the game screen. The selected item will then follow the player's cursor temporarily, allowing the player to left-click again to place the item in the game world.
 
-- Gather participant ratings on different gameplay aspects.
-- Collect textual feedback for each gameplay aspect and the overall game experience.
+### Progression
 
-**Preparation**
+The core gameplay revolves around illuminating new areas. Entering dark zones will cause the player's sanity to rapidly decrease, leading to death if it fully depletes. To progress, the player can collect resources and craft placeable items that allow them to create light sources, pushing back the darkness and unlocking more areas. The goal of the game is to light the map by placing the light sources. It will be tracked by the progress bar on the UI. The game blends city-building and survival elements, appealing to a broad audience. Placing light sources in the dark enhances the eerie atmosphere, adding to the overall experience.
 
-1. **Select Participants:**
-   - Recruit at least 5 players representing your target audience.
+- **Lighting up**: The player finds resources to fuel the existing light sources or create a new one. A higher-tier light source provides a wider coverage radius and longer duration.
+- **Venture into the darkness**: The only life source in this game is called “Sanity”. when it reaches 0, the game is over. Staying in the dark greatly consumes sanity. Don’t stay for too long!
+- **Stamina**: The player can run with faster movement speed for a short period while consuming stamina until it reaches 0. The stamina bar is refilled automatically.
 
-2. **Set Up Environment:**
-   - Ensure a comfortable, distraction-free space with access to the game on WebGL.
+<div align="center">
+  <img src="./GDDImages/lightsout_stamina_full.png" width="600"/>
+</div>
 
-3. **Materials:**
-   - Prepare a questionnaire that includes:
-     - Rating scales for different gameplay aspects.
-     - Open-ended text fields for feedback.
+<div align="center">
+  <img src="./GDDImages/lightsout_stamina_half.png" width="600"/>
+</div>
 
-**Questionnaire Structure**
+- **Increase Sanity**: Standing near the building increases sanity by a fixed rate. Higher tier building provides more sanity. Standing near the light sources does not increase the sanity or reduce it.
+- **Crafting items**: The player can use resources to build a structure for beneficial effects or decoration.
 
-1. **Gameplay Rating Section:**
-   - Include a rating scale (e.g., 1 to 5) for each aspect, such as:
-     - Graphics
-     - Controls
-     - Difficulty
-     - Enjoyment
+<div align="center">
+  <img src="./GDDImages/lightsout_craftingexample.png" width="600"/>
+</div>
 
-2. **Feedback Section:**
-   - Provide text fields for participants to offer detailed feedback:
-     - Comments on each gameplay aspect.
-     - Overall feedback on the game.
+- **Renewable resources**: Resources will automatically spawn periodically. Respawn time depends on the types of resources.
 
-**Protocol Steps**
+## User Interface (UI) 🛑
 
-1. **Introduction (5 min):**
-   - Introduce participants to the study and explain the purpose of the questionnaire.
+The game’s main UI will track the player’s sanity, current materials, and stamina. Additional UI components would include the crafting menu, and the main menu.
 
-2. **Gameplay Session (15 min):**
-   - Allow participants to play the game on WebGL for the allocated time.
+*Note: The images shown below are not the final art style used in-game.*
 
-3. **Questionnaire Completion (10 min):**
-   - Direct participants to fill out the survey form after gameplay.
-   - Encourage them to provide honest feedback and explanations for their ratings.
+### Main Menu
 
-4. **Wrap-Up (5 min):**
-   - Thank participants for their time and contributions.
-   - Remind them of the importance of their feedback for game development.
+The Main Menu gives a vibe of eeriness and loneliness. There are two options in the Main Menu which are: Start Game,and Quit Game. **Start Game** option will lead to **Game's main UI**. (Since it is WebGL build, Quit game button does not work.)
 
-**Post-Session**
+<div align="center">
+  <img src="./GDDImages/menuUI.png" width="600"/>
+</div>
 
-1. **Analyse Responses:**
-   - Review the completed questionnaires, compiling quantitative ratings and qualitative feedback.
+### Game's main UI
 
-2. **Identify Key Themes:**
-   - Look for common trends in ratings and comments to highlight areas for improvement.
+The main scenario of the game. The resources counters are shown at the top of the screen. The stamina bar and sanity bar are shown at the bottom-left of the screen. The player will be at the center of the screen and the camera will follow and lock on the player when they are moving.
 
-3. **Follow-Up:**
-   - Share findings with the development team and plan for any necessary adjustments based on participant feedback.
+<div align="center">
+  <img src="./GDDImages/mainUI.png" width="600"/>
+</div>
 
----
+While standing near the interactable object, the pop-up guide show what the player can do.
+<div align="center">
+  <img src="./GDDImages/interactableUI.png" width="600"/>
+</div>
 
-### Participants
+### Crafting UI
 
-- **Target Audience**: Teenagers and young adults aged 15 - 28.
-- **Recruitment Methods**:
-  1. Ask university friends and family to volunteer.
-  2. Post on social media/online platforms such as Reddit.
+Upon opening the crafting menu, the player can choose which items to craft. The player can click the arrow to change to the **Buildings** tab to craft buildings, and the same goes for the **Decorations** tab.
+The crafting menu would display the discription including stats and effects of the item, along with the materials required to craft it.
+<div align="center">
+  <img src="./GDDImages/craftingUI.png" width="600"/>
+</div>
+Clicking on an item in which the player has sufficient resource for will prompt the crafting menu to disappear and the player will be able to place that item on the map. If the resources are not enough to craft, there will be a pop-up message notice the player.
+<div align="center">
+  <img src="./GDDImages/placeItemUI.png" width="600"/>
+</div>
+When this happens, the chosen item will follow the player's cursor and has a shade of blue, allowing the him to place it wherever he can hover his cursor to. However, if it has a shade of red, it means that he cannot place the item there.
 
----
+## Levels and World Design 🌏
 
-### Data Collection
+### Game World
 
-- **Quantitative Data**:
-  - Gameplay rating: Game mechanic / Graphic / Theme.
-  - Satisfaction.
+We’re aiming to create a 2.5D game that combines 3D assets with a 2D layout. The camera will dynamically pan and move based on the player's movements. The player will navigate the game world using the WASD keys. A map will track the player's progress and reveal the portions of the world they've uncovered.
+
+<div align="center">
+  <img src="./GDDImages/lightsout_gamemap.png" width="600"/>
+</div>
+
+### Objects
+
+- **Light sources**: will be the key element in tracking progress, as the player’s goal is to gradually illuminate the world. These light sources could include items like campfires, torches, and electric lights, each contributing to lighting up different parts of the game world.
+
+<div align="center">
+  <img src="./GDDImages/lightsout_lightsources.png" width="600"/>
+</div>
+
+- **Generator**: Electric light sources require power to keep it on. A generator is used to keep these light sources on and must be fed power to keep it running.
+<div align="center">
+  <img src="./GDDImages/lightsout_generator.png" width="300"/>
+</div>
+
+- **Collecting resources**: There are also resources that the player can collect to gather and craft new items, these resources could be wood, coal, fiber, and metal.
+- **Buildings/Structures**: Buildings would be objects that the player can create. The initial starting tent can recover sanity. The buildings that the player builds can recover sanity faster and have a larger “sanity recovery effect radius” than the initial tent.
+
+<div align="center">
+  <img src="./GDDImages/lightsout_tent.png" width="300"/>
+</div>
+
+- **Obstacles**: Throughout the map, the player will encounter obstacles that will prevent them from moving through it. To get through these obstacles, the player must light up the surrounding area of the obstacles to go down. An example below is a thorn plant that sprouts when given light, allowing the player to pass through.
+<div align="center">
+  <img src="./GDDImages/lightsout_obstacle1.png" width="300"/>
+</div>
+<div align="center">
+The first stage of the "Thorns" obstacle, which will not allow the player to pass through.
+</div>
+
+<div align="center">
+  <img src="./GDDImages/lightsout_obstacle2.png" width="300"/>
+</div>
+<div align="center">
+The second stage of the "Thorns" obstacle, where the thorns start to turn into flowers.
+</div>
+
+<div align="center">
+  <img src="./GDDImages/lightsout_obstacle3.png" width="300"/>
+</div>
+<div align="center">
+The final stage of the "Thorns" obstacle, falling apart and allowing the player to pass through it.
+</div>
+
+- **Ghost**: When the player's sanity go down to a certain ratio, the ghosts will spawn on the map. When the player is near the ghost, their sanity will reduce in a faster rate, so do not go near them, they will be gone eventually.
+
+### Craftables and Interactables
+
+- **Interactables**: Interactables are visible objects on the map, which the player can interact with by pressing E, these Interactables will block the player's path<br>
+
+  - **Tree**: Trees spawn at random rates around the map in random areas. Interacting with one will trigger a chopping animation, once the animation ends, the tree will fade away and the player will gain _WOOD_ and _FIBER_.<br>
+
+    | Image                                                                                        | Resources Given       |
+    | -------------------------------------------------------------------------------------------- | --------------------- |
+    | <div align="center"><img src="./GDDImages/Objects and Interactables/tree_small.png"/></div>  | 4 _WOOD_   |
+    | <div align="center"><img src="./GDDImages/Objects and Interactables/tree_medium.png"/></div> | 5 _WOOD_ |
+    | <div align="center"><img src="./GDDImages/Objects and Interactables/bush.png"/></div>        | 5 _FIBER_   |
+
+
+  - **Stone**: Stones spawn at random rate around the map. Interacting with one will trigger a mining animation, once the animation ends, the player will gain _STONE_. <br>
+
+    | Image                                                                                          | Resources Given |
+    | ---------------------------------------------------------------------------------------------- | --------------- |
+    | <div align="center"><img src="./GDDImages/Objects and Interactables/stone_small.png"/></div>   | 2 _STONE_       |
+    | <div align="center"><img src="./GDDImages/Objects and Interactables/stone_medium.png"/></div>  | 4 _STONE_       |
+ 
+
+  - **Ore**: Ore are more rare than stones and trees. Interacting with ores will trigger a mining animation, once the animation ends, the player will gain _COAL_ or _METAL_ with a few _STONE_. <br>
+
+    | Image                                                                                        | Resources Given       |
+    | -------------------------------------------------------------------------------------------- | --------------------- |
+    | <div align="center"><img src="./GDDImages/Objects and Interactables/ore_small.png"/></div>   | 1 _STONE_, 4 _COAL_   |
+    | <div align="center"><img src="./GDDImages/Objects and Interactables/ore_large.png"/></div>   | 1 _STONE_, 3 _METAL_   |
   
-- **Qualitative Data**:
-  - Feedback: What they like/dislike, and what could be improved.
 
-- **Tools**: Use a questionnaire (survey) for both quantitative and qualitative data.
-
----
-
-### Data Analysis
-
-#### For Observational Technique:
-- **Affinity Diagram**: Analyse main findings by grouping similar insights.
-
-#### For Questionnaire:
-- **Summary Statistics**: Analyse summary statistics of quantitative data (i.e. mean, median, standard deviation).
-- **Visual Graphs**: Produce graphs of the scores for each aspect of the game to identify areas that need improvement.
-
----
-
-### Timeline
-![Evaluation-Timeline](./ReportImages/evaluation_plan_timeline.png)
-
----
-
-### Responsibilities
-
-Who is responsible for each task? How will you ensure that everyone contributes equally?
-
-| Team Member                | Responsibility             |
-|----------------------------|----------------------------|
-| Sakdiphat Tanphiphatari    | Observational Technique    |
-| Acalapati Priyatama        | Query Technique            |
-| Don Lam Nguyen             | Observational Technique    |
-| Duc Hang Giang Vu          | Query Technique            |
-
----
-
-## Evaluation Report
-
-In total, we conducted 7 surveys for a query technique, and 7 cooperative evaluations for an observation technique.
-
-The raw data for survey is here [survey raw data](EvaluationData/Survey_raw.pdf)
-The observation note is here [observation note raw data](EvaluationData/Observation_raw.pdf)
-
-### Quantitative Data
-
-| Category   | Average Score | Scaling                   | Note                                        |
-|------------|---------------|---------------------------|---------------------------------------------|
-| Enjoyment  | 3.57/5        | Higher = Very enjoyable   |                                             |
-| Difficulty | 4/5           | Higher = Difficult        |                                             |
-| Control    | 3.14/5        | Higher = Easy control     | The major problem is the camera control     |
-| UI Layout  | 3.29/5        | Higher = Easy to navigate | The layout is simple but has some problems. |
-| Audio      | 3.57/5        | Higher = Satisfy          |                                             |
-| Graphic    | 3.43/5        | Higher = Satisfy          |                                             |
-| Story      | 3.43/5        | Higher = Like the story   |                                             |
-
-The table displays the average score for the query technique over 7 evaluators on a scale of 1 to 5.
-
-These categories of questions gave us valueble insights into what the game was lacking. Higher scores in diffuculty means many people were struggling to experience later stages of the game, which can lead to repetitive early game experience, causing quick boredom. Scores for UI and control fluctuates at around the mid point mark, which will be reflected more efficiently in the observational section. Lower scores in graphics and audio signifies a lack in the game's erie ambience.
-
-### Qualitative Data
-Data collected from observational evaluations are organized into an affinity diagram as follow, separating them into 6 main categories:
-
-<div align="center">
-  <img src="./ReportImages/AD1.jpg" width="600"/>
-</div>
-
-The **Introduction** did not serve it's purpose, as feedbacks shows players struggling to find the goal of the game, and the incentive to explore.
-
-<div align="center">
-  <img src="./ReportImages/AD2.jpg" width="600"/>
-</div>
-
-The **Difficulty** section provides an understanding into our game's progress rate. Feedbacks were mainly focused on our sanity penalization mechanics rather than the progress speed of the game itself.
-
-<div align="center">
-  <img src="./ReportImages/AD3.jpg" width="600"/>
-</div>
-
-Most participants stated that the graphic was unclear about the crafting resources. The overall UI layout of the crafting system is also unclear.
-
-<div align="center">
-  <img src="./ReportImages/AD4.jpg" width="600"/>
-</div>
-
-The general concensus of the **Game Mechanics** section is that our tutorial did not manage to serve it's purpose. Leading to evaluator's confusion upon playing. A more thorough introduction and tutorial was needed.
-
-<div align="center">
-  <img src="./ReportImages/AD5.jpg" width="600"/>
-</div>
-
-Almost all participants loved the theme and the concept of the game. The dark theme was reported to be interesting and exploration of natural artefacts provides alot to the gameplay experience
-
-<div align="center">
-  <img src="./ReportImages/AD6.jpg" width="600"/>
-</div>
-
-### Improvements
-
-Under the Improvement Section of our game evaluation report, several key changes were implemented to address user feedback and enhance gameplay.
-
-One prominent issue involved the gathering animation; previously, pressing "E" would trigger the animation regardless of the player’s distance from interactable items, disrupting movement. This has been refined so that animations only play when close to an interactable object, allowing for smoother exploration.
-
-Players also struggled to understand they could relight light sources due to a lack of indicators. Now, light sources become relightable only when near extinguishment, with an indicator to clearly signal this, making this mechanic more intuitive.
-
-The crafting menu was restructured due to its interference with visibility of resource counts. By reducing the menu’s vertical space, players can now view resources without obstruction, streamlining the crafting process.
-
-Due to minimal guidance, some players overlooked essential controls like sprinting and camera adjustments. To enhance clarity, a step-by-step tutorial was added at the start of the game, and the guidebook was relocated to the main screen for easier access.
-
-Feedback also revealed that sanity loss was too high, making survival overly difficult. We reduced the sanity reduction from darkness and ghost encounters, increased sanity regeneration from buildings, and lowered the ghosts' range to create a more balanced challenge.
-
-Additionally, lighting adjustments were made to encourage exploration, as previous brightness levels deterred players from venturing into dark areas. By increasing the brightness of both darkness and light sources, players can navigate more confidently.
-
-To enhance player awareness, an extra visual effect and sound cue were added when in a ghost’s range, enabling players to gauge danger more effectively.
-
-Several environmental adjustments were also made: the starting area now includes a tent, improving initial survivability, and resource outlines were added to improve visibility in general.
-
-In response to camera sensitivity, which was deemed too high, sensitivity settings were lowered, providing players with smoother control.
-
-Finally, adjustments were made to increase the initial cutscene text speed for a more fast paced experience, and bugs reported by players were systematically addressed and fixed.
-
-These improvements collectively work to create a more engaging, intuitive, and enjoyable gaming experience based on player insights.
-
-
-
-
-
-
-
-
-
-
-
----
-
-## Shaders and Special Effects
-
-### Shader #1 - Blueprint Shader
-
-**Blueprint Shader File:** [link](./Assets/_Shaders/BlueprintShader.shader) 
-
-**Description:**  
-The Blueprint Shader applies a holographic effect on items being placed in the game world. The colour is adjustable via uniform variables in a C# script. When an item cannot be placed, i.e. blocked by obstacles, the colour is red; otherwise, the colour is blue to indicate that the item can be placed.
-
-<div align="center">
-  <img src="./ReportImages/ShadersFX/blueprint_shader_gif.gif" alt="Blueprint Shader Demo" />
-  <p><strong>Blueprint Shader Demo</strong></p>
-</div>
-
-**Rationale:**  
-Crafting is a core mechanic of our game, therefore it's important to provide visual feedback during item placement to improve the player experience. This shader visually indicates placement states, reducing confusion and enhancing interaction with crafting mechanics.
-
-**Theory:**  
-The vertex shader is mostly untouched given that we do not wish to displace vertices of the input object’s mesh for a blueprint / hologram effect. Instead, to emulate a hologram effect, the fragment shader renders bars running across the object using the UV coordinates and the sine wave function to set output rgb to 0 at set intervals. The animation of the bars moving is done by translating the sine wave function with respect to game time.
-
-**Material Parameters:**
-- [Blueprint Material Link](./Assets/_Shaders/BlueprintShader_Material.mat)
-
-<br/>
-
-<div align="center">
-  <img src="./ReportImages/ShadersFX/_HoloIntensity.gif" alt="_HoloIntensity Parameter Demo" />
-  <p style="margin-top: 7px;"><strong>_HoloIntensity: Controls bar quantity; higher values increase bar density.</strong></p>
-</div>
-
-<br/>
-
-<div align="center">
-  <img src="./ReportImages/ShadersFX/_AnimIntensity.gif" alt="_AnimIntensity Parameter Demo" />
-  <p style="margin-top: 7px;"><strong>_AnimIntensity: Sets bar movement speed; higher values increase speed.</strong></p>
-</div>
-
-<br/>
-
-<div align="center">
-  <img src="./ReportImages/ShadersFX/_Rotator.gif" alt="_Rotator Parameter Demo" />
-  <p style="margin-top: 7px;"><strong>Determines bar orientation; 0 is vertical, 1 is horizontal, interpolated between.</strong></p>
-</div>
-
-**C# Script for Color Parameters:**
-- [C# Script Colour Modification Link](./Assets/_Scripts/Crafting/PlaceItem.cs)
-
-- The parameters being set in this C# script are _Color1 and _Color2. The colour of the object is interpolated between _Color1 and _Color2 to form a gradient. This makes the object’s colour more dynamic and complex.
-
-<br/>
-
-<div>
-  <pre style="width: 80%; max-width: 600px; text-align: left; padding: 10px; border-radius: 5px;">
-   private void SetPlaceable()
-   {
-      ... Some other code here
-        foreach (Renderer renderer in renderers)
-        {
-            foreach (Material material in renderer.materials)
-            {
-               material.SetColor("_Color1", new Color(0.0f, 0.0f, 0.55f));
-               material.SetColor("_Color2", new Color(0.68f, 0.85f, 0.9f));
-            }
-        }
-      ... Some other code here
-   }
-  </pre>
-
-  <p align="center"><strong>The colour scheme of the object is set to blue when the item can be placed at the current location.</strong></p>
-</div>
-
-<br/>
-
-<div>
-  <pre style="width: 80%; max-width: 600px; text-align: left; padding: 10px; border-radius: 5px;">
-   private void SetUnplaceable()
-   {
-      ... Some other code here
-        foreach (Renderer renderer in renderers)
-        {
-            foreach (Material material in renderer.materials)
-            {
-               material.SetColor("_Color1", new Color(0.55f, 0.0f, 0.0f));
-               material.SetColor("_Color2", new Color(1.0f, 0.6f, 0.6f));
-            }
-        }
-      ... Some other code here
-   }
-  </pre>
-
-  <p align="center"><strong>The colour scheme of the object is set to red when the item cannot be placed at the current location.</strong></p>
-</div>
-
----
-
-### Shader #2 - Ghost Shader
-
-**Ghost Shader File**: [link](./Assets/_Shaders/GhostShader.shader)
-
-**Description:**  
-The Ghost Shader is used to create a material for ghosts, giving them a slightly distorted and semi-transparent look. Transparency can be adjusted through a uniform variable in a C# script. This allows for a smooth “fading in” effect, enhancing the ghost's appearance as it materializes in the game.
-
-<div align="center">
-  <img src="./ReportImages/ShadersFX/ghost_shader_gif.gif" alt="Ghost Shader Demo" />
-  <p><strong>Ghost Shader Demo</strong></p>
-</div>
-
-**Rationale:**  
-The Ghost Shader is essential for our game, as ghosts are a key feature that adds to its eerie atmosphere. The shader creates a distorted, transparent appearance that enhances the creepy effect of the ghosts. It is difficult to do vertex distortion purely through C# code, which is why a shader is used. Additionally, the ability to adjust parameters for a ghost fade-in effect adds polish to the game, ensuring a smooth transition when the ghost appears.
-
-**Theory:**  
-The distortion effect is achieved by displacing the input vertex in the vertex shader using a sine wave function that varies with game time. This produces a moving wave animation on the ghost's body. To enhance the ghostly look, the fragment shader adjusts the alpha channel and RGB values, making the ghost appear more transparent and dimmed.
-
-**Material Parameters:**  
-- [Ghost Material Link](./Assets/_Shaders/GhostShader_Material.mat)
-
-<br/>
-
-<div align="center">
-  <img src="./ReportImages/ShadersFX/3ghost.gif" alt="_MainTex Parameter Demo" />
-  <p style="margin-top: 7px;"><strong>_MainTex allows the ghost to have different textures applied. Above are the ghosts with 3 different textures.</strong></p>
-</div>
-
-<br/>
-
-<div align="center">
-  <img src="./ReportImages/ShadersFX/_Transparency.gif" alt="_Transparency Parameter Demo" />
-  <p style="margin-top: 7px;"><strong>_Transparency adjusts the see-through effect.</strong></p>
-</div>
-
-<br/>
-
-<div align="center">
-  <img src="./ReportImages/ShadersFX/_Darkness.gif" alt="_Darkness Parameter Demo" />
-  <p style="margin-top: 7px;"><strong>_Darkness adjusts the dimness of the output RGB channels</strong></p>
-</div>
-
-<br/>
-
-<div align="center">
-  <img src="./ReportImages/ShadersFX/_AuraColor.gif" alt="_AuraColor Parameter Demo" />
-  <p style="margin-top: 7px;"><strong>_AuraColor determines the colour of the ghost.</strong></p>
-</div>
-
-<br/>
-
-<div align="center">
-  <img src="./ReportImages/ShadersFX/_Distortion.gif" alt="_Distortion Parameter Demo" />
-  <p style="margin-top: 7px;"><strong>_DistortionAmount adjusts distortion intensity.</strong></p>
-</div>
-
-<br/>
-
-<div align="center">
-  <img src="./ReportImages/ShadersFX/_TimeScale.gif" alt="_TimeScale Parameter Demo" />
-  <p style="margin-top: 7px;"><strong>_TimeScale adjusts wave animation speed.</strong></p>
-</div>
-
-**C# Script for Fading Effect:**  
-- [C# Script Fading Effect Link](./Assets/_Scripts/WorldObjects/GhostController.cs)
-
-<br/>
-
-<div>
-  <pre style="width: 90%; text-align: left; padding: 10px; border-radius: 5px;">
-   private IEnumerator FadeIn()
-   {
-      float elapsedTime = 0;
-      while (elapsedTime < fadeDuration)
-      {
-         ... Some calculations here
-         float newTransparency = Mathf.Lerp(0, originalTransparency, t);
-         originalAuraColor.a = Mathf.Lerp(0, originalAuraColor.a, t);
-         ghostRenderer.material.SetFloat("_Transparency", newTransparency);
-         ghostRenderer.material.SetColor("_AuraColor", originalAuraColor);
-         ...
-      }
-      ... Some cleanup logic here
-   }
-  </pre>
-
-  <p align="center"><strong>_Transparency and _AuraColor are interpolated with respect to animation time.</strong></p>
-</div>
-
----
-
-### Fog Particle System
-
-**Fog Particle System File:** [link](./Assets/EnvironmentAsset/Fog/FogParticleSystem.prefab)
-
-**Description:**  
-The fog particle system generates volumetric fog that enriches the game environment. This fog enhances the overall aesthetics and contributes to the game's eerie atmosphere.
-
-**Rationale:**  
-The fog particle system is essential for our game, as it deepens the eerie ambiance and unifies the visual elements. By adding fog, we create a more immersive experience, making the environment feel more atmospheric and visually appealing.
-
-<div align="center">
-  <img src="./ReportImages/ShadersFX/fog_particle_gif.gif" alt="Fog Particle System Demo" />
-  <p><strong>Fog vs No Fog Demo</strong></p>
-</div>
-
-**Randomized Attributes for Natural Fog Effects:**  
-
-- **Start Speed:**  
-   <br/>
-   <div align="center">
-      <img src="./ReportImages/ShadersFX/randomise_start_speed.png" alt="Start Speed Parameter" />
-      <p style="margin-top: 7px;"><strong>Speed randomised between 0 and 2 for natural dispersion.</strong></p>
-   </div>  
-  
-  **Description:** Start speed defines the initial velocity of each particle, influencing how fast particles move upon spawning. By randomizing this value, each particle has a slight variation in speed, leading to a more natural, dispersed fog effect.
-
-  **Rationale:** Fog in nature doesn’t move at a uniform speed; pockets of mist vary in movement. The randomness in start speed gives the fog a more organic, drifting appearance, enhancing realism.
-
-- **Start Rotation:**  
-   <br/>
-   <div align="center">
-      <img src="./ReportImages/ShadersFX/randomise_start_rotation.png" style="width: 500px; height: auto;" alt="Start Speed Parameter" />
-      <p style="margin-top: 7px;"><strong>Rotation follows a curve, simulating swirling fog.</strong></p>
-   </div>  
+  - **Campfire (Light Sources)**: Certain light sources requires refueling with a certain amount of _COAL_. Upon interacting, an animation of Adam refueling will play, after the animation finishes, the light sources will go back to full brightness and fuel. If light sources run out of fuel. They will stop providing light and will no longer provide protection against the darkness, however, refueling is still possible and would replenish lights and fuel.
+
+  - **Street Lamp (Electric Light Sources)**: Electric light sources do not require refueling directly, but they need to be within the generator radius. The generator need to be refuel with a certain amount of _COAL_. If the generator is down, all the electric light sources will go down as well until the generator is refilled.
+  - 
+- **Craftables**: Craftables are items that the player can craft, these items would also be placeable on the map, allowing for city-scaping. Craftable items include: Light sources, Buildings, and Decorations<br>
+
+  - **Light Sources**
+
+    | Name           | Image                                                                                           | Materials Required            | Duration (second) | Light Radius |
+    | -------------- | ----------------------------------------------------------------------------------------------- | ----------------------------- | ----------------- | ------------ |
+    | Torch          | <div align="center"><img src="./GDDImages/Objects and Interactables/torch.png"/></div>          | 1 _WOOD_, 1 _COAL_            | 90                 | 7            |
+    | Camp Fire      | <div align="center"><img src="./GDDImages/Objects and Interactables/campfire.png"/></div>       | 3 _WOOD_, 2 _COAL_, 3 _STONE_ | 180                 | 9           |
+    | Jack o Lantern  | <div align="center"><img src="./GDDImages/Objects and Interactables/jackolantern.png"/></div>  | 3 _WOOD_, 2 _COAL_, 8 _FIBER_           | 300                 | 9            |
+    | Christmas Tree     | <div align="center"><img src="./GDDImages/Objects and Interactables/christmas_tree.png"/></div>     | 10 _WOOD_, 10 _COAL_, 10 _FIBER_          | Ongoing                 | 14            |
+    | Street Lamp    | <div align="center"><img src="./GDDImages/Objects and Interactables/street_lamp.png"/></div>    | 7 _WOOD_, 12 _COAL_, 7 _METAL_         | Ongoing                 | 16           |
+    | Burning Barrel | <div align="center"><img src="./GDDImages/Objects and Interactables/burning_barrel.png"/></div> | 4 _WOOD_, 3 _COAL_, 2 _METAL_ | 300                 | 12            |
+    | Traffic Lights         | <div align="center"><img src="./GDDImages/Objects and Interactables/traffic_light.png"/></div>         | 5 _WOOD_, 10 _METAL_, 14 _COAL_           | Ongoing                 | 19            |
+    | Generator    | <div align="center"><img src="./GDDImages/lightsout_generator.png"/></div>     | 10 _WOOD_, 20 _METAL_, 20 _COAL_          | 300                 | 50 (Provide power)            |
+ 
+  - **Buildings**
+    | Name | Image | Materials Required | Effect Radius | Regen(%)
+    | --- | --- | --- | --- | --- |
+    | Tent | <div align="center"><img src="./GDDImages/Objects and Interactables/tent.png"/></div> | 2 _WOOD_, 10 _FIBER_| 9| 5 |
+    | Wooden House | <div align="center"><img src="./GDDImages/Objects and Interactables/wooden_house.png"/></div> | 20 _WOOD_, 10 _FIBER_ | 11 | 10 |
+    | Small house | <div align="center"><img src="./GDDImages/Objects and Interactables/small_house.png"/></div> | 5 _WOOD_, 10 _STONE_, 5 _FIBER_ | 11 | 8 |
+    | Desert House | <div align="center"><img src="./GDDImages/Objects and Interactables/desert_house.png"/></div> | 10 _WOOD_, 20 _STONE_, 10 _FIBER_ | 17 | 20 |
+    | Medieval House | <div align="center"><img src="./GDDImages/Objects and Interactables/medieval_house.png"/></div> | 10 _WOOD_, 10 _STONE_, 10 _FIBER_ | 13 | 11 |
+    | Motel | <div align="center"><img src="./GDDImages/Objects and Interactables/motel.png"/></div> | 25 _WOOD_, 25 _STONE_, 25 _FIBER_ | 17 | 20 |
+
+  - **Decoration**
+    | Name | Image | Materials Required |
+    | --- | --- | --- |
+    | Barrel | <div align="center"><img src="./GDDImages/Objects and Interactables/barrel.png"/></div> | 3 _STONE_, 2 FIBER |
+    | Chair | <div align="center"><img src="./GDDImages/Objects and Interactables/chair.png"/></div> | 2 _WOOD_, 2 _FIBER_ |
+    | Table | <div align="center"><img src="./GDDImages/Objects and Interactables/table.png"/></div> | 3 _WOOD_, 2 _FIBER_ |
     
-  **Description:** Start rotation defines the initial orientation of each particle. The rotation curve ensures particles have gradual orientation shifts. Starting at a low rotation and increasing along a curve means particles will gradually adjust their angles.
+## Art and Audio 🎨 🔊
 
-  **Rationale:** This curve simulates the swirling and slight rotation typical of fog or mist, making it appear as though the fog is naturally turning and blending within itself. The curve shape makes the rotation predictable but still dynamic, aligning with the slow, rolling nature of fog.
+### Art Style
 
-- **Randomise Direction:**  
-   <br/>
-   <div align="center">
-      <img src="./ReportImages/ShadersFX/randomise_direction.png" alt="Start Speed Parameter" />
-      <p style="margin-top: 7px;"><strong>Particles emit in random directions for realistic diffusion. </strong></p>
-   </div>   
-   
-  **Description:** When this option is enabled, particles are emitted in random directions rather than following a strict path.  
-  
-  **Rationale:** Fog generally disperses in all directions, so randomizing the emission direction allows particles to spread unpredictably, achieving a more diffused, realistic fog volume. This also prevents unnatural movement patterns and avoids the "layered" look common with directional fog particles.
+Low-poly 3D models that feature a slightly dark tone that goes well with the darkness featured in the game.
 
----
+### Sound and Music
 
-## Summary of Contributions
+Sounds that give the player a sense of loneliness would work best with this game. The sound gives the errie ambience and each items have sound indicator such as generator working sound, or the sound when gaining sanity.
 
-#### Don Lam Nguyen:
-- Even out lightings (disabling URP’s fade quadratic attenuation)
-- Created lightsource prefabs and lightsources scripts
-- Refueling, and refueling Marker
-- Buildings prefabs, and handling effects of buildings
-- Description for craftables
+### Assets
 
-#### Duc Hang Giang Vu:
-- Implement the player (movement, animations, sanity, sprinting, etc.)
-- Implement Ghost & Fog Particle System spawn/control logic
-- Implement crafted item placement logic
-- Add SFX (ambience, resource collection, etc.)
-- Shaders and Special Effects report
+We plan to use the following assets from the Unity Asset Store.
 
-#### Acalapati Priyatama:
-- Designed the user interface including the HUD, guidance, and crafting UI
-- Created the logic behind the crafting system used in the game
-- Wrote the custom shaders used in the game including the Blueprint Shader and the Ghost Shader
-- Designed the core gameplay loop
-- Created the video trailer and in-game cutscenes
+| Asset                               | Preview                                                                                        | URL                                                                                                              |
+| ----------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| RPG Poly Pack - Lite                | <div align="center"><img src="./GDDImages/Unity Assets/rpg_poly_lite.webp" width="300"/></div>             | <https://assetstore.unity.com/packages/3d/environments/landscapes/rpg-poly-pack-lite-148410>                     |
+| LowPoly Survival Character Rio      | <div align="center"><img src="./GDDImages/Unity Assets/low_poly_character_rio.webp" width="300"/></div>    | <https://assetstore.unity.com/packages/3d/characters/humanoids/lowpoly-survival-character-rio-273074>            |
+| Campfires & Torches Models and FX   | <div align="center"><img src="./GDDImages/Unity Assets/campfires_torches_fx.webp" width="300"/></div>      | <https://assetstore.unity.com/packages/3d/environments/campfires-torches-models-and-fx-242552>                   |
+| Low Poly Nature Pack Lite           | <div align="center"><img src="./GDDImages/Unity Assets/low_poly_nature_lite.webp" width="300"/></div>      | <https://assetstore.unity.com/packages/3d/environments/landscapes/low-poly-nature-pack-lite-288596#content>      |
+| Wooden House - Free - Low Poly      | <div align="center"><img src="./GDDImages/Unity Assets/wooden_house_free.webp" width="300"/></div>         | <https://assetstore.unity.com/packages/3d/environments/wooden-house-free-low-poly-270889>                        |
+| Low_Poly Nature                     | <div align="center"><img src="./GDDImages/Unity Assets/low_poly_nature.webp" width="300"/></div>           | <https://assetstore.unity.com/packages/3d/environments/low-poly-nature-260306>                                   |
+| Street Lamps                        | <div align="center"><img src="./GDDImages/Unity Assets/street_lamps.webp" width="300"/></div>              | <https://assetstore.unity.com/packages/3d/props/exterior/street-lamps-165658>                                    |
+| Street Lamps 2                      | <div align="center"><img src="./GDDImages/Unity Assets/street_lamps2.webp" width="300"/></div>             | <https://assetstore.unity.com/packages/3d/props/exterior/street-lamps-2-260395>                                  |
+| Modular Medieval Lanterns           | <div align="center"><img src="./GDDImages/Unity Assets/modular_medieval_lanterns.webp" width="300"/></div> | <https://assetstore.unity.com/packages/3d/environments/historic/modular-medieval-lanterns-85527>                 |
+| FREE Low Poly Human - RPG Character | <div align="center"><img src="./GDDImages/Unity Assets/low_poly_human_rpg.webp" width="300"/></div>        | <https://assetstore.unity.com/packages/3d/characters/humanoids/fantasy/free-low-poly-human-rpg-character-219979> |
+| Low Poly: Woods Lifestyle           | <div align="center"><img src="./GDDImages/Unity Assets/low_poly_woods_lifestyle.webp" width="300"/></div>  | <https://assetstore.unity.com/packages/3d/environments/low-poly-woods-lifestyle-65306>                           |
+| Low-Poly Resource Rocks             | <div align="center"><img src="./GDDImages/Unity Assets/low_poly_resource_rocks.webp" width="300"/></div>   | <https://assetstore.unity.com/packages/3d/props/exterior/low-poly-resource-rocks-76150>                          |
+| Roman City Low Poly Pack 1 - Lite   | <div align="center"><img src="./GDDImages/Unity Assets/roman-city.jpg" width="300"/></div>                 | <https://assetstore.unity.com/packages/3d/environments/roman-city-low-poly-pack-1-lite-92731#content>            |
+| Medieval Building Exteriors         | <div align="center"><img src="./GDDImages/Unity Assets/medieval-building-ext.webp" width="300"/></div>     | <https://assetstore.unity.com/packages/3d/environments/historic/medieval-buildings-exteriors-72836>              |
+| Low Poly Holiday House              | <div align="center"><img src="./GDDImages/Unity Assets/low_poly_holiday_house.webp" width="300"/></div>    | <https://assetstore.unity.com/packages/3d/environments/urban/lowpoly-holiday-house-95243>                        |
+| Low Poly Modern City Decorations    | <div align="center"><img src="./GDDImages/Unity Assets/low_poly_modern_city.webp" width="300"/></div>      | <https://assetstore.unity.com/packages/3d/environments/urban/lowpoly-holiday-house-95243>                        |
 
-#### Sakdiphat Tanphiphatari:
-- Created auto spawn resources script
-- Designed the world terrain
-- Created an electric light source
-- Fixed minor bugs
-- Evaluation report summary
+<!--
+    Put images / sketches of User Interface here.
+ -->
 
----
+## Team Communication, Timeline and Task Assignment 🤝
 
-## References and External Resources
+### Tools 🔧
 
-- **Unity Assets and Documentation**
-   - [Unity Asset Store](https://assetstore.unity.com/)
-   - [Unity Documentation](https://docs.unity.com/)
+| Tool       | Used For                                         | Link                                                                                    |
+| ---------- | ------------------------------------------------ | --------------------------------------------------------------------------------------- |
+| Discord    | General team communication and stand-up meetings | <https://discord.gg/PNK58X9Q>                                                           |
+| Jira       | Task management                                  | <https://h1pls.atlassian.net/jira/software/projects/KAN/boards/1/timeline>              |
+| Confluence | Documentation                                    | <https://h1pls.atlassian.net/wiki/external/MDNmMGVlZmNmZjQyNDg5YTlmZDg4YTU2NzlkMWM5ODg> |
+| Github     | Code and asset management                        | <https://github.com/feit-comp30019/2024s2-project-1-h1pls>                              |
 
-- **External Assets**  
-   - 	https://assetstore.unity.com/packages/3d/environments/3d-simple-building-hotel-213775
-   -	https://assetstore.unity.com/packages/3d/environments/fantasy/fantasy-house-bundle-257964
-   -	https://assetstore.unity.com/packages/3d/environments/desert-village-houses-lowpoly-200247
-   -	https://assetstore.unity.com/packages/3d/environments/historic/medieval-tent-big-19023
-   -	https://assetstore.unity.com/packages/3d/environments/low-poly-medieval-free-pack-253520
-   -	https://assetstore.unity.com/packages/3d/environments/historic/medieval-buildings-exteriors-72836
-   -	https://assetstore.unity.com/packages/3d/environments/urban/city-traffic-lights-pack-free-low-poly-3d-art-154053
-   -	https://assetstore.unity.com/packages/3d/props/jack-o-lantern-12185
-   -	https://assetstore.unity.com/packages/3d/environments/landscapes/rpg-poly-pack-lite-148410
-   -	https://assetstore.unity.com/packages/3d/environments/campfires-torches-models-and-fx-242552
-   -	https://assetstore.unity.com/packages/3d/environments/landscapes/low-poly-nature-pack-lite-288596#content
-   -	https://assetstore.unity.com/packages/3d/environments/wooden-house-free-low-poly-270889
-   -	https://assetstore.unity.com/packages/3d/props/exterior/street-lamps-2-260395
-   -	https://assetstore.unity.com/packages/3d/characters/humanoids/fantasy/free-low-poly-human-rpg-character-219979
-   -	https://assetstore.unity.com/packages/3d/props/exterior/low-poly-resource-rocks-76150
-   -	https://assetstore.unity.com/packages/3d/props/industrial/industrial-equipment-electric-motor-199519
-   -	https://assetstore.unity.com/packages/3d/vegetation/trees/polycraft-christmas-tree-108277
+### Timeline & Task Assignment 📆
 
+<div align="center">
+  <img src="./GDDImages/timeline.png" width="700"/>
+</div>
 
+## Possible Challenges ⚠️
 
-
+| **Challenge**                                            | **Type**            | **Description**                                                                                                                                                                                                                             | **Solution**                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| -------------------------------------------------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Adapt to new technology and development concepts.        | Technical           | Most team members in our group have little to no experience in Game Development and working with Unity. This slows down the game's development progress and we may end up with an unfinished game if this issue is not carefully addressed. | To mitigate this issue, each member of our team will dedicate time outside of tutorials and lectures to learn Unity and Game Development. In addition, we aim to communicate and share our knowledge regularly to help everyone improve their proficiency with the new technology.                                                                                                                                                                              |
+| Develop a complete game within a tight 12-week deadline. | Time Constraint     | The limited timeframe poses a lot of potential issues with having incomplete features and team member burnout if not well-managed.                                                                                                          | To address this, our team will define a clear and achievable scope for the game from the start, focusing on core gameplay mechanics and essential features. We will also make use of project management tools such as Jira and Confluence to ensure that each milestones are met and adjust the scope if necessary to stay within the timeline. In addition, we will also schedule regular, in-person meetings every week to check in on each member's progress. |
+| Finding suitable music and SFX                           | Creative / Resource | We're aiming to find music and SFX that capture a sense of haunting loneliness and isolation. Unfortunately, the free assets available on the Unity Asset Store don't meet our specific needs.                                                | Our team will explore alternative sources for royalty-free music and SFX such as Freesound, OpenGameArt.org, and Freesfx.                                                                                                                                                                                                                                                                                                                                       
